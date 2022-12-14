@@ -1,3 +1,4 @@
+
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -209,13 +210,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </li>
                    
                     <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Menu Levels</span><span class="fa arrow"></span></a>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Manage Employee</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="graphs.html" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i>Graphs</a></li>
+                            <li><a href="editemp.php" class=" hvr-bounce-to-right"> <i class="fa fa-indent nav_icon"></i>Edit Employee</a></li>
                             
-                            <li><a href="maps.html" class=" hvr-bounce-to-right"><i class="fa fa-map-marker nav_icon"></i>Maps</a></li>
+                            <li><a href="add_emp.php" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i>Add Employee</a></li>
 			
-						<li><a href="typography.html" class=" hvr-bounce-to-right"><i class="fa fa-file-text-o nav_icon"></i>Typography</a></li>
+						
 
 					   </ul>
                     </li>
