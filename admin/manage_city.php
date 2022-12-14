@@ -39,7 +39,7 @@ include_once('header.php');
 					    <td><?php echo $c->city_id;?></td>
 						<td><?php echo $c->state_id;?></td>
 						<td><?php echo $c->city_name;?></td>
-						<td><a href="Editcity_id?edit_city_id=<?php echo $c->city_id?>" class="btn btn-primary">Edit</a></td>
+						<td><a href="editcity_id?edit_city_id=<?php echo $c->city_id?>" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_city_id=<?php echo $c->city_id?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
 					<?php
