@@ -203,22 +203,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </li>
                    
                     <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label"> Employee</span><span class="fa arrow"></span></a>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Employee</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="manage_emp.php" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>manaage Employee</a></li>
+                            <li><a href="manage_emp.php" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Manage Employee</a></li>
                             
                             <li><a href="add_emp.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Add Employee</a></li>
 
 					   </ul>
                     </li>
-					<li><a href="manage_customer.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Customer</span> </a></li>
-					<li><a href="manage_branch.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Branch</span> </a></li>
-                    <li> <a href="manage_category.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Category</span></a></li>
+					<li><a href="manage_customer.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Customer</a></li>
+					<li><a href="manage_branch.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> Manage Branch </a></li>
+                    <li> <a href="manage_category.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Category</a></li>
                     <li><a href="manage_city.php" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Manage City</a></li>
                     <li><a href="manage_cityrate.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Cityrate</a></li>
-                    <li><a href="manage_emp.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Employee</a></li> 
-					<li><a href="manage_feedback.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Feedback</span> </a></li>
-					<li> <a href="manage_state.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage State</span></a></li>
+					<li><a href="manage_feedback.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Feedback </a></li>
+					<li> <a href="manage_state.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage State</a></li>
                     <li><a href="manage_wrate.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Weight Rate</a></li>
                     
                         

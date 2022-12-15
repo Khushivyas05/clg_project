@@ -12,14 +12,151 @@ class control extends model
 		switch($path)
 		{
 			case '/index':
+			$fetcharr=$this->selectall('category');
+			include_once('index.php');
+			break;
+			
+			case '/manage_feedback':
+			$feedback_arr=$this->selectall('feedback');
+			include_once('manage_feedback.php');
+			break;
+			
+			
+			case '/manage_city':
+			$city_arr=$this->selectall('city');
+			include_once('manage_city.php');
+			break;
+			
+			
+			case '/manage_cityrate':
+			$city_rate_arr=$this->selectall('city_rate');
+			include_once('manage_cityrate.php');
+			break;
+			
+			
+			case '/manage_category':
+			$cartegory_arr=$this->selectall('category');
+			include_once('manage_category.php');
+			break;
+			
+			case'/editfeedback':
+			if(isset($_REQUEST['edit_feedback_id']))
+			{
+				$feedback_id=$_REQUEST['edit_feedback_id'];
+				$where=array("feedback_id"=>$feedback_id);
+				$run=$this->select_where('feedback',$where);
+			    $fetch=$run->fetch_object();
+				
+				if(isset($_REQUEST['submit']))
+				{
+					$feedback_id=$_REQUEST['feedback_id'];
+					$cust_id=$_REQUEST['cust_id'];
+					$comment=$_REQUEST['comment'];
+					$date=$_REQUEST['date'];
+	             	$arr=array("feedback_id"=>$feedback_id,"cust_id"=>$cust_id,"comment"=>$comment,"date"=>$date);
+					$res=$this->update('feedback',$arr,$where);
+						if($res)
+						{
+							echo "<script> 
+							alert('Update Success'); 
+							window.location='manage_feedback';
+							</script>";
+						}
+					}
+				}	
+			
+			include_once('editfeedback.php');
+			break;
+			
+			
+			case'/editcity':
+			if(isset($_REQUEST['edit_city_id']))
+			{
+				$city_id=$_REQUEST['edit_city_id'];
+				$where=array("city_id"=>$city_id);
+				$run=$this->select_where('city',$where);
+			    $fetch=$run->fetch_object();
+				
+				if(isset($_REQUEST['submit']))
+				{
+					$city_id=$_REQUEST['city_id'];
+					$state_id=$_REQUEST['state_id'];
+					$city_name=$_REQUEST['city_name'];
+	             	$arr=array("city_id"=>$city_id,"state_id"=>$state_id,"city_name"=>$city_name);
+					$res=$this->update('city',$arr,$where);
+						if($res)
+						{
+							echo "<script> 
+							alert('Update Success'); 
+							window.location='manage_city';
+							</script>";
+						}
+					}
+				}	
+			
+			include_once('editcity.php');
+			break;
+			
+			
+			case '/contact':
 			if(isset($_REQUEST['submit']))
 			{
-				$username=$_REQUEST['username'];
-				$password=$_REQUEST['password'];
+				$name=$_REQUEST['name'];
+				$emailid=$_REQUEST['emailid'];
+				$cont_no=$_REQUEST['cont_no'];
+				$message=$_REQUEST['message'];
+				$arr=array("name"=>$name,"emailid"=>$emailid,"cont_no"=>$cont_no,"message"=>$message);
+				$res=$this->insert('contact',$arr);
+				if($res)
+				{
+					echo "<script> alert('Inquiry Success') </script>";				
+				}
+				else
+				{
+					echo "Not success";
+				}
+			}
+			include_once('contact.php');
+			break;
+			
+			case '/cars':
+			$fetcharr=$this->selectall('car');
+			include_once('cars.php');
+			break;
+			
+			case '/carsform':
+			if(isset($_REQUEST['submit']))
+			{
+				$name=$_REQUEST['name'];
+				$des=$_REQUEST['des'];
+				$capacity=$_REQUEST['capacity'];
+				$mileage=$_REQUEST['mileage'];
+				$price=$_REQUEST['price'];
+				$type=$_REQUEST['type'];
+				$fuel_type=$_REQUEST['fuel_type'];
 				
+			}
+			include_once('carsform.php');
+			break;
+			
+			case '/booking':
+			include_once('booking.php');
+			break;
+			
+			case '/bookingform':
+			include_once('bookingform.php');
+			break;
+			
+			case '/login':
+			if(isset($_REQUEST['submit']))
+			{
 				
-				$where=array("username"=>$username,"password"=>$password);
-				$run=$this->select_where('admin_details',$where);
+				$user_name=$_REQUEST['user_name'];
+				$password=$_REQUEST['pass'];
+				$pass=md5($password);
+				
+				$where=array("user_name"=>$user_name,"pass"=>$pass);
+				$run=$this->select_where('customer',$where);
 				
 				$res=$run->num_rows; 
 				if($res==1) 
