@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Your Transport Solution</title>
+<title>Transport Solution</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Minimal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -205,21 +205,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <li>
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Manage Employee</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="editemp.php" class=" hvr-bounce-to-right"> <i class="fa fa-indent nav_icon"></i>Edit Employee</a></li>
+                            <li><a href="editemp.php" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Edit Employee</a></li>
                             
-                            <li><a href="add_emp.php" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i>Add Employee</a></li>
+                            <li><a href="add_emp.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Add Employee</a></li>
 
 					   </ul>
                     </li>
-					<li><a href="manage_customer.php" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Manage Customer</span> </a></li>
-					<li><a href="manage_branch.php" class=" hvr-bounce-to-right"><i class="fa fa-picture-o nav_icon"></i> <span class="nav-label">Manage Branch</span> </a></li>
-                    <li> <a href="manage_category.php" class=" hvr-bounce-to-right"><i class="fa fa-desktop nav_icon"></i> <span class="nav-label">Manage Category</span><span class="fa arrow"></span></a> </li>
-                    <li><a href="manage_city.php" class=" hvr-bounce-to-right"> <i class="fa fa-info-circle nav_icon"></i>Manage City</a></li>
-                    <li><a href="manage_cityrate.php" class=" hvr-bounce-to-right"><i class="fa fa-question-circle nav_icon"></i>Manage Cityrate</a></li>
-                    <li><a href="manage_emp.php" class=" hvr-bounce-to-right"><i class="fa fa-file-o nav_icon"></i>Manage Employee</a></li> 
-					<li><a href="manage_feedback.php" class=" hvr-bounce-to-right"><i class="fa fa-th nav_icon"></i> <span class="nav-label">Manage Feedback</span> </a></li>
-					<li> <a href="manage_state.php" class=" hvr-bounce-to-right"><i class="fa fa-list nav_icon"></i> <span class="nav-label">Manage State</span><span class="fa arrow"></span></a></li>
-                    <li><a href="manage_wrate.php" class=" hvr-bounce-to-right"><i class="fa fa-align-left nav_icon"></i>Manage Weight Rate</a></li>
+					<li><a href="manage_customer.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Customer</span> </a></li>
+					<li><a href="manage_branch.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Branch</span> </a></li>
+                    <li> <a href="manage_category.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Category</span></a></li>
+                    <li><a href="manage_city.php" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Manage City</a></li>
+                    <li><a href="manage_cityrate.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Cityrate</a></li>
+                    <li><a href="manage_emp.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Employee</a></li> 
+					<li><a href="manage_feedback.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Feedback</span> </a></li>
+					<li> <a href="manage_state.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage State</span></a></li>
+                    <li><a href="manage_wrate.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Weight Rate</a></li>
                     
                         
                     
