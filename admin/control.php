@@ -16,9 +16,87 @@ class control extends model
 			include_once('index.php');
 			break;
 			
-			case '/category':
-			include_once('category.php');
+			case '/manage_feedback':
+			$feedback_arr=$this->selectall('feedback');
+			include_once('manage_feedback.php');
 			break;
+			
+			
+			case '/manage_city':
+			$city_arr=$this->selectall('city');
+			include_once('manage_city.php');
+			break;
+			
+			
+			case '/manage_cityrate':
+			$city_rate_arr=$this->selectall('city_rate');
+			include_once('manage_cityrate.php');
+			break;
+			
+			
+			case '/manage_category':
+			$cartegory_arr=$this->selectall('category');
+			include_once('manage_category.php');
+			break;
+			
+			case'/editfeedback':
+			if(isset($_REQUEST['edit_feedback_id']))
+			{
+				$feedback_id=$_REQUEST['edit_feedback_id'];
+				$where=array("feedback_id"=>$feedback_id);
+				$run=$this->select_where('feedback',$where);
+			    $fetch=$run->fetch_object();
+				
+				if(isset($_REQUEST['submit']))
+				{
+					$feedback_id=$_REQUEST['feedback_id'];
+					$cust_id=$_REQUEST['cust_id'];
+					$comment=$_REQUEST['comment'];
+					$date=$_REQUEST['date'];
+	             	$arr=array("feedback_id"=>$feedback_id,"cust_id"=>$cust_id,"comment"=>$comment,"date"=>$date);
+					$res=$this->update('feedback',$arr,$where);
+						if($res)
+						{
+							echo "<script> 
+							alert('Update Success'); 
+							window.location='manage_feedback';
+							</script>";
+						}
+					}
+				}	
+			
+			include_once('editfeedback.php');
+			break;
+			
+			
+			case'/editcity':
+			if(isset($_REQUEST['edit_city_id']))
+			{
+				$city_id=$_REQUEST['edit_city_id'];
+				$where=array("city_id"=>$city_id);
+				$run=$this->select_where('city',$where);
+			    $fetch=$run->fetch_object();
+				
+				if(isset($_REQUEST['submit']))
+				{
+					$city_id=$_REQUEST['city_id'];
+					$state_id=$_REQUEST['state_id'];
+					$city_name=$_REQUEST['city_name'];
+	             	$arr=array("city_id"=>$city_id,"state_id"=>$state_id,"city_name"=>$city_name);
+					$res=$this->update('city',$arr,$where);
+						if($res)
+						{
+							echo "<script> 
+							alert('Update Success'); 
+							window.location='manage_city';
+							</script>";
+						}
+					}
+				}	
+			
+			include_once('editcity.php');
+			break;
+			
 			
 			case '/contact':
 			if(isset($_REQUEST['submit']))
@@ -41,10 +119,6 @@ class control extends model
 			include_once('contact.php');
 			break;
 			
-			case '/cars':
-			$fetcharr=$this->selectall('car');
-			include_once('cars.php');
-			break;
 			
 			case '/carsform':
 			if(isset($_REQUEST['submit']))

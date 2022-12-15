@@ -1,4 +1,4 @@
-gggg<?php
+<?php
 include_once('header.php');
 ?>
 <script>
@@ -29,6 +29,18 @@ function validate()
 		alert("Please fill out the vehicle_number");
 		return false;
 	}
+	var truck_capacity=document.forms["categoryform"]["truck_capacity"].value;
+	if(truck_capacity=="" || truck_capacity==null)
+	{
+		alert("Please fill out the truck_capacity");
+		return false;
+	}
+	var img=document.forms["categoryform"]["img"].value;
+	if(img=="" || img==null)
+	{
+		alert("Please fill out the img");
+		return false;
+	}
 	
 }
 </script>
@@ -51,28 +63,37 @@ function validate()
         <form name="categoryform" action="" method="post" enctype="multipart/form-data" onsubmit="return validate()">
          	<div class="vali-form">
             <div class="col-md-12 form-group1">
-              <label class="control-label">feedback_id</label>
-              <input type="text" placeholder="feedback_id" name="feedback_id" value="<?php echo $fetch->feedback_id;?>" >
+              <label class="control-label">cate_id</label>
+              <input type="text" placeholder="cate_id" name="cate_id" value="<?php echo $fetch->cate_id;?>" >
             </div>
             
             <div class="clearfix"> </div>
             </div>
 			
 			<div class="col-md-12 form-group1">
-              <label class="control-label">Cust id</label>
-              <input type="text" placeholder="cust_id" name="cust_id" value="<?php echo $fetch->cust_id;?>"<br>
+              <label class="control-label"> model name</label>
+              <input type="text" placeholder="model_name" name="model_name" value="<?php echo $fetch->model_name;?>"<br>
             </div>
 			
 			
 			<div class="col-md-12 form-group1">
-              <label class="control-label">comment</label>
-              <input type="text" placeholder="comment"   name="comment" value="<?php echo $fetch->comment;?>"><br>
+              <label class="control-label">company name</label>
+              <input type="text" placeholder="company_name"   name="company_name" value="<?php echo $fetch->company_name;?>"><br>
             </div>
 			
 						
 			<div class="col-md-12 form-group1">
-              <label class="control-label">Date</label>
-              <input type="file" placeholder="date" name="date" value="<?php echo $fetch->date;?>"><br>
+              <label class="control-label">vehicle number</label>
+              <input type="file" placeholder="vehicle_number" name="vehicle_number" value="<?php echo $fetch->vehicle_number;?>"><br>
+            </div>
+						
+			<div class="col-md-12 form-group1">
+              <label class="control-label">truck capacity</label>
+              <input type="file" placeholder="truck_capacity" name="truck_capacity" value="<?php echo $fetch->truck_capacity;?>"><br>
+            </div>
+			<div class="col-md-12 form-group1">
+              <label class="control-label"> img</label>
+              <input type="file" placeholder="img" name="img" value="<?php echo $fetch->img;?>"><br>
             </div>
              <div class="clearfix"> </div>
    
