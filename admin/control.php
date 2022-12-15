@@ -223,7 +223,7 @@ class control extends model
 			break;
 			
 			case '/manage_customer':
-			$manage_user_arr=$this->selectall('customer_details');
+			$manage_customer_arr=$this->selectall('customer_details');
 			include_once('manage_customer.php');
 			break;
 			
