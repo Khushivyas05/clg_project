@@ -32,7 +32,6 @@ include_once('header.php');
 						<th>Password</th>
 						<th>Username</th>
 						<th>Edit</th>
-						<th>Status</th>
 						<th>Delete</th>
 					  </tr>
 					</thead>
@@ -50,8 +49,7 @@ include_once('header.php');
 						<td><?php echo $mu->email;?></td>
 						<td><?php echo $mu->password;?></td>
 						<td><?php echo $mu->username;?></td>
-						<td><a href="edit_customer?edit_cust_id=<?php echo $mu->cust_id?>" class="btn btn-primary">Edit</a></td>
-						<td><a href="status?status_cust_id=<?php echo $mu->cust_id?>" class="btn btn-danger"><?php echo $mu->status;?></a></td>
+						<td><a href="editcustomer?edit_cust_id=<?php echo $mu->cust_id?>" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_cust_id=<?php echo $mu->cust_id?>" class="btn btn-primary">Delete</a></td>
 					  </tr>
 					  <?php

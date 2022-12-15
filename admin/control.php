@@ -12,7 +12,6 @@ class control extends model
 		switch($path)
 		{
 			case '/index':
-			$fetcharr=$this->selectall('category');
 			include_once('index.php');
 			break;
 			
