@@ -1,14 +1,7 @@
-
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Minimal an Admin Panel Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<title>Your Transport Solution</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Minimal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -102,7 +95,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-               <h1> <a class="navbar-brand" href="index.html">Minimal</a></h1>         
+               <h1> <a class="navbar-brand" href="index.php">Transport</a></h1>         
 			   </div>
 			 <div class=" border-bottom">
         	<div class="full-left">
@@ -210,50 +203,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </li>
                    
                     <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Manage Employee</span><span class="fa arrow"></span></a>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Employee</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="editemp.php" class=" hvr-bounce-to-right"> <i class="fa fa-indent nav_icon"></i>Edit Employee</a></li>
+                            <li><a href="manage_emp.php" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Manage Employee</a></li>
                             
-                            <li><a href="add_emp.php" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i>Add Employee</a></li>
-			
-						
+                            <li><a href="add_emp.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Add Employee</a></li>
 
 					   </ul>
                     </li>
-					 <li>
-                        <a href="inbox.html" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Inbox</span> </a>
-                    </li>
+					<li><a href="manage_customer.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Customer</a></li>
+					<li><a href="manage_branch.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> Manage Branch </a></li>
+                    <li> <a href="manage_category.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Category</a></li>
+                    <li><a href="manage_city.php" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Manage City</a></li>
+                    <li><a href="manage_cityrate.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Cityrate</a></li>
+					<li><a href="manage_feedback.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Feedback </a></li>
+					<li> <a href="manage_state.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage State</a></li>
+                    <li><a href="manage_wrate.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Weight Rate</a></li>
                     
-                    <li>
-                        <a href="gallery.html" class=" hvr-bounce-to-right"><i class="fa fa-picture-o nav_icon"></i> <span class="nav-label">Gallery</span> </a>
-                    </li>
-                     <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-desktop nav_icon"></i> <span class="nav-label">Pages</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="404.php" class=" hvr-bounce-to-right"> <i class="fa fa-info-circle nav_icon"></i>Error 404</a></li>
-                            <li><a href="faq.html" class=" hvr-bounce-to-right"><i class="fa fa-question-circle nav_icon"></i>FAQ</a></li>
-                            <li><a href="blank.html" class=" hvr-bounce-to-right"><i class="fa fa-file-o nav_icon"></i>Blank</a></li>
-                       </ul>
-                    </li>
-                     <li>
-                        <a href="layout.html" class=" hvr-bounce-to-right"><i class="fa fa-th nav_icon"></i> <span class="nav-label">Grid Layouts</span> </a>
-                    </li>
-                   
-                    <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-list nav_icon"></i> <span class="nav-label">Forms</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="forms.html" class=" hvr-bounce-to-right"><i class="fa fa-align-left nav_icon"></i>Basic forms</a></li>
-                            <li><a href="validation.php" class=" hvr-bounce-to-right"><i class="fa fa-check-square-o nav_icon"></i>Validation</a></li>
-                        </ul>
-                    </li>
-                   
-                    <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-cog nav_icon"></i> <span class="nav-label">Settings</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="signin.html" class=" hvr-bounce-to-right"><i class="fa fa-sign-in nav_icon"></i>Signin</a></li>
-                            <li><a href="signup.html" class=" hvr-bounce-to-right"><i class="fa fa-sign-in nav_icon"></i>Singup</a></li>
-                        </ul>
-                    </li>
+                        
+                    
                 </ul>
             </div>
 			</div>
