@@ -41,7 +41,7 @@ include_once('header.php');
 						<td><?php echo $c->cust_id;?></td>
 						<td><?php echo $c->comment;?></td>
 						<td><?php echo $c->date;?></td>
-						<td><a href="Editfeedback?edit_feedback_id=<?php echo $c->feedback_id?>" class="btn btn-primary">Edit</a></td>
+						<td><a href="editfeedback?edit_feedback_id=<?php echo $c->feedback_id?>" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_feedback_id=<?php echo $c->feedback_id ?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
 					<?php

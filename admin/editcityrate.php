@@ -4,23 +4,23 @@ include_once('header.php');
 <script>
 function validate()
 {
-	var city_id=document.forms["cityform"]["city_id"].value;
+	var cr_id=document.forms["cityrateform"]["cr_id"].value;
+	if(cr_id=="" || cr_id==null)
+	{
+		alert("Please fill out the cr_id");
+		return false;
+	}  
+	var city_id=document.forms["cityrateform"]["city_id"].value;
 	if(city_id=="" || city_id==null)
 	{
 		alert("Please fill out the city_id");
 		return false;
-	}  
-	var state_id=document.forms["cityform"]["state_id"].value;
-	if(state_id=="" || state_id==null)
-	{
-		alert("Please fill out the state_id");
-		return false;
 	}
 	
-	var city_name=document.forms["cityform"]["city_name"].value;
-	if(city_name=="" || city_name==null)
+	var rate=document.forms["cityrateform"]["rate"].value;
+	if(rate=="" || rate==null)
 	{
-		alert("Please fill out the city_name");
+		alert("Please fill out the rate");
 		return false;
 	}
 	
@@ -32,7 +32,7 @@ function validate()
 		    	<h2>
 				<a href="dashboard">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Add city</span>
+				<span>Add cityrate</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -42,25 +42,25 @@ function validate()
  		<div class="validation-form">
  	<!---->
   	    
-        <form name="cityform" action="" method="post" enctype="multipart/form-data" onsubmit="return validate()">
+        <form name="cityrateform" action="" method="post" enctype="multipart/form-data" onsubmit="return validate()">
          	<div class="vali-form">
             <div class="col-md-12 form-group1">
-              <label class="control-label">city id</label>
-              <input type="text" placeholder="city_id" name="city_id" value="<?php echo $fetch->city_id;?>" >
+              <label class="control-label">cityrate id</label>
+              <input type="text" placeholder="cr_id" name="cr_id" value="<?php echo $fetch->cr_id;?>" >
             </div>
             
             <div class="clearfix"> </div>
             </div>
 			
 			<div class="col-md-12 form-group1">
-              <label class="control-label">state id</label>
-              <input type="text" placeholder="state_id" name="state_id" value="<?php echo $fetch->state_id;?>"<br>
+              <label class="control-label">city id</label>
+              <input type="text" placeholder="city_id" name="city_id" value="<?php echo $fetch->city_id;?>"<br>
             </div>
 			
 			
 			<div class="col-md-12 form-group1">
-              <label class="control-label">city name</label>
-              <input type="text" placeholder="city_name"   name="city_name" value="<?php echo $fetch->city_name;?>"><br>
+              <label class="control-label">rate</label>
+              <input type="text" placeholder="rate" name="rate" value="<?php echo $fetch->rate;?>"><br>
             </div>
 			
              <div class="clearfix"> </div>
