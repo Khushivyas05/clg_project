@@ -1,14 +1,7 @@
-
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Minimal an Admin Panel Category Flat Bootstrap Responsive Website Template | 404 :: w3layouts</title>
+<title>Your Transport Solution</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Minimal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -25,11 +18,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="four">
 		<img src="images/404.png" alt="" />
 		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-		<a href="index.html" class="hvr-shutter-in-horizontal">Go To Home</a>
+		<a href="index.php" class="hvr-shutter-in-horizontal">Go To Home</a>
 	</div>
 		<!---->
 <div class="copy-right">
-            <p> &copy; 2016 Minimal. All Rights Reserved | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>	    </div>
+            <p> &copy; 2016 Minimal. All Rights Reserved | Design by Your Transport Solution Team </p>	    </div>
 		
      
 <!---->
