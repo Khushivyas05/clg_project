@@ -98,55 +98,6 @@ class control extends model
 			break;
 			
 			
-			case '/contact':
-			if(isset($_REQUEST['submit']))
-			{
-				$name=$_REQUEST['name'];
-				$emailid=$_REQUEST['emailid'];
-				$cont_no=$_REQUEST['cont_no'];
-				$message=$_REQUEST['message'];
-				$arr=array("name"=>$name,"emailid"=>$emailid,"cont_no"=>$cont_no,"message"=>$message);
-				$res=$this->insert('contact',$arr);
-				if($res)
-				{
-					echo "<script> alert('Inquiry Success') </script>";				
-				}
-				else
-				{
-					echo "Not success";
-				}
-			}
-			include_once('contact.php');
-			break;
-			
-			case '/cars':
-			$fetcharr=$this->selectall('car');
-			include_once('cars.php');
-			break;
-			
-			case '/carsform':
-			if(isset($_REQUEST['submit']))
-			{
-				$name=$_REQUEST['name'];
-				$des=$_REQUEST['des'];
-				$capacity=$_REQUEST['capacity'];
-				$mileage=$_REQUEST['mileage'];
-				$price=$_REQUEST['price'];
-				$type=$_REQUEST['type'];
-				$fuel_type=$_REQUEST['fuel_type'];
-				
-			}
-			include_once('carsform.php');
-			break;
-			
-			case '/booking':
-			include_once('booking.php');
-			break;
-			
-			case '/bookingform':
-			include_once('bookingform.php');
-			break;
-			
 			case '/login':
 			if(isset($_REQUEST['submit']))
 			{
