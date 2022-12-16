@@ -12,6 +12,7 @@ class control extends model
 		switch($path)
 		{
 			case '/index':
+			if(isset)
 			include_once('index.php');
 			break;
 			
@@ -288,9 +289,34 @@ class control extends model
 			
 			
 			
+			case '/add_emp':
+            if(isset($_REQUEST['submit']))
+			{
+				$username=$_REQUEST['username'];
+				$password=$_REQUEST['password'];
+                $emp_name=$_REQUEST['emp_name'];
+				$emp_add=$_REQUEST['emp_add'];
+				$designation=$_REQUEST['designation'];
+				$email=$_REQUEST['email'];
+				$contact=$_REQUEST['contact'];
+				$driving_licence=$_REQUEST['driving_licence'];
+				
+				$arr=array("username"=>$username,"password"=>$password,"emp_name"=>$emp_name,"emp_add"=>$emp_add,"designation"=>$designation,"email"=>$email,"contact"=>$contact,"driving_licence"=>$driving_licence);
+				
+				$res=$this->insert('employee_details',$arr);
+				if($res)
+				{
+					echo  "<script>alert('Register success')</script>";
+				}
+				else
+				{
+					echo "not success";
+				}
+			}
+			include_once('add_emp.php');
+			break;
 			
-			
-			case '/editemp':
+			/*case '/editemp':
 			if(isset($_REQUEST['edit_emp_id']))
 			{
 				$emp_id=$_REQUEST['edit_emp_id'];
@@ -315,16 +341,17 @@ class control extends model
 					{
 						echo "<script>
 						alert('update success')
-						window.location='manage_emp';
+						window.location='manage_emp.php';
 						</script>";
 					}
 				}
 			}
 			include_once('editemp.php');
+			break;*/
+			
+			case '/home':
+			include_once('home.php');
 			break;
-			
-			
-			
 			
 			
 			case '/editcustomer':
@@ -349,7 +376,7 @@ class control extends model
 					{
 						echo "<script>
 						alert('update success');
-						window.location='manage_customer';
+						window.location='manage_customer.php';
 						</script>";
 					}
 				}
