@@ -84,6 +84,7 @@ class control extends model
 					$city_name=$_REQUEST['city_name'];
 	             	$arr=array("city_id"=>$city_id,"state_id"=>$state_id,"city_name"=>$city_name);
 					$res=$this->update('city',$arr,$where);
+					{
 						if($res)
 						{
 							echo "<script> 
@@ -96,6 +97,89 @@ class control extends model
 			
 			include_once('editcity.php');
 			break;
+
+			case'/editcityrate':
+				if(isset($_REQUEST['edit_cr_id']))
+				{
+					$cr_id=$_REQUEST['edit_cr_id'];
+					$where=array("cr_id"=>$cr_id);
+					$run=$this->select_where('city_rate',$where);
+					$fetch=$run->fetch_object();
+					
+					if(isset($_REQUEST['submit']))
+					{
+						$cr_id=$_REQUEST['cr_id'];
+						$city_id=$_REQUEST['city_id'];
+						$rate=$_REQUEST['rate'];
+						$arr=array("cr_id"=>$cr_id,"city_id"=>$city_id,"rate"=>$rate);
+						$res=$this->update('city',$arr,$where);
+							if($res)
+							{
+								echo "<script> 
+								alert('Update Success'); 
+								window.location='manage_cityrate';
+								</script>";
+							}
+						}
+					}	
+				
+				include_once('editcityrate.php');
+				break;
+
+				case '/editcategory':
+					if(isset($_REQUEST['edit_cate_id']))
+					{
+						$cate_id=$_REQUEST['edit_cate_id'];
+						$where=array("cate_id"=>$cate_id);
+						$run=$this->select_where('category',$where);
+						$fetch=$run->fetch_object();
+						$old_file=$fetch->cate_img;
+						
+						if(isset($_REQUEST['submit']))
+						{
+							$cat_id=$_REQUEST['cate_id'];
+							$model_name=$_REQUEST['model_name'];
+							$company_name=$_REQUEST['company_name'];
+							$vehicle_number=$_REQUEST['vehicle_number'];
+							$truck_capacity=$_REQUEST['truck_capacity'];
+							$img=$_REQUEST['img'];
+
+							
+							if($_FILES['img']['size']>0)
+							{
+								$cat_img=$_FILES['cat_img']['name'];
+								$path='../admin/images/'.$cat_img;
+								$dup_file=$_FILES['img']['tmp_name'];
+								move_uploaded_file($dup_file,$path);
+								
+								$arr=array("cate_id"=>$cate_id,"model_name"=>$model_name,"company_name"=>$company_name,"vehicle_number"=>$vehicle_number,"truck_capacity"=>$truck_capacity,"img"=>$img);
+								$res=$this->update('category',$arr,$where);
+								if($res)
+								{
+									unlink('../admin/images/'.$old_file);
+									echo "<script>
+									alert('Update success');
+									window.location='manage_cartype';
+									</script>";
+								}
+							}
+							else
+							{
+								$arr=array("cate_id"=>$cate_id,"model_name"=>$model_name,"company_name"=>$company_name,"vehicle_number"=>$vehicle_number,"truck_capacity"=>$truck_capacity,"img"=>$img);
+								$res=$this->update('category',$arr,$where);
+								if($res)
+								{
+									echo "<script>
+									alert('Update success');
+									window.location='manage_category';
+									</script>";
+								}
+							}
+						}
+					}
+					include_once('editcartype.php');
+					break;
+					
 			
 			
 			case '/contact':
