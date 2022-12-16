@@ -374,7 +374,7 @@ class control extends model
 				}
 			}
 			include_once('editcustomer.php');
-			break;*/
+			break;
 			
 			
 			
