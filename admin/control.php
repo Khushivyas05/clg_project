@@ -12,6 +12,7 @@ class control extends model
 		switch($path)
 		{
 			case '/index':
+			if(isset)
 			include_once('index.php');
 			break;
 			
@@ -241,7 +242,7 @@ class control extends model
 			break;
 			
 			
-			/*case '/add_emp':
+			case '/add_emp':
             if(isset($_REQUEST['submit']))
 			{
 				$username=$_REQUEST['username'];
@@ -268,7 +269,7 @@ class control extends model
 			include_once('add_emp.php');
 			break;
 			
-			case '/editemp':
+			/*case '/editemp':
 			if(isset($_REQUEST['edit_emp_id']))
 			{
 				$emp_id=$_REQUEST['edit_emp_id'];
@@ -299,11 +300,11 @@ class control extends model
 				}
 			}
 			include_once('editemp.php');
-			break;
-			
-			case '/dashboard':
-			include_once('dashboard.php');
 			break;*/
+			
+			case '/home':
+			include_once('home.php');
+			break;
 			
 			case '/manage_customer':
 			$manage_customer_arr=$this->selectall('customer_details');
