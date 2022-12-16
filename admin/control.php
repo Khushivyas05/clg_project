@@ -404,7 +404,7 @@ class control extends model
 					{
 					    echo "<script>
 						alert('update success');
-						window.location='manage_feedback';
+						window.location='manage_feedback.php';
 						</script>";
 					}
 				}
@@ -413,20 +413,83 @@ class control extends model
 			break;
 
 			case '/editbranch':
+			if(isset($_REQUEST['edit_branch_id']))
+			{
+				$branch_id=$_REQUEST['edit_branch_id'];
+				$where=array("branch_id=>$branch_id");
+				$run=$this->select_where('branch',$where);
+				$fetch=$run->fetch_object();
+				if(isset($_REQUEST['submit']))
+				{
+					$branch_id=$_REQUEST['branch_id'];
+					$branch_name=$_REQUEST['branch_name'];
+					$contact_no=$_REQUEST['contact_no'];
+					$branch_location=$_REQUEST['branch_location'];
+					$arr=array("branch_id"=>$branch_id,"branch_name"=>$branch_name,"contact_no"=>$contact_no,"branch_location"=>$branch_location);
+					$res=$this->update('branch',$arr,$where);
+					if($res)
+					{
+						echo "<script>
+						alert('update success');
+						window.location='manage_branch.php';
+						</script>";
+					}
+				}
+			}
 			include_once('editbranch.php');
 			break;
 
 			case '/editstate':
+			if(isset($_REQUEST['edit_state_id']))
+			{
+				$state_id=$_REQUEST['edit_state_id'];
+				$where=array("state_id=>$state_id");
+				$run=$this->select_where('state',$where);
+				$fetch=$run->fetch_object();
+				if(isset($_REQUEST['submit']))
+				{
+					$state_id=$_REQUEST['state_id'];
+					$state_name=$_REQUEST['state_name'];
+					$arr=array("state_id"=>$state_id,"state_name"=>$state_name);
+					$res=$this->update('state',$arr,$where);
+					if($res)
+					{
+						echo "<script>
+						alert('update success');
+						window.location='manage_state.php';
+						</script>";
+					}
+				}
+			}
 			include_once('editstate.php');
 			break;
 
 			case '/editwrate':
+			if(isset($_REQUEST['edit_w_id']))
+			{
+				$w_id=$_REQUEST['edit_w_id'];
+				$where=array("w_id=>$w_id");
+				$run=$this->select_where('w_rate',$where);
+				$fetch=$run->fetch_object();
+				if(isset($_REQUEST['submit']))
+				{
+					$w_id=$_REQUEST['w_id'];
+					$kg=$_REQUEST['kg'];
+					$price=$_REQUEST['price'];
+					$arr=array("w_id"=>$w_id,"kg"=>$kg,"price"=>$price);
+					$res=$this->update('w_rate',$arr,$where);
+					if($res)
+					{
+						echo "<script>
+						alert('update success');
+						window.location='manage_wrate.php';
+						</script>";
+					}
+				}
+			}
 			include_once('editwrate.php');
 			break;
 
-			
-			
-			
 			/*case '/delete':
 			if(isset($_REQUEST['del_employee_id']))
 			{
