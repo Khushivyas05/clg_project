@@ -24,8 +24,8 @@ include_once('header.php');
 					<thead>
 					
 					  <tr>
-					     <th>Emp_id</th>
-                         <th>city_id</th>						 
+					    <th>Emp_id</th>
+                        <th>city_id</th>						 
 						<th>Username</th>
 						<th>password</th>
 						<th>Emp_name</th>
