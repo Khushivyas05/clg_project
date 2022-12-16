@@ -294,7 +294,7 @@ class control extends model
 					{
 						echo "<script>
 						alert('update success')
-						window.location='manage_emp';
+						window.location='manage_emp.php';
 						</script>";
 					}
 				}
@@ -333,7 +333,7 @@ class control extends model
 					{
 						echo "<script>
 						alert('update success');
-						window.location='manage_customer';
+						window.location='manage_customer.php';
 						</script>";
 					}
 				}
