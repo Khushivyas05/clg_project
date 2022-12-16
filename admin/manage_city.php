@@ -32,7 +32,7 @@ include_once('header.php');
 					</thead>
 					<tbody>
 					<?php
-					foreach($city_rate_arr as $c)
+					foreach($manage_city_arr as $c)
 					{
 					?>	
 					  <tr>

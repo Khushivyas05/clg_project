@@ -4,7 +4,7 @@ class model
 	public $conn="";
 	function __construct()
 	{
-		$this->conn=new mysqli('localhost','root','','clg project');
+		$this->conn=new mysqli('localhost','root','','clg_project');
 	}
 	function insert($tbl,$arr)
 	{

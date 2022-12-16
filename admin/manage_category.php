@@ -35,7 +35,7 @@ include_once('header.php');
 					</thead>
 					<tbody>
 					<?php
-					foreach($category_arr as $c)
+					foreach($manage_category_arr as $c)
 					{
 					?>	
 					
