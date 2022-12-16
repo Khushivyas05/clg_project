@@ -147,7 +147,7 @@ class control extends model
 							if($_FILES['img']['size']>0)
 							{
 								$cat_img=$_FILES['cat_img']['name'];
-								$path='../admin/images/'.$cat_img;
+								$path='images'.$cat_img;
 								$dup_file=$_FILES['img']['tmp_name'];
 								move_uploaded_file($dup_file,$path);
 								
@@ -155,7 +155,7 @@ class control extends model
 								$res=$this->update('category',$arr,$where);
 								if($res)
 								{
-									unlink('../admin/images/'.$old_file);
+									unlink('images'.$old_file);
 									echo "<script>
 									alert('Update success');
 									window.location='manage_cartype';
@@ -176,7 +176,7 @@ class control extends model
 							}
 						}
 					}
-					include_once('editcartype.php');
+					include_once('editcategory.php');
 					break;
 					
 			
@@ -379,7 +379,7 @@ class control extends model
 			break;
 			
 			
-			/*case '/delete':
+			case '/delete':
 			if(isset($_REQUEST['del_employee_id']))
 			{
 				$e_id=$_REQUEST['del_employee_id'];
@@ -394,19 +394,6 @@ class control extends model
 				}
 			 }
 			 
-			 if(isset($_REQUEST['del_client_id']))
-			 {
-				 $client_id=$_REQUEST['del_client_id'];
-				 $where=array("client_id"=>$client_id);
-				 $res=$this->delete_where('client',$where);
-				 if($res)
-				 {
-					echo "<script>
-					  alert('Delete success')
-					  window.location='manage_client';
-					  </script>";
-				 }
-			 }
 			 if(isset($_REQUEST['del_cust_id']))
 			 {
 				 $cust_id=$_REQUEST['del_cust_id'];
@@ -433,9 +420,9 @@ class control extends model
 					  </script>";
 				 }
 			 }
-			 if(isset($_REQUEST['del_feed_id']))
+			 if(isset($_REQUEST['del_feedback_id']))
 			 {
-				 $feedback_id=$_REQUEST['del_feed_id'];
+				 $feedback_id=$_REQUEST['del_feedback_id'];
 				 $where=array("feedback_id"=>$feedback_id);
 				 $res=$this->delete_where('feedback',$where);
 				 if($res)
@@ -472,48 +459,79 @@ class control extends model
 					  </script>";
 				 }
 			 }
-			 if(isset($_REQUEST['del_car_id']))
-			 {
-				 $car_id=$_REQUEST['del_car_id'];
-				 $where=array("car_id"=>$car_id);
-				 
-				 $run=$this->select_where('car',$where);
-				 $fetch=$run->fetch_object();
-				 $img=$fetch->img;
-				 
-				 $res=$this->delete_where('car',$where);
-				 if($res)
-				 {
-					  unlink('../web/picture/car/'.$img);
-					  echo "<script>
-					  alert('Delete success')
-					  window.location='manage_car';
-					  </script>";
-				 }
-			 }
-			  if(isset($_REQUEST['del_cate_id']))
-			 {
-				 $cate_id=$_REQUEST['del_cate_id'];
-				 $where=array("cate_id"=>$cate_id);
-				 $run=$this->select_where('category',$where);
-				 $fetch=$run->fetch_object();
-				 $cate_img=$fetch->cate_img;
-				 
-				 $res=$this->delete_where('category',$where);
-				 if($res)
-				 {
-					 unlink('../web/picture/cartype/'.$cate_img);
-					  echo "<script>
-					  alert('Delete success')
-					  window.location='manage_cartype';
-					  </script>";
-				 }
-			 }
-			break;*/
+			 
+			  
+				if(isset($_REQUEST['del_feedback_id']))
+				{
+					$feedback_id=$_REQUEST['del_feedback_id'];
+					$where=array("feedback_id"=>$feedback_id);
+					$res=$this->delete_where('feedback',$where);
+					if($res) 
+					{
+						echo "<script> 
+							alert('Delete Success') 
+							window.location='manage_feedback';
+							</script>";
+					}
+				}
+				
+				if(isset($_REQUEST['del_city_id']))
+				{
+					$city_id=$_REQUEST['del_city_id'];
+					$where=array("city_id"=>$city_id);
+					$res=$this->delete_where('city',$where);
+					if($res) 
+					{
+						echo "<script> 
+							alert('Delete Success') 
+							window.location='manage_city';
+							</script>";
+					}
+				}
+				
+				if(isset($_REQUEST['del_cityrate_id']))
+				{
+					$cityrate_id=$_REQUEST['del_cityrate_id'];
+					$where=array("cityrate_id"=>$cityrate_id);
+					$res=$this->delete_where('cityrate',$where);
+					if($res) 
+					{
+						echo "<script> 
+							alert('Delete Success') 
+							window.location='manage_cityrate';
+							</script>";
+					}
+				}
+				
+				if(isset($_REQUEST['del_cate_id']))
+			    {
+				    $cate_id=$_REQUEST['del_cate_id'];
+				    $where=array("cate_id"=>$cate_id);
+				
+				    $run=$this->select_where('category',$where);
+				    $fetch=$run->fetch_object();
+				    $img=$fetch->img;
+				
+				    $res=$this->delete_where('category',$where);
+				    if($res) 
+				    {
+					   unlink('images'.$img);
+					    echo "<script> 
+						alert('Delete Success') 
+						window.location='manage_category';
+						</script>";
+				    }
+			    }
 			
+				
+
+
+		
+			break;
+
+	
 			
-			
-			default :
+     		default :
 			include_once('404.php');
 			break;
 		}	

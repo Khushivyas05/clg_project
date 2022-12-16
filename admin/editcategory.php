@@ -94,6 +94,7 @@ function validate()
 			<div class="col-md-12 form-group1">
               <label class="control-label"> img</label>
               <input type="file" placeholder="img" name="img" value="<?php echo $fetch->img;?>"><br>
+			  <img src="../admin/images/<?php echo $fetch->img;?>" height="80" width="80">
             </div>
              <div class="clearfix"> </div>
    
