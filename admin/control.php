@@ -1,6 +1,6 @@
 <?php
 include_once('model.php');
-
+g
 class control extends model
 {
 	function __construct()
