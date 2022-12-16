@@ -1,6 +1,6 @@
 <?php
 include_once('model.php');
-
+g
 class control extends model
 {
 	function __construct()
@@ -12,9 +12,44 @@ class control extends model
 		switch($path)
 		{
 			case '/index':
-			if(isset)
+			if(isset($_REQUEST['submit']))
+			{
+				
+				$username=$_REQUEST['username'];
+				$password=$_REQUEST['password'];
+				
+				$where=array("username"=>$username,"password"=>$password);
+				$run=$this->select_where('customer_details',$where);
+				
+				$res=$run->num_rows; 
+				if($res==1) 
+				{
+					
+					$_SESSION['admin_details']=$username;
+					
+					echo "<script> 
+						alert('Login Success') 
+						window.location='home.php';
+						</script>";
+					
+				}
+				else
+				{
+					echo "<script> 
+						alert('Login Failed due wrong credebntial') 
+						window.location='index.php';
+						</script>";
+				}
+			}
 			include_once('index.php');
 			break;
+
+			case '/admin_logout':
+			unset($_SESSION['admin']);
+			echo "<script>
+			alert('Logout success')
+			window.location='index.php'
+			</script>";
 			
 			case '/manage_feedback':
 			$manage_feedback_arr=$this->selectall('feedback');
@@ -233,49 +268,6 @@ class control extends model
 			}
 			include_once('editcategory.php');
 			break;
-					
-			
-			
-			case '/login':
-			if(isset($_REQUEST['submit']))
-			{
-				
-				$user_name=$_REQUEST['user_name'];
-				$password=$_REQUEST['pass'];
-				$pass=md5($password);
-				
-				$where=array("user_name"=>$user_name,"pass"=>$pass);
-				$run=$this->select_where('customer',$where);
-				
-				$res=$run->num_rows; 
-				if($res==1) 
-				{
-					
-					$_SESSION['admin_details']=$username;
-					
-					echo "<script> 
-						alert('Login Success') 
-						window.location='dashboard';
-						</script>";
-					
-				}
-				else
-				{
-					echo "<script> 
-						alert('Login Failed due wrong credebntial') 
-						window.location='index';
-						</script>";
-				}
-			}
-			include_once('index.php');
-			break;
-			
-			case '/admin_logout':
-			unset($_SESSION['admin']);
-			echo "<script>
-			alert('Logout success')
-			window.location='index'
-			</script>";
 			
 			case '/profile':
 			$where=array("user_name"=>$_SESSION['admin']);
@@ -491,43 +483,29 @@ class control extends model
 			break;
 
 			/*case '/delete':
-			if(isset($_REQUEST['del_employee_id']))
+			if(isset($_REQUEST['del_emp_id']))
 			{
-				$e_id=$_REQUEST['del_employee_id'];
-				$where=array("e_id"=>$e_id);
-				$res=$this->delete_where('employee',$where);
+				$emp_id=$_REQUEST['del_emp_id'];
+				$where=array("emp_id"=>$emp_id);
+				$res=$this->delete_where('employee_details',$where);
 				if($res)
 				{
 					echo "<script>
 					  alert('Delete success')
-					  window.location='manage_emp';
+					  window.location='manage_emp.php';
 					  </script>";
 				}
-			 }
-			 
-			 if(isset($_REQUEST['del_client_id']))
-			 {
-				 $client_id=$_REQUEST['del_client_id'];
-				 $where=array("client_id"=>$client_id);
-				 $res=$this->delete_where('client',$where);
-				 if($res)
-				 {
-					echo "<script>
-					  alert('Delete success')
-					  window.location='manage_client';
-					  </script>";
-				 }
 			 }
 			 if(isset($_REQUEST['del_cust_id']))
 			 {
 				 $cust_id=$_REQUEST['del_cust_id'];
 				 $where=array("cust_id"=>$cust_id);
-				 $res=$this->delete_where('customer',$where);
+				 $res=$this->delete_where('customer_details',$where);
 				 if($res)
 				 {
 					echo "<script>
 					  alert('Delete success')
-					  window.location='manage_user';
+					  window.location='manage_customer.php';
 					  </script>";
 				 }
 			 }
