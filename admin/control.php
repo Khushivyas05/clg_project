@@ -16,29 +16,29 @@ class control extends model
 			break;
 			
 			case '/manage_feedback':
-			$feedback_arr=$this->selectall('feedback');
+			$manage_feedback_arr=$this->selectall('feedback');
 			include_once('manage_feedback.php');
 			break;
 			
 			
 			case '/manage_city':
-			$city_arr=$this->selectall('city');
+			$manage_city_arr=$this->selectall('city');
 			include_once('manage_city.php');
 			break;
 			
 			
 			case '/manage_cityrate':
-			$city_rate_arr=$this->selectall('city_rate');
+			$manage_cityrate_arr=$this->selectall('city_rate');
 			include_once('manage_cityrate.php');
 			break;
 			
 			
 			case '/manage_category':
-			$cartegory_arr=$this->selectall('category');
+			$manage_category_arr=$this->selectall('category');
 			include_once('manage_category.php');
 			break;
 			
-			case'/editfeedback':
+			/*case'/editfeedback':
 			if(isset($_REQUEST['edit_feedback_id']))
 			{
 				$feedback_id=$_REQUEST['edit_feedback_id'];
@@ -58,7 +58,7 @@ class control extends model
 						{
 							echo "<script> 
 							alert('Update Success'); 
-							window.location='manage_feedback';
+							window.location='manage_feedback.php';
 							</script>";
 						}
 					}
@@ -87,7 +87,7 @@ class control extends model
 						{
 							echo "<script> 
 							alert('Update Success'); 
-							window.location='manage_city';
+							window.location='manage_city.php';
 							</script>";
 						}
 					}
@@ -143,7 +143,7 @@ class control extends model
 			$run=$this->select_where('admin',$where);
 			$fetch=$run->fetch_object();
 			include_once('profile.php');
-			break;
+			break;*/
 			
 			case '/404':
 			include_once('404.php');
@@ -157,7 +157,7 @@ class control extends model
 			break;
 			
 			
-			case '/add_emp':
+			/*case '/add_emp':
             if(isset($_REQUEST['submit']))
 			{
 				$username=$_REQUEST['username'];
@@ -219,14 +219,14 @@ class control extends model
 			
 			case '/dashboard':
 			include_once('dashboard.php');
-			break;
+			break;*/
 			
 			case '/manage_customer':
 			$manage_customer_arr=$this->selectall('customer_details');
 			include_once('manage_customer.php');
 			break;
 			
-			case '/editcustomer':
+			/*case '/editcustomer':
 			if(isset($_REQUEST['edit_cust_id']))
 			{
 				$cust_id=$_REQUEST['edit_cust_id'];
@@ -254,7 +254,7 @@ class control extends model
 				}
 			}
 			include_once('editcustomer.php');
-			break;
+			break;*/
 			
 			
 			
@@ -263,7 +263,7 @@ class control extends model
 			include_once('manage_feedback.php');
 			break;
 			
-			case '/edit_feedback':
+			/*case '/edit_feedback':
 			if(isset($_REQUEST['edit_feedback_id']))
 			{
 				$feedback_id=$_REQUEST['edit_feedback_id'];
@@ -287,7 +287,7 @@ class control extends model
 				}
 			}
 			include_once('edit_feedback.php');
-			break;
+			break;*/
 
 			case '/manage_state':
 			$manage_state_arr=$this->selectall('state');
@@ -295,7 +295,7 @@ class control extends model
 			break;
 			
 			
-			case '/delete':
+			/*case '/delete':
 			if(isset($_REQUEST['del_employee_id']))
 			{
 				$e_id=$_REQUEST['del_employee_id'];
@@ -425,7 +425,7 @@ class control extends model
 					  </script>";
 				 }
 			 }
-			break;
+			break;*/
 			
 			
 			
