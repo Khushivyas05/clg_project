@@ -12,34 +12,33 @@ class control extends model
 		switch($path)
 		{
 			case '/index':
-			$fetcharr=$this->selectall('category');
 			include_once('index.php');
 			break;
 			
 			case '/manage_feedback':
-			$feedback_arr=$this->selectall('feedback');
+			$manage_feedback_arr=$this->selectall('feedback');
 			include_once('manage_feedback.php');
 			break;
 			
 			
 			case '/manage_city':
-			$city_arr=$this->selectall('city');
+			$manage_city_arr=$this->selectall('city');
 			include_once('manage_city.php');
 			break;
 			
 			
 			case '/manage_cityrate':
-			$city_rate_arr=$this->selectall('city_rate');
+			$manage_cityrate_arr=$this->selectall('city_rate');
 			include_once('manage_cityrate.php');
 			break;
 			
 			
 			case '/manage_category':
-			$cartegory_arr=$this->selectall('category');
+			$manage_category_arr=$this->selectall('category');
 			include_once('manage_category.php');
 			break;
 			
-			case'/editfeedback':
+			/*case'/editfeedback':
 			if(isset($_REQUEST['edit_feedback_id']))
 			{
 				$feedback_id=$_REQUEST['edit_feedback_id'];
@@ -59,7 +58,7 @@ class control extends model
 						{
 							echo "<script> 
 							alert('Update Success'); 
-							window.location='manage_feedback';
+							window.location='manage_feedback.php';
 							</script>";
 						}
 					}
@@ -89,7 +88,7 @@ class control extends model
 						{
 							echo "<script> 
 							alert('Update Success'); 
-							window.location='manage_city';
+							window.location='manage_city.php';
 							</script>";
 						}
 					}
@@ -182,55 +181,6 @@ class control extends model
 					
 			
 			
-			case '/contact':
-			if(isset($_REQUEST['submit']))
-			{
-				$name=$_REQUEST['name'];
-				$emailid=$_REQUEST['emailid'];
-				$cont_no=$_REQUEST['cont_no'];
-				$message=$_REQUEST['message'];
-				$arr=array("name"=>$name,"emailid"=>$emailid,"cont_no"=>$cont_no,"message"=>$message);
-				$res=$this->insert('contact',$arr);
-				if($res)
-				{
-					echo "<script> alert('Inquiry Success') </script>";				
-				}
-				else
-				{
-					echo "Not success";
-				}
-			}
-			include_once('contact.php');
-			break;
-			
-			case '/cars':
-			$fetcharr=$this->selectall('car');
-			include_once('cars.php');
-			break;
-			
-			case '/carsform':
-			if(isset($_REQUEST['submit']))
-			{
-				$name=$_REQUEST['name'];
-				$des=$_REQUEST['des'];
-				$capacity=$_REQUEST['capacity'];
-				$mileage=$_REQUEST['mileage'];
-				$price=$_REQUEST['price'];
-				$type=$_REQUEST['type'];
-				$fuel_type=$_REQUEST['fuel_type'];
-				
-			}
-			include_once('carsform.php');
-			break;
-			
-			case '/booking':
-			include_once('booking.php');
-			break;
-			
-			case '/bookingform':
-			include_once('bookingform.php');
-			break;
-			
 			case '/login':
 			if(isset($_REQUEST['submit']))
 			{
@@ -277,75 +227,13 @@ class control extends model
 			$run=$this->select_where('admin',$where);
 			$fetch=$run->fetch_object();
 			include_once('profile.php');
-			break;
+			break;*/
 			
 			case '/404':
 			include_once('404.php');
 			break;
 			
-			case '/add_client':
-			if(isset($_REQUEST['submit']))
-			{
-				$name=$_REQUEST['name'];
-				$user_name=$_REQUEST['user_name'];
-				$emailid=$_REQUEST['emailid'];
-				$password=$_REQUEST['pass'];
-				$pass=md5($password);
-				$address=$_REQUEST['address'];
-				$contact_no=$_REQUEST['contact_no'];
-				$a_no=$_REQUEST['a_no'];
-				$dl_no=$_REQUEST['dl_no'];
-				$puc=$_REQUEST['puc'];
-				$insurance=$_REQUEST['insurance'];
-				
-				$arr=array("name"=>$name,"user_name"=>$user_name,"emailid"=>$emailid,"pass"=>$pass,"address"=>$address,"contact_no"=>$contact_no,"a_no"=>$a_no,"dl_no"=>$dl_no,"puc"=>$puc,"insurance"=>$insurance);
-				
-				$res=$this->insert('client',$arr);
-				if($res)
-				{
-					echo  "<script>alert('Register success')</script>";
-				}
-				else
-				{
-					echo "not success";
-				}
-			}
-			include_once('add_client.php');
-			break;
 			
-			case '/edit_client':
-			if(isset($_REQUEST['edit_client_id']))
-			{
-				$client_id=$_REQUEST['edit_client_id'];
-				$where=array("client_id"=>$client_id);
-				$run=$this->select_where('client',$where);
-				$fetch=$run->fetch_object();
-				if(isset($_REQUEST['submit']))
-				{
-					$client_id=$_REQUEST['client_id'];
-					$name=$_REQUEST['name'];
-					$user_name=$_REQUEST['user_name'];
-					$emailid=$_REQUEST['emailid'];
-					$address=$_REQUEST['address'];
-					$contact_no=$_REQUEST['contact_no'];
-					$a_no=$_REQUEST['a_no'];
-					$dl_no=$_REQUEST['dl_no'];
-					$puc=$_REQUEST['puc'];
-					$insurance=$_REQUEST['insurance'];
-					
-					$arr=array("client_id"=>$client_id,"name"=>$name,"user_name"=>$user_name,"emailid"=>$emailid,"address"=>$address,"contact_no"=>$contact_no,"a_no"=>$a_no,"dl_no"=>$dl_no,"puc"=>$puc,"insurance"=>$insurance);
-					$res=$this->update('client',$arr,$where);
-					if($res)
-					{
-						echo "<script>
-						alert('update success')
-						window.location='manage_client';
-						</script>";
-					}
-				}
-			}
-			include_once('edit_client.php');
-			break;
 			
 			case '/manage_emp':
 			$manage_emp_arr=$this->selectall('employee_details');
@@ -353,7 +241,7 @@ class control extends model
 			break;
 			
 			
-			case '/add_emp':
+			/*case '/add_emp':
             if(isset($_REQUEST['submit']))
 			{
 				$username=$_REQUEST['username'];
@@ -389,14 +277,17 @@ class control extends model
 				$fetch=$run->fetch_object();
 				if(isset($_REQUEST['submit']))
 				{
-					$e_id=$_REQUEST['e_id'];
-					$e_name=$_REQUEST['e_name'];
-					$user_name=$_REQUEST['user_name'];
-					$emailid=$_REQUEST['emailid'];
-					$address=$_REQUEST['address'];
-					$contact_no=$_REQUEST['contact_no'];
+					$emp_id=$_REQUEST['emp_id'];
+					$emp_name=$_REQUEST['emp_name'];
+					$emp_add=$_REQUEST['emp_add'];
+					$username=$_REQUEST['username'];
+					$password=$_REQUEST['password'];
+					$designation=$_REQUEST['designation'];
+				    $email=$_REQUEST['email'];
+				    $contact=$_REQUEST['contact'];
+				    $driving_licence=$_REQUEST['driving_licence'];
 					
-					$arr=array("e_id"=>$e_id,"e_name"=>$e_name,"user_name"=>$user_name,"emailid"=>$emailid,"address"=>$address,"contact_no"=>$contact_no);
+					$arr=array("emp_id"=>$emp_id,"emp_name"=>$emp_name,"emp_add"=>$emp_add,"username"=>$username,"password"=>$password,"designation"=>$designation,"email"=>$email,"contact"=>$contact,"driving_licence"=>$driving_licence);
 					$res=$this->update('employee_details',$arr,$where);
 					if($res)
 					{
@@ -412,14 +303,14 @@ class control extends model
 			
 			case '/dashboard':
 			include_once('dashboard.php');
-			break;
+			break;*/
 			
 			case '/manage_customer':
-			$manage_user_arr=$this->selectall('customer_details');
+			$manage_customer_arr=$this->selectall('customer_details');
 			include_once('manage_customer.php');
 			break;
 			
-			case '/editcustomer':
+			/*case '/editcustomer':
 			if(isset($_REQUEST['edit_cust_id']))
 			{
 				$cust_id=$_REQUEST['edit_cust_id'];
@@ -447,47 +338,16 @@ class control extends model
 				}
 			}
 			include_once('editcustomer.php');
-			break;
+			break;*/
 			
-			case '/manage_payment':
-			$manage_payment_arr=$this->selectall('payment');
-			include_once('manage_payment.php');
-			break;
 			
-			case '/edit_payment':
-			if(isset($_REQUEST['edit_p_id']))
-			{
-				
-					$booking_id=$_REQUEST['edit_p_id'];
-					$where=array("booking_id"=>$booking_id);
-					$run=$this->select_where('payment',$where);
-					$fetch=$run->fetch_object();
-					if(isset($_REQUEST['submit']))
-					{
-						$p_id=$_REQUEST['p_id'];
-						$cust_id=$_REQUEST['cust_id'];
-						$booking_id=$_REQUEST['booking_id'];
-						$payment_type=$_REQUEST['payment_type'];
-                        $arr=array("p_id"=>$p_id,"cust_id"=>$cust_id,"booking_id"=>$booking_id,"payment_type"=>$payment_type);
-						$res=$this->update('payment',$arr,$where);
-						if($res)
-						{
-							echo "<script>
-							alert('update success');
-							window.location='manage_payment';
-							</script>";
-						}
-					}
-			}
-			include_once('edit_payment.php');
-			break;
 			
 			case '/manage_feedback':
 			$manage_feedback_arr=$this->selectall('feedback');
 			include_once('manage_feedback.php');
 			break;
 			
-			case '/edit_feedback':
+			/*case '/edit_feedback':
 			if(isset($_REQUEST['edit_feedback_id']))
 			{
 				$feedback_id=$_REQUEST['edit_feedback_id'];
@@ -511,198 +371,15 @@ class control extends model
 				}
 			}
 			include_once('edit_feedback.php');
-			break;
-			
-			
-			case '/manage_contact':
-			$manage_contact_arr=$this->selectall('contact');
-			include_once('manage_contact.php');
-			break;
-			
-			case '/edit_contact':
-			if(isset($_REQUEST['edit_cont_id']))
-			{
-				
-					$cont_id=$_REQUEST['edit_cont_id'];
-					$where=array("cont_id"=>$cont_id);
-					$run=$this->select_where('contact',$where);
-					$fetch=$run->fetch_object();
-					if(isset($_REQUEST['submit']))
-					{
-						$cont_id=$_REQUEST['cont_id'];
-						$name=$_REQUEST['name'];
-						$emailid=$_REQUEST['emailid'];
-						$cont_no=$_REQUEST['cont_no'];
-						$message=$_REQUEST['message'];
-                        $arr=array("cont_id"=>$cont_id,"name"=>$name,"emailid"=>$emailid,"cont_no"=>$cont_no,"message"=>$message);
-						$res=$this->update('contact',$arr,$where);
-						if($res)
-						{
-							echo "<script>
-							alert('update success');
-							window.location='manage_contact';
-							</script>";
-						}
-					}
-			}
-			include_once('edit_contact.php');
-			break;
-			
-			case '/manage_client':
-			$manage_client_arr=$this->selectall('client');
-			include_once('manage_client.php');
-			break;
-			
-			case '/manage_booking':
-			$manage_booking_arr=$this->selectall('booking');
-			include_once('manage_booking.php');
-			break;
-			
-			case '/edit_booking':
-			if(isset($_REQUEST['edit_booking_id']))
-			{
-				
-					$booking_id=$_REQUEST['edit_booking_id'];
-					$where=array("booking_id"=>$booking_id);
-					$run=$this->select_where('booking',$where);
-					$fetch=$run->fetch_object();
-					if(isset($_REQUEST['submit']))
-					{
-						$booking_id=$_REQUEST['booking_id'];
-						$cust_id=$_REQUEST['cust_id'];
-						$car_id=$_REQUEST['car_id'];
-						$b_date=$_REQUEST['b_date'];
-						$b_time=$_REQUEST['b_time'];
-                        $arr=array("booking_id"=>$booking_id,"cust_id"=>$cust_id,"car_id"=>$car_id,"b_date"=>$b_date,"b_time"=>$b_time);
-						$res=$this->update('booking',$arr,$where);
-						if($res)
-						{
-							echo "<script>
-							alert('update success');
-							window.location='manage_booking';
-							</script>";
-						}
-					}
-			}
-			include_once('edit_booking.php');
-			break;
-			
-			case '/manage_car':
-			$manage_car_arr=$this->selectall('car');
-			include_once('manage_car.php');
-			break;
-			
-			case '/edit_car':
-			if(isset($_REQUEST['edit_car_id']))
-			{
-				
-					$car_id=$_REQUEST['edit_car_id'];
-					$where=array("car_id"=>$car_id);
-					$run=$this->select_where('car',$where);
-					$fetch=$run->fetch_object();
-					$old_file=$fetch->img;
-					if(isset($_REQUEST['submit']))
-					{
-						$car_id=$_REQUEST['car_id'];
-						$client_id=$_REQUEST['client_id'];
-						$name=$_REQUEST['name'];
-						$des=$_REQUEST['des'];
-						$capacity=$_REQUEST['capacity'];
-						$mileage=$_REQUEST['mileage'];
-						$price=$_REQUEST['price'];
-						$type=$_REQUEST['type'];
-						$fuel_type=$_REQUEST['fuel_type'];
-						if($_FILES['img']['size']>0)
-						{
-							$img=$_FILES['img']['name'];
-							$path='../web/picture/car/'.$img;
-							$dup_file=$_FILES['img']['tmp_name'];
-							move_uploaded_file($dup_file,$path);
-							
-							$arr=array("car_id"=>$car_id,"client_id"=>$client_id,"name"=>$name,"des"=>$des,"capacity"=>$capacity,"mileage"=>$mileage,"price"=>$price,"type"=>$type,"fuel_type"=>$fuel_type,"img"=>$img);
-							$res=$this->update('car',$arr,$where);
-							if($res)
-							{
-								unlink('../web/picture/car/'.$old_file);
-								echo "<script>
-								alert('update success');
-								window.location='manage_car';
-								</script>";
-							}
-						}
-						else
-						{
-							$arr=array("car_id"=>$car_id,"client_id"=>$client_id,"name"=>$name,"des"=>$des,"capacity"=>$capacity,"mileage"=>$mileage,"price"=>$price,"img"=>$img,"type"=>$type,"fuel_type"=>$fuel_type);
-							$res=$this->update('car',$arr,$where);
-							if($res)
-							{
-								echo "<script>
-								alert('update success');
-								window.location='manage_car';
-								</script>";
-							}
-						}
-					}
-			}
-			include_once('edit_car.php');
-			break;
-			
-			case '/manage_cartype':
-			$manage_cartype_arr=$this->selectall('category');
-			include_once('manage_cartype.php');
-			break;
-			
-			case '/edit_cartype':
-			if(isset($_REQUEST['edit_cate_id']))
-			{
-				
-					$cate_id=$_REQUEST['edit_cate_id'];
-					$where=array("cate_id"=>$cate_id);
-					$run=$this->select_where('category',$where);
-					$fetch=$run->fetch_object();
-					$old_file=$fetch->cate_img;
-					if(isset($_REQUEST['submit']))
-					{
-						$cate_id=$_REQUEST['cate_id'];
-						$cate_name=$_REQUEST['cate_name'];
-						$cate_des=$_REQUEST['cate_des'];
-						if($_FILES['cate_img']['size']>0)
-						{
-							$cate_img=$_FILES['cate_img']['name'];
-							$path='../web/picture/cartype/'.$cate_img;
-							$dup_file=$_FILES['cate_img']['tmp_name'];
-							move_uploaded_file($dup_file,$path);
-							
-							$arr=array("cate_id"=>$cate_id,"cate_name"=>$cate_name,"cate_des"=>$cate_des,"cate_img"=>$cate_img);
-							$res=$this->update('category',$arr,$where);
-							if($res)
-							{
-								unlink('../web/picture/cartype/'.$old_file);
-								echo "<script>
-								alert('update success');
-								window.location='manage_cartype';
-								</script>";
-							}
-						}
-						else
-						{
-							$arr=array("cate_id"=>$cate_id,"cate_name"=>$cate_name,"cate_des"=>$cate_des,"cate_img"=>$cate_img);
-							$res=$this->update('category',$arr,$where);
-							if($res)
-							{
-								echo "<script>
-								alert('update success');
-								window.location='manage_cartype';
-								</script>";
-							}
-						}
-					}
-			}
-			include_once('edit_cartype.php');
-			break;
+			break;*/
 
+			case '/manage_state':
+			$manage_state_arr=$this->selectall('state');
+			include_once('manage_state.php');
+			break;
 			
-			case '/delete':
+			
+			/*case '/delete':
 			if(isset($_REQUEST['del_employee_id']))
 			{
 				$e_id=$_REQUEST['del_employee_id'];
@@ -832,80 +509,9 @@ class control extends model
 					  </script>";
 				 }
 			 }
-			break;
+			break;*/
 			
-			case '/status':
 			
-			if(isset($_REQUEST['status_cust_id']))
-			{
-				$cust_id=$_REQUEST['status_cust_id'];
-				$where=array("cust_id"=>$cust_id);
-				$run=$this->select_where('customer',$where);
-				$fetch=$run->fetch_object();
-				$status=$fetch->status;
-				
-				if($status=="Block")
-				{
-					$arr=array("status"=>"Unblock");
-					$res=$this->update('customer',$arr,$where);
-					if($res)
-					{
-						echo "<script> 
-							alert('Unblock Success') 
-							window.location='manage_user';
-							</script>";
-					}
-				}
-				else
-				{
-					$arr=array("status"=>"Block");
-					$res=$this->update('customer',$arr,$where);
-					if($res)
-					{
-						unset($_SESSION['email']);
-						echo "<script> 
-							alert('Block Success') 
-							window.location='manage_user';
-							</script>";
-					}
-				}
-			}
-			
-			if(isset($_REQUEST['status_e_id']))
-			{
-				$e_id=$_REQUEST['status_e_id'];
-				$where=array("e_id"=>$e_id);
-				$run=$this->select_where('employee',$where);
-				$fetch=$run->fetch_object();
-				$status=$fetch->status;
-				
-				if($status=="Block")
-				{
-					$arr=array("status"=>"Unblock");
-					$res=$this->update('employee',$arr,$where);
-					if($res)
-					{
-						echo "<script> 
-							alert('Unblock Success') 
-							window.location='manage_emp';
-							</script>";
-					}
-				}
-				else
-				{
-					$arr=array("status"=>"Block");
-					$res=$this->update('employee',$arr,$where);
-					if($res)
-					{
-						unset($_SESSION['email']);
-						echo "<script> 
-							alert('Block Success') 
-							window.location='manage_emp';
-							</script>";
-					}
-				}
-			}
-			break;
 			
 			default :
 			include_once('404.php');

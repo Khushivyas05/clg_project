@@ -5,7 +5,7 @@ include_once('header.php');
  	<!--banner-->	
 		     <div class="banner">
 		    	<h2>
-				<a href="dashboard">Home</a>
+				<a href="index.php">Home</a>
 				<i class="fa fa-angle-right"></i>
 				<span>Manage State</span>
 				</h2>
@@ -31,7 +31,7 @@ include_once('header.php');
 					</thead>
 					<tbody>
 					<?php
-					foreach($manage_contact_arr as $m)
+					foreach($manage_state_arr as $m)
 					{
 					?>
 					  <tr>

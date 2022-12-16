@@ -33,7 +33,7 @@ include_once('header.php');
 					</thead>
 					<tbody>
 					<?php
-					foreach($feedback_arr as $c)
+					foreach($manage_feedback_arr as $c)
 					{
 					?>	
 					  <tr>
