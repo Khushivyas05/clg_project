@@ -35,7 +35,6 @@ include_once('header.php');
 						<th>Contact_no</th>
 						<th>Driving Licence</th>
 						<th>Edit</th>
-						<th>Status</th>
 						<th>Delete</th>
 					  </tr>
 					</thead>
@@ -56,7 +55,6 @@ include_once('header.php');
 						<td><?php echo $m->contact;?></td>
 						<td><?php echo $m->driving_licence;?></td>
 						<td><a href="edit_emp?edit_emp_id=<?php echo $m->emp_id;?>" class="btn btn-primary">Edit</a></td>
-                        <td><a href="status?status_emp_id=<?php echo $m->emp_id;?>" class="btn btn-danger"><?php echo $m->status;?></a></td>
 						<td><a href="delete?del_emp_id=<?php echo $m->emp_id;?>"class="btn btn-primary">Delete</a></td>
 					  </tr>
 					  <?php
