@@ -288,6 +288,11 @@ class control extends model
 			}
 			include_once('edit_feedback.php');
 			break;
+
+			case '/manage_state':
+			$manage_state_arr=$this->selectall('state');
+			include_once('manage_state.php');
+			break;
 			
 			
 			case '/delete':
