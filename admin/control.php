@@ -48,7 +48,7 @@ class control extends model
 			unset($_SESSION['admin']);
 			echo "<script>
 			alert('Logout success')
-			window.location='index'
+			window.location='index.php'
 			</script>";
 			
 			case '/manage_feedback':
@@ -420,43 +420,29 @@ class control extends model
 			
 			
 			/*case '/delete':
-			if(isset($_REQUEST['del_employee_id']))
+			if(isset($_REQUEST['del_emp_id']))
 			{
-				$e_id=$_REQUEST['del_employee_id'];
-				$where=array("e_id"=>$e_id);
-				$res=$this->delete_where('employee',$where);
+				$emp_id=$_REQUEST['del_emp_id'];
+				$where=array("emp_id"=>$emp_id);
+				$res=$this->delete_where('employee_details',$where);
 				if($res)
 				{
 					echo "<script>
 					  alert('Delete success')
-					  window.location='manage_emp';
+					  window.location='manage_emp.php';
 					  </script>";
 				}
-			 }
-			 
-			 if(isset($_REQUEST['del_client_id']))
-			 {
-				 $client_id=$_REQUEST['del_client_id'];
-				 $where=array("client_id"=>$client_id);
-				 $res=$this->delete_where('client',$where);
-				 if($res)
-				 {
-					echo "<script>
-					  alert('Delete success')
-					  window.location='manage_client';
-					  </script>";
-				 }
 			 }
 			 if(isset($_REQUEST['del_cust_id']))
 			 {
 				 $cust_id=$_REQUEST['del_cust_id'];
 				 $where=array("cust_id"=>$cust_id);
-				 $res=$this->delete_where('customer',$where);
+				 $res=$this->delete_where('customer_details',$where);
 				 if($res)
 				 {
 					echo "<script>
 					  alert('Delete success')
-					  window.location='manage_user';
+					  window.location='manage_customer.php';
 					  </script>";
 				 }
 			 }
