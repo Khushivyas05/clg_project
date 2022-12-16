@@ -20,25 +20,79 @@ class control extends model
 			include_once('manage_feedback.php');
 			break;
 			
-			
 			case '/manage_city':
 			$manage_city_arr=$this->selectall('city');
 			include_once('manage_city.php');
 			break;
-			
 			
 			case '/manage_cityrate':
 			$manage_cityrate_arr=$this->selectall('city_rate');
 			include_once('manage_cityrate.php');
 			break;
 			
-			
 			case '/manage_category':
 			$manage_category_arr=$this->selectall('category');
 			include_once('manage_category.php');
 			break;
+
+			case '/manage_emp':
+			$manage_emp_arr=$this->selectall('employee_details');
+			include_once('manage_emp.php');
+			break;
+
+			case '/manage_state':
+			$manage_state_arr=$this->selectall('state');
+			include_once('manage_state.php');
+			break;
+	
+			case '/manage_branch':
+			$manage_state_arr=$this->selectall('branch');
+			include_once('manage_branch.php');
+			break;
+	
+			case '/manage_wrate':
+			$manage_state_arr=$this->selectall('w_rate');
+			include_once('manage_wrate.php');
+			break;
+
+			case '/manage_customer':
+			$manage_customer_arr=$this->selectall('customer_details');
+			include_once('manage_customer.php');
+			break;
+
+			case '/manage_feedback':
+			$manage_feedback_arr=$this->selectall('feedback');
+			include_once('manage_feedback.php');
+			break;
+
+			case '/add_emp':
+				if(isset($_REQUEST['submit']))
+				{
+					$username=$_REQUEST['username'];
+					$password=$_REQUEST['password'];
+					$emp_name=$_REQUEST['emp_name'];
+					$emp_add=$_REQUEST['emp_add'];
+					$designation=$_REQUEST['designation'];
+					$email=$_REQUEST['email'];
+					$contact=$_REQUEST['contact'];
+					$driving_licence=$_REQUEST['driving_licence'];
+					
+					$arr=array("username"=>$username,"password"=>$password,"emp_name"=>$emp_name,"emp_add"=>$emp_add,"designation"=>$designation,"email"=>$email,"contact"=>$contact,"driving_licence"=>$driving_licence);
+					
+					$res=$this->insert('employee_details',$arr);
+					if($res)
+					{
+						echo  "<script>alert('Register success')</script>";
+					}
+					else
+					{
+						echo "not success";
+					}
+				}
+				include_once('add_emp.php');
+				break;
 			
-			/*case'/editfeedback':
+			case'/editfeedback':
 			if(isset($_REQUEST['edit_feedback_id']))
 			{
 				$feedback_id=$_REQUEST['edit_feedback_id'];
@@ -98,86 +152,86 @@ class control extends model
 			break;
 
 			case'/editcityrate':
-				if(isset($_REQUEST['edit_cr_id']))
-				{
-					$cr_id=$_REQUEST['edit_cr_id'];
-					$where=array("cr_id"=>$cr_id);
-					$run=$this->select_where('city_rate',$where);
-					$fetch=$run->fetch_object();
+			if(isset($_REQUEST['edit_cr_id']))
+			{
+				$cr_id=$_REQUEST['edit_cr_id'];
+				$where=array("cr_id"=>$cr_id);
+				$run=$this->select_where('city_rate',$where);
+				$fetch=$run->fetch_object();
 					
-					if(isset($_REQUEST['submit']))
+				if(isset($_REQUEST['submit']))
+				{
+					$cr_id=$_REQUEST['cr_id'];
+					$city_id=$_REQUEST['city_id'];
+					$rate=$_REQUEST['rate'];
+					$arr=array("cr_id"=>$cr_id,"city_id"=>$city_id,"rate"=>$rate);
+					$res=$this->update('city',$arr,$where);
+					if($res)
 					{
-						$cr_id=$_REQUEST['cr_id'];
-						$city_id=$_REQUEST['city_id'];
-						$rate=$_REQUEST['rate'];
-						$arr=array("cr_id"=>$cr_id,"city_id"=>$city_id,"rate"=>$rate);
-						$res=$this->update('city',$arr,$where);
-							if($res)
-							{
-								echo "<script> 
-								alert('Update Success'); 
-								window.location='manage_cityrate';
-								</script>";
-							}
-						}
-					}	
+						echo "<script> 
+						alert('Update Success'); 
+						window.location='manage_cityrate';
+						</script>";
+					}
+				}
+			}	
 				
-				include_once('editcityrate.php');
-				break;
+			include_once('editcityrate.php');
+			break;
 
-				case '/editcategory':
-					if(isset($_REQUEST['edit_cate_id']))
-					{
-						$cate_id=$_REQUEST['edit_cate_id'];
-						$where=array("cate_id"=>$cate_id);
-						$run=$this->select_where('category',$where);
-						$fetch=$run->fetch_object();
-						$old_file=$fetch->cate_img;
+			case '/editcategory':
+			if(isset($_REQUEST['edit_cate_id']))
+			{
+				$cate_id=$_REQUEST['edit_cate_id'];
+				$where=array("cate_id"=>$cate_id);
+				$run=$this->select_where('category',$where);
+				$fetch=$run->fetch_object();
+				$old_file=$fetch->cate_img;
 						
-						if(isset($_REQUEST['submit']))
-						{
-							$cat_id=$_REQUEST['cate_id'];
-							$model_name=$_REQUEST['model_name'];
-							$company_name=$_REQUEST['company_name'];
-							$vehicle_number=$_REQUEST['vehicle_number'];
-							$truck_capacity=$_REQUEST['truck_capacity'];
-							$img=$_REQUEST['img'];
+				if(isset($_REQUEST['submit']))
+				{
+					$cat_id=$_REQUEST['cate_id'];
+					$model_name=$_REQUEST['model_name'];
+					$company_name=$_REQUEST['company_name'];
+					$vehicle_number=$_REQUEST['vehicle_number'];
+					$truck_capacity=$_REQUEST['truck_capacity'];
+					$img=$_REQUEST['img'];
 
 							
-							if($_FILES['img']['size']>0)
-							{
-								$cat_img=$_FILES['cat_img']['name'];
-								$path='../admin/images/'.$cat_img;
-								$dup_file=$_FILES['img']['tmp_name'];
-								move_uploaded_file($dup_file,$path);
+					if($_FILES['img']['size']>0)
+					{
+						$cat_img=$_FILES['cat_img']['name'];
+						$path='../admin/images/'.$cat_img;
+						$dup_file=$_FILES['img']['tmp_name'];
+						move_uploaded_file($dup_file,$path);
 								
-								$arr=array("cate_id"=>$cate_id,"model_name"=>$model_name,"company_name"=>$company_name,"vehicle_number"=>$vehicle_number,"truck_capacity"=>$truck_capacity,"img"=>$img);
-								$res=$this->update('category',$arr,$where);
-								if($res)
-								{
-									unlink('../admin/images/'.$old_file);
-									echo "<script>
-									alert('Update success');
-									window.location='manage_cartype';
-									</script>";
-								}
-							}
-							else
-							{
-								$arr=array("cate_id"=>$cate_id,"model_name"=>$model_name,"company_name"=>$company_name,"vehicle_number"=>$vehicle_number,"truck_capacity"=>$truck_capacity,"img"=>$img);
-								$res=$this->update('category',$arr,$where);
-								if($res)
-								{
-									echo "<script>
-									alert('Update success');
-									window.location='manage_category';
-									</script>";
-								}
-							}
+						$arr=array("cate_id"=>$cate_id,"model_name"=>$model_name,"company_name"=>$company_name,"vehicle_number"=>$vehicle_number,"truck_capacity"=>$truck_capacity,"img"=>$img);
+						$res=$this->update('category',$arr,$where);
+						if($res)
+						{
+							unlink('../admin/images/'.$old_file);
+							echo "<script>
+							alert('Update success');
+							window.location='manage_category.php';
+							</script>";
 						}
 					}
-					include_once('editcartype.php');
-					break;
+					else
+					{
+						$arr=array("cate_id"=>$cate_id,"model_name"=>$model_name,"company_name"=>$company_name,"vehicle_number"=>$vehicle_number,"truck_capacity"=>$truck_capacity,"img"=>$img);
+						$res=$this->update('category',$arr,$where);
+						if($res)
+						{
+							echo "<script>
+							alert('Update success');
+							window.location='manage_category.php';
+							</script>";
+						}
+					}
+				}
+			}
+			include_once('editcategory.php');
+			break;
 					
 			
 			
@@ -229,44 +283,12 @@ class control extends model
 			include_once('profile.php');
 			break;*/
 			
-			case '/404':
-			include_once('404.php');
-			break;
 			
 			
 			
-			case '/manage_emp':
-			$manage_emp_arr=$this->selectall('employee_details');
-			include_once('manage_emp.php');
-			break;
 			
 			
-			/*case '/add_emp':
-            if(isset($_REQUEST['submit']))
-			{
-				$username=$_REQUEST['username'];
-				$password=$_REQUEST['password'];
-                $emp_name=$_REQUEST['emp_name'];
-				$emp_add=$_REQUEST['emp_add'];
-				$designation=$_REQUEST['designation'];
-				$email=$_REQUEST['email'];
-				$contact=$_REQUEST['contact'];
-				$driving_licence=$_REQUEST['driving_licence'];
-				
-				$arr=array("username"=>$username,"password"=>$password,"emp_name"=>$emp_name,"emp_add"=>$emp_add,"designation"=>$designation,"email"=>$email,"contact"=>$contact,"driving_licence"=>$driving_licence);
-				
-				$res=$this->insert('employee_details',$arr);
-				if($res)
-				{
-					echo  "<script>alert('Register success')</script>";
-				}
-				else
-				{
-					echo "not success";
-				}
-			}
-			include_once('add_emp.php');
-			break;
+			
 			
 			case '/editemp':
 			if(isset($_REQUEST['edit_emp_id']))
@@ -301,16 +323,11 @@ class control extends model
 			include_once('editemp.php');
 			break;
 			
-			case '/dashboard':
-			include_once('dashboard.php');
-			break;*/
 			
-			case '/manage_customer':
-			$manage_customer_arr=$this->selectall('customer_details');
-			include_once('manage_customer.php');
-			break;
 			
-			/*case '/editcustomer':
+			
+			
+			case '/editcustomer':
 			if(isset($_REQUEST['edit_cust_id']))
 			{
 				$cust_id=$_REQUEST['edit_cust_id'];
@@ -342,12 +359,7 @@ class control extends model
 			
 			
 			
-			case '/manage_feedback':
-			$manage_feedback_arr=$this->selectall('feedback');
-			include_once('manage_feedback.php');
-			break;
-			
-			/*case '/edit_feedback':
+			case '/edit_feedback':
 			if(isset($_REQUEST['edit_feedback_id']))
 			{
 				$feedback_id=$_REQUEST['edit_feedback_id'];
@@ -370,13 +382,22 @@ class control extends model
 					}
 				}
 			}
-			include_once('edit_feedback.php');
-			break;*/
-
-			case '/manage_state':
-			$manage_state_arr=$this->selectall('state');
-			include_once('manage_state.php');
+			include_once('editfeedback.php');
 			break;
+
+			case '/editbranch':
+			include_once('editbranch.php');
+			break;
+
+			case '/editstate':
+			include_once('editstate.php');
+			break;
+
+			case '/editwrate':
+			include_once('editwrate.php');
+			break;
+
+			
 			
 			
 			/*case '/delete':
@@ -511,7 +532,9 @@ class control extends model
 			 }
 			break;*/
 			
-			
+			case '/404':
+			include_once('404.php');
+			break;
 			
 			default :
 			include_once('404.php');
