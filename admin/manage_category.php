@@ -45,7 +45,7 @@ include_once('header.php');
 						<td><?php echo $c->company_name;?></td>
 						<td><?php echo $c->vehicle_number;?></td>
 						<td><?php echo $c->truck_capacity;?></td>
-						<td><img src="images<?php echo $c->img;?>" width="50px" height="40px"> </td>
+						<td><img src="images/<?php echo $c->img;?>" width="50px" height="40px"> </td>
 						<td><a href="editcategory?edit_cate_id=<?php echo $c->cate_id?>" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_cate_id=<?php echo $c->cate_id ?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
