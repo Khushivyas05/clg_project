@@ -78,7 +78,7 @@ include_once('header.php');
             </div>
             <div class="col-md-12 form-group1">
               <label class="control-label">Name</label>
-              <input type="text" name="name"  value="<?php echo $fetch->name;?>" placeholder="Name" ><br>
+              <input type="text" name="cust_name"  value="<?php echo $fetch->cust_name;?>" placeholder="Name" ><br>
             </div>
 			<div class="clearfix"> </div>
 			</div>

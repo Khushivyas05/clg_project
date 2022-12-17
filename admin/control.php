@@ -148,7 +148,7 @@ class control extends model
 					{
 						echo "<script> 
 						alert('Update Success'); 
-						window.location='manage_feedback.php';
+						window.location='manage_feedback';
 						</script>";
 					}
 				}
@@ -178,7 +178,7 @@ class control extends model
 						{
 							echo "<script> 
 							alert('Update Success'); 
-							window.location='manage_city.php';
+							window.location='manage_city';
 							</script>";
 						}
 					}
@@ -249,7 +249,7 @@ class control extends model
 							unlink('../admin/images/'.$old_file);
 							echo "<script>
 							alert('Update success');
-							window.location='manage_category.php';
+							window.location='manage_category';
 							</script>";
 						}
 					}
@@ -261,7 +261,7 @@ class control extends model
 						{
 							echo "<script>
 							alert('Update success');
-							window.location='manage_category.php';
+							window.location='manage_category';
 							</script>";
 						}
 					}
@@ -334,7 +334,7 @@ class control extends model
 					{
 						echo "<script>
 						alert('update success')
-						window.location='manage_emp.php';
+						window.location='manage_emp';
 						</script>";
 					}
 				}
@@ -369,7 +369,7 @@ class control extends model
 					{
 						echo "<script>
 						alert('update success');
-						window.location='manage_customer.php';
+						window.location='manage_customer';
 						</script>";
 					}
 				}
@@ -397,7 +397,7 @@ class control extends model
 					{
 					    echo "<script>
 						alert('update success');
-						window.location='manage_feedback.php';
+						window.location='manage_feedback';
 						</script>";
 					}
 				}
@@ -409,7 +409,7 @@ class control extends model
 			if(isset($_REQUEST['edit_branch_id']))
 			{
 				$branch_id=$_REQUEST['edit_branch_id'];
-				$where=array("branch_id=>$branch_id");
+				$where=array("branch_id"=>$branch_id);
 				$run=$this->select_where('branch',$where);
 				$fetch=$run->fetch_object();
 				if(isset($_REQUEST['submit']))
@@ -424,7 +424,7 @@ class control extends model
 					{
 						echo "<script>
 						alert('update success');
-						window.location='manage_branch.php';
+						window.location='manage_branch';
 						</script>";
 					}
 				}
@@ -436,7 +436,7 @@ class control extends model
 			if(isset($_REQUEST['edit_state_id']))
 			{
 				$state_id=$_REQUEST['edit_state_id'];
-				$where=array("state_id=>$state_id");
+				$where=array("state_id"=>$state_id);
 				$run=$this->select_where('state',$where);
 				$fetch=$run->fetch_object();
 				if(isset($_REQUEST['submit']))
@@ -449,7 +449,7 @@ class control extends model
 					{
 						echo "<script>
 						alert('update success');
-						window.location='manage_state.php';
+						window.location='manage_state';
 						</script>";
 					}
 				}
@@ -461,7 +461,7 @@ class control extends model
 			if(isset($_REQUEST['edit_w_id']))
 			{
 				$w_id=$_REQUEST['edit_w_id'];
-				$where=array("w_id=>$w_id");
+				$where=array("w_id"=>$w_id);
 				$run=$this->select_where('w_rate',$where);
 				$fetch=$run->fetch_object();
 				if(isset($_REQUEST['submit']))
@@ -475,7 +475,7 @@ class control extends model
 					{
 						echo "<script>
 						alert('update success');
-						window.location='manage_wrate.php';
+						window.location='manage_wrate';
 						</script>";
 					}
 				}
@@ -493,7 +493,7 @@ class control extends model
 				 {
 					echo "<script>
 					  alert('Delete success')
-					  window.location='manage_employee.php';
+					  window.location='manage_employee';
 					  </script>";
 				 }
 			 }

@@ -60,7 +60,7 @@ function validate()
 			
 			<div class="col-md-12 form-group1">
               <label class="control-label">Cust id</label>
-              <input type="text" placeholder="cust_id" name="cust_id" value="<?php echo $fetch->cust_id;?>"<br>
+              <input type="text" placeholder="cust_id" name="cust_id" value="<?php echo $fetch->cust_id;?>"><br>
             </div>
 			
 			
