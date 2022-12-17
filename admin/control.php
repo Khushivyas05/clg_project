@@ -202,7 +202,7 @@ class control extends model
 					$city_id=$_REQUEST['city_id'];
 					$rate=$_REQUEST['rate'];
 					$arr=array("cr_id"=>$cr_id,"city_id"=>$city_id,"rate"=>$rate);
-					$res=$this->update('city',$arr,$where);
+					$res=$this->update('city_rate',$arr,$where);
 					if($res)
 					{
 						echo "<script> 
@@ -223,7 +223,7 @@ class control extends model
 				$where=array("cate_id"=>$cate_id);
 				$run=$this->select_where('category',$where);
 				$fetch=$run->fetch_object();
-				$old_file=$fetch->cate_img;
+				$old_file=$fetch->img;
 						
 				if(isset($_REQUEST['submit']))
 				{
@@ -237,8 +237,8 @@ class control extends model
 							
 					if($_FILES['img']['size']>0)
 					{
-						$cat_img=$_FILES['cat_img']['name'];
-						$path='images'.$cat_img;
+						$cat_img=$_FILES['img']['name'];
+						$path='images/'.$img;
 						$dup_file=$_FILES['img']['tmp_name'];
 						move_uploaded_file($dup_file,$path);
 								
@@ -246,7 +246,7 @@ class control extends model
 						$res=$this->update('category',$arr,$where);
 						if($res)
 						{
-							unlink('../admin/images/'.$old_file);
+							unlink('images/'.$old_file);
 							echo "<script>
 							alert('Update success');
 							window.location='manage_category';
@@ -278,13 +278,11 @@ class control extends model
 			break;
 			
 			
-			
-			
-			
-			
 			case '/add_emp':
+			$fetcharr=$this->selectall('city');
             if(isset($_REQUEST['submit']))
 			{
+				$city_id=$_REQUEST['city_id'];
 				$username=$_REQUEST['username'];
 				$password=$_REQUEST['password'];
                 $emp_name=$_REQUEST['emp_name'];
@@ -294,7 +292,7 @@ class control extends model
 				$contact=$_REQUEST['contact'];
 				$driving_licence=$_REQUEST['driving_licence'];
 				
-				$arr=array("username"=>$username,"password"=>$password,"emp_name"=>$emp_name,"emp_add"=>$emp_add,"designation"=>$designation,"email"=>$email,"contact"=>$contact,"driving_licence"=>$driving_licence);
+				$arr=array("city_id"=>$city_id,"username"=>$username,"password"=>$password,"emp_name"=>$emp_name,"emp_add"=>$emp_add,"designation"=>$designation,"email"=>$email,"contact"=>$contact,"driving_licence"=>$driving_licence);
 				
 				$res=$this->insert('employee_details',$arr);
 				if($res)
@@ -539,11 +537,11 @@ class control extends model
 				}
 			}
 				
-			if(isset($_REQUEST['del_cityrate_id']))
+			if(isset($_REQUEST['del_cr_id']))
 			{
-				$cityrate_id=$_REQUEST['del_cityrate_id'];
-				$where=array("cityrate_id"=>$cityrate_id);
-				$res=$this->delete_where('cityrate',$where);
+				$cr_id=$_REQUEST['del_cr_id'];
+				$where=array("cr_id"=>$cr_id);
+				$res=$this->delete_where('city_rate',$where);
 				if($res) 
 				{
 					echo "<script> 

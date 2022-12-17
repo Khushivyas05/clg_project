@@ -84,17 +84,17 @@ function validate()
 						
 			<div class="col-md-12 form-group1">
               <label class="control-label">vehicle number</label>
-              <input type="file" placeholder="vehicle_number" name="vehicle_number" value="<?php echo $fetch->vehicle_number;?>"><br>
+              <input type="text" placeholder="vehicle_number" name="vehicle_number" value="<?php echo $fetch->vehicle_number;?>"><br>
             </div>
 						
 			<div class="col-md-12 form-group1">
               <label class="control-label">truck capacity</label>
-              <input type="file" placeholder="truck_capacity" name="truck_capacity" value="<?php echo $fetch->truck_capacity;?>"><br>
+              <input type="text" placeholder="truck_capacity" name="truck_capacity" value="<?php echo $fetch->truck_capacity;?>"><br>
             </div>
 			<div class="col-md-12 form-group1">
               <label class="control-label"> img</label>
               <input type="file" placeholder="img" name="img" value="<?php echo $fetch->img;?>"><br>
-			  <img src="../admin/images/<?php echo $fetch->img;?>" height="80" width="80">
+			  <img src="images/<?php echo $fetch->img;?>" height="80" width="80">
             </div>
              <div class="clearfix"> </div>
    
