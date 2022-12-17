@@ -72,7 +72,7 @@ function validate()
 						
 			<div class="col-md-12 form-group1">
               <label class="control-label">Date</label>
-              <input type="file" placeholder="date" name="date" value="<?php echo $fetch->date;?>"><br>
+              <input type="date" placeholder="date" name="date" value="<?php echo $fetch->date;?>"><br>
             </div>
              <div class="clearfix"> </div>
    
