@@ -1,6 +1,5 @@
 <?php
 include_once('model.php');
-g
 class control extends model
 {
 	function __construct()
@@ -10,7 +9,7 @@ class control extends model
 		$path=$_SERVER['PATH_INFO'];
 		
 		switch($path)
-		{
+		{ 
 			case '/index':
 			if(isset($_REQUEST['submit']))
 			{
@@ -102,31 +101,31 @@ class control extends model
 			break;
 
 			case '/add_emp':
-				if(isset($_REQUEST['submit']))
+			if(isset($_REQUEST['submit']))
+			{
+				$username=$_REQUEST['username'];
+				$password=$_REQUEST['password'];
+				$emp_name=$_REQUEST['emp_name'];
+				$emp_add=$_REQUEST['emp_add'];
+				$designation=$_REQUEST['designation'];
+				$email=$_REQUEST['email'];
+				$contact=$_REQUEST['contact'];
+				$driving_licence=$_REQUEST['driving_licence'];
+					
+				$arr=array("username"=>$username,"password"=>$password,"emp_name"=>$emp_name,"emp_add"=>$emp_add,"designation"=>$designation,"email"=>$email,"contact"=>$contact,"driving_licence"=>$driving_licence);
+					
+				$res=$this->insert('employee_details',$arr);
+				if($res)
 				{
-					$username=$_REQUEST['username'];
-					$password=$_REQUEST['password'];
-					$emp_name=$_REQUEST['emp_name'];
-					$emp_add=$_REQUEST['emp_add'];
-					$designation=$_REQUEST['designation'];
-					$email=$_REQUEST['email'];
-					$contact=$_REQUEST['contact'];
-					$driving_licence=$_REQUEST['driving_licence'];
-					
-					$arr=array("username"=>$username,"password"=>$password,"emp_name"=>$emp_name,"emp_add"=>$emp_add,"designation"=>$designation,"email"=>$email,"contact"=>$contact,"driving_licence"=>$driving_licence);
-					
-					$res=$this->insert('employee_details',$arr);
-					if($res)
-					{
-						echo  "<script>alert('Register success')</script>";
-					}
-					else
-					{
-						echo "not success";
-					}
+					echo  "<script>alert('Register success')</script>";
 				}
-				include_once('add_emp.php');
-				break;
+				else
+				{
+					echo "not success";
+				}
+			}
+			include_once('add_emp.php');
+			break;
 			
 			case'/editfeedback':
 			if(isset($_REQUEST['edit_feedback_id']))
@@ -144,15 +143,15 @@ class control extends model
 					$date=$_REQUEST['date'];
 	             	$arr=array("feedback_id"=>$feedback_id,"cust_id"=>$cust_id,"comment"=>$comment,"date"=>$date);
 					$res=$this->update('feedback',$arr,$where);
-						if($res)
-						{
-							echo "<script> 
-							alert('Update Success'); 
-							window.location='manage_feedback.php';
-							</script>";
-						}
+					if($res)
+					{
+						echo "<script> 
+						alert('Update Success'); 
+						window.location='manage_feedback.php';
+						</script>";
 					}
-				}	
+				}
+			}	
 			
 			include_once('editfeedback.php');
 			break;
@@ -182,7 +181,8 @@ class control extends model
 							</script>";
 						}
 					}
-				}	
+				}
+			}	
 			
 			include_once('editcity.php');
 			break;
@@ -237,7 +237,7 @@ class control extends model
 					if($_FILES['img']['size']>0)
 					{
 						$cat_img=$_FILES['cat_img']['name'];
-						$path='../admin/images/'.$cat_img;
+						$path='images'.$cat_img;
 						$dup_file=$_FILES['img']['tmp_name'];
 						move_uploaded_file($dup_file,$path);
 								
@@ -522,9 +522,9 @@ class control extends model
 					  </script>";
 				 }
 			 }
-			 if(isset($_REQUEST['del_feed_id']))
+			 if(isset($_REQUEST['del_feedback_id']))
 			 {
-				 $feedback_id=$_REQUEST['del_feed_id'];
+				 $feedback_id=$_REQUEST['del_feedback_id'];
 				 $where=array("feedback_id"=>$feedback_id);
 				 $res=$this->delete_where('feedback',$where);
 				 if($res)
@@ -561,54 +561,84 @@ class control extends model
 					  </script>";
 				 }
 			 }
-			 if(isset($_REQUEST['del_car_id']))
-			 {
-				 $car_id=$_REQUEST['del_car_id'];
-				 $where=array("car_id"=>$car_id);
-				 
-				 $run=$this->select_where('car',$where);
-				 $fetch=$run->fetch_object();
-				 $img=$fetch->img;
-				 
-				 $res=$this->delete_where('car',$where);
-				 if($res)
-				 {
-					  unlink('../web/picture/car/'.$img);
-					  echo "<script>
-					  alert('Delete success')
-					  window.location='manage_car';
-					  </script>";
-				 }
-			 }
-			  if(isset($_REQUEST['del_cate_id']))
-			 {
-				 $cate_id=$_REQUEST['del_cate_id'];
-				 $where=array("cate_id"=>$cate_id);
-				 $run=$this->select_where('category',$where);
-				 $fetch=$run->fetch_object();
-				 $cate_img=$fetch->cate_img;
-				 
-				 $res=$this->delete_where('category',$where);
-				 if($res)
-				 {
-					 unlink('../web/picture/cartype/'.$cate_img);
-					  echo "<script>
-					  alert('Delete success')
-					  window.location='manage_cartype';
-					  </script>";
-				 }
-			 }
-			break;*/
+			 
+			  
+				if(isset($_REQUEST['del_feedback_id']))
+				{
+					$feedback_id=$_REQUEST['del_feedback_id'];
+					$where=array("feedback_id"=>$feedback_id);
+					$res=$this->delete_where('feedback',$where);
+					if($res) 
+					{
+						echo "<script> 
+							alert('Delete Success') 
+							window.location='manage_feedback';
+							</script>";
+					}
+				}
+				
+				if(isset($_REQUEST['del_city_id']))
+				{
+					$city_id=$_REQUEST['del_city_id'];
+					$where=array("city_id"=>$city_id);
+					$res=$this->delete_where('city',$where);
+					if($res) 
+					{
+						echo "<script> 
+							alert('Delete Success') 
+							window.location='manage_city';
+							</script>";
+					}
+				}
+				
+				if(isset($_REQUEST['del_cityrate_id']))
+				{
+					$cityrate_id=$_REQUEST['del_cityrate_id'];
+					$where=array("cityrate_id"=>$cityrate_id);
+					$res=$this->delete_where('cityrate',$where);
+					if($res) 
+					{
+						echo "<script> 
+							alert('Delete Success') 
+							window.location='manage_cityrate';
+							</script>";
+					}
+				}
+				
+				if(isset($_REQUEST['del_cate_id']))
+			    {
+				    $cate_id=$_REQUEST['del_cate_id'];
+				    $where=array("cate_id"=>$cate_id);
+				
+				    $run=$this->select_where('category',$where);
+				    $fetch=$run->fetch_object();
+				    $img=$fetch->img;
+				
+				    $res=$this->delete_where('category',$where);
+				    if($res) 
+				    {
+					   unlink('images'.$img);
+					    echo "<script> 
+						alert('Delete Success') 
+						window.location='manage_category';
+						</script>";
+				    }
+			    }
 			
-			case '/404':
-			include_once('404.php');
+				
+
+
+		
 			break;
+
+	
 			
-			default :
+     		default :
 			include_once('404.php');
 			break;
 		}	
 	}
 }
+
 $obj=new control;
 ?>
