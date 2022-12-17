@@ -44,6 +44,7 @@ class control extends model
 			break;
 
 			case '/admin_logout':
+				
 			unset($_SESSION['admin']);
 			echo "<script>
 			alert('Logout success')
@@ -484,19 +485,19 @@ class control extends model
 
 			case '/delete':
 			if(isset($_REQUEST['del_emp_id']))
-			{
-				$emp_id=$_REQUEST['del_emp_id'];
-				$where=array("emp_id"=>$emp_id);
-				$res=$this->delete_where('employee_details',$where);
-				if($res)
-				{
+			 {
+				 $emp_id=$_REQUEST['del_emp_id'];
+				 $where=array("emp_id"=>$emp_id);
+				 $res=$this->delete_where('employee_details',$where);
+				 if($res)
+				 {
 					echo "<script>
 					  alert('Delete success')
-					  window.location='manage_emp.php';
+					  window.location='manage_employee.php';
 					  </script>";
-				}
+				 }
 			 }
-			 if(isset($_REQUEST['del_cust_id']))
+		     if(isset($_REQUEST['del_cust_id']))
 			 {
 				 $cust_id=$_REQUEST['del_cust_id'];
 				 $where=array("cust_id"=>$cust_id);

@@ -50,7 +50,7 @@ include_once('header.php');
 						<td><?php echo $mu->password;?></td>
 						<td><?php echo $mu->username;?></td>
 						<td><a href="editcustomer?edit_cust_id=<?php echo $mu->cust_id?>" class="btn btn-primary">Edit</a></td>
-						<td><a href="delete?del_cust_id=<?php echo $mu->cust_id?>" class="btn btn-primary">Delete</a></td>
+						<td><a href="delete?del_cust_id=<?php echo $mu->cust_id?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
 					  <?php
 					  }
