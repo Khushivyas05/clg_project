@@ -509,19 +509,7 @@ class control extends model
 					  </script>";
 				 }
 			 }
-			 if(isset($_REQUEST['del_cont_id']))
-			 {
-				 $cont_id=$_REQUEST['del_cont_id'];
-				 $where=array("cont_id"=>$contact_id);
-				 $res=$this->delete_where('contact',$where);
-				 if($res)
-				 {
-					echo "<script>
-					  alert('Delete success')
-					  window.location='manage_contact';
-					  </script>";
-				 }
-			 }
+			 
 			 if(isset($_REQUEST['del_feedback_id']))
 			 {
 				 $feedback_id=$_REQUEST['del_feedback_id'];
@@ -535,80 +523,39 @@ class control extends model
 					  </script>";
 				 }
 			 }
-			  if(isset($_REQUEST['del_booking_id']))
-			 {
-				 $booking_id=$_REQUEST['del_booking_id_id'];
-				 $where=array("booking_id"=>$booking_id);
-				 $res=$this->delete_where('booking',$where);
-				 if($res)
-				 {
-					echo "<script>
-					  alert('Delete success')
-					  window.location='manage_booking';
-					  </script>";
-				 }
-			 }
-			  if(isset($_REQUEST['del_p_id']))
-			 {
-				 $p_id=$_REQUEST['del_p_id'];
-				 $where=array("p_id"=>$p_id);
-				 $res=$this->delete_where('payment',$where);
-				 if($res)
-				 {
-					echo "<script>
-					  alert('Delete success')
-					  window.location='manage_payment';
-					  </script>";
-				 }
-			 }
-			 
 			  
-				if(isset($_REQUEST['del_feedback_id']))
+			if(isset($_REQUEST['del_city_id']))
+			{
+				$city_id=$_REQUEST['del_city_id'];
+				$where=array("city_id"=>$city_id);
+				$res=$this->delete_where('city',$where);
+				if($res) 
 				{
-					$feedback_id=$_REQUEST['del_feedback_id'];
-					$where=array("feedback_id"=>$feedback_id);
-					$res=$this->delete_where('feedback',$where);
-					if($res) 
-					{
-						echo "<script> 
-							alert('Delete Success') 
-							window.location='manage_feedback';
-							</script>";
-					}
+					echo "<script> 
+					alert('Delete Success') 
+					window.location='manage_city';
+					</script>";
 				}
+			}
 				
-				if(isset($_REQUEST['del_city_id']))
+			if(isset($_REQUEST['del_cityrate_id']))
+			{
+				$cityrate_id=$_REQUEST['del_cityrate_id'];
+				$where=array("cityrate_id"=>$cityrate_id);
+				$res=$this->delete_where('cityrate',$where);
+				if($res) 
 				{
-					$city_id=$_REQUEST['del_city_id'];
-					$where=array("city_id"=>$city_id);
-					$res=$this->delete_where('city',$where);
-					if($res) 
-					{
-						echo "<script> 
-							alert('Delete Success') 
-							window.location='manage_city';
-							</script>";
-					}
+					echo "<script> 
+						alert('Delete Success') 
+						window.location='manage_cityrate';
+						</script>";
 				}
+			}
 				
-				if(isset($_REQUEST['del_cityrate_id']))
-				{
-					$cityrate_id=$_REQUEST['del_cityrate_id'];
-					$where=array("cityrate_id"=>$cityrate_id);
-					$res=$this->delete_where('cityrate',$where);
-					if($res) 
-					{
-						echo "<script> 
-							alert('Delete Success') 
-							window.location='manage_cityrate';
-							</script>";
-					}
-				}
-				
-				if(isset($_REQUEST['del_cate_id']))
-			    {
-				    $cate_id=$_REQUEST['del_cate_id'];
-				    $where=array("cate_id"=>$cate_id);
+			if(isset($_REQUEST['del_cate_id']))
+			{
+				$cate_id=$_REQUEST['del_cate_id'];
+				$where=array("cate_id"=>$cate_id);
 				
 				    $run=$this->select_where('category',$where);
 				    $fetch=$run->fetch_object();
