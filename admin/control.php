@@ -308,7 +308,7 @@ class control extends model
 			include_once('add_emp.php');
 			break;
 			
-			/*case '/editemp':
+			case '/editemp':
 			if(isset($_REQUEST['edit_emp_id']))
 			{
 				$emp_id=$_REQUEST['edit_emp_id'];
@@ -339,7 +339,7 @@ class control extends model
 				}
 			}
 			include_once('editemp.php');
-			break;*/
+			break;
 			
 			case '/home':
 			include_once('home.php');
@@ -482,7 +482,7 @@ class control extends model
 			include_once('editwrate.php');
 			break;
 
-			/*case '/delete':
+			case '/delete':
 			if(isset($_REQUEST['del_emp_id']))
 			{
 				$emp_id=$_REQUEST['del_emp_id'];
@@ -624,11 +624,6 @@ class control extends model
 						</script>";
 				    }
 			    }
-			
-				
-
-
-		
 			break;
 
 	
