@@ -9,7 +9,7 @@ class control extends model
 		$path=$_SERVER['PATH_INFO'];
 		
 		switch($path)
-		{
+		{ 
 			case '/index':
 			if(isset($_REQUEST['submit']))
 			{
@@ -18,7 +18,7 @@ class control extends model
 				$password=$_REQUEST['password'];
 				
 				$where=array("username"=>$username,"password"=>$password);
-				$run=$this->select_where('customer_details',$where);
+				$run=$this->select_where('admin_details',$where);
 				
 				$res=$run->num_rows; 
 				if($res==1) 
@@ -28,7 +28,7 @@ class control extends model
 					
 					echo "<script> 
 						alert('Login Success') 
-						window.location='home.php';
+						window.location='home';
 						</script>";
 					
 				}
@@ -36,7 +36,7 @@ class control extends model
 				{
 					echo "<script> 
 						alert('Login Failed due wrong credebntial') 
-						window.location='index.php';
+						window.location='index';
 						</script>";
 				}
 			}
@@ -48,7 +48,7 @@ class control extends model
 			unset($_SESSION['admin']);
 			echo "<script>
 			alert('Logout success')
-			window.location='index.php'
+			window.location='index'
 			</script>";
 			
 			case '/manage_feedback':
@@ -82,12 +82,12 @@ class control extends model
 			break;
 	
 			case '/manage_branch':
-			$manage_state_arr=$this->selectall('branch');
+			$manage_branch_arr=$this->selectall('branch');
 			include_once('manage_branch.php');
 			break;
 	
 			case '/manage_wrate':
-			$manage_state_arr=$this->selectall('w_rate');
+			$manage_wrate_arr=$this->selectall('w_rate');
 			include_once('manage_wrate.php');
 			break;
 
@@ -102,31 +102,31 @@ class control extends model
 			break;
 
 			case '/add_emp':
-				if(isset($_REQUEST['submit']))
+			if(isset($_REQUEST['submit']))
+			{
+				$username=$_REQUEST['username'];
+				$password=$_REQUEST['password'];
+				$emp_name=$_REQUEST['emp_name'];
+				$emp_add=$_REQUEST['emp_add'];
+				$designation=$_REQUEST['designation'];
+				$email=$_REQUEST['email'];
+				$contact=$_REQUEST['contact'];
+				$driving_licence=$_REQUEST['driving_licence'];
+					
+				$arr=array("username"=>$username,"password"=>$password,"emp_name"=>$emp_name,"emp_add"=>$emp_add,"designation"=>$designation,"email"=>$email,"contact"=>$contact,"driving_licence"=>$driving_licence);
+					
+				$res=$this->insert('employee_details',$arr);
+				if($res)
 				{
-					$username=$_REQUEST['username'];
-					$password=$_REQUEST['password'];
-					$emp_name=$_REQUEST['emp_name'];
-					$emp_add=$_REQUEST['emp_add'];
-					$designation=$_REQUEST['designation'];
-					$email=$_REQUEST['email'];
-					$contact=$_REQUEST['contact'];
-					$driving_licence=$_REQUEST['driving_licence'];
-					
-					$arr=array("username"=>$username,"password"=>$password,"emp_name"=>$emp_name,"emp_add"=>$emp_add,"designation"=>$designation,"email"=>$email,"contact"=>$contact,"driving_licence"=>$driving_licence);
-					
-					$res=$this->insert('employee_details',$arr);
-					if($res)
-					{
-						echo  "<script>alert('Register success')</script>";
-					}
-					else
-					{
-						echo "not success";
-					}
+					echo  "<script>alert('Register success')</script>";
 				}
-				include_once('add_emp.php');
-				break;
+				else
+				{
+					echo "not success";
+				}
+			}
+			include_once('add_emp.php');
+			break;
 			
 			case'/editfeedback':
 			if(isset($_REQUEST['edit_feedback_id']))
@@ -144,15 +144,15 @@ class control extends model
 					$date=$_REQUEST['date'];
 	             	$arr=array("feedback_id"=>$feedback_id,"cust_id"=>$cust_id,"comment"=>$comment,"date"=>$date);
 					$res=$this->update('feedback',$arr,$where);
-						if($res)
-						{
-							echo "<script> 
-							alert('Update Success'); 
-							window.location='manage_feedback.php';
-							</script>";
-						}
+					if($res)
+					{
+						echo "<script> 
+						alert('Update Success'); 
+						window.location='manage_feedback.php';
+						</script>";
 					}
-				}	
+				}
+			}	
 			
 			include_once('editfeedback.php');
 			break;
@@ -182,7 +182,8 @@ class control extends model
 							</script>";
 						}
 					}
-				}	
+				}
+			}	
 			
 			include_once('editcity.php');
 			break;
@@ -274,7 +275,7 @@ class control extends model
 			$run=$this->select_where('admin',$where);
 			$fetch=$run->fetch_object();
 			include_once('profile.php');
-			break;*/
+			break;
 			
 			
 			
@@ -308,7 +309,7 @@ class control extends model
 			include_once('add_emp.php');
 			break;
 			
-			/*case '/editemp':
+			case '/editemp':
 			if(isset($_REQUEST['edit_emp_id']))
 			{
 				$emp_id=$_REQUEST['edit_emp_id'];
@@ -339,7 +340,7 @@ class control extends model
 				}
 			}
 			include_once('editemp.php');
-			break;*/
+			break;
 			
 			case '/home':
 			include_once('home.php');
@@ -509,19 +510,7 @@ class control extends model
 					  </script>";
 				 }
 			 }
-			 if(isset($_REQUEST['del_cont_id']))
-			 {
-				 $cont_id=$_REQUEST['del_cont_id'];
-				 $where=array("cont_id"=>$contact_id);
-				 $res=$this->delete_where('contact',$where);
-				 if($res)
-				 {
-					echo "<script>
-					  alert('Delete success')
-					  window.location='manage_contact';
-					  </script>";
-				 }
-			 }
+			 
 			 if(isset($_REQUEST['del_feedback_id']))
 			 {
 				 $feedback_id=$_REQUEST['del_feedback_id'];
@@ -535,80 +524,39 @@ class control extends model
 					  </script>";
 				 }
 			 }
-			  if(isset($_REQUEST['del_booking_id']))
-			 {
-				 $booking_id=$_REQUEST['del_booking_id_id'];
-				 $where=array("booking_id"=>$booking_id);
-				 $res=$this->delete_where('booking',$where);
-				 if($res)
-				 {
-					echo "<script>
-					  alert('Delete success')
-					  window.location='manage_booking';
-					  </script>";
-				 }
-			 }
-			  if(isset($_REQUEST['del_p_id']))
-			 {
-				 $p_id=$_REQUEST['del_p_id'];
-				 $where=array("p_id"=>$p_id);
-				 $res=$this->delete_where('payment',$where);
-				 if($res)
-				 {
-					echo "<script>
-					  alert('Delete success')
-					  window.location='manage_payment';
-					  </script>";
-				 }
-			 }
-			 
 			  
-				if(isset($_REQUEST['del_feedback_id']))
+			if(isset($_REQUEST['del_city_id']))
+			{
+				$city_id=$_REQUEST['del_city_id'];
+				$where=array("city_id"=>$city_id);
+				$res=$this->delete_where('city',$where);
+				if($res) 
 				{
-					$feedback_id=$_REQUEST['del_feedback_id'];
-					$where=array("feedback_id"=>$feedback_id);
-					$res=$this->delete_where('feedback',$where);
-					if($res) 
-					{
-						echo "<script> 
-							alert('Delete Success') 
-							window.location='manage_feedback';
-							</script>";
-					}
+					echo "<script> 
+					alert('Delete Success') 
+					window.location='manage_city';
+					</script>";
 				}
+			}
 				
-				if(isset($_REQUEST['del_city_id']))
+			if(isset($_REQUEST['del_cityrate_id']))
+			{
+				$cityrate_id=$_REQUEST['del_cityrate_id'];
+				$where=array("cityrate_id"=>$cityrate_id);
+				$res=$this->delete_where('cityrate',$where);
+				if($res) 
 				{
-					$city_id=$_REQUEST['del_city_id'];
-					$where=array("city_id"=>$city_id);
-					$res=$this->delete_where('city',$where);
-					if($res) 
-					{
-						echo "<script> 
-							alert('Delete Success') 
-							window.location='manage_city';
-							</script>";
-					}
+					echo "<script> 
+						alert('Delete Success') 
+						window.location='manage_cityrate';
+						</script>";
 				}
+			}
 				
-				if(isset($_REQUEST['del_cityrate_id']))
-				{
-					$cityrate_id=$_REQUEST['del_cityrate_id'];
-					$where=array("cityrate_id"=>$cityrate_id);
-					$res=$this->delete_where('cityrate',$where);
-					if($res) 
-					{
-						echo "<script> 
-							alert('Delete Success') 
-							window.location='manage_cityrate';
-							</script>";
-					}
-				}
-				
-				if(isset($_REQUEST['del_cate_id']))
-			    {
-				    $cate_id=$_REQUEST['del_cate_id'];
-				    $where=array("cate_id"=>$cate_id);
+			if(isset($_REQUEST['del_cate_id']))
+			{
+				$cate_id=$_REQUEST['del_cate_id'];
+				$where=array("cate_id"=>$cate_id);
 				
 				    $run=$this->select_where('category',$where);
 				    $fetch=$run->fetch_object();
@@ -624,11 +572,6 @@ class control extends model
 						</script>";
 				    }
 			    }
-			
-				
-
-
-		
 			break;
 
 	
@@ -639,5 +582,6 @@ class control extends model
 		}	
 	}
 }
+
 $obj=new control;
 ?>
