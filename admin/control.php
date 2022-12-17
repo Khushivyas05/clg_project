@@ -16,9 +16,9 @@ class control extends model
 				
 				$username=$_REQUEST['username'];
 				$password=$_REQUEST['password'];
-				abc
+				
 				$where=array("username"=>$username,"password"=>$password);
-				$run=$this->select_where('customer_details',$where);
+				$run=$this->select_where('admin_details',$where);
 				
 				$res=$run->num_rows; 
 				if($res==1) 
@@ -28,7 +28,7 @@ class control extends model
 					
 					echo "<script> 
 						alert('Login Success') 
-						window.location='home.php';
+						window.location='home';
 						</script>";
 					
 				}
@@ -36,7 +36,7 @@ class control extends model
 				{
 					echo "<script> 
 						alert('Login Failed due wrong credebntial') 
-						window.location='index.php';
+						window.location='index';
 						</script>";
 				}
 			}
@@ -47,7 +47,7 @@ class control extends model
 			unset($_SESSION['admin']);
 			echo "<script>
 			alert('Logout success')
-			window.location='index.php'
+			window.location='index'
 			</script>";
 			
 			case '/manage_feedback':
