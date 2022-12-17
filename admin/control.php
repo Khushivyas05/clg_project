@@ -81,12 +81,12 @@ class control extends model
 			break;
 	
 			case '/manage_branch':
-			$manage_state_arr=$this->selectall('branch');
+			$manage_branch_arr=$this->selectall('branch');
 			include_once('manage_branch.php');
 			break;
 	
 			case '/manage_wrate':
-			$manage_state_arr=$this->selectall('w_rate');
+			$manage_wrate_arr=$this->selectall('w_rate');
 			include_once('manage_wrate.php');
 			break;
 
@@ -274,7 +274,7 @@ class control extends model
 			$run=$this->select_where('admin',$where);
 			$fetch=$run->fetch_object();
 			include_once('profile.php');
-			break;*/
+			break;
 			
 			
 			
