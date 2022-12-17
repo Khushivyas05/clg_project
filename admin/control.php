@@ -16,7 +16,7 @@ class control extends model
 				
 				$username=$_REQUEST['username'];
 				$password=$_REQUEST['password'];
-				
+				dd
 				$where=array("username"=>$username,"password"=>$password);
 				$run=$this->select_where('admin_details',$where);
 				
