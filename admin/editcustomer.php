@@ -7,25 +7,25 @@ include_once('header.php');
 	  var cust_id=document.forms["clientform"]["cust_id"].value;
 	   if(cust_id=="" || cust_id==null)
 	   {
-		   alert("please fill out the password");
+		   alert("please fill out the cust_id");
 		   return false;
 	   } 
-	  var name=document.forms["clientform"]["name"].value;
-	  if(name=="" || name==null)
+	  var city_id=document.forms["clientform"]["city_id"].value;
+	  if(city_id=="" || city_id==null)
 	  {
-		  alert("please fill out name");
+		  alert("please fill out city_id");
 		  return false;
 	  }
-	  var user_name=document.forms["clientform"]["user_name"].value;
-	   if(user_name=="" || user_name==null)
+	  var cust_name=document.forms["clientform"]["cust_name"].value;
+	   if(cust_name=="" || cust_name==null)
 	   {
-		   alert("please fill out the username");
+		   alert("please fill out the cust_name");
 		   return false;
 	   } 
-      var emailid=document.forms["clientform"]["emailid"].value;
-      if(emailid=="" || emailid==null)
+      var cust_add=document.forms["clientform"]["cust_add"].value;
+      if(cust_add=="" || cust_add==null)
 	  {
-		  alert("please fill out the emailid");
+		  alert("please fill out the cust_add");
 		  return false;
 	  }
        var contact_no=document.forms["clientform"]["contact_no"].value;
@@ -34,24 +34,18 @@ include_once('header.php');
 		   alert("please fill out the contact no");
 		   return false;
 	   } 
-	   var address=document.forms["clientform"]["address"].value;
-	   if(address=="" || address==null)
+	   var email=document.forms["clientform"]["email"].value;
+	   if(email=="" || email==null)
 	   {
-		   alert("please fill out the address");
+		   alert("please fill out the email");
 		   return false;
 	   } 
-	   var a_no=document.forms["clientform"]["a_no"].value;
-	   if(a_no=="" || a_no==null)
+	   var username=document.forms["clientform"]["username"].value;
+	   if(username=="" || username==null)
 	   {
-		   alert("please fill out the a_no");
+		   alert("please fill out the username");
 		   return false;
-	   }
-	   var dl_no=document.forms["clientform"]["dl_no"].value;
-	   if(dl_no=="" || dl_no==null)
-	   {
-		   alert("please fill out the dl_no");
-		   return false;
-	   }
+	   } 
 
   }
   </script>
@@ -76,52 +70,50 @@ include_once('header.php');
               <label class="control-label">Cust_id</label>
               <input type="text" name="cust_id"  value="<?php echo $fetch->cust_id;?>" placeholder="Name" ><br>
             </div>
+
+			<div class="col-md-12 form-group1">
+			<label class="control-label">City Id</label>
+              <input type="text" name="city_id" value="<?php echo $fetch->city_id;?>" placeholder="Username" >
+            </div>
+
             <div class="col-md-12 form-group1">
-              <label class="control-label">Name</label>
-              <input type="text" name="name"  value="<?php echo $fetch->name;?>" placeholder="Name" ><br>
+              <label class="control-label">Customer Name</label>
+              <input type="text" name="cust_name"  value="<?php echo $fetch->cust_name;?>" placeholder="Name" ><br>
             </div>
 			<div class="clearfix"> </div>
 			</div>
+
+			<div class="col-md-12 form-group1 group-mail">
+              <label class="control-label">Address</label>
+              <textarea class="form-control" name="cust_add" placeholder="Address" ><?php echo $fetch->cust_add;?></textarea>
+              </div>
+
 			<div class="col-md-12 form-group1">
-              <label class="control-label">User Name</label>
-              <input type="text" name="user_name" value="<?php echo $fetch->user_name;?>" placeholder="User Name" ><br>
+              <label class="control-label">Contact No</label>
+              <input type="text" name="contact_no" value="<?php echo $fetch->contact_no;?>" placeholder="User Name" ><br>
             </div>
             
             <div class="col-md-12 form-group1 group-mail">
               <label class="control-label">Email id</label>
-              <input type="text" name="emailid" value="<?php echo $fetch->emailid;?>" placeholder="Email id" >
+              <input type="text" name="email" value="<?php echo $fetch->email;?>" placeholder="Email id" >
             </div>
              <div class="clearfix"> </div>
 
              <div class="clearfix"> </div>
               
-			  <div class="col-md-12 form-group1 group-mail">
-              <label class="control-label">Address</label>
-              <textarea class="form-control" name="address" placeholder="Address" ><?php echo $fetch->address;?></textarea>
-              </div>
-			
+			  
              <div class="clearfix"> </div>
             
              <div class="clearfix"> </div>
             <div class="vali-form">
             
             <div class="col-md-12 form-group1 form-last">
-              <label class="control-label">Contact Number</label>
-              <input type="text" name="con_no" value="<?php echo $fetch->con_no;?>" placeholder="Contact Number" >
+              <label class="control-label">Username</label>
+              <input type="text" name="username" value="<?php echo $fetch->username;?>" placeholder="Contact Number" >
             </div>
             <div class="clearfix"> </div>
             </div>
-			
-             <div class="vali-form vali-form1">
-             <div class="col-md-6 form-group1 form-last">
-              <label class="control-label">Aadhar card no</label>
-              <input type="text" name="a_no" value="<?php echo $fetch->a_no;?>" placeholder="Aadhar card no" >
-            </div>
 		
-			  <div class="col-md-6 form-group1 form-last">
-              <label class="control-label">Driving Licence no</label>
-              <input type="text" name="dl_no" value="<?php echo $fetch->dl_no;?>" placeholder="Driving Licence no" >
-            </div>
 			<div class="clearfix"> </div>
 			</div>
 			
