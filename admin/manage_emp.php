@@ -16,7 +16,7 @@ include_once('header.php');
 	
 
 			<div class="blank-page" style="overflow:auto">
-				abc
+		
 				<div class="container mt-3">
 				  <h2>Manage Employee</h2>
 
