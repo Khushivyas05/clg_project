@@ -1,6 +1,5 @@
 <?php
 include_once('model.php');
-g
 class control extends model
 {
 	function __construct()
@@ -10,7 +9,7 @@ class control extends model
 		$path=$_SERVER['PATH_INFO'];
 		
 		switch($path)
-		{
+		{ 
 			case '/index':
 			if(isset($_REQUEST['submit']))
 			{
@@ -102,31 +101,31 @@ class control extends model
 			break;
 
 			case '/add_emp':
-				if(isset($_REQUEST['submit']))
+			if(isset($_REQUEST['submit']))
+			{
+				$username=$_REQUEST['username'];
+				$password=$_REQUEST['password'];
+				$emp_name=$_REQUEST['emp_name'];
+				$emp_add=$_REQUEST['emp_add'];
+				$designation=$_REQUEST['designation'];
+				$email=$_REQUEST['email'];
+				$contact=$_REQUEST['contact'];
+				$driving_licence=$_REQUEST['driving_licence'];
+					
+				$arr=array("username"=>$username,"password"=>$password,"emp_name"=>$emp_name,"emp_add"=>$emp_add,"designation"=>$designation,"email"=>$email,"contact"=>$contact,"driving_licence"=>$driving_licence);
+					
+				$res=$this->insert('employee_details',$arr);
+				if($res)
 				{
-					$username=$_REQUEST['username'];
-					$password=$_REQUEST['password'];
-					$emp_name=$_REQUEST['emp_name'];
-					$emp_add=$_REQUEST['emp_add'];
-					$designation=$_REQUEST['designation'];
-					$email=$_REQUEST['email'];
-					$contact=$_REQUEST['contact'];
-					$driving_licence=$_REQUEST['driving_licence'];
-					
-					$arr=array("username"=>$username,"password"=>$password,"emp_name"=>$emp_name,"emp_add"=>$emp_add,"designation"=>$designation,"email"=>$email,"contact"=>$contact,"driving_licence"=>$driving_licence);
-					
-					$res=$this->insert('employee_details',$arr);
-					if($res)
-					{
-						echo  "<script>alert('Register success')</script>";
-					}
-					else
-					{
-						echo "not success";
-					}
+					echo  "<script>alert('Register success')</script>";
 				}
-				include_once('add_emp.php');
-				break;
+				else
+				{
+					echo "not success";
+				}
+			}
+			include_once('add_emp.php');
+			break;
 			
 			case'/editfeedback':
 			if(isset($_REQUEST['edit_feedback_id']))
@@ -144,15 +143,15 @@ class control extends model
 					$date=$_REQUEST['date'];
 	             	$arr=array("feedback_id"=>$feedback_id,"cust_id"=>$cust_id,"comment"=>$comment,"date"=>$date);
 					$res=$this->update('feedback',$arr,$where);
-						if($res)
-						{
-							echo "<script> 
-							alert('Update Success'); 
-							window.location='manage_feedback.php';
-							</script>";
-						}
+					if($res)
+					{
+						echo "<script> 
+						alert('Update Success'); 
+						window.location='manage_feedback.php';
+						</script>";
 					}
-				}	
+				}
+			}	
 			
 			include_once('editfeedback.php');
 			break;
@@ -182,7 +181,8 @@ class control extends model
 							</script>";
 						}
 					}
-				}	
+				}
+			}	
 			
 			include_once('editcity.php');
 			break;
@@ -610,5 +610,6 @@ class control extends model
 		}	
 	}
 }
+
 $obj=new control;
 ?>
