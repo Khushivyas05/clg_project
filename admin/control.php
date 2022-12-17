@@ -571,7 +571,46 @@ class control extends model
 						window.location='manage_category';
 						</script>";
 				    }
-			    }
+			}
+			if(isset($_REQUEST['del_branch_id']))
+			{
+				$branch_id=$_REQUEST['del_branch_id'];
+				$where=array("branch_id"=>$branch_id);
+				$res=$this->delete_where('branch',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('Delete Success');
+					window.location='manage_branch';
+					</script>";
+				}
+			}
+			if(isset($_REQUEST['del_state_id']))
+			{
+				$state_id=$_REQUEST['del_state_id'];
+				$where=array("state_id"=>$state_id);
+				$res=$this->delete_where('state',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('Delete Success');
+					window.location='manage_state';
+					</script>";
+				}
+			}
+			if(isset($_REQUEST['del_w_id']))
+			{
+				$w_id=$_REQUEST['del_w_id'];
+				$where=array("w_id"=>$w_id);
+				$res=$this->delete_where('w_rate',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('Delete Success');
+					window.location='manage_wrate';
+					</script>";
+				}
+			}
 			break;
 
 	
