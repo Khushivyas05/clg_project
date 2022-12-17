@@ -27,7 +27,6 @@ include_once('header.php');
 					    <th>Emp_id</th>
                         <th>city_id</th>						 
 						<th>Username</th>
-						<th>password</th>
 						<th>Emp_name</th>
 						<th>Emp_add</th>
 						<th>Designation</th>
@@ -46,7 +45,6 @@ include_once('header.php');
 					  <tr>
 					    <td><?php echo $m->emp_id;?></td>
 						<td><?php echo $m->city_id;?></td>
-						<td><?php echo $m->password;?></td>
 						<td><?php echo $m->username;?></td>
 						<td><?php echo $m->emp_name;?></td>
 						<td><?php echo $m->emp_add;?></td>
@@ -54,7 +52,7 @@ include_once('header.php');
 						<td><?php echo $m->email;?></td>
 						<td><?php echo $m->contact;?></td>
 						<td><?php echo $m->driving_licence;?></td>
-						<td><a href="edit_emp?edit_emp_id=<?php echo $m->emp_id;?>" class="btn btn-primary">Edit</a></td>
+						<td><a href="editemp?edit_emp_id=<?php echo $m->emp_id;?>" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_emp_id=<?php echo $m->emp_id;?>"class="btn btn-danger">Delete</a></td>
 					  </tr>
 					  <?php

@@ -148,7 +148,7 @@ class control extends model
 					{
 						echo "<script> 
 						alert('Update Success'); 
-						window.location='manage_feedback.php';
+						window.location='manage_feedback';
 						</script>";
 					}
 				}
@@ -178,7 +178,7 @@ class control extends model
 						{
 							echo "<script> 
 							alert('Update Success'); 
-							window.location='manage_city.php';
+							window.location='manage_city';
 							</script>";
 						}
 					}
@@ -249,7 +249,7 @@ class control extends model
 							unlink('images/'.$old_file);
 							echo "<script>
 							alert('Update success');
-							window.location='manage_category.php';
+							window.location='manage_category';
 							</script>";
 						}
 					}
@@ -261,7 +261,7 @@ class control extends model
 						{
 							echo "<script>
 							alert('Update success');
-							window.location='manage_category.php';
+							window.location='manage_category';
 							</script>";
 						}
 					}
@@ -278,13 +278,11 @@ class control extends model
 			break;
 			
 			
-			
-			
-			
-			
 			case '/add_emp':
+			$fetcharr=$this->selectall('city');
             if(isset($_REQUEST['submit']))
 			{
+				$city_id=$_REQUEST['city_id'];
 				$username=$_REQUEST['username'];
 				$password=$_REQUEST['password'];
                 $emp_name=$_REQUEST['emp_name'];
@@ -294,7 +292,7 @@ class control extends model
 				$contact=$_REQUEST['contact'];
 				$driving_licence=$_REQUEST['driving_licence'];
 				
-				$arr=array("username"=>$username,"password"=>$password,"emp_name"=>$emp_name,"emp_add"=>$emp_add,"designation"=>$designation,"email"=>$email,"contact"=>$contact,"driving_licence"=>$driving_licence);
+				$arr=array("city_id"=>$city_id,"username"=>$username,"password"=>$password,"emp_name"=>$emp_name,"emp_add"=>$emp_add,"designation"=>$designation,"email"=>$email,"contact"=>$contact,"driving_licence"=>$driving_licence);
 				
 				$res=$this->insert('employee_details',$arr);
 				if($res)
@@ -334,7 +332,7 @@ class control extends model
 					{
 						echo "<script>
 						alert('update success')
-						window.location='manage_emp.php';
+						window.location='manage_emp';
 						</script>";
 					}
 				}
@@ -369,7 +367,7 @@ class control extends model
 					{
 						echo "<script>
 						alert('update success');
-						window.location='manage_customer.php';
+						window.location='manage_customer';
 						</script>";
 					}
 				}
@@ -397,7 +395,7 @@ class control extends model
 					{
 					    echo "<script>
 						alert('update success');
-						window.location='manage_feedback.php';
+						window.location='manage_feedback';
 						</script>";
 					}
 				}
@@ -409,7 +407,7 @@ class control extends model
 			if(isset($_REQUEST['edit_branch_id']))
 			{
 				$branch_id=$_REQUEST['edit_branch_id'];
-				$where=array("branch_id=>$branch_id");
+				$where=array("branch_id"=>$branch_id);
 				$run=$this->select_where('branch',$where);
 				$fetch=$run->fetch_object();
 				if(isset($_REQUEST['submit']))
@@ -424,7 +422,7 @@ class control extends model
 					{
 						echo "<script>
 						alert('update success');
-						window.location='manage_branch.php';
+						window.location='manage_branch';
 						</script>";
 					}
 				}
@@ -436,7 +434,7 @@ class control extends model
 			if(isset($_REQUEST['edit_state_id']))
 			{
 				$state_id=$_REQUEST['edit_state_id'];
-				$where=array("state_id=>$state_id");
+				$where=array("state_id"=>$state_id);
 				$run=$this->select_where('state',$where);
 				$fetch=$run->fetch_object();
 				if(isset($_REQUEST['submit']))
@@ -449,7 +447,7 @@ class control extends model
 					{
 						echo "<script>
 						alert('update success');
-						window.location='manage_state.php';
+						window.location='manage_state';
 						</script>";
 					}
 				}
@@ -461,7 +459,7 @@ class control extends model
 			if(isset($_REQUEST['edit_w_id']))
 			{
 				$w_id=$_REQUEST['edit_w_id'];
-				$where=array("w_id=>$w_id");
+				$where=array("w_id"=>$w_id);
 				$run=$this->select_where('w_rate',$where);
 				$fetch=$run->fetch_object();
 				if(isset($_REQUEST['submit']))
@@ -475,7 +473,7 @@ class control extends model
 					{
 						echo "<script>
 						alert('update success');
-						window.location='manage_wrate.php';
+						window.location='manage_wrate';
 						</script>";
 					}
 				}
@@ -493,7 +491,7 @@ class control extends model
 				 {
 					echo "<script>
 					  alert('Delete success')
-					  window.location='manage_employee.php';
+					  window.location='manage_employee';
 					  </script>";
 				 }
 			 }
@@ -571,7 +569,46 @@ class control extends model
 						window.location='manage_category';
 						</script>";
 				    }
-			    }
+			}
+			if(isset($_REQUEST['del_branch_id']))
+			{
+				$branch_id=$_REQUEST['del_branch_id'];
+				$where=array("branch_id"=>$branch_id);
+				$res=$this->delete_where('branch',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('Delete Success');
+					window.location='manage_branch';
+					</script>";
+				}
+			}
+			if(isset($_REQUEST['del_state_id']))
+			{
+				$state_id=$_REQUEST['del_state_id'];
+				$where=array("state_id"=>$state_id);
+				$res=$this->delete_where('state',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('Delete Success');
+					window.location='manage_state';
+					</script>";
+				}
+			}
+			if(isset($_REQUEST['del_w_id']))
+			{
+				$w_id=$_REQUEST['del_w_id'];
+				$where=array("w_id"=>$w_id);
+				$res=$this->delete_where('w_rate',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('Delete Success');
+					window.location='manage_wrate';
+					</script>";
+				}
+			}
 			break;
 
 	

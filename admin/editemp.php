@@ -62,32 +62,44 @@ include_once('header.php');
          	<div class="vali-form">
 			<div class="col-md-12 form-group1">
               <label class="control-label">Emp_id</label>
-              <input type="text" name="e_id" value="<?php echo $fetch->e_id;?>" placeholder="Name" >
-            </div>
-			
-            <div class="col-md-12 form-group1">
-              <label class="control-label">Name</label>
-              <input type="text" name="e_name" value="<?php echo $fetch->e_name;?>" placeholder="Name" >
-            </div>
-            <div class="clearfix"> </div>
+              <input type="text" name="emp_id" value="<?php echo $fetch->emp_id;?>" placeholder="Name" >
             </div>
 			
 			<div class="col-md-12 form-group1">
-              <label class="control-label">User_name</label>
-              <input type="text" name="user_name" value="<?php echo $fetch->user_name;?>" placeholder="Username" >
+			<label class="control-label">City Id</label>
+              <input type="text" name="city_id" value="<?php echo $fetch->city_id;?>" placeholder="Username" >
             </div>
 			 <div class="clearfix"> </div>
            
+			<div class="col-md-12 form-group1">
+              <label class="control-label">Username</label>
+              <input type="text" name="username" value="<?php echo $fetch->username;?>" placeholder="Username" >
+            </div>
+			 <div class="clearfix"> </div>
+           
+             <div class="col-md-12 form-group1">
+              <label class="control-label">Name</label>
+              <input type="text" name="emp_name" value="<?php echo $fetch->emp_name;?>" placeholder="Name" >
+            </div>
+            <div class="clearfix"> </div>
+            </div>
+
+			<div class="col-md-12 form-group1 group-mail">
+              <label class="control-label">Address</label>
+              <textarea class="form-control" name="emp_add" placeholder="Address" ><?php echo $fetch->emp_add;?></textarea>
+            </div>
+
+			<div class="col-md-12 form-group1">
+              <label class="control-label">Designation</label>
+              <input type="text" name="designation" value="<?php echo $fetch->designation;?>" placeholder="Name" >
+            </div>
+
             <br>
             <div class="col-md-12 form-group1 group-mail">
               <label class="control-label">Email id</label>
-              <input type="text" name="emailid" value="<?php echo $fetch->emailid;?>" placeholder="Email id" >
+              <input type="text" name="email" value="<?php echo $fetch->email;?>" placeholder="Email id" >
             </div>
 			
-			 <div class="col-md-12 form-group1 group-mail">
-              <label class="control-label">Address</label>
-              <textarea class="form-control" name="address" placeholder="Address" ><?php echo $fetch->address;?></textarea>
-            </div>
              <div class="clearfix"> </div>
 			 
 			 <div class="clearfix"> </div>
@@ -95,11 +107,15 @@ include_once('header.php');
             <div class="vali-form">
             <div class="col-md-12 form-group1 form-last">
               <label class="control-label">Contact Number</label>
-              <input type="text" name="contact_no" value="<?php echo $fetch->contact_no;?>" placeholder="Contact Number" >
+              <input type="text" name="contact" value="<?php echo $fetch->contact;?>" placeholder="Contact Number" >
             </div>
             <div class="clearfix"> </div>
+			<div class="col-md-12 form-group1 form-last">
+              <label class="control-label">Driving Licence</label>
+              <input type="text" name="driving_licence" value="<?php echo $fetch->driving_licence;?>" placeholder="Contact Number" >
+            </div>
            </div>
-            
+            <br>
              <div class="clearfix"> </div>
           
             <div class="col-md-12 form-group">
