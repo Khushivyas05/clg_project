@@ -32,7 +32,7 @@ include_once('header.php');
 					</thead>
 					<tbody>
 					<?php
-					foreach($manage_contact_arr as $m)
+					foreach($manage_wrate_arr as $m)
 					{
 					?>
 					  <tr>

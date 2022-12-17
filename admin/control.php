@@ -18,7 +18,7 @@ class control extends model
 				$password=$_REQUEST['password'];
 				
 				$where=array("username"=>$username,"password"=>$password);
-				$run=$this->select_where('customer_details',$where);
+				$run=$this->select_where('admin_details',$where);
 				
 				$res=$run->num_rows; 
 				if($res==1) 
@@ -28,7 +28,7 @@ class control extends model
 					
 					echo "<script> 
 						alert('Login Success') 
-						window.location='home.php';
+						window.location='home';
 						</script>";
 					
 				}
@@ -36,7 +36,7 @@ class control extends model
 				{
 					echo "<script> 
 						alert('Login Failed due wrong credebntial') 
-						window.location='index.php';
+						window.location='index';
 						</script>";
 				}
 			}
@@ -44,10 +44,11 @@ class control extends model
 			break;
 
 			case '/admin_logout':
+				
 			unset($_SESSION['admin']);
 			echo "<script>
 			alert('Logout success')
-			window.location='index.php'
+			window.location='index'
 			</script>";
 			
 			case '/manage_feedback':
@@ -81,12 +82,12 @@ class control extends model
 			break;
 	
 			case '/manage_branch':
-			$manage_state_arr=$this->selectall('branch');
+			$manage_branch_arr=$this->selectall('branch');
 			include_once('manage_branch.php');
 			break;
 	
 			case '/manage_wrate':
-			$manage_state_arr=$this->selectall('w_rate');
+			$manage_wrate_arr=$this->selectall('w_rate');
 			include_once('manage_wrate.php');
 			break;
 
@@ -274,7 +275,7 @@ class control extends model
 			$run=$this->select_where('admin',$where);
 			$fetch=$run->fetch_object();
 			include_once('profile.php');
-			break;*/
+			break;
 			
 			
 			
@@ -484,19 +485,19 @@ class control extends model
 
 			case '/delete':
 			if(isset($_REQUEST['del_emp_id']))
-			{
-				$emp_id=$_REQUEST['del_emp_id'];
-				$where=array("emp_id"=>$emp_id);
-				$res=$this->delete_where('employee_details',$where);
-				if($res)
-				{
+			 {
+				 $emp_id=$_REQUEST['del_emp_id'];
+				 $where=array("emp_id"=>$emp_id);
+				 $res=$this->delete_where('employee_details',$where);
+				 if($res)
+				 {
 					echo "<script>
 					  alert('Delete success')
-					  window.location='manage_emp.php';
+					  window.location='manage_employee.php';
 					  </script>";
-				}
+				 }
 			 }
-			 if(isset($_REQUEST['del_cust_id']))
+		     if(isset($_REQUEST['del_cust_id']))
 			 {
 				 $cust_id=$_REQUEST['del_cust_id'];
 				 $where=array("cust_id"=>$cust_id);

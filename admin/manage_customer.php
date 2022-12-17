@@ -44,7 +44,7 @@ include_once('header.php');
 					    <td><?php echo $mu->cust_id;?></td>
 						<td><?php echo $mu->city_id;?></td>
 						<td><?php echo $mu->cust_name;?></td>
-						<td><?php echo $mu->cust_address;?></td>
+						<td><?php echo $mu->cust_add;?></td>
 						<td><?php echo $mu->contact_no;?></td>
 						<td><?php echo $mu->email;?></td>
 						<td><?php echo $mu->password;?></td>
