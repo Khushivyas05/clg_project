@@ -95,7 +95,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-               <h1> <a class="navbar-brand" href="index.php">Transport</a></h1>         
+               <h1> <a class="navbar-brand" href="home">Transport</a></h1>         
 			   </div>
 			 <div class=" border-bottom">
         	<div class="full-left">
@@ -201,9 +201,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <li>
                         <a href="home" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Home</span> </a>
                     </li>
-                    <li><a href="manage_customer" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Customer</a></li>
+					<li><a href="manage_customer" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Customer</a></li>
 					<li><a href="manage_feedback" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Feedback </a></li>
-
                     <li>
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Employee</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
