@@ -256,7 +256,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <li><a href="add_state" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add State</a></li>
                             
                             <li><a href="manage_state" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage State</a></li>
-
 					   </ul>
                     </li>
 					<li>
@@ -265,9 +264,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <li><a href="add_wrate" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Weightrate</a></li>
                             
                             <li><a href="manage_wrate" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Weightrate</a></li>
-
 					   </ul>
                     </li>
+					<li> <a href="admin_logout" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Logout</span> </a> </li>
                 </ul>
             </div>
 			</div>
