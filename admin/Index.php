@@ -58,7 +58,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-12">
 				<div class="login-mail">
 					<input type="text" name="username" placeholder="Username" >
-					<i class="fa fa-envelope"></i>
+					<i class="fa fa-user"></i>
 				</div>
 				<div class="login-mail">
 					<input type="password" name="password" placeholder="Password" >
@@ -69,7 +69,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="login-do">
 				<label class="hvr-shutter-in-horizontal login-sub">
-					<input type="submit" name="submit" value="login">
+					<input type="submit" name="submit" value="Login">
 					</label>
 			</div>
 			

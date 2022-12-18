@@ -103,6 +103,7 @@ class control extends model
 			case '/add_emp':
 			if(isset($_REQUEST['submit']))
 			{
+				$city_id=$_REQUEST['city_id'];
 				$username=$_REQUEST['username'];
 				$password=$_REQUEST['password'];
 				$emp_name=$_REQUEST['emp_name'];
@@ -112,7 +113,7 @@ class control extends model
 				$contact=$_REQUEST['contact'];
 				$driving_licence=$_REQUEST['driving_licence'];
 					
-				$arr=array("username"=>$username,"password"=>$password,"emp_name"=>$emp_name,"emp_add"=>$emp_add,"designation"=>$designation,"email"=>$email,"contact"=>$contact,"driving_licence"=>$driving_licence);
+				$arr=array("city_id"=>$city_id,"username"=>$username,"password"=>$password,"emp_name"=>$emp_name,"emp_add"=>$emp_add,"designation"=>$designation,"email"=>$email,"contact"=>$contact,"driving_licence"=>$driving_licence);
 					
 				$res=$this->insert('employee_details',$arr);
 				if($res)
@@ -547,7 +548,7 @@ class control extends model
 				 {
 					echo "<script>
 					  alert('Delete success')
-					  window.location='manage_employee';
+					  window.location='manage_emp';
 					  </script>";
 				 }
 			 }
@@ -560,7 +561,7 @@ class control extends model
 				 {
 					echo "<script>
 					  alert('Delete success')
-					  window.location='manage_customer.php';
+					  window.location='manage_customer';
 					  </script>";
 				 }
 			 }
