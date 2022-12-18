@@ -43,9 +43,8 @@ class control extends model
 			include_once('index.php');
 			break;
 
-			case '/admin_logout':
-				
-			unset($_SESSION['admin']);
+			case '/admin_logout':	
+			unset($_SESSION['admin_details']);
 			echo "<script>
 			alert('Logout success')
 			window.location='index'
