@@ -72,7 +72,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="login-do">
 				<label class="hvr-shutter-in-horizontal login-sub">
-					<input type="submit" name="submit" value="login">
+					<input type="submit" name="submit" value="Login">
 					</label>
 			</div>
 			
