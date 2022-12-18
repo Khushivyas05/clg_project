@@ -102,14 +102,14 @@ include_once('header.php');
             </div>
 
 			<div class="col-md-12 form-group1">
-              <label class="control-label">Emp_name</label>
+              <label class="control-label">Name</label>
               <input type="text" name="emp_name" placeholder="emp_name" >
             </div>
 			 <div class="clearfix"> </div>
            
             <br>
             <div class="col-md-12 form-group1 group-mail">
-              <label class="control-label">Emp_add</label>
+              <label class="control-label">Address</label>
               <textarea class="form-control" name="emp_add" placeholder="Emp_add" ></textarea>
             </div>
              <div class="clearfix"> </div>
