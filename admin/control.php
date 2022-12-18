@@ -306,6 +306,63 @@ class control extends model
 			}
 			include_once('add_emp.php');
 			break;
+
+			case '/add_branch':
+			if(isset($_REQUEST['submit']))
+			{
+				$branch_name=$_REQUEST['branch_name'];
+				$contact_no=$_REQUEST['contact_no'];
+				$branch_location=$_REQUEST['branch_location'];
+				$arr=array("branch_name"=>$branch_name,"contact_no"=>$contact_no,"branch_location"=>$branch_location);
+				$res=$this->insert('branch',$arr);
+				if($res)
+				{
+					echo "<script>alert('Data Inserted successfully')</script>";
+				}
+				else
+				{
+					echo "<script>alert('Data is not inserted')</script>";
+				}
+			}
+			include_once('add_branch.php');
+			break;
+
+			case '/add_state':
+			if(isset($_REQUEST['submit']))
+			{
+				$state_name=$_REQUEST['state_name'];
+				$arr=array("state_name"=>$state_name);
+				$res=$this->insert('state',$arr);
+				if($res)
+				{
+					echo "<script>alert('Data Inserted successfully')</script>";
+				}
+				else
+				{
+					echo "<script>alert('Data is not inserted')</script>";
+				}
+			}
+			include_once('add_state.php');
+			break;
+
+			case '/add_wrate':
+			if(isset($_REQUEST['submit']))
+			{
+				$kg=$_REQUEST['kg'];
+				$price=$_REQUEST['price'];
+				$arr=array("kg"=>$kg,"price"=>$price);
+				$res=$this->insert('w_rate',$arr);
+				if($res)
+				{
+					echo "<script>alert('Data Inserted successfully')</script>";
+				}
+				else
+				{
+					echo "<script>alert('Data is not inserted')</script>";
+				}
+			}
+			include_once('add_wrate.php');
+			break;
 			
 			case '/editemp':
 			if(isset($_REQUEST['edit_emp_id']))
