@@ -2,7 +2,7 @@
 include_once('header.php');
 ?>
 <script>
-function validate()
+function validate()nn
 {
 	var branch_name=document.forms["branchform"]["branch_name"].value;
 	if(branch_name=="" || branch_name==null)
