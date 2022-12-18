@@ -38,7 +38,7 @@ function validate()
 		    	<h2>
 				<a href="dashboard">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Add feedback</span>
+				<span>Edit feedback</span>
 				</h2>
 		    </div>
 		<!--//banner-->

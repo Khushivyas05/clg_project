@@ -54,7 +54,7 @@ include_once('header.php');
 		    	<h2>
 				<a href="dashboard">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Validation</span>
+				<span>Edit Customer</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -78,7 +78,7 @@ include_once('header.php');
 
             <div class="col-md-12 form-group1">
               <label class="control-label">Customer Name</label>
-              <input type="text" name="cust_cust_name"  value="<?php echo $fetch->cust_cust_name;?>" placeholder="Name" ><br>
+              <input type="text" name="cust_name"  value="<?php echo $fetch->cust_name;?>" placeholder="Name" ><br>
             </div>
 			<div class="clearfix"> </div>
 			</div>

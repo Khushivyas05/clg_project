@@ -76,7 +76,7 @@ include_once('header.php');
 		    	<h2>
 				<a href="dashboard">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Validation</span>
+				<span>Add Employee</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -103,14 +103,14 @@ include_once('header.php');
 
 			<div class="col-md-12 form-group1">
               <label class="control-label">Name</label>
-              <input type="text" name="emp_name" placeholder="emp_name" >
+              <input type="text" name="emp_name" placeholder="Name" >
             </div>
 			 <div class="clearfix"> </div>
            
             <br>
             <div class="col-md-12 form-group1 group-mail">
               <label class="control-label">Address</label>
-              <textarea class="form-control" name="emp_add" placeholder="Emp_add" ></textarea>
+              <textarea class="form-control" name="emp_add" placeholder="Address" ></textarea>
             </div>
              <div class="clearfix"> </div>
 

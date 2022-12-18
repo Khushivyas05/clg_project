@@ -4,13 +4,6 @@ include_once('header.php');
 <script>
 function validate()
 {
-	var cr_id=document.forms["cityrateform"]["cr_id"].value;
-	if(cr_id=="" || cr_id==null)
-	{
-		alert("Please fill out the cityrate id");
-		return false;
-	}
-	
 	var city_id=document.forms["cityrateform"]["city_id"].value;
 	if(city_id=="" ||city_id==null)
 	{
@@ -45,17 +38,21 @@ function validate()
   	    
         <form name="cityrateform" action="" method="post" enctype="multipart/form-data" onsubmit="return validate()">
          	<div class="vali-form">
-            <div class="col-md-12 form-group1">
-              <label class="control-label">Cityrate Id</label>
-              <input type="text" name="cr_id" placeholder="cr_id" >
-            </div>
-            
             <div class="clearfix"> </div>
             </div>
 			
 			<div class="col-md-12 form-group1">
-              <label class="control-label">City Id</label>
-              <input type="text" name="city_id" placeholder="city_id" ></textarea>
+			<label class="control-label">City:</label>
+            <select name="city_id" class="form-control">
+			<?php
+			foreach($fetcharr as $f)
+			{
+			?>
+			<option value="<?php echo $f->city_id?>"><?php echo $f->city_name?></option>
+			<?php
+			}
+			?>
+			</select>
             </div>
 			
 			
