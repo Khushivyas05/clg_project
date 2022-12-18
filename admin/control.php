@@ -29,7 +29,7 @@ class control extends model
 					
 					echo "<script> 
 						alert('Login Success') 
-						window.location='home';
+						window.location='manage_customer';
 						</script>";
 					
 				}
@@ -274,14 +274,6 @@ class control extends model
 			include_once('editcategory.php');
 			break;
 			
-			case '/profile':
-			$where=array("user_name"=>$_SESSION['admin']);
-			$run=$this->select_where('admin',$where);
-			$fetch=$run->fetch_object();
-			include_once('profile.php');
-			break;
-			
-			
 			case '/add_emp':
 			$fetcharr=$this->selectall('city');
             if(isset($_REQUEST['submit']))
@@ -466,11 +458,6 @@ class control extends model
 			include_once('editemp.php');
 			break;
 			
-			case '/home':
-			include_once('home.php');
-			break;
-			
-			
 			case '/editcustomer':
 			if(isset($_REQUEST['edit_cust_id']))
 			{
@@ -500,8 +487,6 @@ class control extends model
 			}
 			include_once('editcustomer.php');
 			break;
-			
-			
 			
 			case '/edit_feedback':
 			if(isset($_REQUEST['edit_feedback_id']))
