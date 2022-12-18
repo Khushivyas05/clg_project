@@ -88,20 +88,7 @@ include_once('header.php');
   	    
         <form action="" name="empform" method="post" enctype="multipart/form-data" onsubmit="return validate()">
          	<div class="vali-form">
-
-           <!--<div class="col-md-12 form-group1 group-mail"><br>
-			<label class="control-label">city:</label>
-            <select name="city_id" class="form-control">
-			
-			</select>
-			</div>
-			<div class="clearfix"> </div>-->
-
-			<div class="col-md-12 form-group1">
-              <label class="control-label">City id</label>
-              <input type="text" name="city_id" placeholder="city id" >
-            </div>
-
+				
 			<div class="col-md-12 form-group1">
               <label class="control-label">Username</label>
               <input type="text" name="username" placeholder="Name" >
@@ -126,6 +113,21 @@ include_once('header.php');
               <textarea class="form-control" name="emp_add" placeholder="Emp_add" ></textarea>
             </div>
              <div class="clearfix"> </div>
+
+			<div class="col-md-12 form-group1 group-mail"><br>
+			<label class="control-label">City:</label>
+            <select name="city_id" class="form-control">
+			<?php
+			foreach($fetcharr as $f)
+			{
+			?>
+			<option value="<?php echo $f->city_id?>"><?php echo $f->city_name?></option>
+			<?php
+			}
+			?>
+			</select>
+			</div>
+			<div class="clearfix"> </div>
 			 
 			 <div class="col-md-12 form-group1 group-mail">
               <label class="control-label">Designation</label>
