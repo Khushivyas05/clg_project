@@ -14,7 +14,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="js/jquery.min.js"> </script>
 <script src="js/bootstrap.min.js"> </script>
 </head>
-<body>bb
+<body>
 	<div class="four">
 		<img src="images/404.png" alt="" />
 		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
