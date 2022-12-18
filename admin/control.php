@@ -101,6 +101,7 @@ class control extends model
 			break;
 
 			case '/add_emp':
+			$fetcharr=$this->selectall('city');
 			if(isset($_REQUEST['submit']))
 			{
 				$city_id=$_REQUEST['city_id'];
