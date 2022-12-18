@@ -309,6 +309,70 @@ class control extends model
 			include_once('add_emp.php');
 			break;
 
+			case '/add_city':
+				if(isset($_REQUEST['submit']))
+				{
+					$city_id=$_REQUEST['city_id'];
+					$state_id=$_REQUEST['state_id'];
+					$city_name=$_REQUEST['city_name'];
+					$arr=array("city_id"=>$city_id,"state_id"=>$state_id,"city_name"=>$city_name);
+					$res=$this->insert('city',$arr);
+					if($res)
+					{
+						echo "<script>alert('Data Inserted successfully')</script>";
+					}
+					else
+					{
+						echo "<script>alert('Data is not inserted')</script>";
+					}
+				}
+				include_once('add_city.php');
+				break;
+
+				
+			case '/add_cityrate':
+				if(isset($_REQUEST['submit']))
+				{
+					$cr_id=$_REQUEST['cr_id'];
+					$city_id=$_REQUEST['city_id'];
+					$rate=$_REQUEST['rate'];
+					$arr=array("cr_id"=>$cr_id,"city_id"=>$city_id,"rate"=>$rate);
+					$res=$this->insert('cityrate',$arr);
+					if($res)
+					{
+						echo "<script>alert('Data Inserted successfully')</script>";
+					}
+					else
+					{
+						echo "<script>alert('Data is not inserted')</script>";
+					}
+				}
+				include_once('add_cityrate.php');
+				break;
+
+				case '/add_category':
+					if(isset($_REQUEST['submit']))
+					{
+						$cate_id=$_REQUEST['cate_id'];
+						$model_name=$_REQUEST['model_name'];
+						$company_name=$_REQUEST['company_name'];
+						$vehicle_number=$_REQUEST['vehicle_number'];
+						$truck_capacity=$_REQUEST['truck_capacity'];
+						$img=$_REQUEST['img'];
+						$arr=array("cate_id"=>$cate_id,"model_name"=>$model_name,"company_name"=>$company_name,"vehicle_number"=>$vehicle_number,"truck_capacity"=>$truck_capacity,"img"=>$img);
+						$res=$this->insert('category',$arr);
+						if($res)
+						{
+							echo "<script>alert('Data Inserted successfully')</script>";
+						}
+						else
+						{
+							echo "<script>alert('Data is not inserted')</script>";
+						}
+					}
+					include_once('add_category.php');
+					break;
+
 			case '/add_branch':
 			if(isset($_REQUEST['submit']))
 			{
