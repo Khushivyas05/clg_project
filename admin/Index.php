@@ -64,9 +64,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<input type="password" name="password" placeholder="Password" >
 					<i class="fa fa-lock"></i>
 				</div>
-				   <a class="news-letter " href="#">
-						 <label class="checkbox1"><input type="checkbox" name="checkbox" ><i> </i>Forget Password</label>
-					   </a>
 
 			
 			</div>
