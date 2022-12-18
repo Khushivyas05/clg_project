@@ -306,71 +306,62 @@ class control extends model
 			include_once('add_emp.php');
 			break;
 
-			case '/add_city':
-				if(isset($_REQUEST['submit']))
+			case '/add_branch':
+			if(isset($_REQUEST['submit']))
+			{
+				$branch_name=$_REQUEST['branch_name'];
+				$contact_no=$_REQUEST['contact_no'];
+				$branch_location=$_REQUEST['branch_location'];
+				$arr=array("branch_name"=>$branch_name,"contact_no"=>$contact_no,"branch_location"=>$branch_location);
+				$res=$this->insert('branch',$arr);
+				if($res)
 				{
-					$city_id=$_REQUEST['city_id'];
-					$state_id=$_REQUEST['state_id'];
-					$city_name=$_REQUEST['city_name'];
-					$arr=array("city_id"=>$city_id,"state_id"=>$state_id,"city_name"=>$city_name);
-					$res=$this->insert('city',$arr);
-					if($res)
-					{
-					
-						echo "<script> alert('Register Success') </script>";
-					}
-				   else
-				   {
-						echo "Not success";				   
-				   }				   
-				}	
-				include_once('add_city.php');
-				break;
+					echo "<script>alert('Data Inserted successfully')</script>";
+				}
+				else
+				{
+					echo "<script>alert('Data is not inserted')</script>";
+				}
+			}
+			include_once('add_branch.php');
+			break;
 
-				case '/add_cityrate':
-					if(isset($_REQUEST['submit']))
-					{
-						$cr_id=$_REQUEST['cr_id'];
-						$city_id=$_REQUEST['city_id'];
-						$rate=$_REQUEST['rate'];
-						$arr=array("cr_id"=>$cr_id,"city_id"=>$city_id,"rate"=>$rate);
-						$res=$this->insert('city_rate',$arr);
-						if($res)
-						{
-						
-							echo "<script> alert('Register Success') </script>";
-						}
-					   else
-					   {
-							echo "Not success";				   
-					   }				   
-					}	
-					include_once('add_cityrate.php');
-					break;
-					
-				case '/add_category':
-					if(isset($_REQUEST['submit']))
-					{
-						$cate_id=$_REQUEST['cate_id'];
-						$model_name=$_REQUEST['model_name'];
-						$company_name=$_REQUEST['company_name'];
-						$vehicle_number=$_REQUEST['vehicle_number'];
-						$truck_capacity=$_REQUEST['truck_capacity'];
-						$img=$_REQUEST['img'];
-						$arr=array("cate_id"=>$cate_id,"model_name"=>$model_name,"company_name"=>$company_name,"vehicle_number"=>$vehicle_number,"img"=>$img);
-						$res=$this->insert('category',$arr);
-						if($res)
-						{
-						
-							echo "<script> alert('Register Success') </script>";
-						}
-					   else
-					   {
-							echo "Not success";				   
-					   }				   
-					}	
-					include_once('add_category.php');
-					break;
+			case '/add_state':
+			if(isset($_REQUEST['submit']))
+			{
+				$state_name=$_REQUEST['state_name'];
+				$arr=array("state_name"=>$state_name);
+				$res=$this->insert('state',$arr);
+				if($res)
+				{
+					echo "<script>alert('Data Inserted successfully')</script>";
+				}
+				else
+				{
+					echo "<script>alert('Data is not inserted')</script>";
+				}
+			}
+			include_once('add_state.php');
+			break;
+
+			case '/add_wrate':
+			if(isset($_REQUEST['submit']))
+			{
+				$kg=$_REQUEST['kg'];
+				$price=$_REQUEST['price'];
+				$arr=array("kg"=>$kg,"price"=>$price);
+				$res=$this->insert('w_rate',$arr);
+				if($res)
+				{
+					echo "<script>alert('Data Inserted successfully')</script>";
+				}
+				else
+				{
+					echo "<script>alert('Data is not inserted')</script>";
+				}
+			}
+			include_once('add_wrate.php');
+			break;
 			
 			case '/editemp':
 			if(isset($_REQUEST['edit_emp_id']))
