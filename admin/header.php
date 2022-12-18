@@ -201,7 +201,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <li>
                         <a href="home" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Home</span> </a>
                     </li>
-                   
+                    <li><a href="manage_customer" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Customer</a></li>
+					<li><a href="manage_feedback" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Feedback </a></li>
+
                     <li>
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Employee</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
@@ -211,17 +213,62 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 					   </ul>
                     </li>
-					<li><a href="manage_customer" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Customer</a></li>
-					<li><a href="manage_branch" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> Manage Branch </a></li>
-                    <li> <a href="manage_category" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Category</a></li>
-                    <li><a href="manage_city" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Manage City</a></li>
-                    <li><a href="manage_cityrate" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Cityrate</a></li>
-					<li><a href="manage_feedback" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Feedback </a></li>
-					<li> <a href="manage_state" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage State</a></li>
-                    <li><a href="manage_wrate" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Weight Rate</a></li>
-                    
-                        
-                    
+					
+					<li>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Branch</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="add_branch" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Branch</a></li>
+                            
+                            <li><a href="manage_branch" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Branch</a></li>
+
+					   </ul>
+                    </li>
+					<li>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Category</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="add_category" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Category</a></li>
+                            
+                            <li><a href="manage_category" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Category</a></li>
+
+					   </ul>
+                    </li>
+					<li>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">City</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="add_city" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add City</a></li>
+                            
+                            <li><a href="manage_city" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage City</a></li>
+
+					   </ul>
+                    </li>
+					<li>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">City Rate</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="add_cityrate" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Cityrate</a></li>
+                            
+                            <li><a href="manage_cityrate" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Cityrate</a></li>
+
+					   </ul>
+                    </li>
+					
+					<li>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">State</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="add_state" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add State</a></li>
+                            
+                            <li><a href="manage_state" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage State</a></li>
+
+					   </ul>
+                    </li>
+					<li>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Weight rate</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="add_wrate" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Weightrate</a></li>
+                            
+                            <li><a href="manage_wrate" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Weightrate</a></li>
+
+					   </ul>
+                    </li>
                 </ul>
             </div>
 			</div>
