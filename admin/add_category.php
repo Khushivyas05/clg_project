@@ -35,6 +35,12 @@ function validate()
 		alert("Please fill out the   Truck Capacity");
 		return false;
 	}
+    var img=document.forms["categoryform"]["img"].value;
+	if(img=="" ||img==null)
+	{
+		alert("Please fill out the   img ");
+		return false;
+	}
     
 	
 }
@@ -85,6 +91,11 @@ function validate()
             <div class="col-md-12 form-group1">
               <label class="control-label">Truck capacity </label>
               <input type="text"  name="truck_capacity" placeholder="truck_capacity" >
+            </div>
+			
+            <div class="col-md-12 form-group1">
+              <label class="control-label">Img  </label>
+              <input type="file"  name="img" placeholder="img" >
             </div>
 			
 			
