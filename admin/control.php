@@ -489,7 +489,6 @@ class control extends model
 			break;
 			
 			case '/edit_feedback':
-			$fetcharr=$this->selectall('city');
 			if(isset($_REQUEST['edit_feedback_id']))
 			{
 				$feedback_id=$_REQUEST['edit_feedback_id'];
