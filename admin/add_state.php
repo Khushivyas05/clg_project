@@ -16,7 +16,7 @@ function validate()
  	<!--banner-->	
 		   <div class="banner">
 		    	<h2>
-				<a href="home">Home</a>
+				<a href="manage_customer">Home</a>
 				<i class="fa fa-angle-right"></i>
 				<span>Add State</span>
 				</h2>

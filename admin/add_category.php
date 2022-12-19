@@ -4,13 +4,6 @@ include_once('header.php');
 <script>
 function validate()
 {
-	var cate_id=document.forms["categoryform"]["cate_id"].value;
-	if(cate_id=="" || cate_id==null)
-	{
-		alert("Please fill out the Category Id");
-		return false;
-	}
-	
 	var model_name=document.forms["categoryform"]["model_name"].value;
 	if(model_name=="" ||model_name==null)
 	{
@@ -41,8 +34,6 @@ function validate()
 		alert("Please fill out the   img ");
 		return false;
 	}
-    
-	
 }
 
 </script>
@@ -50,9 +41,9 @@ function validate()
  	<!--banner-->	
 		   <div class="banner">
 		    	<h2>
-				<a href="dashboard">Home</a>
+				<a href="manage_customer">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Add Capacity</span>
+				<span>Add Category</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -63,34 +54,27 @@ function validate()
  	<!---->
   	    
         <form name="categoryform" action="" method="post" enctype="multipart/form-data" onsubmit="return validate()">
-         	<div class="vali-form">
-            <div class="col-md-12 form-group1">
-              <label class="control-label">Category Id</label>
-              <input type="text" name="cate_id" placeholder="cate_id" >
-            </div>
-            
-            <div class="clearfix"> </div>
-            </div>
+         	
 			
 			<div class="col-md-12 form-group1">
               <label class="control-label">Model Name</label>
-              <input type="text" name="model_name" placeholder="model_name" ></textarea>
+              <input type="text" name="model_name" placeholder="Model name" ></textarea>
             </div>
 			
 			
 			<div class="col-md-12 form-group1">
               <label class="control-label">Company Name</label>
-              <input type="text"  name="company_name" placeholder="company_name" >
+              <input type="text"  name="company_name" placeholder="Company name" >
             </div>
             
 			<div class="col-md-12 form-group1">
               <label class="control-label">Vehicle Number</label>
-              <input type="text"  name="vehicle_number" placeholder="vehicle_number" >
+              <input type="text"  name="vehicle_number" placeholder="Vehicle number" >
             </div>
 
             <div class="col-md-12 form-group1">
               <label class="control-label">Truck capacity </label>
-              <input type="text"  name="truck_capacity" placeholder="truck_capacity" >
+              <input type="text"  name="truck_capacity" placeholder="Truck capacity" >
             </div>
 			
             <div class="col-md-12 form-group1">

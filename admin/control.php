@@ -29,7 +29,7 @@ class control extends model
 					
 					echo "<script> 
 						alert('Login Success') 
-						window.location='home';
+						window.location='manage_customer';
 						</script>";
 					
 				}
@@ -161,6 +161,7 @@ class control extends model
 			
 			
 			case'/editcity':
+			$fetcharr=$this->selectall('state');
 			if(isset($_REQUEST['edit_city_id']))
 			{
 				$city_id=$_REQUEST['edit_city_id'];
@@ -191,6 +192,7 @@ class control extends model
 			break;
 
 			case'/editcityrate':
+			$fetcharr=$this->selectall('city');
 			if(isset($_REQUEST['edit_cr_id']))
 			{
 				$cr_id=$_REQUEST['edit_cr_id'];
@@ -272,14 +274,6 @@ class control extends model
 			include_once('editcategory.php');
 			break;
 			
-			case '/profile':
-			$where=array("user_name"=>$_SESSION['admin']);
-			$run=$this->select_where('admin',$where);
-			$fetch=$run->fetch_object();
-			include_once('profile.php');
-			break;
-			
-			
 			case '/add_emp':
 			$fetcharr=$this->selectall('city');
             if(isset($_REQUEST['submit']))
@@ -307,6 +301,70 @@ class control extends model
 				}
 			}
 			include_once('add_emp.php');
+			break;
+
+			case '/add_city':
+			$fetcharr=$this->selectall('state');
+			if(isset($_REQUEST['submit']))
+			{
+				$state_id=$_REQUEST['state_id'];
+				$city_name=$_REQUEST['city_name'];
+				$arr=array("state_id"=>$state_id,"city_name"=>$city_name);
+				$res=$this->insert('city',$arr);
+				if($res)
+				{
+					echo "<script>alert('Data Inserted successfully')</script>";
+				}
+				else
+				{
+					echo "<script>alert('Data is not inserted')</script>";
+				}
+			}
+			include_once('add_city.php');
+			break;
+
+				
+			case '/add_cityrate':
+			$fetcharr=$this->selectall('city');
+			if(isset($_REQUEST['submit']))
+			{
+				$city_id=$_REQUEST['city_id'];
+				$rate=$_REQUEST['rate'];
+				$arr=array("city_id"=>$city_id,"rate"=>$rate);
+				$res=$this->insert('city_rate',$arr);
+				if($res)
+				{
+					echo "<script>alert('Data Inserted successfully')</script>";
+				}
+				else
+				{
+					echo "<script>alert('Data is not inserted')</script>";
+				}
+			}
+			include_once('add_cityrate.php');
+			break;
+
+			case '/add_category':
+			if(isset($_REQUEST['submit']))
+			{
+				$cate_id=$_REQUEST['cate_id'];
+				$model_name=$_REQUEST['model_name'];
+				$company_name=$_REQUEST['company_name'];
+				$vehicle_number=$_REQUEST['vehicle_number'];
+				$truck_capacity=$_REQUEST['truck_capacity'];
+				$img=$_REQUEST['img'];
+				$arr=array("cate_id"=>$cate_id,"model_name"=>$model_name,"company_name"=>$company_name,"vehicle_number"=>$vehicle_number,"truck_capacity"=>$truck_capacity,"img"=>$img);
+				$res=$this->insert('category',$arr);
+				if($res)
+				{
+					echo "<script>alert('Data Inserted successfully')</script>";
+				}
+				else
+				{
+					echo "<script>alert('Data is not inserted')</script>";
+				}
+			}
+			include_once('add_category.php');
 			break;
 
 			case '/add_branch':
@@ -367,6 +425,7 @@ class control extends model
 			break;
 			
 			case '/editemp':
+			$fetcharr=$this->selectall('city');
 			if(isset($_REQUEST['edit_emp_id']))
 			{
 				$emp_id=$_REQUEST['edit_emp_id'];
@@ -399,11 +458,6 @@ class control extends model
 			include_once('editemp.php');
 			break;
 			
-			case '/home':
-			include_once('home.php');
-			break;
-			
-			
 			case '/editcustomer':
 			if(isset($_REQUEST['edit_cust_id']))
 			{
@@ -433,8 +487,6 @@ class control extends model
 			}
 			include_once('editcustomer.php');
 			break;
-			
-			
 			
 			case '/edit_feedback':
 			if(isset($_REQUEST['edit_feedback_id']))
