@@ -91,14 +91,14 @@ include_once('header.php');
 				
 			<div class="col-md-12 form-group1">
               <label class="control-label">Username</label>
-              <input type="text" name="username" placeholder="Name" >
+              <input type="text" name="username" placeholder="Username" >
             </div>
             <div class="clearfix"> </div>
             </div>
 			 <div class="vali-form vali-form1">
             <div class="col-md-12 form-group1">
               <label class="control-label">Password</label>
-              <input type="password" name="password" placeholder="Create a password" >
+              <input type="password" name="password" placeholder="password" >
             </div>
 
 			<div class="col-md-12 form-group1">
