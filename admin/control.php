@@ -230,7 +230,7 @@ class control extends model
 						
 				if(isset($_REQUEST['submit']))
 				{
-					$cat_id=$_REQUEST['cate_id'];
+					$cate_id=$_REQUEST['cate_id'];
 					$model_name=$_REQUEST['model_name'];
 					$company_name=$_REQUEST['company_name'];
 					$vehicle_number=$_REQUEST['vehicle_number'];
