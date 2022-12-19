@@ -19,7 +19,6 @@ class model
 	function selectall($tbl)
 	{
 	    $ins="select * from $tbl";
-		$ins="select * from $tbl";
 		$run=$this->conn->query($ins);
 		while($fetch=$run->fetch_object())
 		{
