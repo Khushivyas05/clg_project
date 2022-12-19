@@ -1,5 +1,4 @@
 <?php
-
 include_once('model.php');
 class control extends model
 {
