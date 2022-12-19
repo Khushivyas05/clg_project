@@ -677,7 +677,7 @@ class control extends model
 				    $res=$this->delete_where('category',$where);
 				    if($res) 
 				    {
-					   unlink('images'.$img);
+					   unlink('images/'.$img);
 					    echo "<script> 
 						alert('Delete Success') 
 						window.location='manage_category';
