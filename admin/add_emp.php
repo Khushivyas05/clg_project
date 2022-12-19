@@ -74,9 +74,9 @@ include_once('header.php');
  	<!--banner-->	
 		   <div class="banner">
 		    	<h2>
-				<a href="dashboard">Home</a>
+				<a href="manage_customer">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Validation</span>
+				<span>Add Employee</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -91,26 +91,26 @@ include_once('header.php');
 				
 			<div class="col-md-12 form-group1">
               <label class="control-label">Username</label>
-              <input type="text" name="username" placeholder="Name" >
+              <input type="text" name="username" placeholder="Username" >
             </div>
             <div class="clearfix"> </div>
             </div>
 			 <div class="vali-form vali-form1">
             <div class="col-md-12 form-group1">
               <label class="control-label">Password</label>
-              <input type="password" name="password" placeholder="Create a password" >
+              <input type="password" name="password" placeholder="password" >
             </div>
 
 			<div class="col-md-12 form-group1">
               <label class="control-label">Name</label>
-              <input type="text" name="emp_name" placeholder="emp_name" >
+              <input type="text" name="emp_name" placeholder="Name" >
             </div>
 			 <div class="clearfix"> </div>
            
             <br>
             <div class="col-md-12 form-group1 group-mail">
               <label class="control-label">Address</label>
-              <textarea class="form-control" name="emp_add" placeholder="Emp_add" ></textarea>
+              <textarea class="form-control" name="emp_add" placeholder="Address" ></textarea>
             </div>
              <div class="clearfix"> </div>
 

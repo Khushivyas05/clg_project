@@ -30,9 +30,9 @@ function validate()
  	<!--banner-->	
 		   <div class="banner">
 		    	<h2>
-				<a href="dashboard">Home</a>
+				<a href="manage_customer">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Add city</span>
+				<span>Edit city</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -53,8 +53,17 @@ function validate()
             </div>
 			
 			<div class="col-md-12 form-group1">
-              <label class="control-label">state id</label>
-              <input type="text" placeholder="state_id" name="state_id" value="<?php echo $fetch->state_id;?>"<br>
+			<label class="control-label">State:</label>
+            <select name="state_id" class="form-control">
+			<?php
+			foreach($fetcharr as $f)
+			{
+			?>
+			<option value="<?php echo $f->state_id?>"><?php echo $f->state_name?></option>
+			<?php
+			}
+			?>
+			</select>
             </div>
 			
 			

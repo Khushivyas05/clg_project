@@ -5,7 +5,7 @@ include_once('header.php');
  	<!--banner-->	
 		     <div class="banner">
 		    	<h2>
-				<a href="dashboard">Home</a>
+				<a href="manage_customer">Home</a>
 				<i class="fa fa-angle-right"></i>
 				<span>Manage Weight rate</span>
 				</h2>
@@ -39,7 +39,7 @@ include_once('header.php');
 						<td><?php echo $m->w_id;?></td>
 						<td><?php echo $m->kg;?></td>
 						<td><?php echo $m->price;?></td>
-						<td><a href="editcontact?edit_w_id=<?php echo $m->w_id;?>" class="btn btn-primary">Edit</a></td>
+						<td><a href="editwrate?edit_w_id=<?php echo $m->w_id;?>" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_w_id=<?php echo $m->w_id;?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
 					 <?php

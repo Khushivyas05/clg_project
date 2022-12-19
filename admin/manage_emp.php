@@ -5,7 +5,7 @@ include_once('header.php');
  	<!--banner-->	
 		     <div class="banner">
 		    	<h2>
-				<a href="dashboard">Home</a>
+				<a href="manage_customer">Home</a>
 				<i class="fa fa-angle-right"></i>
 				<span>Manage Employee</span>
 				</h2>
