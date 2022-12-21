@@ -1,7 +1,7 @@
 <?php
 include_once('header.php');
 ?>
- 
+ ddd
  	<!--banner-->	
 		     <div class="banner">
 		    	<h2>
@@ -29,7 +29,6 @@ include_once('header.php');
 						<th>Address</th>
 						<th>Contact no</th>
 						<th>Email</th>
-						<th>Password</th>
 						<th>Username</th>
 						<th>Edit</th>
 						<th>Delete</th>
@@ -47,7 +46,6 @@ include_once('header.php');
 						<td><?php echo $mu->cust_add;?></td>
 						<td><?php echo $mu->contact_no;?></td>
 						<td><?php echo $mu->email;?></td>
-						<td><?php echo $mu->password;?></td>
 						<td><?php echo $mu->username;?></td>
 						<td><a href="editcustomer?edit_cust_id=<?php echo $mu->cust_id?>" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_cust_id=<?php echo $mu->cust_id?>" class="btn btn-danger">Delete</a></td>
