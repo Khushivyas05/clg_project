@@ -24,8 +24,8 @@ include_once('header.php');
 					<thead>
 					  <tr>
 						<th>w_id</th>
-						<th>kg</th>
-						<th>price</th>
+						<th>Kilogram</th>
+						<th>Price</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>

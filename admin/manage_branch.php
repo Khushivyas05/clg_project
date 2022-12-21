@@ -23,10 +23,10 @@ include_once('header.php');
 				  <table class="table">
 					<thead>
 					  <tr>
-						<th>branch_id</th>
-						<th>branch_name</th>
-						<th>contact_no</th>
-						<th>branch_location</th>
+						<th>Branch_id</th>
+						<th>Name</th>
+						<th>Contact no</th>
+						<th>Location</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>

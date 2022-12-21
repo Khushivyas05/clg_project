@@ -24,10 +24,10 @@ include_once('header.php');
 					<thead>
 					  <tr>
 					    <th>Cust_id</th>
-						<th>City_id</th>
-						<th>Cust_name</th>
-						<th>Cust_address</th>
-						<th>Contact_no</th>
+						<th>City</th>
+						<th>Name</th>
+						<th>Address</th>
+						<th>Contact no</th>
 						<th>Email</th>
 						<th>Password</th>
 						<th>Username</th>

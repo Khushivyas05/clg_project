@@ -23,8 +23,8 @@ include_once('header.php');
 				  <table class="table">
 					<thead>
 					  <tr>
-						<th>state_id</th>
-						<th>state_name</th>
+						<th>State_id</th>
+						<th>State Name</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>

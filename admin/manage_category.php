@@ -23,12 +23,12 @@ include_once('header.php');
 				  <table class="table">
 					<thead>
 					  <tr>
-					    <th>cate_id</th>
-						<th>model_name</th>
-						<th>company_name</th>
-						<th>vehicle_number</th>
-						<th>truck_capacity</th>
-						<th>img</th>
+					    <th>Cate_id</th>
+						<th>Model Name</th>
+						<th>Company Name</th>
+						<th>Vehicle Number</th>
+						<th>Truck Capacity</th>
+						<th>Image</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>
