@@ -96,4 +96,4 @@ class model
 	}
 }
 $obj=new model();
-?>n
+?>
