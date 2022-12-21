@@ -25,13 +25,13 @@ include_once('header.php');
 					
 					  <tr>
 					    <th>Emp_id</th>
-                        <th>city_id</th>						 
+                        <th>City</th>						 
 						<th>Username</th>
-						<th>Emp_name</th>
-						<th>Emp_add</th>
+						<th>Name</th>
+						<th>Address</th>
 						<th>Designation</th>
 						<th>Email</th>
-						<th>Contact_no</th>
+						<th>Contact no</th>
 						<th>Driving Licence</th>
 						<th>Edit</th>
 						<th>Delete</th>

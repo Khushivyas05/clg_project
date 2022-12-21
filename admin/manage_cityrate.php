@@ -24,9 +24,9 @@ include_once('header.php');
 				  <table class="table">
 					<thead>
 					  <tr>
-					    <th>cr_id</th>
-					    <th>city_id</th>
-						<th>rate</th>
+					    <th>Cr_id</th>
+					    <th>City Name</th>
+						<th>Rate</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>
