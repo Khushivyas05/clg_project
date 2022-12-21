@@ -3,7 +3,7 @@ include_once('model.php');
 class control extends model
 {
 	function __construct()
-	{
+	{bb
 		session_start();
 		model::__construct();
 		$path=$_SERVER['PATH_INFO'];
