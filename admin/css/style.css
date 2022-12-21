@@ -242,7 +242,7 @@ i.nav_icon {
 }
 .sidebar ul li a{
   color: #999;
-  font-size:14px;
+  font-size:18px;
 }
 
 ul.nav.navbar-nav.navbar-right {
@@ -540,7 +540,7 @@ i.fa.fa-globe {
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
 }
 .banner  h2{
-	font-size:0.9em;
+	font-size:20px;
 }
 .banner  h2 a { 
     color:#D95459;
@@ -1323,17 +1323,17 @@ input#disabledTextInput,select#disabledSelect {
 label.control-label {
     font-weight: 100;
     color: #000;
-    font-size: 0.9em;
+    font-size: 20px;
     margin: 0;
 }
 .form-group1 input[type="text"],.form-group1 textarea,
 .form-group1 input[type="password"],.form-group1 input[type="date"]{
 	border: 1px solid #E9E9E9;
-    font-size: 0.9em;
+    font-size: 20px;
     width: 100%;
     outline: none;
     padding: 0.5em 1em;
-    color: #999;
+    color: black;
     margin-top: 0.5em;
     font-family: 'Muli-Regular';
 }
@@ -1766,7 +1766,7 @@ div#home {
     border-top: 1px solid #ddd;
 }
 td.table-text h6{
-	font-size: 1.2em;
+	font-size: 1.9em;
 	color:#000;
 }
 td.table-text p{
