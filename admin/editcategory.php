@@ -72,7 +72,7 @@ function validate()
 			
 			<div class="col-md-12 form-group1">
               <label class="control-label"> model name</label>
-              <input type="text" placeholder="model_name" name="model_name" value="<?php echo $fetch->model_name;?>"<br>
+              <input type="text" placeholder="model_name" name="model_name" value="<?php echo $fetch->model_name;?>"><br>
             </div>
 			
 			
