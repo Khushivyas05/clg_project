@@ -1,5 +1,4 @@
 <?php
-hetvi
 include_once('model.php');
 class control extends model
 {
@@ -231,17 +230,16 @@ class control extends model
 						
 				if(isset($_REQUEST['submit']))
 				{
-					$cat_id=$_REQUEST['cate_id'];
+					$cate_id=$_REQUEST['cate_id'];
 					$model_name=$_REQUEST['model_name'];
 					$company_name=$_REQUEST['company_name'];
 					$vehicle_number=$_REQUEST['vehicle_number'];
 					$truck_capacity=$_REQUEST['truck_capacity'];
-					$img=$_REQUEST['img'];
 
 							
 					if($_FILES['img']['size']>0)
 					{
-						$cat_img=$_FILES['img']['name'];
+						$img=$_FILES['img']['name'];
 						$path='images/'.$img;
 						$dup_file=$_FILES['img']['tmp_name'];
 						move_uploaded_file($dup_file,$path);
@@ -347,13 +345,17 @@ class control extends model
 			case '/add_category':
 			if(isset($_REQUEST['submit']))
 			{
-				$cate_id=$_REQUEST['cate_id'];
 				$model_name=$_REQUEST['model_name'];
 				$company_name=$_REQUEST['company_name'];
 				$vehicle_number=$_REQUEST['vehicle_number'];
 				$truck_capacity=$_REQUEST['truck_capacity'];
-				$img=$_REQUEST['img'];
-				$arr=array("cate_id"=>$cate_id,"model_name"=>$model_name,"company_name"=>$company_name,"vehicle_number"=>$vehicle_number,"truck_capacity"=>$truck_capacity,"img"=>$img);
+
+				$img=$_FILES['img']['name'];
+				$path='images/'.$img;
+				$dup_file=$_FILES['img']['tmp_name'];
+				move_uploaded_file($dup_file,$path);
+
+				$arr=array("model_name"=>$model_name,"company_name"=>$company_name,"vehicle_number"=>$vehicle_number,"truck_capacity"=>$truck_capacity,"img"=>$img);
 				$res=$this->insert('category',$arr);
 				if($res)
 				{
@@ -459,6 +461,7 @@ class control extends model
 			break;
 			
 			case '/editcustomer':
+			$fetcharr=$this->selectall('city');
 			if(isset($_REQUEST['edit_cust_id']))
 			{
 				$cust_id=$_REQUEST['edit_cust_id'];
@@ -674,7 +677,7 @@ class control extends model
 				    $res=$this->delete_where('category',$where);
 				    if($res) 
 				    {
-					   unlink('images'.$img);
+					   unlink('images/'.$img);
 					    echo "<script> 
 						alert('Delete Success') 
 						window.location='manage_category';

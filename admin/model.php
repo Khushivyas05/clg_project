@@ -19,7 +19,6 @@ class model
 	function selectall($tbl)
 	{
 	    $ins="select * from $tbl";
-		$ins="select * from $tbl";
 		$run=$this->conn->query($ins);
 		while($fetch=$run->fetch_object())
 		{
@@ -57,7 +56,7 @@ class model
 		$i=0;
 		foreach($where as $w)
 		{
-			echo $del.=" and $key_arr[$i]='$value_arr[$i]'";
+			$del.=" and $key_arr[$i]='$value_arr[$i]'";
 			$i++;
 		}
 		$run=$this->conn->query($del);

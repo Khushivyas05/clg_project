@@ -38,14 +38,14 @@ function validate()
          	<div class="vali-form">
             <div class="col-md-12 form-group1">
               <label class="control-label">Kilogram</label>
-              <input type="number" name="kg" placeholder="Kilogram">
+              <input type="text" name="kg" placeholder="Kilogram">
             </div>
             <div class="clearfix"> </div>
             </div>
             
             <div class="col-md-12 form-group1 group-mail">
               <label class="control-label">Price</label>
-              <input type="number" name="price" placeholder="price">
+              <input type="text" name="price" placeholder="price">
             </div>
              
              <div class="clearfix"> </div>
