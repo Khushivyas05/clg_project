@@ -24,9 +24,9 @@ include_once('header.php');
 					<thead>
 					  <tr>
 					    <th>Feedback_id</th>
-					    <th>cust_id</th>
-						<th>comment</th>
-						<th>date</th>
+					    <th>Customer Name</th>
+						<th>Comment</th>
+						<th>Date</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>
