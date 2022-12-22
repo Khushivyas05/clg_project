@@ -1,7 +1,7 @@
 <?php
 include_once('header.php');
 ?>
- ddd
+ 
  	<!--banner-->	
 		     <div class="banner">
 		    	<h2>
@@ -20,7 +20,7 @@ include_once('header.php');
 				<div class="container mt-3">
 				  <h2>Manage Customer</h2>
 
-				  <table class="table">
+				  <table class="table table-bordered table-striped">
 					<thead>
 					  <tr>
 					    <th>Cust_id</th>

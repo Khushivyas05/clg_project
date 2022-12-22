@@ -20,7 +20,7 @@ include_once('header.php');
 				<div class="container mt-3">
 				  <h2>Manage city</h2>
 
-				  <table class="table">
+				  <table class="table table-bordered table-striped">
 					<thead>
 					  <tr>
 					    <th>City_id</th>
