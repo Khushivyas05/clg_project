@@ -15,9 +15,9 @@ include_once('header.php');
  	<div class="blank">
 	
 
-			<div class="blank-page">
+			<div class="blank-page" style="overflow:auto">
 				
-				<div class="container mt-3">
+				<div class="container mt-3" >
 				  <h2>Manage branch</h2>
 
 				  <table class="table">
