@@ -51,17 +51,17 @@ class control extends model
 			</script>";
 			
 			case '/manage_feedback':
-			$manage_feedback_arr=$this->selectall('feedback');
+			$manage_feedback_arr=$this->select_where_join('feedback','customer_details','feedback.cust_id=customer_details.cust_id');
 			include_once('manage_feedback.php');
 			break;
 			
 			case '/manage_city':
-			$manage_city_arr=$this->selectall('city');
+			$manage_city_arr=$this->select_where_join('city','state','city.state_id=state.state_id');
 			include_once('manage_city.php');
 			break;
 			
 			case '/manage_cityrate':
-			$manage_cityrate_arr=$this->selectall('city_rate');
+			$manage_cityrate_arr=$this->select_where_join('city_rate','city','city_rate.city_id=city.city_id');
 			include_once('manage_cityrate.php');
 			break;
 			
@@ -71,7 +71,7 @@ class control extends model
 			break;
 
 			case '/manage_emp':
-			$manage_emp_arr=$this->selectall('employee_details');
+			$manage_emp_arr=$this->select_where_join('employee_details','city','employee_details.city_id=city.city_id');
 			include_once('manage_emp.php');
 			break;
 
@@ -91,7 +91,7 @@ class control extends model
 			break;
 
 			case '/manage_customer':
-			$manage_customer_arr=$this->selectall('customer_details');
+			$manage_customer_arr=$this->select_where_join('customer_details','city','customer_details.city_id=city.city_id');
 			include_once('manage_customer.php');
 			break;
 

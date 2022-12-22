@@ -44,7 +44,7 @@ include_once('header.php');
 					?>
 					  <tr>
 					    <td><?php echo $m->emp_id;?></td>
-						<td><?php echo $m->city_id;?></td>
+						<td><?php echo $m->city_name;?></td>
 						<td><?php echo $m->username;?></td>
 						<td><?php echo $m->emp_name;?></td>
 						<td><?php echo $m->emp_add;?></td>

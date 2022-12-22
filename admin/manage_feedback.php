@@ -38,7 +38,7 @@ include_once('header.php');
 					?>	
 					  <tr>
 					    <td><?php echo $c->feedback_id;?></td>
-						<td><?php echo $c->cust_id;?></td>
+						<td><?php echo $c->cust_name;?></td>
 						<td><?php echo $c->comment;?></td>
 						<td><?php echo $c->date;?></td>
 						<td><a href="editfeedback?edit_feedback_id=<?php echo $c->feedback_id?>" class="btn btn-primary">Edit</a></td>
