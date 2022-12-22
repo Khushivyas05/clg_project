@@ -37,7 +37,7 @@ d
 					?>	
 					  <tr>
 					    <td><?php echo $c->cr_id;?></td>
-						<td><?php echo $c->city_id;?></td>
+						<td><?php echo $c->city_name;?></td>
 						<td><?php echo $c->rate;?></td>
 						<td><a href="editcityrate?edit_cr_id=<?php echo $c->cr_id?>" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_cr_id=<?php echo $c->cr_id?>" class="btn btn-danger">Delete</a></td>

@@ -48,6 +48,24 @@ class model
 		$run=$this->conn->query($sel);
 		return $run;
 	}
+
+	function select_where_join($tbl1,$tbl2,$on)
+	{
+	    $ins="select * from $tbl1 join $tbl2 on $on";
+		$run=$this->conn->query($ins);
+		while($fetch=$run->fetch_object())
+		{
+			$arr[]=$fetch;
+		}
+		if(!empty($arr))
+		{
+			return $arr;
+		}
+		else
+		{
+			return $arr=array("Data not found");
+		}
+	}
 	function delete_where($tbl,$where)
 	{
 		$key_arr=array_keys($where);
