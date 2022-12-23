@@ -1,5 +1,6 @@
 <?php
 include_once('header.php');
+hh
 ?>
 <script>
   function validate()
@@ -131,7 +132,7 @@ include_once('header.php');
 			 
 			 <div class="col-md-12 form-group1 group-mail">
               <label class="control-label">Designation</label>
-              <input type="text" name="designation" placeholder="Designation" >
+			  <input type="text" name="designation" placeholder="Designation" >
             </div>
 			
 			 <div class="clearfix"> </div>
