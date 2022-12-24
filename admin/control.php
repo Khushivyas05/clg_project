@@ -120,7 +120,7 @@ class control extends model
 			break;
 
 			case '/manage_payment':
-			$manage_payment_arr=$this->selectall('payment');
+			$manage_payment_arr=$this->select_where_join('payment','customer_details','payment.cust_id=customer_details.cust_id','invoice','payment.invoice_id=invoice.invoice_id');
 			include_once('manage_payment.php');
 			break;
 
