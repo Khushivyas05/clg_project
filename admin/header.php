@@ -40,45 +40,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <!----->
 
-<!--pie-chart--->
-<script src="js/pie-chart.js" type="text/javascript"></script>
- <script type="text/javascript">
-
-        $(document).ready(function () {
-            $('#demo-pie-1').pieChart({
-                barColor: '#3bb2d0',
-                trackColor: '#eee',
-                lineCap: 'round',
-                lineWidth: 8,
-                onStep: function (from, to, percent) {
-                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
-                }
-            });
-
-            $('#demo-pie-2').pieChart({
-                barColor: '#fbb03b',
-                trackColor: '#eee',
-                lineCap: 'butt',
-                lineWidth: 8,
-                onStep: function (from, to, percent) {
-                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
-                }
-            });
-
-            $('#demo-pie-3').pieChart({
-                barColor: '#ed6498',
-                trackColor: '#eee',
-                lineCap: 'square',
-                lineWidth: 8,
-                onStep: function (from, to, percent) {
-                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
-                }
-            });
-
-           
-        });
-
-    </script>
 <!--skycons-icons-->
 <script src="js/skycons.js"></script>
 <!--//skycons-icons-->
@@ -100,11 +61,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			 <div class=" border-bottom">
         	<div class="full-left">
         	  <section class="full-top">
-				<button id="toggle"><i class="fa fa-arrows-alt"></i></button>	
+					
 			</section>
 			<form class=" navbar-left-right">
-              <input type="text"  value="Search..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search...';}">
-              <input type="submit" value="" class="fa fa-search">
+              
             </form>
             <div class="clearfix"> </div>
            </div>

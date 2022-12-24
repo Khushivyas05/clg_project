@@ -185,6 +185,7 @@ class control extends model
 				break;
 			
 			case'/editfeedback':
+			$fetcharr=$this->selectall('customer_details');
 			if(isset($_REQUEST['edit_feedback_id']))
 			{
 				$feedback_id=$_REQUEST['edit_feedback_id'];
@@ -546,32 +547,6 @@ class control extends model
 			}
 			include_once('editcustomer.php');
 			break;
-			
-			case '/edit_feedback':
-			if(isset($_REQUEST['edit_feedback_id']))
-			{
-				$feedback_id=$_REQUEST['edit_feedback_id'];
-				$where=array("feedback_id"=>$feedback_id);
-				$run=$this->select_where('feedback',$where);
-				$fetch=$run->fetch_object();
-				if(isset($_REQUEST['submit']))
-				{
-					$feedback_id=$_REQUEST['feedback_id'];
-					$cust_id=$_REQUEST['cust_id'];
-					$comment=$_REQUEST['comment'];
-					$arr=array("feedback_id"=>$feedback_id,"cust_id"=>$cust_id,"comment"=>$comment);
-					$res=$this->update('feedback',$arr,$where);
-					if($res)
-					{
-					    echo "<script>
-						alert('update success');
-						window.location='manage_feedback';
-						</script>";
-					}
-				}
-			}
-			include_once('editfeedback.php');
-			break;
 
 			case '/editbranch':
 			if(isset($_REQUEST['edit_branch_id']))
@@ -649,6 +624,38 @@ class control extends model
 				}
 			}
 			include_once('editwrate.php');
+			break;
+
+			case '/editbooking':
+			$fetcharr=$this->selectall('customer_details');
+			$arr=$this->selectall('category');
+			if(isset($_REQUEST['edit_booking_id']))
+			{
+				$booking_id=$_REQUEST['edit_booking_id'];
+				$where=array("booking_id"=>$booking_id);
+				$run=$this->select_where('booking',$where);
+				$fetch=$run->fetch_object();
+				if(isset($_REQUEST['submit']))
+				{
+					$booking_id=$_REQUEST['booking_id'];
+					$cust_id=$_REQUEST['cust_id'];
+					$cate_id=$_REQUEST['cate_id'];
+					$source=$_REQUEST['source'];
+					$destination=$_REQUEST['destination'];
+					$price=$_REQUEST['price'];
+					$payment_type=$_REQUEST['payment_type'];
+					$arr=array("booking_id"=>$booking_id,"cust_id"=>$cust_id,"cate_id"=>$cate_id,"source"=>$source,"destination"=>$destination,"price"=>$price,"payment_type"=>$payment_type);
+					$res=$this->update('booking',$arr,$where);
+					if($res)
+					{
+						echo "<script>
+						alert('update success');
+						window.location='manage_booking';
+						</script>";
+					}
+				}
+			}
+			include_once('editbooking.php');
 			break;
 
 			case '/delete':
