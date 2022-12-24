@@ -106,7 +106,7 @@ class control extends model
 			break;
 
 			case '/manage_fuel':
-			$manage_fuel_arr=$this->select_where_join('fuel','employee_details','fuel.emp_id=employee_details.emp_id','','');
+			$manage_fuel_arr=$this->select_where_join('fuel','employee_details','fuel.emp_id=employee_details.emp_id');
 			include_once('manage_fuel.php');
 			break;
 
@@ -115,13 +115,13 @@ class control extends model
 			include_once('manage_invoice.php');
 			break;
 
-			case 'manage_parcel':
+			case '/manage_parcel':
 			$manage_parcel_arr=$this->select_where_join('parcel','customer_details','parcel.cust_id=customer_details.cust_id');
-			include_once('manage_parcel.php');
+			include_once('managee_parcel.php');
 			break;
 
 			case '/manage_payment':
-			$manage_payment_arr=$this->selectall('payment');
+			$manage_payment_arr=$this->select_where_join('payment','customer_details','payment.cust_id=customer_details.cust_id','invoice','payment.invoice_id=invoice.invoice_id');
 			include_once('manage_payment.php');
 			break;
 
