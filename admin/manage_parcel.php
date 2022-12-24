@@ -24,7 +24,7 @@ include_once('header.php');
 					<thead>
 					  <tr>
 					    <th>Parcel id</th>
-					    <th>Customer id</th>
+					    <th>Customer Name</th>
 						<th>Weight</th>
                         <th>Type</th>
 						<th>Edit</th>
@@ -41,8 +41,8 @@ include_once('header.php');
 						<td><?php echo $c->cust_name;?></td>
 						<td><?php echo $c->weight;?></td>
                         <td><?php echo $c->type;?></td>
-						<td><a href="editcity?edit_city_id=<?php echo $c->city_id?>" class="btn btn-primary">Edit</a></td>
-						<td><a href="delete?del_city_id=<?php echo $c->city_id?>" class="btn btn-danger">Delete</a></td>
+						<td><a href="editparcel?edit_parcel_id=<?php echo $c->parcel_id?>" class="btn btn-primary">Edit</a></td>
+						<td><a href="delete?del_parcel_id=<?php echo $c->parcel_id?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
 					<?php
 					}

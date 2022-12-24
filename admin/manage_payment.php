@@ -25,13 +25,13 @@ include_once('header.php');
 					  <tr>
 						<th>payment_id</th>
 						<th>cust_id</th>
-						<th>invoice_id</th>
+						<th>invoice Date</th>
 						<th>price</th>
                         <th>payment_type</th>
 						<th>date</th>
 						<th>Edit</th>
 						<th>Delete</th>
-					  </tr>
+                        </tr>
 					</thead>
 					<tbody>
 					<?php
@@ -40,8 +40,8 @@ include_once('header.php');
 					?>
 					  <tr>
 						<td><?php echo $c->payment_id;?></td>
-						<td><?php echo $c->cust_id;?></td>
-						<td><?php echo $c->invoice_id;?></td>
+						<td><?php echo $c->cust_name;?></td>
+						<td><?php echo $c->invoice_date;?></td>
 						<td><?php echo $c->price;?></td>
                         <td><?php echo $c->payment_type;?></td>
 						<td><?php echo $c->date;?></td>
