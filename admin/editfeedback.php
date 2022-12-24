@@ -59,8 +59,17 @@ function validate()
             </div>
 			
 			<div class="col-md-12 form-group1">
-              <label class="control-label">Cust id</label>
-              <input type="text" placeholder="cust_id" name="cust_id" value="<?php echo $fetch->cust_id;?>"><br>
+			<label class="control-label">Customer Name:</label>
+            <select name="cust_id" class="form-control">
+			<?php
+			foreach($fetcharr as $f)
+			{
+			?>
+			<option value="<?php echo $f->cust_id?>"><?php echo $f->cust_name?></option>
+			<?php
+			}
+			?>
+			</select>
             </div>
 			
 			
