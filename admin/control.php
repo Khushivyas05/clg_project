@@ -101,7 +101,7 @@ class control extends model
 			break;
 
 			case '/manage_booking':
-			$manage_booking_arr=$this->select_where_join('booking','customer_details','booking.cust_id=customer_details.cust_id','category','booking.cate_id=category.cate_id');
+			$manage_booking_arr=$this->select_where_join1('booking','customer_details','booking.cust_id=customer_details.cust_id','category','booking.cate_id=category.cate_id');
 			include_once('manage_booking.php');
 			break;
 
@@ -111,7 +111,7 @@ class control extends model
 			break;
 
 			case '/manage_invoice':
-			$manage_invoice_arr=$this->select_where1_join('invoice','booking','invoice.booking_id=booking.booking_id','branch','invice.branch_id=branch.branch_id');
+			$manage_invoice_arr=$this->select_where_join1('invoice','booking','invoice.booking_id=booking.booking_id','branch','invoice.branch_id=branch.branch_id');
 			include_once('manage_invoice.php');
 			break;
 
@@ -121,7 +121,7 @@ class control extends model
 			break;
 
 			case '/manage_payment':
-			$manage_payment_arr=$this->select_where_join('payment','customer_details','payment.cust_id=customer_details.cust_id','invoice','payment.invoice_id=invoice.invoice_id');
+			$manage_payment_arr=$this->select_where_join1('payment','customer_details','payment.cust_id=customer_details.cust_id','invoice','payment.invoice_id=invoice.invoice_id');
 			include_once('manage_payment.php');
 			break;
 
