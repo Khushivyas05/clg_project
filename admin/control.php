@@ -100,6 +100,15 @@ class control extends model
 			include_once('manage_feedback.php');
 			break;
 
+			case '/manage_booking':
+			$manage_booking_arr=$this->select_where_join('booking','customer_details','booking.cust_id=customer_details.cust_id','category','booking.cate_id=category.cate_id');
+			include_once('manage_booking.php');
+			break;
+
+			case '/manage_fuel':
+			include_once('manage_fuel.php');
+			break;
+
 			case '/manage_payment':
 			$manage_payment_arr=$this->selectall('payment');
 			include_once('manage_payment.php');
@@ -416,7 +425,8 @@ class control extends model
 			if(isset($_REQUEST['submit']))
 			{
 				$kg=$_REQUEST['kg'];
-				$price=$_REQUEST['price'];
+				$rate=10;
+				$price=$kg*$rate;
 				$arr=array("kg"=>$kg,"price"=>$price);
 				$res=$this->insert('w_rate',$arr);
 				if($res)

@@ -43,10 +43,10 @@ function validate()
             <div class="clearfix"> </div>
             </div>
             
-            <div class="col-md-12 form-group1 group-mail">
+            <!--<div class="col-md-12 form-group1 group-mail">
               <label class="control-label">Price</label>
               <input type="text" name="price" placeholder="price">
-            </div>
+            </div>-->
              
              <div class="clearfix"> </div>
              <div class="clearfix"> </div>
