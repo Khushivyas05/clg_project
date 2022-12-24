@@ -106,7 +106,7 @@ class control extends model
 			break;
 
 			case '/manage_fuel':
-			$manage_fuel_arr=$this->select_where_join('fuel','employee_details','fuel.emp_id=employee_details.emp_id','','');
+			$manage_fuel_arr=$this->select_where_join('fuel','employee_details','fuel.emp_id=employee_details.emp_id');
 			include_once('manage_fuel.php');
 			break;
 
