@@ -100,6 +100,16 @@ class control extends model
 			include_once('manage_feedback.php');
 			break;
 
+			case '/manage_invoice':
+			$manage_invoice_arr=$this->select_where_join('invoice','booking','invoice.booking_id=booking.booking_id');
+			include_once('manage_invoice.php');
+			break;
+
+			case 'manage_parcel':
+			$manage_parcel_arr=$this->selectall('parcel');
+			include_once('manag_parcel.php');
+			break;
+
 			case '/add_emp':
 			$fetcharr=$this->selectall('city');
 			if(isset($_REQUEST['submit']))
