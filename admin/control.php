@@ -116,8 +116,8 @@ class control extends model
 			break;
 
 			case 'manage_parcel':
-			$manage_parcel_arr=$this->selectall('parcel');
-			include_once('manag_parcel.php');
+			$manage_parcel_arr=$this->select_where_join('parcel','customer_details','parcel.cust_id=customer_details.cust_id');
+			include_once('manage_parcel.php');
 			break;
 
 			case '/manage_payment':
