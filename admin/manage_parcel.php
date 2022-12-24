@@ -39,7 +39,8 @@ include_once('header.php');
 					  <tr>
 					    <td><?php echo $c->parcel_id;?></td>
 						<td><?php echo $c->cust_name;?></td>
-						<td><?php echo $c->city_name;?></td>
+						<td><?php echo $c->weight;?></td>
+                        <td><?php echo $c->type;?></td>
 						<td><a href="editcity?edit_city_id=<?php echo $c->city_id?>" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_city_id=<?php echo $c->city_id?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
