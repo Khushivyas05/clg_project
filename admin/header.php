@@ -267,6 +267,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             
                             <li><a href="manage_wrate" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Weightrate</a></li>
 					   </ul>
+					   <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Invoice</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="add_invoice" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Invoice</a></li>
+                            
+                            <li><a href="manage_invoice" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Invoice</a></li>
+					   </ul>
                     </li>
 					<li> <a href="admin_logout" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Logout</span> </a> </li>
                 </ul>
