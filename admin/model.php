@@ -49,9 +49,9 @@ class model
 		return $run;
 	}
 
-	function select_where_join($tbl1,$tbl2,$on)
+	function select_where_join($tbl1,$tbl2,$on1,$tbl3,$on2)
 	{
-	    $ins="select * from $tbl1 join $tbl2 on $on";
+	    $ins="select * from $tbl1 join $tbl2 on $on1 join $tbl3 on $on2";
 		$run=$this->conn->query($ins);
 		while($fetch=$run->fetch_object())
 		{
