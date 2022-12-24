@@ -411,7 +411,8 @@ class control extends model
 			if(isset($_REQUEST['submit']))
 			{
 				$kg=$_REQUEST['kg'];
-				$price=$_REQUEST['price'];
+				$rate=10;
+				$price=$kg*$rate;
 				$arr=array("kg"=>$kg,"price"=>$price);
 				$res=$this->insert('w_rate',$arr);
 				if($res)
