@@ -1,6 +1,6 @@
 <?php
 include_once('header.php');
-hh
+
 ?>
 <script>
   function validate()
@@ -43,14 +43,14 @@ hh
 		   return false;
 	   } 
 	  
-	   var emailid=document.forms["empform"]["emailid"].value;
-	   if(emailid=="" || emailid==null)
+	   var email=document.forms["empform"]["email"].value;
+	   if(email=="" || email==null)
 	   {
 		   alert("please fill out the emailid");
 		   return false;
 	   } 
-       var mail=/^[a-zA-Z0-9_]+@[a-zA-Z]+\.[a-zA-Z]{2,4}$/;
-       if(!mail.test(emailid))
+	   var mail=/^[a-zA-Z0-9_]+@[a-zA-Z]+\.[a-zA-Z]{2,4}$/;
+       if(!mail.test(email))
 	   {
 		   alert("please proper email id");
 		   return false;

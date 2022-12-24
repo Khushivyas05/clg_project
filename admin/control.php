@@ -110,6 +110,21 @@ class control extends model
 			include_once('manage_fuel.php');
 			break;
 
+			case '/manage_invoice':
+			$manage_invoice_arr=$this->select_where_join('invoice','booking','invoice.booking_id=booking.booking_id');
+			include_once('manage_invoice.php');
+			break;
+
+			case 'manage_parcel':
+			$manage_parcel_arr=$this->selectall('parcel');
+			include_once('manag_parcel.php');
+			break;
+
+			case '/manage_payment':
+			$manage_payment_arr=$this->selectall('payment');
+			include_once('manage_payment.php');
+			break;
+
 			case '/add_emp':
 			$fetcharr=$this->selectall('city');
 			if(isset($_REQUEST['submit']))
@@ -731,6 +746,19 @@ class control extends model
 					echo "<script>
 					alert('Delete Success');
 					window.location='manage_wrate';
+					</script>";
+				}
+			}
+			if(isset($_REQUEST['del_payment_id']))
+			{
+				$payment_id=$_REQUEST['del_payment_id'];
+				$where=array("payment_id"=>$payment_id);
+				$res=$this->delete_where('payment_id',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('Delete Success');
+					window.location='payment_id';
 					</script>";
 				}
 			}
