@@ -9,7 +9,7 @@ include_once('header.php');
 				<i class="fa fa-angle-right"></i>
 				<span>Manage booking</span>
 				</h2>
-		    </div>bb
+		    </div>
 		<!--//banner-->
  	 <!--faq-->
  	<div class="blank">
