@@ -117,7 +117,7 @@ class control extends model
 
 			case '/manage_parcel':
 			$manage_parcel_arr=$this->select_where_join('parcel','customer_details','parcel.cust_id=customer_details.cust_id');
-			include_once('managee_parcel.php');
+			include_once('manage_parcel.php');
 			break;
 
 			case '/manage_payment':
