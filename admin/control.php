@@ -115,9 +115,9 @@ class control extends model
 			include_once('manage_invoice.php');
 			break;
 
-			case 'manage_parcel':
+			case '/manage_parcel':
 			$manage_parcel_arr=$this->selectall('parcel');
-			include_once('manag_parcel.php');
+			include_once('manage_parcel.php');
 			break;
 
 			case '/manage_payment':
