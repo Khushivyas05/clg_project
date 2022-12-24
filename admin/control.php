@@ -106,6 +106,7 @@ class control extends model
 			break;
 
 			case '/manage_fuel':
+			$manage_fuel_arr=$this->select_where_join('fuel','employee_details','fuel.emp_id=employee_details.emp_id','','');
 			include_once('manage_fuel.php');
 			break;
 
@@ -117,6 +118,11 @@ class control extends model
 			case 'manage_parcel':
 			$manage_parcel_arr=$this->selectall('parcel');
 			include_once('manag_parcel.php');
+			break;
+
+			case '/manage_payment':
+			$manage_payment_arr=$this->selectall('payment');
+			include_once('manage_payment.php');
 			break;
 
 			case '/add_emp':
@@ -740,6 +746,19 @@ class control extends model
 					echo "<script>
 					alert('Delete Success');
 					window.location='manage_wrate';
+					</script>";
+				}
+			}
+			if(isset($_REQUEST['del_payment_id']))
+			{
+				$payment_id=$_REQUEST['del_payment_id'];
+				$where=array("payment_id"=>$payment_id);
+				$res=$this->delete_where('payment_id',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('Delete Success');
+					window.location='payment_id';
 					</script>";
 				}
 			}
