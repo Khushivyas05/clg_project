@@ -621,6 +621,36 @@ class control extends model
 			include_once('editwrate.php');
 			break;
 
+			
+			case '/editpayment':
+				if(isset($_REQUEST['edit_payment_id']))
+				{
+					$payment_id=$_REQUEST['edit_payment_id'];
+					$where=array("payment_id"=>$payment_id);
+					$run=$this->select_where('payment',$where);
+					$fetch=$run->fetch_object();
+					if(isset($_REQUEST['submit']))
+					{
+						$payment_id=$_REQUEST['payment_id'];
+						$cust_id=$_REQUEST['cust_id'];
+						$invoice_id=$_REQUEST['invoice_id'];
+						$price=$_REQUEST['price'];
+						$payment_type=$_REQUEST['payment_type'];
+						$date=$_REQUEST['date'];
+						$arr=array("payment_id"=>$payment_id,"cust_id"=>$cust_id,"invoice_id"=>$invoice_id,"price"=>$price,"payment_type"=>$payment_type,"date"=>$date);
+						$res=$this->update('payment',$arr,$where);
+						if($res)
+						{
+							echo "<script>
+							alert('update success');
+							window.location='manage_payment';
+							</script>";
+						}
+					}
+				}
+				include_once('editpayment.php');
+				break;
+
 			case '/delete':
 			if(isset($_REQUEST['del_emp_id']))
 			 {
@@ -753,7 +783,7 @@ class control extends model
 			{
 				$payment_id=$_REQUEST['del_payment_id'];
 				$where=array("payment_id"=>$payment_id);
-				$res=$this->delete_where('payment_id',$where);
+				$res=$this->delete_where('payment',$where);
 				if($res)
 				{
 					echo "<script>
