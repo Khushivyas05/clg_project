@@ -122,7 +122,7 @@ class model
 		$j=0;
 		foreach($where as $w)
 		{
-			echo $upd.=" and $wkey_arr[$j]='$wvalue_arr[$j]'";
+			$upd.=" and $wkey_arr[$j]='$wvalue_arr[$j]'";
 			$j++;
 		}
 		$run=$this->conn->query($upd);

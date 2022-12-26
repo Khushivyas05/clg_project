@@ -4,31 +4,38 @@ include_once('header.php');
 <script>
 function validate()
 {
-	var branch_id=document.forms["branchform"]["branch_id"].value;
-	if(branch_id=="" || branch_id==null)
+	var fuel_id=document.forms["fuelform"]["fuel_id"].value;
+	if(fuel_id=="" || fuel_id==null)
 	{
-		alert("Please fill out Branch Id");
+		alert("Please fill out Fuel Id");
 		return false;
 	}
 	
-	var branch_name=document.forms["branchform"]["branch_name"].value;
-	if(branch_name=="" || branch_name==null)
+	var emp_id=document.forms["fuelform"]["emp_id"].value;
+	if(emp_id=="" || emp_id==null)
 	{
-		alert("Please fill out Branch Name");
+		alert("Please fill out Employee Name");
 		return false;
 	}
 	
-	var contact_no=document.forms["branchform"]["contact_no"].value;
-	if(contact_no=="" || contact_no==null)
+	var source=document.forms["fuelform"]["source"].value;
+	if(source=="" || source==null)
 	{
-		alert("Please fill out contact number");
+		alert("Please fill out source");
 		return false;
 	}
 	
-	var branch_location=document.forms["branchform"]["branch_location"].value;
-	if(branch_location=="" || branch_location==null)
+	var destination=document.forms["fuelform"]["destination"].value;
+	if(destination=="" || destination==null)
 	{
-		alert("Please fill out Branch Location");
+		alert("Please fill out destination");
+		return false;
+	}
+
+	var fuel_amt=document.forms["fuelform"]["fuel_amt"].value;
+	if(fuel_amt=="" || fuel_amt==null)
+	{
+		alert("Please fill out fuel amount");
 		return false;
 	}
 	
@@ -40,7 +47,7 @@ function validate()
 		    	<h2>
 				<a href="manage_customer">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Edit Branch</span>
+				<span>Edit Fuel</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -50,36 +57,40 @@ function validate()
  		<div class="validation-form">
  	<!---->
   	    
-        <form name="branchform" action="" method="post" enctype="multipart/form-data" onsubmit="return validate()">
+        <form name="fuelform" action="" method="post" enctype="multipart/form-data" onsubmit="return validate()">
          	<div class="vali-form">
             <div class="col-md-12 form-group1">
-              <label class="control-label">Branch ID</label>
-              <input type="text" name="branch_id" value="<?php echo $fetch->branch_id;?>" placeholder="branch_id">
+              <label class="control-label">Fuel ID</label>
+              <input type="text" name="fuel_id" value="<?php echo $fetch->fuel_id;?>" placeholder="fuel_id">
             </div>
             <div class="clearfix"> </div>
             </div>
             
 			<div class="col-md-12 form-group1">
-              <label class="control-label">Branch Name</label>
-              <input type="text" name="branch_name" value="<?php echo $fetch->branch_name;?>" placeholder="branch name">
+              <label class="control-label">Employee Name</label>
+              <input type="text" name="emp_id" value="<?php echo $fetch->emp_id;?>" placeholder="Employee name">
             </div>
             <div class="clearfix"> </div>
 			 
             <div class="vali-form">
             <div class="col-md-12 form-group1">
-              <label class="control-label">Contact Number</label>
-              <input type="text" name="contact_no" value="<?php echo $fetch->contact_no;?>" placeholder="Contact Number">
+			<label class="control-label">Source</label>
+            <input type="text" name="source" value="<?php echo $fetch->source;?>" placeholder="Source">
             </div>
             <div class="clearfix"> </div>
             </div>
 			
 			<div class="col-md-12 form-group1">
-              <label class="control-label">Branch Location</label>
-              <input type="text" name="branch_location" value="<?php echo $fetch->branch_location;?>" placeholder="branch location">
+			<label class="control-label">Destination</label>
+            <input type="text" name="destination" value="<?php echo $fetch->destination;?>" placeholder="Destination">
             </div>
             <div class="clearfix"> </div>
 			
-			
+			<div class="col-md-12 form-group1">
+			<label class="control-label">Fuel amount</label>
+            <input type="text" name="fuel_amt" value="<?php echo $fetch->fuel_amt;?>" placeholder="Fuel amount">
+            </div>
+            <div class="clearfix"> </div>
 			
 			
             <div class="clearfix"> </div>
