@@ -628,33 +628,35 @@ class control extends model
 
 			
 			case '/editpayment':
-				if(isset($_REQUEST['edit_payment_id']))
+			$fetcharr=$this->selectall('customer_details');
+			if(isset($_REQUEST['edit_payment_id']))
+			{
+				$payment_id=$_REQUEST['edit_payment_id'];
+				$where=array("payment_id"=>$payment_id);
+				$run=$this->select_where('payment',$where);
+				$fetch=$run->fetch_object();
+				if(isset($_REQUEST['submit']))
 				{
-					$payment_id=$_REQUEST['edit_payment_id'];
-					$where=array("payment_id"=>$payment_id);
-					$run=$this->select_where('payment',$where);
-					$fetch=$run->fetch_object();
-					if(isset($_REQUEST['submit']))
+					$payment_id=$_REQUEST['payment_id'];
+					$cust_id=$_REQUEST['cust_id'];
+					$invoice_id=$_REQUEST['invoice_id'];
+					$price=$_REQUEST['price'];
+					$payment_type=$_REQUEST['payment_type'];
+					$date=$_REQUEST['date'];
+					$arr=array("payment_id"=>$payment_id,"cust_id"=>$cust_id,"invoice_id"=>$invoice_id,"price"=>$price,"payment_type"=>$payment_type,"date"=>$date);
+					$res=$this->update('payment',$arr,$where);
+					if($res)
 					{
-						$payment_id=$_REQUEST['payment_id'];
-						$cust_id=$_REQUEST['cust_id'];
-						$invoice_id=$_REQUEST['invoice_id'];
-						$price=$_REQUEST['price'];
-						$payment_type=$_REQUEST['payment_type'];
-						$date=$_REQUEST['date'];
-						$arr=array("payment_id"=>$payment_id,"cust_id"=>$cust_id,"invoice_id"=>$invoice_id,"price"=>$price,"payment_type"=>$payment_type,"date"=>$date);
-						$res=$this->update('payment',$arr,$where);
-						if($res)
-						{
-							echo "<script>
-							alert('update success');
-							window.location='manage_payment';
-							</script>";
-						}
+						echo "<script>
+						alert('update success');
+						window.location='manage_payment';
+						</script>";
 					}
 				}
-				include_once('editpayment.php');
-				break;
+			}
+			include_once('editpayment.php');
+			break;
+
 			case '/editbooking':
 			$fetcharr=$this->selectall('customer_details');
 			$arr=$this->selectall('category');

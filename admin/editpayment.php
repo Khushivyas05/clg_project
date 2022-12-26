@@ -74,7 +74,7 @@ function validate()
 			<label class="control-label">cust_id</label>
             <select name="cust_id" class="form-control">
 			<?php
-			foreach($fetcharr as $c)
+			foreach($fetcharr as $f)
 			{
 			?>
 			<option value="<?php echo $f->cust_id?>"><?php echo $f->cust_name?></option>
@@ -87,16 +87,7 @@ function validate()
 			
 			<div class="col-md-12 form-group1">
             <label class="control-label">invoice_id</label>
-            <select name="invoice_id" class="form-control">
-			<?php
-			foreach($fetcharr as $c)
-			{
-			?>
-			<option value="<?php echo $f->invoice_id?>"><?php echo $f->invoice_date?></option>
-			<?php
-			}
-			?>
-			</select>
+            <input type="text" placeholder="Date" name="invoice_id" value="<?php echo $fetch->invoice_id;?>"><br>
             </div>
             <div class="clearfix"> </div>
 			
