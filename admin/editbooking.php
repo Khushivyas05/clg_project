@@ -61,20 +61,11 @@ function validate()
             
 			<div class="col-md-12 form-group1">
             <label class="control-label">Customer Name:</label>
-            <select name="cust_id" class="form-control">
-			<?php
-			foreach($fetcharr as $f)
-			{
-			?>
-			<option value="<?php echo $f->cust_id?>"><?php echo $f->cust_name?></option>
-			<?php
-			}
-			?>
-			</select>
+            <input type="text" name="cust_id" value="<?php echo $fetch->cust_name;?>" placeholder="Customer name">
             </div>
             <div class="clearfix"> </div>
             <label class="control-label">Vehicle number</label>
-            <input type="text" name="cate_id" value="<?php echo $arr->vehicle_number;?>" placeholder="Vehicle number">
+            <input type="text" name="cate_id" value="<?php echo $fetch->vehicle_number;?>" placeholder="Vehicle number">
             <div class="vali-form">
             <div class="col-md-12 form-group1">
            

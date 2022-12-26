@@ -498,13 +498,14 @@ class control extends model
 				if(isset($_REQUEST['submit']))
 				{
 					$cust_id=$_REQUEST['cust_id'];
+					$city_id=$_REQUEST['city_id'];
 					$cust_name=$_REQUEST['cust_name'];
 					$cust_add=$_REQUEST['cust_add'];
 					$contact_no=$_REQUEST['contact_no'];
 					$email=$_REQUEST['email'];
 					$username=$_REQUEST['username'];
 					
-					$arr=array("cust_id"=>$cust_id,"cust_name"=>$cust_name,"cust_add"=>$cust_add,"contact_no"=>$contact_no,"email"=>$email,"username"=>$username);
+					$arr=array("cust_id"=>$cust_id,"city_id"=>$city_id,"cust_name"=>$cust_name,"cust_add"=>$cust_add,"contact_no"=>$contact_no,"email"=>$email,"username"=>$username);
 					$res=$this->update('customer_details',$arr,$where);
 					if($res)
 					{
@@ -597,8 +598,6 @@ class control extends model
 			break;
 
 			case '/editbooking':
-			$fetcharr=$this->selectall('customer_details');
-			$arr=$this->selectall('category');
 			if(isset($_REQUEST['edit_booking_id']))
 			{
 				$booking_id=$_REQUEST['edit_booking_id'];
@@ -626,6 +625,34 @@ class control extends model
 				}
 			}
 			include_once('editbooking.php');
+			break;
+
+			case '/editfuel':
+			if(isset($_REQUEST['edit_fuel_id']))
+			{
+				$fuel_id=$_REQUEST['edit_fuel_id'];
+				$where=array("fuel_id"=>$fuel_id);
+				$run=$this->select_where('fuel',$where);
+				$fetch=$run->fetch_object();
+				if(isset($_REQUEST['submit']))
+				{
+					$fuel_id=$_REQUEST['fuel_id'];
+					$emp_id=$_REQUEST['emp_id'];
+					$source=$_REQUEST['source'];
+					$destination=$_REQUEST['destination'];
+					$fuel_amt=$_REQUEST['fuel_amt'];
+					$arr=array("fuel_id"=>$fuel_id,"emp_id"=>$emp_id,"source"=>$source,"destination"=>$destination,"fuel_amt"=>$fuel_amt);
+					$res=$this->update('fuel',$arr,$where);
+					if($res)
+					{
+						echo "<script>
+						alert('update success');
+						window.location='manage_fuel';
+						</script>";
+					}
+				}
+			}
+			include_once('editfuel.php');
 			break;
 
 			case '/delete':
@@ -760,12 +787,38 @@ class control extends model
 			{
 				$payment_id=$_REQUEST['del_payment_id'];
 				$where=array("payment_id"=>$payment_id);
-				$res=$this->delete_where('payment_id',$where);
+				$res=$this->delete_where('payment',$where);
 				if($res)
 				{
 					echo "<script>
 					alert('Delete Success');
-					window.location='payment_id';
+					window.location='manage_payment';
+					</script>";
+				}
+			}
+			if(isset($_REQUEST['del_booking_id']))
+			{
+				$booking_id=$_REQUEST['del_booking_id'];
+				$where=array("booking_id"=>$booking_id);
+				$res=$this->delete_where('booking',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('Delete Success');
+					window.location='manage_booking';
+					</script>";
+				}
+			}
+			if(isset($_REQUEST['del_fuel_id']))
+			{
+				$fuel_id=$_REQUEST['del_fuel_id'];
+				$where=array("fuel_id"=>$fuel_id);
+				$res=$this->delete_where('fuel',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('Delete Success');
+					window.location='manage_fuel';
 					</script>";
 				}
 			}

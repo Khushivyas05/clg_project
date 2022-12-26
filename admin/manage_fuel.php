@@ -43,8 +43,8 @@ include_once('header.php');
 						<td><?php echo $m->source;?></td>
 						<td><?php echo $m->destination;?></td>
                         <td><?php echo $m->fuel_amt;?></td>
-						<td><a href="editbranch?edit_branch_id=<?php echo $m->branch_id;?>" class="btn btn-primary">Edit</a></td>
-						<td><a href="delete?del_branch_id=<?php echo $m->branch_id;?>" class="btn btn-danger">Delete</a></td>
+						<td><a href="editfuel?edit_fuel_id=<?php echo $m->fuel_id;?>" class="btn btn-primary">Edit</a></td>
+						<td><a href="delete?del_fuel_id=<?php echo $m->fuel_id;?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
 					 <?php
 					}
