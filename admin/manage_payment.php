@@ -24,7 +24,7 @@ include_once('header.php');
 					<thead>
 					  <tr>
 						<th>payment_id</th>
-						<th>cust_id</th>
+						<th>cust_name</th>
 						<th>invoice Date</th>
 						<th>price</th>
                         <th>payment_type</th>

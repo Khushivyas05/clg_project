@@ -153,6 +153,36 @@ class control extends model
 			}
 			include_once('add_emp.php');
 			break;
+
+			case'/editparcel':
+				$fetcharr=$this->selectall('customer_details');
+				if(isset($_REQUEST['edit_parcel_id']))
+				{
+					$parcel_id=$_REQUEST['edit_parcel_id'];
+					$where=array("parcel_id"=>$parcel_id);
+					$run=$this->select_where('parcel',$where);
+					$fetch=$run->fetch_object();
+					
+					if(isset($_REQUEST['submit']))
+					{
+						$parcel_id=$_REQUEST['parcel_id'];
+						$cust_id=$_REQUEST['cust_id'];
+						$weight=$_REQUEST['weight'];
+						$type=$_REQUEST['type'];
+						 $arr=array("parcel_id"=>$parcel_id,"cust_id"=>$cust_id,"weight"=>$weight,"type"=>$type);
+						$res=$this->update('parcel',$arr,$where);
+						if($res)
+						{
+							echo "<script> 
+							alert('Update Success'); 
+							window.location='manage_parcel';
+							</script>";
+						}
+					}
+				}	
+				
+				include_once('editparcel.php');
+				break;
 			
 			case'/editfeedback':
 			$fetcharr=$this->selectall('customer_details');
@@ -597,6 +627,37 @@ class control extends model
 			include_once('editwrate.php');
 			break;
 
+			
+			case '/editpayment':
+			$fetcharr=$this->selectall('customer_details');
+			if(isset($_REQUEST['edit_payment_id']))
+			{
+				$payment_id=$_REQUEST['edit_payment_id'];
+				$where=array("payment_id"=>$payment_id);
+				$run=$this->select_where('payment',$where);
+				$fetch=$run->fetch_object();
+				if(isset($_REQUEST['submit']))
+				{
+					$payment_id=$_REQUEST['payment_id'];
+					$cust_id=$_REQUEST['cust_id'];
+					$invoice_id=$_REQUEST['invoice_id'];
+					$price=$_REQUEST['price'];
+					$payment_type=$_REQUEST['payment_type'];
+					$date=$_REQUEST['date'];
+					$arr=array("payment_id"=>$payment_id,"cust_id"=>$cust_id,"invoice_id"=>$invoice_id,"price"=>$price,"payment_type"=>$payment_type,"date"=>$date);
+					$res=$this->update('payment',$arr,$where);
+					if($res)
+					{
+						echo "<script>
+						alert('update success');
+						window.location='manage_payment';
+						</script>";
+					}
+				}
+			}
+			include_once('editpayment.php');
+			break;
+
 			case '/editbooking':
 			if(isset($_REQUEST['edit_booking_id']))
 			{
@@ -693,6 +754,34 @@ class control extends model
 					  echo "<script>
 					  alert('Delete success')
 					  window.location='manage_feedback';
+					  </script>";
+				 }
+			 }
+
+			 if(isset($_REQUEST['del_invoice_id']))
+			 {
+				 $invoice_id=$_REQUEST['del_invoice_id'];
+				 $where=array("invoice_id"=>$invoice_id);
+				 $res=$this->delete_where('invoice',$where);
+				 if($res)
+				 {
+					  echo "<script>
+					  alert('Delete success')
+					  window.location='manage_invoice';
+					  </script>";
+				 }
+			 }
+
+			 if(isset($_REQUEST['del_parcel_id']))
+			 {
+				 $parcel_id=$_REQUEST['del_parcel_id'];
+				 $where=array("parcel_id"=>$parcel_id);
+				 $res=$this->delete_where('parcel',$where);
+				 if($res)
+				 {
+					  echo "<script>
+					  alert('Delete success')
+					  window.location='manage_parcel';
 					  </script>";
 				 }
 			 }

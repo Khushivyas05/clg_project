@@ -15,7 +15,7 @@ include_once('header.php');
  	<div class="blank">
 	
 
-			<div class="blank-page">
+			<div class="blank-page" style="overflow:auto">
 				
 				<div class="container mt-3">
 				  <h2>Manage invoice</h2>
@@ -53,8 +53,8 @@ include_once('header.php');
                         <td><?php echo $m->destination;?></td>
                         <td><?php echo $m->payment_type;?></td>
                         <td><?php echo $m->price;?></td>
-						<td><a href="editstate?edit_state_id=<?php echo $m->state_id;?>" class="btn btn-primary">Edit</a></td>
-						<td><a href="delete?del_state_id=<?php echo $m->state_id;?>" class="btn btn-danger">Delete</a></td>
+						<td><a href="editinvoice?edit_invoice_id=<?php echo $m->invoice_id;?>" class="btn btn-primary">Edit</a></td>
+						<td><a href="delete?del_invoice_id=<?php echo $m->invoice_id;?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
 					 <?php
 					}
