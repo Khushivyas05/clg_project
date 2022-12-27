@@ -241,7 +241,7 @@ i.nav_icon {
   margin-right:6px;
 }
 .sidebar ul li a{
-  color: #999;
+  color: black;
   font-size:18px;
 }
 
@@ -319,7 +319,7 @@ ul.nav.navbar-nav.navbar-right {
     margin-right: 14px;
 }
 i.nav_icon {
-    color: #999;
+    color: black;
     padding: 15px;
     width: 44px;
     height: 44px;
@@ -2099,7 +2099,7 @@ tr.table-row {
 }
 .copy p, .copy-right p{
 	font-size:0.85em;
-	color:#555;
+	color:black;
 }
 .copy p a, .copy-right p a{
 	color:#000;
