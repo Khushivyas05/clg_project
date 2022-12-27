@@ -51,8 +51,8 @@ function validate()
         <form name="invoiceform" action="" method="post" enctype="multipart/form-data" onsubmit="return validate()">
          	<div class="vali-form">
             <div class="col-md-12 form-group1">
-              <label class="control-label">Parcel_id</label>
-              <input type="text" placeholder="parcel_id" name="parcel_id" value="<?php echo $fetch->parcel_id;?>" >
+              <label class="control-label">Invoice id</label>
+              <input type="text" placeholder="invoice_id" name="invoice_id" value="<?php echo $fetch->invoice_id;?>" >
             </div>
             
             <div class="clearfix"> </div>
@@ -74,20 +74,58 @@ function validate()
             </div>
 			 <div class="clearfix"> </div>
             
-			
+			 <div class="col-md-12 form-group1">
+			<label class="control-label">Customer Name</label>
+            <select name="cust_id" class="form-control">
+			<?php
+			foreach($fetcharr as $f)
+			{
+			?>
+			<option value="<?php echo $f->cust_id?>"><?php echo $f->cust_name?></option>
+			<?php
+			}
+			?>
+			</select>
+            </div>
+			 <div class="clearfix"> </div>
 			
 			<div class="col-md-12 form-group1">
-              <label class="control-label">Weight</label>
-              <input type="text" placeholder="weight"   name="weight" value="<?php echo $fetch->weight;?>"><br>
+              <label class="control-label">Invoice Date</label>
+              <input type="text" placeholder="invoice_date"   name="invoice_date" value="<?php echo $fetch->invoice_date;?>"><br>
             </div>
 			
 						
 			<div class="col-md-12 form-group1">
-              <label class="control-label">Type</label>
-              <input type="text" placeholder="type" name="type" value="<?php echo $fetch->type;?>"><br>
+              <label class="control-label">Goods Type</label>
+              <input type="text" placeholder="goods_type" name="goods_type" value="<?php echo $fetch->goods_type;?>"><br>
             </div>
              <div class="clearfix"> </div>
-   
+            
+			 <div class="col-md-12 form-group1">
+              <label class="control-label">Charges</label>
+              <input type="text" placeholder="charges" name="charges" value="<?php echo $fetch->charges;?>"><br>
+            </div>
+
+			<div class="col-md-12 form-group1">
+              <label class="control-label">Source</label>
+              <input type="text" placeholder="source" name="source" value="<?php echo $fetch->source;?>"><br>
+            </div>
+
+            <div class="col-md-12 form-group1">
+              <label class="control-label">Destination</label>
+              <input type="text" placeholder="destination" name="destination" value="<?php echo $fetch->destination;?>"><br>
+            </div>
+
+			<div class="col-md-12 form-group1">
+              <label class="control-label">Payment Type</label>
+              <input type="text" placeholder="payment_type" name="payment_type" value="<?php echo $fetch->payment_type;?>"><br>
+            </div>
+
+			<div class="col-md-12 form-group1">
+              <label class="control-label">Price</label>
+              <input type="text" placeholder="price" name="price" value="<?php echo $fetch->price;?>"><br>
+            </div>
+
              <div class="clearfix"> </div>
           
             <div class="col-md-12 form-group">
