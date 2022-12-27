@@ -22,7 +22,7 @@ function validate()
 		alert("Please fill out branch location");
 		return false;
 	}
-}nbnb
+}
 </script>
  
  	<!--banner-->	
