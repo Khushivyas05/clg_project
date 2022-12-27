@@ -58,30 +58,29 @@ function validate()
             <div class="clearfix"> </div>
             </div>
 			
-			
-            <div class="col-md-12 form-group1">
-			<label class="control-label">Customer Name</label>
-            <select name="cust_id" class="form-control">
+			<div class="col-md-12 form-group1">
+			<label class="control-label">Booking </label>
+            <select name="booking_id" class="form-control">
 			<?php
 			foreach($fetcharr as $f)
 			{
 			?>
-			<option value="<?php echo $f->cust_id?>"><?php echo $f->cust_name?></option>
+			<option value="<?php echo $f->booking_id?>"><?php echo $f->source?></option>
 			<?php
 			}
 			?>
 			</select>
             </div>
 			 <div class="clearfix"> </div>
-            
-			 <div class="col-md-12 form-group1">
-			<label class="control-label">Customer Name</label>
-            <select name="cust_id" class="form-control">
+			
+            <div class="col-md-12 form-group1">
+			<label class="control-label">Branch Name</label>
+            <select name="branch_id" class="form-control">
 			<?php
 			foreach($fetcharr as $f)
 			{
 			?>
-			<option value="<?php echo $f->cust_id?>"><?php echo $f->cust_name?></option>
+			<option value="<?php echo $f->branch_id?>"><?php echo $f->branch_name?></option>
 			<?php
 			}
 			?>

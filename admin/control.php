@@ -43,6 +43,13 @@ class control extends model
 			include_once('index.php');
 			break;
 
+			case '/profile':
+			$where=array("username"=>$_SESSION['admin_details']);
+			$run=$this->select_where('admin_details',$where);
+			$fetch=$run->fetch_object();
+			include_once('profile.php');
+			break;
+
 			case '/admin_logout':	
 			unset($_SESSION['admin_details']);
 			echo "<script>
@@ -185,7 +192,8 @@ class control extends model
 				break;
 
 				case'/editinvoice':
-					$fetcharr=$this->selectall('customer_details');
+					$fetcharr=$this->selectall('booking');
+					$fetcharr=$this->selectall('branch');
 					if(isset($_REQUEST['edit_invoice_id']))
 					{
 						$invoice_id=$_REQUEST['edit_invoice_id'];
@@ -196,8 +204,8 @@ class control extends model
 						if(isset($_REQUEST['submit']))
 						{
 							$invoice_id=$_REQUEST['invoice_id'];
-							$cust_id=$_REQUEST['cust_id'];
-							$weight=$_REQUEST['weight'];
+							$booking_id=$_REQUEST['booking_id'];
+							$branch_id=$_REQUEST['branch_id'];
 							$invoice_date=$_REQUEST['invoice_date'];
 							$goods_type=$_REQUEST['goods_type'];
 							$charges=$_REQUEST['charges'];
@@ -205,7 +213,7 @@ class control extends model
 							$destination=$_REQUEST['destination'];
 							$payment_type=$_REQUEST['payment_type'];
 							$price=$_REQUEST['price'];
-							 $arr=array("invoice_id"=>$invoice_id,"cust_id"=>$cust_id,"weight"=>$weight,"invoice_date"=>$invoice_date,"goods_type"=>$goods_type,"charges"=>$charges,"source"=>$source,"destination"=>$destination,"payment_type"=>$payment_type,"price"=>$price);
+							 $arr=array("invoice_id"=>$invoice_id,"booking_id"=>$booking_id,"branch_id"=>$branch_id,"invoice_date"=>$invoice_date,"goods_type"=>$goods_type,"charges"=>$charges,"source"=>$source,"destination"=>$destination,"payment_type"=>$payment_type,"price"=>$price);
 							$res=$this->update('invoice',$arr,$where);
 							if($res)
 							{
