@@ -1,12 +1,11 @@
 <?php
-if(isset($_SESSION['username']))
+if(isset($_SESSION['admin_details']))
 {
 	
 }
 else
 {
 	echo "<script>
-	alert('Login Suceess');
 	window.location='manage_customer';
 	</script>";
 }
@@ -36,7 +35,7 @@ include_once('header.php');
 				<table>
 				<tr><td>Username</td>  
 				<td>:</td>  
-				<td><?php echo $fetch->user_name;?></td>
+				<td><?php echo $fetch->username;?></td>
 				</tr>
 				<tr>
 				<td>Email</td>

@@ -44,7 +44,7 @@ class control extends model
 			break;
 
 			case '/profile':
-			$where=array("username"=>$_SESSION['username']);
+			$where=array("username"=>$_SESSION['admin_details']);
 			$run=$this->select_where('admin_details',$where);
 			$fetch=$run->fetch_object();
 			include_once('profile.php');
