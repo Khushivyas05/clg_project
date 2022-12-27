@@ -1,7 +1,7 @@
 <?php
 include_once('header.php');
 ?>
-dd
+
 <script>
 function validate()
 {
