@@ -31,7 +31,7 @@ include_once('header.php');
 						<th>date</th>
 						<th>Edit</th>
 						<th>Delete</th>
-                        </tr>
+                       </tr>
 					</thead>
 					<tbody>
 					<?php
