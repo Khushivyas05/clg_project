@@ -948,6 +948,7 @@ class control extends model
 					</script>";
 				}
 			}
+			
 			break;
 
 	
