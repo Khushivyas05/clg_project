@@ -402,8 +402,8 @@ nav.navbar.navbar-static-top {
 .dropdown-at {
     padding: 0 !important;
     position: relative;
-    color: #999;
-    font-size: 0.9em;
+    color: black;
+    font-size: 18px;
     text-decoration: none ;
 }
 .dropdown-at:hover,.dropdown-at:focus {
