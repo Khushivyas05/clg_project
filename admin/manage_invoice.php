@@ -44,7 +44,7 @@ include_once('header.php');
 					?>
 					  <tr>
 						<td><?php echo $m->invoice_id;?></td>
-						<td><?php echo $m->booking_id;?></td>
+						<td><?php echo $m->source;?></td>
                         <td><?php echo $m->branch_name;?></td>
                         <td><?php echo $m->invoice_date;?></td>
                         <td><?php echo $m->goods_type;?></td>
