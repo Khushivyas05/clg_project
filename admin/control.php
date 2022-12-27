@@ -43,6 +43,13 @@ class control extends model
 			include_once('index.php');
 			break;
 
+			case '/profile':
+			$where=array("username"=>$_SESSION['admin_details']);
+			$run=$this->select_where('admin_details',$where);
+			$fetch=$run->fetch_object();
+			include_once('profile.php');
+			break;
+
 			case '/admin_logout':	
 			unset($_SESSION['admin_details']);
 			echo "<script>
