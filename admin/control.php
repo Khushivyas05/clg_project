@@ -507,6 +507,30 @@ class control extends model
 			include_once('add_state.php');
 			break;
 
+			case '/add_fuel':
+			$fetcharr=$this->selectall('employee_details');	
+			if(isset($_REQUEST['submit']))
+				{
+					$emp_id=$_REQUEST['emp_id'];
+					$source=$_REQUEST['source'];
+					$destination=$_REQUEST['destination'];
+					$fuel_amt=$_REQUEST['fuel_amt'];
+					$arr=array("emp_id"=>$emp_id,"source"=>$source,"destination"=>$destination,"fuel_amt"=>$fuel_amt);
+					$res=$this->insert('fuel',$arr);
+					if($res)
+					{
+						echo "<script>alert('Data Inserted successfully')</script>";
+					}
+					else
+					{
+						echo "<script>alert('Data is not inserted')</script>";
+					}
+				}
+				include_once('add_fuel.php');
+				break;
+
+			
+
 			case '/add_wrate':
 			if(isset($_REQUEST['submit']))
 			{
