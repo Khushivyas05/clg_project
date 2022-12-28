@@ -50,6 +50,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!----->
         <nav class="navbar-default navbar-static-top" role="navigation">
              <div class="navbar-header">
+            
+                
+                
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -83,7 +86,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		              <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"><span class=" name-caret">Rackham<i class="caret"></i></span><img src="images/wo.jpg"></a>
 		              <ul class="dropdown-menu " role="menu">
 		                <li><a href="profile"><i class="fa fa-user"></i>Profile</a></li>
-						<li><a href="admin_logout"><i class="fa fa-user"></i>Logout</a></li>
+						<li><a href="logout"><i class="fa fa-user"></i>Logout</a></li>
 		              </ul>
 		            </li>
 		           
@@ -96,7 +99,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		    <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                 <ul class="nav" id="side-menu">
-				
+                 <?php
+				  if(isset($_SESSION['admin_details']))
+                  {
+                    ?>
+                   
 					<li><a href="manage_customer" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Customer</a></li>
 					<li><a href="manage_feedback" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Feedback </a></li>
 					<li><a href="manage_booking" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Booking</a></li>
@@ -168,8 +175,54 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					   </ul>
 					  
                     </li>
-					
+                 <?php
+                  }
+                ?>
                 </ul>
+             </div>
+                </div>
+             
+             <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                 <?php
+				  if(isset($_SESSION['employee_details']))
+                  {
+                 ?>
+                 
+					<li><a href="manage_customer" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Customer</a></li>
+				   <li><a href="manage_fuel" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Fuel</a></li>
+                   <li>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Branch</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="add_branch" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Branch</a></li>
+                            
+                            <li><a href="manage_branch" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Branch</a></li>
+
+					   </ul>
+                    </li>
+					<li>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Category</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="add_category" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Category</a></li>
+                            
+                            <li><a href="manage_category" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Category</a></li>
+
+					   </ul>
+                    </li>
+					<li>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">City</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="add_city" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add City</a></li>
+                            
+                            <li><a href="manage_city" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage City</a></li>
+
+					   </ul>
+                    </li>
+                  <?php
+                  }
+                ?>
+             </ul>
             </div>
 			</div>
         </nav>

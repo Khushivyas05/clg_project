@@ -13,31 +13,58 @@ class control extends model
 			case '/index':
 			if(isset($_REQUEST['submit']))
 			{
-				
+				$ch=$_REQUEST['choice'];
 				$username=$_REQUEST['username'];
 				$password=$_REQUEST['password'];
 				
 				$where=array("username"=>$username,"password"=>$password);
-				$run=$this->select_where('admin_details',$where);
-				
-				$res=$run->num_rows; 
-				if($res==1) 
+				if($ch=="admin")
 				{
+					$run=$this->select_where('admin_details',$where);
 					
-					$_SESSION['admin_details']=$username;
-					
-					echo "<script> 
-						alert('Login Success') 
-						window.location='manage_customer';
-						</script>";
-					
+					$res=$run->num_rows; 
+					if($res==1) 
+					{
+						
+						$_SESSION['admin_details']=$username;
+						
+						echo "<script> 
+							alert('Login Success') 
+							window.location='manage_customer';
+							</script>";
+						
+					}
+					else
+					{
+						echo "<script> 
+							alert('Login Failed due wrong credebntial') 
+							window.location='index';
+							</script>";
+					}
 				}
 				else
 				{
-					echo "<script> 
-						alert('Login Failed due wrong credebntial') 
-						window.location='index';
-						</script>";
+					$run=$this->select_where('employee_details',$where);
+					
+					$res=$run->num_rows; 
+					if($res==1) 
+					{
+						
+						$_SESSION['employee_details']=$username;
+						
+						echo "<script> 
+							alert('Login Success') 
+							window.location='manage_customer';
+							</script>";
+						
+					}
+					else
+					{
+						echo "<script> 
+							alert('Login Failed due wrong credebntial') 
+							window.location='index';
+							</script>";
+					}	
 				}
 			}
 			include_once('index.php');
@@ -50,12 +77,23 @@ class control extends model
 			include_once('profile.php');
 			break;
 
-			case '/admin_logout':	
-			unset($_SESSION['admin_details']);
-			echo "<script>
-			alert('Logout success')
-			window.location='index'
-			</script>";
+			case '/logout':	
+			if(isset($_SESSION['admin_details']))
+			{
+				unset($_SESSION['admin_details']);
+				echo "<script>
+			          alert('Logout success')
+					  window.location='index'
+					 </script>";
+			}
+			elseif(isset($_SESSION['employee_details']))
+			{
+				unset($_SESSION['employee_details']);
+				echo "<script>
+				alert('Logout success')
+				window.location='index'
+				</script>";
+			}
 			
 			case '/manage_feedback':
 			$manage_feedback_arr=$this->select_where_join('feedback','customer_details','feedback.cust_id=customer_details.cust_id');
@@ -506,6 +544,30 @@ class control extends model
 			}
 			include_once('add_state.php');
 			break;
+
+			case '/add_fuel':
+			$fetcharr=$this->selectall('employee_details');	
+			if(isset($_REQUEST['submit']))
+				{
+					$emp_id=$_REQUEST['emp_id'];
+					$source=$_REQUEST['source'];
+					$destination=$_REQUEST['destination'];
+					$fuel_amt=$_REQUEST['fuel_amt'];
+					$arr=array("emp_id"=>$emp_id,"source"=>$source,"destination"=>$destination,"fuel_amt"=>$fuel_amt);
+					$res=$this->insert('fuel',$arr);
+					if($res)
+					{
+						echo "<script>alert('Data Inserted successfully')</script>";
+					}
+					else
+					{
+						echo "<script>alert('Data is not inserted')</script>";
+					}
+				}
+				include_once('add_fuel.php');
+				break;
+
+			
 
 			case '/add_wrate':
 			if(isset($_REQUEST['submit']))

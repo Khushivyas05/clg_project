@@ -45,11 +45,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 	<div class="login">
 		<h1><a href="index">Your Transport Solution </a></h1>
-		<h1><a href="index">Admin Login  </a></h1>
+		<h1><a href="index">Login  </a></h1>
 		<div class="login-bottom">
 			<h2>Login</h2>
 			<form name="indexform" action="" method="post" onsubmit="return validate()">
 			<div class="col-md-12">
+			<select name="choice" class="form-control">
+					<option >Select</option>
+						<option value="admin">Admin</option>
+						<option value="employee">Employee</option>
+                   </select>
+				   <br>
+				   <div class="clearfix"> </div>
 				<div class="login-mail">
 					<input type="text" name="username" placeholder="Username" >
 					<i class="fa fa-user"></i>
@@ -58,8 +65,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<input type="password" name="password" placeholder="Password" >
 					<i class="fa fa-lock"></i>
 				</div>
-
-			
+            
 			</div>
 			<div class="login-do">
 				<label class="hvr-shutter-in-horizontal login-sub">
@@ -71,6 +77,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</form>
 		</div>
 	</div>
-	<?php
+</body>
+<?php
 include_once('footer.php');
 ?>
