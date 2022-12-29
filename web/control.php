@@ -26,6 +26,14 @@ class control extends model
             include_once('trackorder.php');
             break; 
 
+            case '/signup.php':
+            include_once('signup.php');
+            break;
+            
+            case '/login':
+            include_once('login.php');
+            break;    
+
             default:
             include_once('404.php');
             break;
