@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Your Transport Solution</title>
+    <title>Packers a Packers & Movers Category Bootstrap Responsive Website Template | 404 </title>
     <!-- web fonts -->
     <link href="http://fonts.googleapis.com/css?family=Karla:400,700&amp;display=swap" rel="stylesheet">
     <!-- //web fonts -->
@@ -59,7 +59,7 @@ if(typeof _bsa !== 'undefined' && _bsa) {
 <style>
 * {
   box-sizing: border-box;
-  font-family: Lora, Georgia, times, serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 
@@ -200,7 +200,6 @@ RIGHT SIDEBAR TOGGLE SECTION
 <div id="right-sidebar" class="right-sidebar-notifcations nav-collapse">
 <div class="bs-example bs-example-tabs right-sidebar-tab-notification" data-example-id="togglable-tabs">
 
-    
         <!---<div class="responsive-icons">
             <a href="#url" class="desktop-mode">
                 <span class="w3l-icon -desktop">
@@ -228,98 +227,22 @@ RIGHT SIDEBAR TOGGLE SECTION
 
 
 
-<!-- Top Menu 1 -->
-<section class="w3l-top-menu-1">
-	<div class="top-hd">
+<section class="w3l-error-page">
+	<div class="error-page-info-6">
 		<div class="container">
-	<header class="row">
-		<div class="accounts col-sm-9 col-6">
-				<li class="top_li"><span class="fa fa-mobile"></span><a href="tel:+142 5897555">+142 5897555</a> </li>
-				<li class="top_li1"><span class="fa fa-map-marker"></span> 158 Avenues Street	</li>
-				<li class="top_li2"><span class="fa fa-clock-o"></span> Mon - Sat 6:00 - 18:00 </li>
+				<div class="logo text-center top-hny-logo">
+						 <a class="brand-logo" href="index"><span class="fa fa-truck" aria-hidden="true"></span> Packers</a>
+						<!-- if logo is image enable this   
+						<a class="brand-logo" href="#index">
+							<img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+						</a> -->
+					</div>
+			<div class="error-block">
+				<h1>404</h1>
+				<h5>Oops! This page can't be found</h5>
+				<p>This page you were looking for does't exist</p>
+				 <div class="button"><a href="index" class="btn btn-secondary btn-theme">Back to home</a></div>
+			</div>
 		</div>
-        <a class="btn btn-primary" href="login"> Login  </a> <br>
-        <a class="btn btn-primary" href="signup"> Signup </a>
-		<div class="social-top col-sm-3 col-6">
-		</div>
-	</header>
-</div>
-</div>
-</section>
-<!-- //Top Menu 1 -->
-<section class="w3l-bootstrap-header">
-  <nav class="navbar navbar-expand-lg navbar-light py-lg-2 py-2">
-    <div class="container">
-    <a class="navbar-brand" href="index"><span class="fa fa-truck"></span>YourTransportSolution</a>
-    <!-- if logo is image enable this   
-    <a class="navbar-brand" href="#index">
-        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-    </a> -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon fa fa-bars"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mx-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about">About</a>
-        </li>
-        <!--<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Pages
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="services">Services</a>
-            <a class="dropdown-item" href="pricing">Pricing</a>
-            <a class="dropdown-item" href="portfolio">Portfolio</a>
-			<a class="dropdown-item" href="services-single">Services Single</a>
-            <a class="dropdown-item" href="team-single">Team Single</a>
-            <a class="dropdown-item" href="login">Login</a>
-			<a class="dropdown-item" href="signup">Sign Up</a>
-			<a class="dropdown-item" href="timeline">Timeline</a>
-			<a class="dropdown-item" href="faq">Faq</a>
-      <a class="dropdown-item" href="404">404</a>
-      <a class="dropdown-item" href="coming-soon">Coming Soon</a>
-      <a class="dropdown-item" href="email-template">Email Template</a>
-      <a class="dropdown-item" href="single">Single Page</a>
-      
-          </div>
-        </li>
-         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Blog
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="blog">Blog</a>
-            <a class="dropdown-item" href="blog-single">Blog Single</a>
-		</div>
-        </li>
-		<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Shop
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="ecommerce">Shop</a>
-            <a class="dropdown-item" href="ecommerce-single">Shop Single</a>
-			<a class="dropdown-item" href="ecommerce-cart">Shop cart</a>
-		</div>
-        </li>-->
-        <li class="nav-item">
-          <a class="nav-link" href="contact">Contact</a>
-        </li>
-      </ul>
-      <form class="form-inline">
-        <a class="btn btn-secondary btn-theme" href="trackorder"> Track Order </a> 
-      </form>
-     
-    </div>
-  </div>
-  </nav>
+	</div>
 </section>

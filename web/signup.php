@@ -250,7 +250,16 @@ RIGHT SIDEBAR TOGGLE SECTION
         <form action="#" method="GET">
           <div class="">
             <p class="text-head">Name</p>
-            <input type="text" name="name" class="input" placeholder="Enter Your Name.." />
+            <input type="text" name="cust_name" class="input" placeholder="Enter Your Name.." />
+          </div>  
+           <div class="">
+            <p class="text-head">Address</p>
+            <textarea class="form-control" name="cust_add" placeholder="Enter Your Name.." ></textarea>
+          </div>
+          
+          <div class="">
+            <p class="text-head">Contact No</p>
+            <input type="text" name="contact_no" class="input" placeholder="Enter Your Name.." />
           </div>
           <div class="">
             <p class="text-head">Email</p>
@@ -260,14 +269,17 @@ RIGHT SIDEBAR TOGGLE SECTION
             <p class="text-head">Password</p>
             <input type="password" name="password" class="input" placeholder="Choose Password.." />
           </div>
-         
+          <div class="">
+            <p class="text-head">Username</p>
+            <input type="text" name="username" class="input" placeholder="Enter Your Name.." />
+          </div>
           <label class="remember">
             <input type="checkbox">
             <span class="checkmark"></span>Remember me
           </label>
           <div class="d-grid align-login-register">
             <button type="submit" class="btn btn-secondary btn-theme">Register</button>
-            <a href="login.html" class="signuplink">Login</a>
+            <a href="login" class="signuplink">Login</a>
           </div>
         </form>
 
