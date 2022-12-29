@@ -39,7 +39,7 @@ function validate()
 			
                 <a href="manage_customer">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Add fule</span>
+				<span>Add fuel</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -70,19 +70,19 @@ function validate()
 			
 			
 			<div class="col-md-12 form-group1">
-              <label class="control-label">source</label>
+              <label class="control-label">Source</label>
               <input type="text"  name="source" placeholder="source" >
             </div>
 
             
 			<div class="col-md-12 form-group1">
-              <label class="control-label">destination</label>
+              <label class="control-label">Destination</label>
               <input type="text"  name="destination" placeholder="destination" >
             </div>
 
             
 			<div class="col-md-12 form-group1">
-              <label class="control-label">fuel amt</label>
+              <label class="control-label">Fuel Amount</label>
               <input type="text"  name="fuel_amt" placeholder="fuel_amt" >
             </div>
 			
