@@ -1,19 +1,11 @@
-<!---/demosWTR/Freedom/20-10-2020/packers-freedom-demo_Free/244861779/web/login.html/demosWTR/Freedom/20-10-2020/packers-freedom-demo_Free/244861779/web/index.htmlArrayEdit status----><!---/demosWTR/Freedom/20-10-2020/packers-freedom-demo_Free/244861779/web/index.htmlselect product_id,template_id,template_title,template_name,featured_image,featured_image_server_id,
-full_image_server_id,full_image from template_down_details where starter_demo_url='/demosWTR/Freedom/20-10-2020/packers-freedom-demo_Free/244861779/web/index.html' lat part:login.html---><!--
-Author: W3layouts
-Author URL: http://w3layouts.com
--->
 <!doctype html>
 <html lang="en">
-  
-<!-- Mirrored from demo.w3layouts.com/demosWTR/Freedom/20-10-2020/packers-freedom-demo_Free/244861779/web/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Dec 2022 15:49:27 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Packers a Packers & Movers Category Bootstrap Responsive Website Template | Login </title>
+    <title>Login</title>
     <!-- web fonts -->
     <link href="http://fonts.googleapis.com/css?family=Karla:400,700&amp;display=swap" rel="stylesheet">
     <!-- //web fonts -->
@@ -239,7 +231,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 	<div class="login-bg section-gap">
 		<div class="container">
 				<div class="logo text-left top-bottom-gap">
-					<a class="brand-logo" href="index.html"><span class="fa fa-truck"></span> Packers</a>
+					<a class="brand-logo" href="index"><span class="fa fa-truck"></span> Packers</a>
 					<!-- if logo is image enable this   
 							<a class="brand-logo" href="#index.html">
 								<img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
@@ -247,7 +239,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 				</div>
 			<div class="login-form">
 				<h4 class="form-head">Welcome, Please Login</h4>
-				<form action="#" method="GET">
+				<form action="" method="post" enctype="multipart/form-data">
 					<div class="">
 						<p class="text-head">User Id</p>
 						<input type="text" name="username" placeholder="Please Enter User Id.." class="input" />
@@ -262,7 +254,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 					</label>
 					<div class="d-grid align-login-register">
 						<button type="submit" class="btn btn-secondary btn-theme">Login</button>
-						<a href="signup.html" class="signuplink">Register New</a>
+						<a href="signup" class="signuplink">Register New</a>
 					</div>
 				</form>
 
@@ -274,5 +266,4 @@ RIGHT SIDEBAR TOGGLE SECTION
 
 </body>
 
-<!-- Mirrored from demo.w3layouts.com/demosWTR/Freedom/20-10-2020/packers-freedom-demo_Free/244861779/web/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Dec 2022 15:49:27 GMT -->
 </html>
