@@ -2,7 +2,6 @@
 include_once('header.php');
 ?>
 <script>
-	hh
 function validate()
 {
 	var state_id=document.forms["cityform"]["state_id"].value;
