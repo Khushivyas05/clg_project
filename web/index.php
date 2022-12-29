@@ -101,7 +101,7 @@ include_once('header.php');
     <div class="main-w3 pb-5" id="stats">
         <div class="container py-md-5 mt-4">
            <div class="main-cont-wthree-fea row">
-                <div class="grids-speci1 col-lg-3 col-6">
+                <!--<div class="grids-speci1 col-lg-3 col-6">
                     <div class="spec-2">
                     <span class="fa fa-heart"></span>
                     <h3 class="title-spe">40450</h3>
@@ -129,7 +129,7 @@ include_once('header.php');
                         <p>Commercial Goods</p>
                         </div>
                     </div>
-            </div>
+            </div>-->
             
         </div>
     </div>
@@ -167,7 +167,7 @@ include_once('header.php');
 
 <section class="w3l-feature-2">
 		<div class="grid top-bottom py-5">
-			<div class="container py-md-5">
+			<!--<div class="container py-md-5">
 				<div class="heading text-center mx-auto">
 					<h3 class="head">How We Work</h3>
 					<p class="my-3 head"> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
@@ -201,8 +201,7 @@ include_once('header.php');
 					<a href="services" class="red mt-3">Read More <span class="fa fa-angle-right pl-1"></span></a>
 					</div>
 				</div>
-			</div>
-		</div>
+			</div>-->
 	</section>
 
    <!--customers-7-->
@@ -227,7 +226,7 @@ include_once('header.php');
                                 <img src="assets/images/te2.jpg" alt=" " class="img-responsive">
                             </div>
                             <div class="custo_grid col-10">
-                                <h5 class="text-white">Franklin Rosey</h5>
+                                <h5 class="text-white">Khushi Vyas</h5>
                                 <span>Co-founder</span>
                             </div>
                         
@@ -244,7 +243,7 @@ include_once('header.php');
                                  <img src="assets/images/te1.jpg" alt=" " class="img-responsive">
                             </div>
                             <div class="custo_grid col-10">
-                                <h5 class="text-white">Henry Jasmin</h5>
+                                <h5 class="text-white">Disha Panchal</h5>
                                 <span>Client</span>
                             </div>
                             
