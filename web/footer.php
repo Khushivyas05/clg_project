@@ -35,10 +35,9 @@
             </div>
             </div>
             <div class="d-grid grid-col-2 bottom-copies">
-                <p class="copy-footer-29">© 2020 Packers. All rights reserved | Designed by Your Transportation Team</p>
+                <p class="copy-footer-29">© All rights reserved | Designed by Your Transportation Team</p>
                  <ul class="list-btm-29">
-                        <li><a href="#link">Privacy policy</a></li>
-                        <li><a href="#link">Terms of service</a></li>
+                        
                         <li>
                         </li>
                     </ul>

@@ -26,7 +26,7 @@ class control extends model
             include_once('trackorder.php');
             break; 
 
-            case '/signup.php':
+            case '/signup':
             if(isset($_REQUEST['submit']))
             {
                 $name=$_REQUEST['name'];
