@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Packers a Packers & Movers Category Bootstrap Responsive Website Template | Home </title>
+    <title>Your Transport Solution</title>
     <!-- web fonts -->
     <link href="http://fonts.googleapis.com/css?family=Karla:400,700&amp;display=swap" rel="stylesheet">
     <!-- //web fonts -->
@@ -239,10 +239,6 @@ RIGHT SIDEBAR TOGGLE SECTION
 				<li class="top_li2"><span class="fa fa-clock-o"></span> Mon - Sat 6:00 - 18:00 </li>
 		</div>
 		<div class="social-top col-sm-3 col-6">
-			<li><a href="#"><span class="fa fa-facebook pr-2"></span></a></li>
-			<li><a href="#"><span class="fa fa-instagram pr-2"></span></a> </li>
-				<li><a href="#"><span class="fa fa-twitter pr-2"></span></a></li>
-				<li><a href="#"><span class="fa fa-vimeo"></span></a> </li>
 		</div>
 	</header>
 </div>

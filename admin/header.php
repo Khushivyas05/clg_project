@@ -178,13 +178,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                  <?php
                   }
                 ?>
-                </ul>
-             </div>
-                </div>
-             
-             <div class="navbar-default sidebar" role="navigation">
-                <div class="sidebar-nav navbar-collapse">
-                <ul class="nav" id="side-menu">
+                
                  <?php
 				  if(isset($_SESSION['employee_details']))
                   {
@@ -217,6 +211,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             
                             <li><a href="manage_city" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage City</a></li>
 
+					   </ul>
+                    </li>
+                    <li>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">State</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="add_state" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add State</a></li>
+                            
+                            <li><a href="manage_state" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage State</a></li>
 					   </ul>
                     </li>
                   <?php

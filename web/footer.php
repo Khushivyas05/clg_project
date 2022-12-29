@@ -7,11 +7,6 @@
                     <h6 class="footer-title-29"><a href="index.html"><span class="fa fa-truck"></span> Packers</a></h6>
                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
                    <div class="main-social-footer-29">
-                    <a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a>
-                    <a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a>
-                    <a href="#instagram" class="instagram"><span class="fa fa-instagram"></span></a>
-                    <a href="#google-plus" class="google-plus"><span class="fa fa-google-plus"></span></a>
-                    <a href="#linkedin" class="linkedin"><span class="fa fa-linkedin"></span></a>
                 </div>
                 </div>
                 <div class="footer-list-29 footer-2">
@@ -44,12 +39,7 @@
                  <ul class="list-btm-29">
                         <li><a href="#link">Privacy policy</a></li>
                         <li><a href="#link">Terms of service</a></li>
-                        <li><select name="carlist" form="carform">
-                                <option value="Language">English <span class="fa fa-angle-down"></span></option>
-                                <option value="Language">France</option>
-                                <option value="Language">Spanish </option>
-                                <option value="Language">Russian</option>
-                            </select>
+                        <li>
                         </li>
                     </ul>
             </div>
