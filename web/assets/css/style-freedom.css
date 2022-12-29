@@ -3854,7 +3854,9 @@ select.form-control[size], select.form-control[multiple] {
   height: auto; }
 
 textarea.form-control {
-  height: auto; }
+  height: auto;
+  background: #f6f6f6;
+}
 
 .form-group {
   margin-bottom: 1rem; }
