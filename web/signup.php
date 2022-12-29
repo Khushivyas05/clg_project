@@ -247,7 +247,7 @@ RIGHT SIDEBAR TOGGLE SECTION
       </div>
       <div class="login-form">
         <h4 class="form-head">Register</h4>
-        <form action="#" method="GET">
+        <form action="" method="post" enctype="multipart/form-data">
           <div class="">
             <p class="text-head">Name</p>
             <input type="text" name="cust_name" class="input" placeholder="Enter Your Name.." />
@@ -273,10 +273,6 @@ RIGHT SIDEBAR TOGGLE SECTION
             <p class="text-head">Username</p>
             <input type="text" name="username" class="input" placeholder="Enter Your Name.." />
           </div>
-          <label class="remember">
-            <input type="checkbox">
-            <span class="checkmark"></span>Remember me
-          </label>
           <div class="d-grid align-login-register">
             <button type="submit" class="btn btn-secondary btn-theme">Register</button>
             <a href="login" class="signuplink">Login</a>
