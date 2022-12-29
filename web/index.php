@@ -180,25 +180,25 @@ include_once('header.php');
 						<div class="icon"> <span class="fa fa-arrows" aria-hidden="true"></span></div>
 						<h4>01. Book Us</h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do eiusmod tempor.</p>
-						<a href="services.html" class="red mt-3">Read More <span class="fa fa-angle-right pl-1"></span></a>
+						<a href="services" class="red mt-3">Read More <span class="fa fa-angle-right pl-1"></span></a>
 					</div>
 					<div class="three-grids-columns col-lg-3 col-sm-6 mt-sm-0 mt-5">
 						<div class="icon"> <span class="fa fa-cog" aria-hidden="true"></span></div>
 						<h4>02. Pack your Goods</h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do eiusmod tempor.</p>
-						<a href="services.html" class="red mt-3">Read More <span class="fa fa-angle-right pl-1"></span></a>
+						<a href="services" class="red mt-3">Read More <span class="fa fa-angle-right pl-1"></span></a>
 					</div>
 					<div class="three-grids-columns col-lg-3 col-sm-6 mt-lg-0 mt-5">
 						<div class="icon"> <span class="fa fa-adjust" aria-hidden="true"></span></div>
 						<h4>03. Move your Goods</h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do eiusmod tempor.</p>
-						<a href="services.html" class="red mt-3">Read More <span class="fa fa-angle-right pl-1"></span></a>
+						<a href="services" class="red mt-3">Read More <span class="fa fa-angle-right pl-1"></span></a>
 					</div>
 					<div class="three-grids-columns col-lg-3 col-sm-6 mt-lg-0 mt-5">
 						<div class="icon"> <span class="fa fa-anchor" aria-hidden="true"></span></div>
 					<h4>04. We Deliver</h4>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do eiusmod tempor.</p>
-					<a href="services.html" class="red mt-3">Read More <span class="fa fa-angle-right pl-1"></span></a>
+					<a href="services" class="red mt-3">Read More <span class="fa fa-angle-right pl-1"></span></a>
 					</div>
 				</div>
 			</div>
