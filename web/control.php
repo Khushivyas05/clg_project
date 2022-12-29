@@ -26,7 +26,7 @@ class control extends model
             include_once('trackorder.php');
             break; 
 
-            case '/signup.php':
+            case '/signup':
             include_once('signup.php');
             break;
             

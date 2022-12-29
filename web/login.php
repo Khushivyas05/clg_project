@@ -231,9 +231,9 @@ RIGHT SIDEBAR TOGGLE SECTION
 	<div class="login-bg section-gap">
 		<div class="container">
 				<div class="logo text-left top-bottom-gap">
-					<a class="brand-logo" href="index"><span class="fa fa-truck"></span> Packers</a>
+					<a class="brand-logo" href="index"><span class="fa fa-truck"></span>Your Transport Solution</a>
 					<!-- if logo is image enable this   
-							<a class="brand-logo" href="#index.html">
+							<a class="brand-logo" href="#index">
 								<img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
 							</a> -->
 				</div>
@@ -248,10 +248,6 @@ RIGHT SIDEBAR TOGGLE SECTION
 						<p class="text-head">Password</p>
 						<input type="password" name="password" placeholder="Please Enter Password.." class="input" />
 					</div>
-					<label class="remember">
-						<input type="checkbox">
-						<span class="checkmark"></span>Remember me
-					</label>
 					<div class="d-grid align-login-register">
 						<button type="submit" class="btn btn-secondary btn-theme">Login</button>
 						<a href="signup" class="signuplink">Register New</a>
