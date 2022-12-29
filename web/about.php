@@ -6,7 +6,7 @@ include_once('header.php');
     <div class="about-inner">
         <div class="container">
             <ul class="breadcrumbs-custom-path">
-                <li><a href="index.html">Home <span class="fa fa-angle-double-right" aria-hidden="true"></span></a></li>
+                <li><a href="index">Home <span class="fa fa-angle-double-right" aria-hidden="true"></span></a></li>
                 <li class="active">About</li>
             </ul>
         </div>
@@ -35,7 +35,7 @@ include_once('header.php');
 					<li><span class="fa fa-thumbs-o-up"></span> High Professional & Ethical Standards</li>
 					<li><span class="fa fa-thumbs-o-up"></span> Strive for Continuous Process Improvement</li>
 					<li><span class="fa fa-thumbs-o-up"></span> Exceeding the expectations of our Clients</li>
-					<a href="services.html" class="theme-button btn mt-4">View Our Services</a>
+					<a href="services" class="theme-button btn mt-4">View Our Services</a>
 				</div>
 			</div>
 		</div>
@@ -117,11 +117,11 @@ include_once('header.php');
 						<div class="teams-gd col-lg-3 col-sm-6">
 							<div class="team-member">
 								<div class="team-img">
-									<a href="team-single.html"><img class="img-fluid" src="assets/images/t4.jpg" alt=""></a>
+									<a href="team-single"><img class="img-fluid" src="assets/images/t4.jpg" alt=""></a>
 								</div>
 								<div class="team-hover">
 									<div class="desk">
-											<h4><a href="team-single.html">Meet Me</a></h4>
+											<h4><a href="team-single">Meet Me</a></h4>
 										<p>Lorem ipsum dolor sit amet,Ea consequuntur </p>
 									</div>
 									<div class="s-link">
@@ -132,18 +132,18 @@ include_once('header.php');
 								</div>
 							</div>
 							<div class="team-title">
-								<h5><a href="team-single.html">Martin Smith</a></h5>
+								<h5><a href="team-single">Martin Smith</a></h5>
 								<span>DELIVERY BOY</span>
 							</div>
 						</div>
 						<div class="teams-gd col-lg-3 col-sm-6 mt-sm-0 mt-4">
 							<div class="team-member">
 								<div class="team-img">
-									<a href="team-single.html"><img class="img-fluid" src="assets/images/t2.jpg" alt=""></a>
+									<a href="team-single"><img class="img-fluid" src="assets/images/t2.jpg" alt=""></a>
 								</div>
 								<div class="team-hover">
 									<div class="desk">
-											<h4><a href="team-single.html">Meet Me</a></h4>
+											<h4><a href="team-single">Meet Me</a></h4>
 										<p>Lorem ipsum dolor sit amet,Ea consequuntur </p>
 									</div>
 									<div class="s-link">
@@ -154,7 +154,7 @@ include_once('header.php');
 								</div>
 							</div>
 							<div class="team-title">
-								<h5><a href="team-single.html">Smith Harbet</a></h5>
+								<h5><a href="team-single">Smith Harbet</a></h5>
 
 								<span>DRIVER</span>
 							</div>
@@ -162,11 +162,11 @@ include_once('header.php');
 						<div class="teams-gd col-lg-3 col-sm-6 mt-lg-0 mt-4">
 							<div class="team-member">
 								<div class="team-img">
-									<a href="team-single.html"><img class="img-fluid" src="assets/images/t3.jpg" alt=""></a>
+									<a href="team-single"><img class="img-fluid" src="assets/images/t3.jpg" alt=""></a>
 								</div>
 								<div class="team-hover">
 									<div class="desk">
-											<h4><a href="team-single.html">Meet Me</a></h4>
+											<h4><a href="team-single">Meet Me</a></h4>
 										<p>Lorem ipsum dolor sit amet,Ea consequuntur </p>
 									</div>
 									<div class="s-link">
@@ -177,18 +177,18 @@ include_once('header.php');
 								</div>
 							</div>
 							<div class="team-title">
-								<h5><a href="team-single.html">Franklin Harbet</a></h5>
+								<h5><a href="team-single">Franklin Harbet</a></h5>
 								<span>MANAGER</span>
 							</div>
 						</div>
 						<div class="teams-gd col-lg-3 col-sm-6 mt-lg-0 mt-4">
 							<div class="team-member">
 								<div class="team-img">
-									<a href="team-single.html"><img class="img-fluid" src="assets/images/t1.jpg" alt=""></a>
+									<a href="team-single"><img class="img-fluid" src="assets/images/t1.jpg" alt=""></a>
 								</div>
 								<div class="team-hover">
 									<div class="desk">
-											<h4><a href="team-single.html">Meet Me</a></h4>
+											<h4><a href="team-single">Meet Me</a></h4>
 										<p>Lorem ipsum dolor sit amet,Ea consequuntur </p>
 									</div>
 									<div class="s-link">
@@ -199,7 +199,7 @@ include_once('header.php');
 								</div>
 							</div>
 							<div class="team-title">
-								<h5><a href="team-single.html">Linda Anderson</a></h5>
+								<h5><a href="team-single">Linda Anderson</a></h5>
 
 								<span>CEO / FOUNDER</span>
 							</div>
