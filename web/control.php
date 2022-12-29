@@ -1,7 +1,7 @@
 <?php
 include_once('../admin/model.php');
 class control extends model
-{
+{d
     function __construct()
     {
         session_start();
