@@ -180,25 +180,25 @@ include_once('header.php');
 						<div class="icon"> <span class="fa fa-arrows" aria-hidden="true"></span></div>
 						<h4>01. Book Us</h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do eiusmod tempor.</p>
-						<a href="services.html" class="red mt-3">Read More <span class="fa fa-angle-right pl-1"></span></a>
+						<a href="services" class="red mt-3">Read More <span class="fa fa-angle-right pl-1"></span></a>
 					</div>
 					<div class="three-grids-columns col-lg-3 col-sm-6 mt-sm-0 mt-5">
 						<div class="icon"> <span class="fa fa-cog" aria-hidden="true"></span></div>
 						<h4>02. Pack your Goods</h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do eiusmod tempor.</p>
-						<a href="services.html" class="red mt-3">Read More <span class="fa fa-angle-right pl-1"></span></a>
+						<a href="services" class="red mt-3">Read More <span class="fa fa-angle-right pl-1"></span></a>
 					</div>
 					<div class="three-grids-columns col-lg-3 col-sm-6 mt-lg-0 mt-5">
 						<div class="icon"> <span class="fa fa-adjust" aria-hidden="true"></span></div>
 						<h4>03. Move your Goods</h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do eiusmod tempor.</p>
-						<a href="services.html" class="red mt-3">Read More <span class="fa fa-angle-right pl-1"></span></a>
+						<a href="services" class="red mt-3">Read More <span class="fa fa-angle-right pl-1"></span></a>
 					</div>
 					<div class="three-grids-columns col-lg-3 col-sm-6 mt-lg-0 mt-5">
 						<div class="icon"> <span class="fa fa-anchor" aria-hidden="true"></span></div>
 					<h4>04. We Deliver</h4>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do eiusmod tempor.</p>
-					<a href="services.html" class="red mt-3">Read More <span class="fa fa-angle-right pl-1"></span></a>
+					<a href="services" class="red mt-3">Read More <span class="fa fa-angle-right pl-1"></span></a>
 					</div>
 				</div>
 			</div>
@@ -269,29 +269,29 @@ include_once('header.php');
                 <div class="grids4-info  col-lg-4 col-md-6">
                       
                         <div class="info-bg editContent">
-                            <a href="blog.html"><img src="assets/images/g2.jpg" class="img-fluid" alt=""></a>
-                            <h5 class="mt-4 mb-3 editContent"><a class="editContent" href="blog.html">Waring & Packaging of Goods</a></h5>
+                            <a href="blog"><img src="assets/images/g2.jpg" class="img-fluid" alt=""></a>
+                            <h5 class="mt-4 mb-3 editContent"><a class="editContent" href="blog">Waring & Packaging of Goods</a></h5>
                            <li class="pr-3"><span class="fa fa-calendar"></span> January 18, 2020</li>
-                           <li><a href="blog.html"><span class="fa fa-arrow-circle-right"></span> Read More</a></li>
+                           <li><a href="blog"><span class="fa fa-arrow-circle-right"></span> Read More</a></li>
                         </div>
                     </div>
                 <div class="grids4-info col-lg-4 col-md-6 mt-md-0 mt-4">
                        
                         <div class="info-bg editContent">
-                            <a href="blog.html"><img src="assets/images/g6.jpg" class="img-fluid" alt=""></a>
-                            <h5 class="mt-4 mb-3 editContent"><a class="editContent" href="blog.html">Freight Transportation & Logistics
+                            <a href="blog"><img src="assets/images/g6.jpg" class="img-fluid" alt=""></a>
+                            <h5 class="mt-4 mb-3 editContent"><a class="editContent" href="blog">Freight Transportation & Logistics
                             </a></h5>
                             <li class="pr-3"><span class="fa fa-calendar"></span> January 18, 2020</li>
-                            <li><a href="blog.html"><span class="fa fa-arrow-circle-right"></span> Read More</a></li>
+                            <li><a href="blog"><span class="fa fa-arrow-circle-right"></span> Read More</a></li>
                         </div>
                     </div>
                  <div class="grids4-info col-lg-4 col-md-6 offset-lg-0 offset-md-3 mt-lg-0 mt-4">
                       
                         <div class="info-bg editContent">
-                            <a href="blog.html"><img src="assets/images/g10.jpg" class="img-fluid" alt=""></a>
-                            <h5 class="mt-4 mb-3 editContent"><a class="editContent" href="blog.html">Twist Locks Connection Devices</a></h5>
+                            <a href="blog"><img src="assets/images/g10.jpg" class="img-fluid" alt=""></a>
+                            <h5 class="mt-4 mb-3 editContent"><a class="editContent" href="blog">Twist Locks Connection Devices</a></h5>
                             <li class="pr-3"><span class="fa fa-calendar"></span> January 18, 2020</li>
-                            <li><a href="blog.html"><span class="fa fa-arrow-circle-right"></span> Read More</a></li>
+                            <li><a href="blog"><span class="fa fa-arrow-circle-right"></span> Read More</a></li>
                         </div>
                     </div>
 					
