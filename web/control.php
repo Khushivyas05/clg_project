@@ -59,8 +59,8 @@ class control extends model
                 $username=$_REQUEST['username'];
 				$password=$_REQUEST['password'];
 				
-                $where=array("username"=>$username,"pass"=>$pass);
-				$run=$this->select_where('customer',$where);
+                $where=array("username"=>$username,"password"=>$password);
+				$run=$this->select_where('customer_details',$where);
 
                 $res=$run->num_rows; 
 				if($res==1)
