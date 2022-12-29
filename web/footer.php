@@ -4,7 +4,7 @@
         <div class="container">
             <div class="d-grid grid-col-4 footer-top-29">
                 <div class="footer-list-29 footer-1">
-                    <h6 class="footer-title-29"><a href="index.html"><span class="fa fa-truck"></span> Packers</a></h6>
+                    <h6 class="footer-title-29"><a href="index.html"><span class="fa fa-truck"></span>YTS</a></h6>
                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
                    <div class="main-social-footer-29">
                 </div>
@@ -14,23 +14,15 @@
                 
                 <div class="footer-list-29 footer-3">
                    
-                  <h6 class="footer-title-29">Newsletter </h6>
-          <form action="#" class="subscribe" method="post">
-            <input type="email" name="email" placeholder="Email" required="">
-            <button><span class="fa fa-envelope-o"></span></button>
-          </form>
-          <p>Subscribe and get our weekly newsletter</p>
-          <p>We'll never share your email address</p>
+                 
         
               </div>
               <div class="footer-list-29 footer-4">
                 <ul>
                     <h6 class="footer-title-29">Quick Links</h6>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="blog.html"> Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index">Home</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="contact">Contact</a></li>
                 </ul>
             </div>
             </div>

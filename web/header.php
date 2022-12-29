@@ -238,8 +238,8 @@ RIGHT SIDEBAR TOGGLE SECTION
 				<li class="top_li1"><span class="fa fa-map-marker"></span> 158 Avenues Street	</li>
 				<li class="top_li2"><span class="fa fa-clock-o"></span> Mon - Sat 6:00 - 18:00 </li>
 		</div>
-        <a class="btn btn-primary" href="login"> Login  </a> <br>
-        <a class="btn btn-primary" href="signup"> Signup </a>
+        <a class="btn btn-secondary mr-2" href="login"> Login  </a> 
+        <a class="btn btn-secondary" href="signup"> Signup </a>
 		<div class="social-top col-sm-3 col-6">
 		</div>
 	</header>
@@ -250,7 +250,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 <section class="w3l-bootstrap-header">
   <nav class="navbar navbar-expand-lg navbar-light py-lg-2 py-2">
     <div class="container">
-    <a class="navbar-brand" href="index"><span class="fa fa-truck"></span>YourTransportSolution</a>
+    <a class="navbar-brand" href="index"><span class="fa fa-truck"></span>Transport</a>
     <!-- if logo is image enable this   
     <a class="navbar-brand" href="#index">
         <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />

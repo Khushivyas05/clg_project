@@ -239,7 +239,7 @@ RIGHT SIDEBAR TOGGLE SECTION
   <div class="login-bg section-gap">
     <div class="container">
       <div class="logo text-left top-bottom-gap">
-        <a class="brand-logo" href="index.html"><span class="fa fa-truck"></span> Packers</a>
+        <a class="brand-logo" href="index.html"><span class="fa fa-truck"></span> Your Transport Solution</a>
         <!-- if logo is image enable this   
             <a class="brand-logo" href="#index.html">
               <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
@@ -247,7 +247,7 @@ RIGHT SIDEBAR TOGGLE SECTION
       </div>
       <div class="login-form">
         <h4 class="form-head">Register</h4>
-        <form action="#" method="GET">
+        <form action="" method="post" enctype="multipart/form-data">
           <div class="">
             <p class="text-head">Name</p>
             <input type="text" name="cust_name" class="input" placeholder="Enter Your Name.." />
@@ -273,10 +273,6 @@ RIGHT SIDEBAR TOGGLE SECTION
             <p class="text-head">Username</p>
             <input type="text" name="username" class="input" placeholder="Enter Your Name.." />
           </div>
-          <label class="remember">
-            <input type="checkbox">
-            <span class="checkmark"></span>Remember me
-          </label>
           <div class="d-grid align-login-register">
             <button type="submit" class="btn btn-secondary btn-theme">Register</button>
             <a href="login" class="signuplink">Login</a>
