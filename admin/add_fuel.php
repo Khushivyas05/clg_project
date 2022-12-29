@@ -3,7 +3,7 @@ include_once('header.php');
 ?>
 <script>
 function validate()
-{
+{d
 	var emp_id=document.forms["fuelform"]["emp_id"].value;
 	if(emp_id=="" ||emp_id==null)
 	{
