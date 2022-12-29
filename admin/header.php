@@ -178,20 +178,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                  <?php
                   }
                 ?>
-                </ul>
-             </div>
-                </div>
-             
-             <div class="navbar-default sidebar" role="navigation">
-                <div class="sidebar-nav navbar-collapse">
-                <ul class="nav" id="side-menu">
+                
                  <?php
 				  if(isset($_SESSION['employee_details']))
                   {
                  ?>
                  
 					<li><a href="manage_customer" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Customer</a></li>
-				   <li><a href="manage_fuel" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Fuel</a></li>
+                   <li>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Fuel</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="add_fuel" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Fuel Amount</a></li>
+                            
+                            <li><a href="manage_fuel" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Fuel Amount</a></li>
+
+					   </ul>
+                    </li>
                    <li>
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Branch</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">

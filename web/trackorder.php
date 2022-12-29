@@ -1,5 +1,36 @@
-<!-- grids block 5 -->
-<section class="w3l-footer-29-main">
+<?php
+include_once('header.php');
+?>
+<!-- inner banner -->
+<section class="w3l-inner-banner-main">
+    <div class="about-inner sear-1">
+        <div class="container">
+            
+            
+        </div>
+    </div>
+</section>
+<!-- //covers -->
+ <!-- /forms -->
+<section class="w3l-forms-6" id="subscribe">
+        <div class="forms-main py-5">
+            <div class="container py-md-3">
+               <h4 class="text-center mb-5">Enter the Consignment No.</h4>
+                    <div class="column">
+                        <form action="#" class="form-6-gd" method="post">
+                            <input type="text" name="search" placeholder="Enter Tracking Number" required="" />
+                            <button type="submit" class="theme-button btn">Track Result</button>
+                        </form>
+                    </div>
+                
+            </div>
+        </div>
+    </section>
+     <!-- //forms -->
+
+ 
+ <!-- grids block 5 -->
+ <section class="w3l-footer-29-main">
     <div class="footer-29">
         <div class="container">
             <div class="d-grid grid-col-4 footer-top-29">
@@ -7,9 +38,22 @@
                     <h6 class="footer-title-29"><a href="index.html"><span class="fa fa-truck"></span> Packers</a></h6>
                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
                    <div class="main-social-footer-29">
+                    <a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a>
+                    <a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a>
+                    <a href="#instagram" class="instagram"><span class="fa fa-instagram"></span></a>
+                    <a href="#google-plus" class="google-plus"><span class="fa fa-google-plus"></span></a>
+                    <a href="#linkedin" class="linkedin"><span class="fa fa-linkedin"></span></a>
                 </div>
                 </div>
                 <div class="footer-list-29 footer-2">
+                    <ul>
+                        <h6 class="footer-title-29">Categories</h6>
+                        <li><a href="services.html">Airfreight </a></li>
+                        <li><a href="services.html">Domestic</a></li>
+                        <li><a href="services.html">International</a></li>
+                        <li><a href="services.html">Shipping</a></li>
+                        <li><a href="services.html">Liquids</a></li>
+                    </ul>
                 </div>
                 
                 <div class="footer-list-29 footer-3">
@@ -35,11 +79,16 @@
             </div>
             </div>
             <div class="d-grid grid-col-2 bottom-copies">
-                <p class="copy-footer-29">© 2020 Packers. All rights reserved | Designed by Your Transportation Team</p>
+                <p class="copy-footer-29">© 2020 Packers. All rights reserved | Designed by <a href="https://w3layouts.com/">W3layouts</a></p>
                  <ul class="list-btm-29">
                         <li><a href="#link">Privacy policy</a></li>
                         <li><a href="#link">Terms of service</a></li>
-                        <li>
+                        <li><select name="carlist" form="carform">
+                                <option value="Language">English <span class="fa fa-angle-down"></span></option>
+                                <option value="Language">France</option>
+                                <option value="Language">Spanish </option>
+                                <option value="Language">Russian</option>
+                            </select>
                         </li>
                     </ul>
             </div>
@@ -100,5 +149,11 @@ integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifw
 
 
 </body>
+
+
+<!-- Mirrored from demo.w3layouts.com/demosWTR/Freedom/20-10-2020/packers-freedom-demo_Free/244861779/web/track-order-form.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Dec 2022 15:49:31 GMT -->
 </html>
 <!-- // grids block 5 -->
+
+
+
