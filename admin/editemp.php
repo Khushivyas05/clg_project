@@ -5,42 +5,66 @@ include_once('header.php');
 <script>
   function validate()
   {
-	  var e_id=document.forms["empform"]["e_id"].value;
-	  if(e_id=="" || e_id==null)
+	  var emp_id=document.forms["empform"]["emp_id"].value;
+	  if(emp_id=="" || emp_id==null)
 	  {
-		  alert("please fill out e_id");
+		  alert("please fill out emp_id");
 		  return false;
 	  }
-	  var e_name=document.forms["empform"]["e_name"].value;
-	  if(e_name=="" || e_name==null)
+	  var city_id=document.forms["empform"]["city_id"].value;
+	  if(city_id=="" || city_id==null)
 	  {
-		  alert("please fill out e_name");
+		  alert("please fill out city_id");
 		  return false;
 	  }
-	  var user_name=document.forms["empform"]["user_name"].value;
-	   if(user_name=="" || user_name==null)
+	  var username=document.forms["empform"]["username"].value;
+	   if(username=="" || username==null)
 	   {
 		   alert("please fill out the username");
 		   return false;
 	   }  
-	   var emailid=document.forms["empform"]["emailid"].value;
-	   if(emailid=="" || emailid==null)
+	   var password=document.forms["empform"]["password"].value;
+	   if(password=="" || password==null)
 	   {
 		   alert("please fill out the emailid");
 		   return false;
 	   } 
-	   var address=document.forms["empform"]["address"].value;
-	   if(address=="" || address==null)
+	   var emp_name=document.forms["empform"]["emp_name"].value;
+	   if(emp_name=="" || emp_name==null)
 	   {
-		   alert("please fill out the address");
+		   alert("please fill out the empname");
 		   return false;
 	   } 
-	   var contact_no=document.forms["empform"]["contact_no"].value;
-	   if(contact_no=="" || contact_no==null)
+	   var emp_add=document.forms["empform"]["emp_add"].value;
+	   if(emp_add=="" || emp_add==null)
 	   {
-		   alert("please fill out the contact no");
+		   alert("please fill out the emp add");
 		   return false;
-	   }	   
+	   }
+	   var designation=document.forms["empform"]["designation"].value;
+	   if(designation=="" || designation==null)
+	   {
+		   alert("please fill out the  designation");
+		   return false;
+	   }
+	   var email=document.forms["empform"]["email"].value;
+	   if(email=="" || email==null)
+	   {
+		   alert("please fill out the  email");
+		   return false;
+	   }
+	   var contact=document.forms["empform"]["contact"].value;
+	   if(contact=="" || contact==null)
+	   {
+		   alert("please fill out the  contact");
+		   return false;
+	   }
+	   var driving_licence=document.forms["empform"]["driving_licence"].value;
+	   if(driving_licence=="" || driving_licence==null)
+	   {
+		   alert("please fill out the  driving_licence");
+		   return false;
+	   }					   
   }
 </script>
  	<!--banner-->	

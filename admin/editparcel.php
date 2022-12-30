@@ -4,29 +4,29 @@ include_once('header.php');
 <script>
 function validate()
 {
-	var feedback_id=document.forms["feedbackform"]["feedback_id"].value;
-	if(feedback_id=="" || feedback_id==null)
+	var parcel_id=document.forms["parcelform"]["parcel_id"].value;
+	if(parcel_id=="" || parcel_id==null)
 	{
 		alert("Please fill out the feedback_id");
 		return false;
 	}  
-	var cust_id=document.forms["feedbackform"]["cust_id"].value;
+	var cust_id=document.forms["parcelform"]["cust_id"].value;
 	if(cust_id=="" || cust_id==null)
 	{
 		alert("Please fill out the cust_id");
 		return false;
 	}
 	
-	var comment=document.forms["feedbackform"]["comment"].value;
-	if(comment=="" || comment==null)
+	var weight=document.forms["parcelform"]["weight"].value;
+	if(weight=="" || weight==null)
 	{
-		alert("Please fill out the comment");
+		alert("Please fill out the weight");
 		return false;
 	}
-	var date=document.forms["feedbackform"]["date"].value;
-	if(date=="" || date==null)
+	var type=document.forms["parcelform"]["type"].value;
+	if(type=="" || type==null)
 	{
-		alert("Please fill out the date");
+		alert("Please fill out the type");
 		return false;
 	}
 	
