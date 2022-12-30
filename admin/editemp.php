@@ -5,42 +5,80 @@ include_once('header.php');
 <script>
   function validate()
   {
-	  var e_id=document.forms["empform"]["e_id"].value;
-	  if(e_id=="" || e_id==null)
+	  var emp_id=document.forms["empform"]["emp_id"].value;
+	  if(emp_id=="" || emp_id==null)
 	  {
-		  alert("please fill out e_id");
-		  return false;
+		alert('please fill out the emp_id');
+		return false;
 	  }
-	  var e_name=document.forms["empform"]["e_name"].value;
-	  if(e_name=="" || e_name==null)
+	  var city_id=document.forms["empform"]["city_id"].value;
+	  if(city_id=="" || city_id==null)
 	  {
-		  alert("please fill out e_name");
-		  return false;
+		alert('please fill out the city_id');
+		return false;
 	  }
-	  var user_name=document.forms["empform"]["user_name"].value;
-	   if(user_name=="" || user_name==null)
+	  var username=document.forms["empform"]["username"].value;
+	  if(username=="" || username==null)
+	  {
+		alert('please fill out the username');
+		return false;
+	  }
+	  var emp_name=document.forms["empform"]["emp_name"].value;
+	  if(emp_name=="" || emp_name==null)
+	  {
+		alert('please fill out the emp_name');
+		return false;
+	  }
+	  var emp_add=document.forms["empform"]["emp_add"].value;
+	  if(emp_add=="" || emp_add==null)
+	  {
+		alert('please fill out the emp_add');
+		return false;
+	  }
+	  var des=document.getElementsByName("designation");
+	  if(des[0].checked==true)
+	  {
+	  }
+	  else if(des[1].checked==true)
+	  {
+	  }
+	  else
+	  {
+		alert('please select designation');
+		return false;
+	  }
+	  var email=document.forms["empform"]["email"].value;  
+	if(email=="" || email==null)  // for null condition
+	{
+		alert('Please fill out the email');  // alert msg
+		return false;   //return false means msg show and again on same page with value not refresh page
+	}
+	
+	var mail=/^[a-zA-Z0-9_]+@[a-zA-Z]+\.[a-zA-Z]{2,4}$/;
+	if(!mail.test(email))
+	{
+		alert('Please fill proper email id');  // alert msg
+		return false;   //return false means msg show and again on same page with value not refresh page
+
+	}
+	   var contact=document.forms["empform"]["contact"].value;
+	   if(contact=="" || contact==null)
 	   {
-		   alert("please fill out the username");
+		   alert('please fill out the contact no');
 		   return false;
-	   }  
-	   var emailid=document.forms["empform"]["emailid"].value;
-	   if(emailid=="" || emailid==null)
+	   }
+      var phone=/^[0-9]{10,11}$/;
+       if(!phone.test(contact))
 	   {
-		   alert("please fill out the emailid");
+		   alert('please proper phone no');
 		   return false;
-	   } 
-	   var address=document.forms["empform"]["address"].value;
-	   if(address=="" || address==null)
+	   }
+	   var driving_licence=document.forms["empform"]["driving_licence"].value;
+	   if(driving_licence=="" || driving_licence==null)
 	   {
-		   alert("please fill out the address");
+		   alert('please fill out the driving_licence no');
 		   return false;
-	   } 
-	   var contact_no=document.forms["empform"]["contact_no"].value;
-	   if(contact_no=="" || contact_no==null)
-	   {
-		   alert("please fill out the contact no");
-		   return false;
-	   }	   
+	   }		   
   }
 </script>
  	<!--banner-->	
