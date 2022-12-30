@@ -59,7 +59,7 @@ if(typeof _bsa !== 'undefined' && _bsa) {
 <style>
 * {
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: Lora, Georgia, times, serif;
 }
 
 
