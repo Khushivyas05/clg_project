@@ -28,18 +28,20 @@ include_once('header.php');
 		  alert("please fill out the cust_add");
 		  return false;
 	  }
-       var contact_no=document.forms["clientform"]["contact_no"].value;
-	   if(contact_no=="" || contact_no==null)
-	   {
-		   alert("please fill out the contact no");
-		   return false;
-	   } 
-	   var email=document.forms["clientform"]["email"].value;
-	   if(email=="" || email==null)
-	   {
-		   alert("please fill out the email");
-		   return false;
-	   } 
+	  var contact_no=document.forms["clientform"]["contact_no"].value;
+      if(contact_no=="" || contact_no==null)
+	  {
+		  alert("please fill out the contact_no");
+		  return false;
+	  }
+	  
+	  var email=document.forms["clientform"]["email"].value;
+	  if(email=="" ||email==null)
+	  {
+		alert("Please fill out the email ");
+		return false;
+	  }
+	  
 	   var username=document.forms["clientform"]["username"].value;
 	   if(username=="" || username==null)
 	   {
