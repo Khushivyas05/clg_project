@@ -26,43 +26,23 @@ include_once('header.php');
 	  var emp_name=document.forms["empform"]["emp_name"].value;
 	  if(emp_name=="" || emp_name==null)
 	  {
-		alert('please fill out the emp_name');
-		return false;
+		  alert("please fill out e_id");
+		  return false;
 	  }
-	  var emp_add=document.forms["empform"]["emp_add"].value;
-	  if(emp_add=="" || emp_add==null)
+	  var e_name=document.forms["empform"]["e_name"].value;
+	  if(e_name=="" || e_name==null)
 	  {
-		alert('please fill out the emp_add');
-		return false;
+		  alert("please fill out e_name");
+		  return false;
 	  }
-	  var des=document.getElementsByName("designation");
-	  if(des[0].checked==true)
-	  {
-	  }
-	  else if(des[1].checked==true)
-	  {
-	  }
-	  else
-	  {
-		alert('please select designation');
-		return false;
-	  }
-	  var email=document.forms["empform"]["email"].value;  
-	if(email=="" || email==null)  // for null condition
-	{
-		alert('Please fill out the email');  // alert msg
-		return false;   //return false means msg show and again on same page with value not refresh page
-	}
-	
-	var mail=/^[a-zA-Z0-9_]+@[a-zA-Z]+\.[a-zA-Z]{2,4}$/;
-	if(!mail.test(email))
-	{
-		alert('Please fill proper email id');  // alert msg
-		return false;   //return false means msg show and again on same page with value not refresh page
-
-	}
-	   var contact=document.forms["empform"]["contact"].value;
-	   if(contact=="" || contact==null)
+	  var user_name=document.forms["empform"]["user_name"].value;
+	   if(user_name=="" || user_name==null)
+	   {
+		   alert("please fill out the username");
+		   return false;
+	   }  
+	   var emailid=document.forms["empform"]["emailid"].value;
+	   if(emailid=="" || emailid==null)
 	   {
 		   alert('please fill out the contact no');
 		   return false;
@@ -137,8 +117,9 @@ include_once('header.php');
             </div>
 
 			<div class="col-md-12 form-group1">
-              <label class="control-label">Designation</label>
-              <input type="text" name="designation" value="<?php echo $fetch->designation;?>" placeholder="Name" >
+			<label class="control-label">Designation:</label>
+            Employee:<input type="radio" name="designation" value="Employee">
+			Driver:<input type="radio" name="designation" value="Driver">
             </div>
 
             <br>
