@@ -8,63 +8,57 @@ include_once('header.php');
 	  var emp_id=document.forms["empform"]["emp_id"].value;
 	  if(emp_id=="" || emp_id==null)
 	  {
-		  alert("please fill out emp_id");
-		  return false;
+		alert('please fill out the emp_id');
+		return false;
 	  }
 	  var city_id=document.forms["empform"]["city_id"].value;
 	  if(city_id=="" || city_id==null)
 	  {
-		  alert("please fill out city_id");
-		  return false;
+		alert('please fill out the city_id');
+		return false;
 	  }
 	  var username=document.forms["empform"]["username"].value;
-	   if(username=="" || username==null)
+	  if(username=="" || username==null)
+	  {
+		alert('please fill out the username');
+		return false;
+	  }
+	  var emp_name=document.forms["empform"]["emp_name"].value;
+	  if(emp_name=="" || emp_name==null)
+	  {
+		  alert("please fill out e_id");
+		  return false;
+	  }
+	  var e_name=document.forms["empform"]["e_name"].value;
+	  if(e_name=="" || e_name==null)
+	  {
+		  alert("please fill out e_name");
+		  return false;
+	  }
+	  var user_name=document.forms["empform"]["user_name"].value;
+	   if(user_name=="" || user_name==null)
 	   {
 		   alert("please fill out the username");
 		   return false;
 	   }  
-	   var password=document.forms["empform"]["password"].value;
-	   if(password=="" || password==null)
+	   var emailid=document.forms["empform"]["emailid"].value;
+	   if(emailid=="" || emailid==null)
 	   {
-		   alert("please fill out the emailid");
-		   return false;
-	   } 
-	   var emp_name=document.forms["empform"]["emp_name"].value;
-	   if(emp_name=="" || emp_name==null)
-	   {
-		   alert("please fill out the empname");
-		   return false;
-	   } 
-	   var emp_add=document.forms["empform"]["emp_add"].value;
-	   if(emp_add=="" || emp_add==null)
-	   {
-		   alert("please fill out the emp add");
+		   alert('please fill out the contact no');
 		   return false;
 	   }
-	   var designation=document.forms["empform"]["designation"].value;
-	   if(designation=="" || designation==null)
+      var phone=/^[0-9]{10,11}$/;
+       if(!phone.test(contact))
 	   {
-		   alert("please fill out the  designation");
-		   return false;
-	   }
-	   var email=document.forms["empform"]["email"].value;
-	   if(email=="" || email==null)
-	   {
-		   alert("please fill out the  email");
-		   return false;
-	   }
-	   var contact=document.forms["empform"]["contact"].value;
-	   if(contact=="" || contact==null)
-	   {
-		   alert("please fill out the  contact");
+		   alert('please proper phone no');
 		   return false;
 	   }
 	   var driving_licence=document.forms["empform"]["driving_licence"].value;
 	   if(driving_licence=="" || driving_licence==null)
 	   {
-		   alert("please fill out the  driving_licence");
+		   alert('please fill out the driving_licence no');
 		   return false;
-	   }					   
+	   }		   
   }
 </script>
  	<!--banner-->	
@@ -123,8 +117,9 @@ include_once('header.php');
             </div>
 
 			<div class="col-md-12 form-group1">
-              <label class="control-label">Designation</label>
-              <input type="text" name="designation" value="<?php echo $fetch->designation;?>" placeholder="Name" >
+			<label class="control-label">Designation:</label>
+            Employee:<input type="radio" name="designation" value="Employee">
+			Driver:<input type="radio" name="designation" value="Driver">
             </div>
 
             <br>
