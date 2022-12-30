@@ -29,20 +29,42 @@ include_once('header.php');
 		  alert("please fill out e_id");
 		  return false;
 	  }
-	  var e_name=document.forms["empform"]["e_name"].value;
-	  if(e_name=="" || e_name==null)
+	  var emp_add=document.forms["empform"]["emp_add"].value;
+	  if(emp_add=="" || emp_add==null)
 	  {
-		  alert("please fill out e_name");
+		  alert("please fill out emp_add");
 		  return false;
 	  }
-	  var user_name=document.forms["empform"]["user_name"].value;
-	   if(user_name=="" || user_name==null)
+	  var des = document.getElementsByName("designation");
+    if (des[0].checked == true) 
+	{
+                   
+    } 
+	else if (des[1].checked == true) 
+	{
+                  
+    } 
+	else 
+	{
+		alert('! Please Select designation');  // alert msg
+        return false;
+    }
+	  var email=document.forms["empform"]["email"].value;
+	   if(email=="" || email==null)
 	   {
-		   alert("please fill out the username");
+		   alert("please fill out the email");
 		   return false;
 	   }  
-	   var emailid=document.forms["empform"]["emailid"].value;
-	   if(emailid=="" || emailid==null)
+	   var mail=/^[a-zA-Z0-9_]+@[a-zA-Z]+\.[a-zA-Z]{2,4}$/;
+	if(!mail.test(email))
+	{
+		alert('Please fill proper email id');  // alert msg
+		return false;   //return false means msg show and again on same page with value not refresh page
+
+	}
+
+	   var contact=document.forms["empform"]["contact"].value;
+	   if(contact=="" || contact==null)
 	   {
 		   alert('please fill out the contact no');
 		   return false;
