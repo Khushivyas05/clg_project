@@ -1,6 +1,6 @@
 <?php
 include_once('header.php');
-
+d
 ?>
 <script>
   function validate()
@@ -12,13 +12,13 @@ include_once('header.php');
 		  return false;
 	  }
 	  var pass=document.forms["empform"]["password"].value;
-	   if(password=="" || password==null)
-	   {
+	  if(password=="" || password==null)
+	  {
 		   alert("please fill out the password");
 		   return false;
-	   } 
+	  } 
 	 var emp_name=document.forms["empform"]["emp_name"].value;
-	   if(emp_name=="" || emp_name==null)
+	 if(emp_name=="" || emp_name==null)
 	   {
 		   alert("please fill out the emp_name");
 		   return false;
