@@ -132,7 +132,8 @@ include_once('header.php');
 			 
 			 <div class="col-md-12 form-group1 group-mail">
               <label class="control-label">Designation</label>
-			  <input type="text" name="designation" placeholder="Designation" >
+			  Employee:<input type="radio" name="designation" value="Employee">
+			  Driver:<input type="radio" name="designation" value="Driver">
             </div>
 			
 			 <div class="clearfix"> </div>

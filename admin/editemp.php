@@ -99,8 +99,9 @@ include_once('header.php');
             </div>
 
 			<div class="col-md-12 form-group1">
-              <label class="control-label">Designation</label>
-              <input type="text" name="designation" value="<?php echo $fetch->designation;?>" placeholder="Name" >
+			<label class="control-label">Designation:</label>
+            Employee:<input type="radio" name="designation" value="Employee">
+			Driver:<input type="radio" name="designation" value="Driver">
             </div>
 
             <br>
