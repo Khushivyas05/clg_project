@@ -22,7 +22,7 @@ include_once('header.php');
 		  alert("please fill out Name");
 		  return false;
 	  }  
-	 /*var alpha=/^[A-Za-z]+$/;
+	 var alpha=/^[A-Za-z]+$/;
 	  if(!alpha.test(emp_name))
 	  {
 		  alert("please fill only character");
@@ -78,7 +78,7 @@ include_once('header.php');
 	   {
 		   alert('please fill out the driving_licence no');
 		   return false;
-	   }	*/		   
+	   }	   
   }
 </script>
  	<!--banner-->	
@@ -174,9 +174,6 @@ include_once('header.php');
         </form>
     
  	<!---->
- </div>
-
-</div>
 <?php
 include_once('footer.php');
 ?>

@@ -238,8 +238,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </li>
                   <?php
                   }
-                ?>
-             </ul>
+                  ?>
+               </ul>
             </div>
 			</div>
         </nav>

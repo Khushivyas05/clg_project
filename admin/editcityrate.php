@@ -85,9 +85,6 @@ function validate()
         </form>
     
  	<!---->
- </div>
-
-</div>
 <?php
 include_once('footer.php');
 ?>
