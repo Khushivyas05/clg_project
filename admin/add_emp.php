@@ -1,6 +1,5 @@
 <?php
 include_once('header.php');
-
 ?>
 <script>
   function validate()
@@ -96,6 +95,7 @@ include_once('header.php');
             </div>
             <div class="clearfix"> </div>
             </div>
+			
 			 <div class="vali-form vali-form1">
             <div class="col-md-12 form-group1">
               <label class="control-label">Password</label>
