@@ -226,7 +226,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 </div>
 </div>
 
-hhh
+
 
 <!-- Top Menu 1 -->
 <section class="w3l-top-menu-1">

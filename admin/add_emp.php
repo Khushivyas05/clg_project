@@ -1,6 +1,5 @@
 <?php
 include_once('header.php');
-
 ?>
 <script>
   function validate()
@@ -111,7 +110,7 @@ include_once('header.php');
               <label class="control-label">Password</label>
               <input type="password" name="password" placeholder="password" >
             </div>
-            </div>
+            
 
 			<div class="col-md-12 form-group1">
               <label class="control-label">Name</label>
@@ -142,9 +141,9 @@ include_once('header.php');
 			<div class="clearfix"> </div>
 			 
 			 <div class="col-md-12 form-group1 group-mail">
-              <label class="control-label">Designation</label>
-			  Employee:<input type="radio" name="designation" value="Employee">
-			  Driver:<input type="radio" name="designation" value="Driver">
+              <label class="control-label">Designation:</label><br>
+			 <input type="radio" name="designation" value="Employee"> Employee
+			 <input type="radio" name="designation" value="Driver"> Driver
             </div>
 			
 			 <div class="clearfix"> </div>

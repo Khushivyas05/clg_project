@@ -249,7 +249,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 						<input type="password" name="password" placeholder="Please Enter Password.." class="input" />
 					</div>
 					<div class="d-grid align-login-register">
-						<button type="submit" class="btn btn-secondary btn-theme">Login</button>
+						<button type="submit" class="btn btn-secondary btn-theme" name="submit">Login</button>
 						<a href="signup" class="signuplink">Register New</a>
 					</div>
 				</form>

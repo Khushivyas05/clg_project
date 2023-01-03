@@ -248,6 +248,7 @@ RIGHT SIDEBAR TOGGLE SECTION
       <div class="login-form">
         <h4 class="form-head">Register</h4>
         <form action="" method="post" enctype="multipart/form-data">
+
           <div class="">
             <p class="text-head">Name</p>
             <input type="text" name="cust_name" class="input" placeholder="Enter Your Name.." />
@@ -256,7 +257,19 @@ RIGHT SIDEBAR TOGGLE SECTION
             <p class="text-head">Address</p>
             <textarea class="form-control" name="cust_add" placeholder="Enter Your Name.." ></textarea>
           </div>
-          
+          <div class="">
+            <p class="text-head">City </p>
+            <select name="city_id" class="form-control">
+			<?php
+			foreach($fetcharr as $f)
+			{
+			?>
+			<option value="<?php echo $f->city_id?>"><?php echo $f->city_name?></option>
+			<?php
+			}
+			?>
+			</select>
+          </div>
           <div class="">
             <p class="text-head">Contact No</p>
             <input type="text" name="contact_no" class="input" placeholder="Enter Your Name.." />
@@ -274,7 +287,7 @@ RIGHT SIDEBAR TOGGLE SECTION
             <input type="text" name="username" class="input" placeholder="Enter Your Name.." />
           </div>
           <div class="d-grid align-login-register">
-            <button type="submit" class="btn btn-secondary btn-theme">Register</button>
+            <button type="submit" class="btn btn-secondary btn-theme" name="submit">Register</button>
             <a href="login" class="signuplink">Login</a>
           </div>
         </form>
