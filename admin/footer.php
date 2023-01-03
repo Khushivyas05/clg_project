@@ -1,4 +1,6 @@
-		
+</div>
+
+</div>		
 <div class="copy">
             <p> &copy; All Rights Reserved | Design by Your Transport Solution Team </p>
 	    </div>
