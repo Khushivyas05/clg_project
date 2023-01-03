@@ -130,6 +130,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 					   </ul>
                     </li>
+
 					<li>
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Category</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
@@ -139,6 +140,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 					   </ul>
                     </li>
+
 					<li>
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">City</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
@@ -148,6 +150,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 					   </ul>
                     </li>
+
 					<li>
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">City Rate</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
@@ -194,6 +197,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 					   </ul>
                     </li>
+
                    <li>
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Branch</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
@@ -203,6 +207,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 					   </ul>
                     </li>
+
 					<li>
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Category</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
@@ -212,6 +217,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 					   </ul>
                     </li>
+
 					<li>
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">City</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
@@ -221,6 +227,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 					   </ul>
                     </li>
+                    
                     <li>
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">State</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
@@ -231,8 +238,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </li>
                   <?php
                   }
-                ?>
-             </ul>
+                  ?>
+               </ul>
             </div>
 			</div>
         </nav>

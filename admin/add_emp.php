@@ -22,7 +22,7 @@ include_once('header.php');
 		  alert("please fill out Name");
 		  return false;
 	  }  
-	  var alpha=/^[A-Za-z]+$/;
+	 /*var alpha=/^[A-Za-z]+$/;
 	  if(!alpha.test(emp_name))
 	  {
 		  alert("please fill only character");
@@ -78,7 +78,7 @@ include_once('header.php');
 	   {
 		   alert('please fill out the driving_licence no');
 		   return false;
-	   }		   
+	   }	*/		   
   }
 </script>
  	<!--banner-->	
@@ -110,7 +110,7 @@ include_once('header.php');
               <label class="control-label">Password</label>
               <input type="password" name="password" placeholder="password" >
             </div>
-            </div>
+            
 
 			<div class="col-md-12 form-group1">
               <label class="control-label">Name</label>
@@ -141,9 +141,9 @@ include_once('header.php');
 			<div class="clearfix"> </div>
 			 
 			 <div class="col-md-12 form-group1 group-mail">
-              <label class="control-label">Designation</label>
-			  Employee:<input type="radio" name="designation" value="Employee">
-			  Driver:<input type="radio" name="designation" value="Driver">
+              <label class="control-label">Designation:</label><br>
+			 <input type="radio" name="designation" value="Employee"> Employee
+			 <input type="radio" name="designation" value="Driver"> Driver
             </div>
 			
 			 <div class="clearfix"> </div>
@@ -174,9 +174,6 @@ include_once('header.php');
         </form>
     
  	<!---->
- </div>
-
-</div>
 <?php
 include_once('footer.php');
 ?>

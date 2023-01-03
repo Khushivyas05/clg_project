@@ -226,7 +226,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 </div>
 </div>
 
-hhh
+
 
 <!-- Top Menu 1 -->
 <section class="w3l-top-menu-1">
@@ -238,8 +238,22 @@ hhh
 				<li class="top_li1"><span class="fa fa-map-marker"></span> 158 Avenues Street	</li>
 				<li class="top_li2"><span class="fa fa-clock-o"></span> Mon - Sat 6:00 - 18:00 </li>
 		</div>
-        <a class="btn btn-secondary mr-2" href="login"> Login  </a> 
-        <a class="btn btn-secondary" href="signup"> Signup </a>
+       <?php
+       if(isset($_SESSION['username']))
+       {
+       ?>
+        <a class="btn btn-secondary mr-2" href="login">Logout</a> 
+        <a class="btn btn-secondary" href="signup">Profile</a>
+      <?php
+       }
+       else
+       {
+      ?>
+        <a class="btn btn-secondary mr-2" href="login">Login</a> 
+        <a class="btn btn-secondary" href="signup">Signup</a>
+       <?php
+       }
+       ?> 
 		<div class="social-top col-sm-3 col-6">
 		</div>
 	</header>
