@@ -242,8 +242,8 @@ RIGHT SIDEBAR TOGGLE SECTION
        if(isset($_SESSION['username']))
        {
        ?>
-        <a class="btn btn-secondary mr-2" href="login">Logout</a> 
-        <a class="btn btn-secondary" href="signup">Profile</a>
+        <a class="btn btn-secondary mr-2" href="logout">Logout</a> 
+        <!--<a class="btn btn-secondary" href="profile">Profile</a>-->
       <?php
        }
        else
