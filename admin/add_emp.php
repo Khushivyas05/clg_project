@@ -1,6 +1,5 @@
 <?php
 include_once('header.php');
-
 ?>
 <script>
   function validate()
@@ -23,7 +22,7 @@ include_once('header.php');
 		  alert("please fill out Name");
 		  return false;
 	  }  
-	 /*var alpha=/^[A-Za-z]+$/;
+	  var alpha=/^[A-Za-z]+$/;
 	  if(!alpha.test(emp_name))
 	  {
 		  alert("please fill only character");
@@ -35,39 +34,39 @@ include_once('header.php');
 		  alert("please fill out emp_add");
 		  return false;
 	  } 
-	  var des = document.getElementsByName("designation");
-    if (des[0].checked == true) 
-	{
+	  var designation = document.getElementsByName("designation");
+      if (des[0].checked == true) 
+	  {
                    
-    } 
-	else if (des[1].checked == true) 
-	{
+      } 
+	  else if (des[1].checked == true) 
+	  {
                   
-    } 
-	else 
-	{
-		alert('! Please Select designation');  // alert msg
+      } 
+	  else 
+	  {
+		alert('! Please Select designation');  
         return false;
-    } 
-	var email=document.forms["empform"]["email"].value;
-	   if(email=="" || email==null)
-	   {
+      } 
+	  var email=document.forms["empform"]["email"].value;
+	  if(email=="" || email==null)
+	  {
 		   alert("please fill out the email");
 		   return false;
-	   }  
-	   var mail=/^[a-zA-Z0-9_]+@[a-zA-Z]+\.[a-zA-Z]{2,4}$/;
-	if(!mail.test(email))
-	{
-		alert('Please fill proper email id');  // alert msg
-		return false;   //return false means msg show and again on same page with value not refresh page
+	  }  
+	  var email=/^[a-zA-Z0-9_]+@[a-zA-Z]+\.[a-zA-Z]{2,4}$/;
+	  if(!email.test(email))
+	  {
+		alert('Please fill proper email id');  
+		return false;   
 
-	}
-	var contact=document.forms["empform"]["contact"].value;
-	   if(contact=="" || contact==null)
-	   {
+	  }
+	 var contact=document.forms["empform"]["contact"].value;
+	 if(contact=="" || contact==null)
+	 {
 		   alert('please fill out the contact no');
 		   return false;
-	   }
+	 }
       var phone=/^[0-9]{10,11}$/;
        if(!phone.test(contact))
 	   {
@@ -79,7 +78,7 @@ include_once('header.php');
 	   {
 		   alert('please fill out the driving_licence no');
 		   return false;
-	   }	*/		   
+	   }		   
   }
 </script>
  	<!--banner-->	
