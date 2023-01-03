@@ -27,17 +27,19 @@ class control extends model
             break; 
 
             case '/signup':
+            $fetcharr=$this->selectall('city');
             if(isset($_REQUEST['submit']))
             {
-                $name=$_REQUEST['name'];
-                $address=$_REQUEST['address'];
-                $contact=$_REQUEST['contact'];
+                $city_id=$_REQUEST['city_id'];
+                $cust_name=$_REQUEST['cust_name'];
+                $cust_add=$_REQUEST['cust_add'];
+                $contact_no=$_REQUEST['contact_no'];
                 $email=$_REQUEST['email'];
                 $password=$_REQUEST['password'];
                 $username=$_REQUEST['username'];
 
-                $arr=array("name"=>$name,"address"=>$address,"contact"=>$contact,"email"=>$email,"password"=>$password,"username"=>$username);
-                $res=$this->insert('contact',$arr);
+                $arr=array("city_id"=>$city_id,"cust_name"=>$cust_name,"cust_add"=>$cust_add,"contact_no"=>$contact_no,"email"=>$email,"password"=>$password,"username"=>$username);
+                $res=$this->insert('customer_details',$arr);
 
                 if($res)
                 {
@@ -65,32 +67,17 @@ class control extends model
                 $res=$run->num_rows; 
 				if($res==1)
                 {
-                    
-				        $data=$run->fetch_object();
-					    $status=$data->status;
-					    if($status=="Unblock")
-                        {
-                            $_SESSION['username']=$username;
-                            echo "<script> 
-                            alert('Login Success') 
-                            window.location='index';
-                            </script>";
-                        }
-                        else
-                        {
-                            echo "<script> 
-						    alert('Login Failed due to blocked') 
-						    window.location='login';
-						    </script>";
-                        }
-
-                } 
+                    $_SESSION['username']=$username;
+                    echo "<script> 
+                    alert('Login Success') 
+                    window.location='index';
+                    </script>";
+                }
                 else
                 {
-                    
-					echo "<script> 
-                    alert('Login Failed due wrong credentials') 
-                    window.location='index';
+                    echo "<script> 
+                    alert('Login Failed due to blocked') 
+                    window.location='login';
                     </script>";
                 }
 				

@@ -59,9 +59,8 @@ include_once('header.php');
 				  </table>
 				</div>
 				
-	        </div>
-	</div>
-	
+				</div>
+	</div>	
 	<!--//faq-->
 	<?php
 include_once('footer.php');
