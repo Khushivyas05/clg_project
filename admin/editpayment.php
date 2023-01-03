@@ -71,7 +71,7 @@ function validate()
             </div>
 			
 			<div class="col-md-12 form-group1">
-			<label class="control-label">cust_id</label>
+			<label class="control-label">cust name</label>
             <select name="cust_id" class="form-control">
 			<?php
 			foreach($fetcharr as $f)
