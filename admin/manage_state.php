@@ -24,7 +24,7 @@ include_once('header.php');
 					<thead>
 					  <tr>
 						<th>State_id</th>
-						<th>State Name</th>
+						<th>State</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>

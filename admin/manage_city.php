@@ -25,7 +25,7 @@ include_once('header.php');
 					  <tr>
 					    <th>City_id</th>
 					    <th>State</th>
-						<th>City Name</th>
+						<th>City</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>
