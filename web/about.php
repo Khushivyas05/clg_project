@@ -67,7 +67,7 @@ include_once('header.php');
 			   <div class="float-lt feature-gd col-sm-6">	
 					<div class="icon"> <span class="fa fa-file-text-o" aria-hidden="true"></span></div>
 					 <div class="icon-info">
-                       <h5>Art of Warehouse</h5>
+                       <h5>1</h5>
 						<p> Today, our company has firmly established itself as the 'Market Leader' in the logistics and supply chain industry in India </p>
 					
 					</div>
@@ -76,7 +76,7 @@ include_once('header.php');
 				<div class="float-mid feature-gd  col-sm-6">	
 					<div class="icon"> <span class="fa fa-laptop" aria-hidden="true"></span></div>
 					 <div class="icon-info">
-						<h5>Safe Storage Solutions</h5>
+						<h5>2</h5>
 						<p> Your transport services offers cutting-edge and state-of-the-art transport solutions to its customers, helping them to focus on their core competencies and business operations. </p>
 						
 					</div>
@@ -84,15 +84,15 @@ include_once('header.php');
 				<div class="float-rt feature-gd  col-sm-6">	
 					<div class="icon"> <span class="fa fa-clone" aria-hidden="true"></span></div>
 					 <div class="icon-info">
-						<h5>Latest Packaging Materials</h5>
-						<p> To increase your business with a single click we have launched an advanced, inventive and feature-rich mobile app </p>
+						<h5>3</h5>
+						<p>Stay responsive to consumers’ requirement, find innovative and flexible solutions and strive to achieve customer satisfaction with our performance, honesty, and integrity. </p>
 					
 					</div>
 			 </div>	 
 			 <div class="float-lt feature-gd col-sm-6">	
 					 <div class="icon"> <span class="fa fa-bullseye" aria-hidden="true"></span></div>
 					 <div class="icon-info">
-						<h5>Quickest Service by Road</h5>
+						<h5>4</h5>
 					    <p>Transport solution offers cutting-edge and state-of-the-art transport solutions to its customers, helping them to focus on their core competencies and business operations. </p>
 					</div>
 					 
