@@ -74,7 +74,7 @@ function validate()
             </div>
             <div class="clearfix"> </div>
             <label class="control-label">Vehicle number</label>
-            <input type="text" name="cate_id" value="<?php echo $fetch->vehicle_number;?>" placeholder="Vehicle number">
+            <input type="text" name="cate_id" value="<?php echo $fetch->vehicle_number;?>" placeholder="cate_id">
             <div class="vali-form">
             <div class="col-md-12 form-group1">
            

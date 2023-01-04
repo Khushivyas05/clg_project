@@ -2,7 +2,6 @@
 include_once('header.php');
 ?>
 <script>
-d	
 function validate()
 {
 	var branch_id=document.forms["branchform"]["branch_id"].value;
