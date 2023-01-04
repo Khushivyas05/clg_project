@@ -240,38 +240,33 @@ include_once('header.php');
         Nulla mollis dapibus nunc, ut rhoncus
         turpis sodales quis. Integer sit amet mattis quam.</p>
     </div>
+    
             <div class="row mt-5 pt-3">
-                <div class="grids4-info  col-lg-4 col-md-6">
-                      
-                        <div class="info-bg editContent">
-                            <a href="blog"><img src="assets/images/g2.jpg" class="img-fluid" alt=""></a>
-                            <h5 class="mt-4 mb-3 editContent"><a class="editContent" href="blog">Waring & Packaging of Goods</a></h5>
-                           <li class="pr-3"><span class="fa fa-calendar"></span> January 18, 2020</li>
-                           <li><a href="blog"><span class="fa fa-arrow-circle-right"></span> Read More</a></li>
-                        </div>
-                    </div>
-                <div class="grids4-info col-lg-4 col-md-6 mt-md-0 mt-4">
-                       
-                        <div class="info-bg editContent">
-                            <a href="blog"><img src="assets/images/g6.jpg" class="img-fluid" alt=""></a>
-                            <h5 class="mt-4 mb-3 editContent"><a class="editContent" href="blog">Freight Transportation & Logistics
-                            </a></h5>
-                            <li class="pr-3"><span class="fa fa-calendar"></span> January 18, 2020</li>
-                            <li><a href="blog"><span class="fa fa-arrow-circle-right"></span> Read More</a></li>
-                        </div>
-                    </div>
+                    <?php 
+                         foreach($fetcharr as $data)
+                         {
+                    ?>
+               
                  <div class="grids4-info col-lg-4 col-md-6 offset-lg-0 offset-md-3 mt-lg-0 mt-4">
-                      
-                        <div class="info-bg editContent">
-                            <a href="blog"><img src="assets/images/g10.jpg" class="img-fluid" alt=""></a>
-                            <h5 class="mt-4 mb-3 editContent"><a class="editContent" href="blog">Twist Locks Connection Devices</a></h5>
-                            <li class="pr-3"><span class="fa fa-calendar"></span> January 18, 2020</li>
-                            <li><a href="blog"><span class="fa fa-arrow-circle-right"></span> Read More</a></li>
+                    
+                 <div class="info-bg editContent">
+                            <a href="blog"><img src="../admin/images/<?php echo $data->img;?>" width="100%" height="200px" alt=""></a>
+                            <h5 class="mt-4 mb-3 editContent"><a class="editContent" href="blog"></a></h5>
+                            <li class="pr-3"><span class="fa fa-calendar"></span>Model Name: <?php echo $data->model_name;?></li>
+                            <li class="pr-3"><span class="fa fa-calendar"></span>Company Name: <?php echo $data->company_name;?></li>
+                            <li class="pr-3"><span class="fa fa-calendar"></span>Vehicle Number: <?php echo $data->vehicle_number;?></li>
+                            <li class="pr-3"><span class="fa fa-calendar"></span>Capacity: <?php echo $data->truck_capacity;?></li><br>
+                           
                         </div>
+                    
                     </div>
 					
-                </div>
+                
+                <?php
+                         }
+                     ?>
            </div>
+           
     </div>
 </section>
 <?php

@@ -144,15 +144,15 @@ include_once('header.php');
 			if($fetch->designation=="Employee")
 			{
 			?>
-            Employee:<input type="radio" name="designation" value="Employee" checked>
-			Driver:<input type="radio" name="designation" value="Driver">
+            Employee <input type="radio" name="designation" value="Employee" checked>
+			Driver <input type="radio" name="designation" value="Driver">
 			<?php
 			}
 			elseif($fetch->designation=="Driver")
 			{
 			?>
-            Employee:<input type="radio" name="designation" value="Employee">
-			Driver:<input type="radio" name="designation" value="Driver" checked>
+            Employee <input type="radio" name="designation" value="Employee">
+			Driver <input type="radio" name="designation" value="Driver" checked>
 			<?php
 			}
 			?>
