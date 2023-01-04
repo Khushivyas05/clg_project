@@ -255,24 +255,24 @@ RIGHT SIDEBAR TOGGLE SECTION
           </div>  
            <div class="">
             <p class="text-head">Address</p>
-            <textarea class="form-control" name="cust_add" placeholder="Enter Your Name.." ></textarea>
+            <textarea class="form-control" name="cust_add" placeholder="Enter Your address.." ></textarea>
           </div>
           <div class="">
             <p class="text-head">City </p>
             <select name="city_id" class="form-control">
-			<?php
-			foreach($fetcharr as $f)
-			{
-			?>
-			<option value="<?php echo $f->city_id?>"><?php echo $f->city_name?></option>
-			<?php
-			}
-			?>
-			</select>
+                <?php
+                foreach($fetcharr as $f)
+                {
+                ?>
+                <option value="<?php echo $f->city_id?>"><?php echo $f->city_name?></option>
+                <?php
+                }
+                ?>
+            </select>
           </div>
           <div class="">
             <p class="text-head">Contact No</p>
-            <input type="text" name="contact_no" class="input" placeholder="Enter Your Name.." />
+            <input type="text" name="contact_no" class="input" placeholder="Enter Your Contact No.." />
           </div>
           <div class="">
             <p class="text-head">Email</p>
@@ -284,7 +284,7 @@ RIGHT SIDEBAR TOGGLE SECTION
           </div>
           <div class="">
             <p class="text-head">Username</p>
-            <input type="text" name="username" class="input" placeholder="Enter Your Name.." />
+            <input type="text" name="username" class="input" placeholder="Enter Your Username.." />
           </div>
           <div class="d-grid align-login-register">
             <button type="submit" class="btn btn-secondary btn-theme" name="submit">Register</button>

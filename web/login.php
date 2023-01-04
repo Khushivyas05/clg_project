@@ -241,8 +241,8 @@ RIGHT SIDEBAR TOGGLE SECTION
 				<h4 class="form-head">Welcome, Please Login</h4>
 				<form action="" method="post" enctype="multipart/form-data">
 					<div class="">
-						<p class="text-head">User Id</p>
-						<input type="text" name="username" placeholder="Please Enter User Id.." class="input" />
+						<p class="text-head">Username</p>
+						<input type="text" name="username" placeholder="Please Enter Username.." class="input" />
 					</div>
 					<div class="">
 						<p class="text-head">Password</p>

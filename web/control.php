@@ -83,7 +83,16 @@ class control extends model
 				
             }
             include_once('login.php');
-            break;    
+            break;   
+            
+            case '/logout':
+            unset($_SESSION['username']);
+            echo "<script>
+                 alert('Logout Success');
+                 window.location='index';
+                 </script>";
+            break;
+            
 
             default:
             include_once('404.php');
