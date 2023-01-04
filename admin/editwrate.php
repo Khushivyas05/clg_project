@@ -59,13 +59,13 @@ function validate()
             </div>
             <div class="clearfix"> </div>
 			 
-            <div class="vali-form">
+            <!--<div class="vali-form">
             <div class="col-md-12 form-group1">
               <label class="control-label">Price</label>
               <input type="text" name="price" value="<?php echo $fetch->price;?>" placeholder="Price">
             </div>
             <div class="clearfix"> </div>
-            </div>
+            </div>-->
 			
 			
             <div class="clearfix"> </div>

@@ -124,12 +124,7 @@ include_once('header.php');
             </div>
             <div class="clearfix"> </div>
             </div>
-		
-			<div class="clearfix"> </div>
-			</div>
 			
-             <div class="clearfix"> </div>
-             </div>
             <div class="col-md-12 form-group">
               <button type="submit" name="submit" class="btn btn-primary">Submit</button>
               <button type="reset" name="reset" class="btn btn-default">Reset</button>

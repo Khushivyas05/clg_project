@@ -45,12 +45,14 @@ class control extends model
                 if($res)
                 {
                     echo "<script>
-					alert('Inquiry Success');
+					alert('Signup success');
 					</script>";
                 }
                 else
                 {
-                    echo "Inquiry not success";
+                    echo "<script>
+					alert('Signup not success');
+					</script>";
                 }
             }    
             include_once('signup.php');
@@ -77,14 +79,23 @@ class control extends model
                 else
                 {
                     echo "<script> 
-                    alert('Login Failed due to blocked') 
+                    alert('Login Failed') 
                     window.location='login';
                     </script>";
                 }
 				
             }
             include_once('login.php');
-            break;    
+            break;   
+            
+            case '/logout':
+            unset($_SESSION['username']);
+            echo "<script>
+                 alert('Logout Success');
+                 window.location='index';
+                 </script>";
+            break;
+            
 
             default:
             include_once('404.php');
