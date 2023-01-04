@@ -140,8 +140,22 @@ include_once('header.php');
 
 			<div class="col-md-12 form-group1">
 			<label class="control-label">Designation:</label>
-            Employee:<input type="radio" name="designation" value="Employee">
+			<?php
+			if($fetch->designation=="Employee")
+			{
+			?>
+            Employee:<input type="radio" name="designation" value="Employee" checked>
 			Driver:<input type="radio" name="designation" value="Driver">
+			<?php
+			}
+			elseif($fetch->designation=="Driver")
+			{
+			?>
+            Employee:<input type="radio" name="designation" value="Employee">
+			Driver:<input type="radio" name="designation" value="Driver" checked>
+			<?php
+			}
+			?>
             </div>
 
             <br>

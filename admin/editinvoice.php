@@ -59,17 +59,8 @@ function validate()
             </div>
 			
 			<div class="col-md-12 form-group1">
-			<label class="control-label">Booking </label>
-            <select name="booking_id" class="form-control">
-			<?php
-			foreach($fetcharr as $f)
-			{
-			?>
-			<option value="<?php echo $f->booking_id?>"><?php echo $f->source?></option>
-			<?php
-			}
-			?>
-			</select>
+			<label class="control-label">Book date</label>
+            <input type="text" placeholder="booking date" name="booking_id" value="<?php echo $fetch->book_date;?>" >
             </div>
 			 <div class="clearfix"> </div>
 			
@@ -90,7 +81,7 @@ function validate()
 			
 			<div class="col-md-12 form-group1">
               <label class="control-label">Invoice Date</label>
-              <input type="text" placeholder="invoice_date"   name="invoice_date" value="<?php echo $fetch->invoice_date;?>"><br>
+              <input type="date" placeholder="invoice_date"   name="invoice_date" value="<?php echo $fetch->invoice_date;?>"><br>
             </div>
 			
 						

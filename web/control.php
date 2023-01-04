@@ -44,12 +44,14 @@ class control extends model
                 if($res)
                 {
                     echo "<script>
-					alert('Inquiry Success');
+					alert('Signup success');
 					</script>";
                 }
                 else
                 {
-                    echo "Inquiry not success";
+                    echo "<script>
+					alert('Signup not success');
+					</script>";
                 }
             }    
             include_once('signup.php');
@@ -76,7 +78,7 @@ class control extends model
                 else
                 {
                     echo "<script> 
-                    alert('Login Failed due to blocked') 
+                    alert('Login Failed') 
                     window.location='login';
                     </script>";
                 }

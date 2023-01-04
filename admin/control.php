@@ -200,71 +200,69 @@ class control extends model
 			break;
 
 			case'/editparcel':
-				$fetcharr=$this->selectall('customer_details');
-				if(isset($_REQUEST['edit_parcel_id']))
-				{
-					$parcel_id=$_REQUEST['edit_parcel_id'];
-					$where=array("parcel_id"=>$parcel_id);
-					$run=$this->select_where('parcel',$where);
-					$fetch=$run->fetch_object();
-					
-					if(isset($_REQUEST['submit']))
-					{
-						$parcel_id=$_REQUEST['parcel_id'];
-						$cust_id=$_REQUEST['cust_id'];
-						$weight=$_REQUEST['weight'];
-						$type=$_REQUEST['type'];
-						 $arr=array("parcel_id"=>$parcel_id,"cust_id"=>$cust_id,"weight"=>$weight,"type"=>$type);
-						$res=$this->update('parcel',$arr,$where);
-						if($res)
-						{
-							echo "<script> 
-							alert('Update Success'); 
-							window.location='manage_parcel';
-							</script>";
-						}
-					}
-				}	
+			$fetcharr=$this->selectall('customer_details');
+			if(isset($_REQUEST['edit_parcel_id']))
+			{
+				$parcel_id=$_REQUEST['edit_parcel_id'];
+				$where=array("parcel_id"=>$parcel_id);
+				$run=$this->select_where('parcel',$where);
+				$fetch=$run->fetch_object();
 				
-				include_once('editparcel.php');
-				break;
-
-				case'/editinvoice':
-					$fetcharr=$this->selectall('booking');
-					$fetcharr=$this->selectall('branch');
-					if(isset($_REQUEST['edit_invoice_id']))
+				if(isset($_REQUEST['submit']))
+				{
+					$parcel_id=$_REQUEST['parcel_id'];
+					$cust_id=$_REQUEST['cust_id'];
+					$weight=$_REQUEST['weight'];
+					$type=$_REQUEST['type'];
+						$arr=array("parcel_id"=>$parcel_id,"cust_id"=>$cust_id,"weight"=>$weight,"type"=>$type);
+					$res=$this->update('parcel',$arr,$where);
+					if($res)
 					{
-						$invoice_id=$_REQUEST['edit_invoice_id'];
-						$where=array("invoice_id"=>$invoice_id);
-						$run=$this->select_where('invoice',$where);
-						$fetch=$run->fetch_object();
-						
-						if(isset($_REQUEST['submit']))
-						{
-							$invoice_id=$_REQUEST['invoice_id'];
-							$booking_id=$_REQUEST['booking_id'];
-							$branch_id=$_REQUEST['branch_id'];
-							$invoice_date=$_REQUEST['invoice_date'];
-							$goods_type=$_REQUEST['goods_type'];
-							$charges=$_REQUEST['charges'];
-							$source=$_REQUEST['source'];
-							$destination=$_REQUEST['destination'];
-							$payment_type=$_REQUEST['payment_type'];
-							$price=$_REQUEST['price'];
-							 $arr=array("invoice_id"=>$invoice_id,"booking_id"=>$booking_id,"branch_id"=>$branch_id,"invoice_date"=>$invoice_date,"goods_type"=>$goods_type,"charges"=>$charges,"source"=>$source,"destination"=>$destination,"payment_type"=>$payment_type,"price"=>$price);
-							$res=$this->update('invoice',$arr,$where);
-							if($res)
-							{
-								echo "<script> 
-								alert('Update Success'); 
-								window.location='manage_invoice';
-								</script>";
-							}
-						}
-					}	
-					
-					include_once('editinvoice.php');
-					break;
+						echo "<script> 
+						alert('Update Success'); 
+						window.location='manage_parcel';
+						</script>";
+					}
+				}
+			}	
+			
+			include_once('editparcel.php');
+			break;
+
+			case'/editinvoice':
+			$fetcharr=$this->selectall('branch');
+			if(isset($_REQUEST['edit_invoice_id']))
+			{
+				$invoice_id=$_REQUEST['edit_invoice_id'];
+				$where=array("invoice_id"=>$invoice_id);
+				$run=$this->select_where('invoice',$where);
+				$fetch=$run->fetch_object();
+				
+				if(isset($_REQUEST['submit']))
+				{
+					$invoice_id=$_REQUEST['invoice_id'];
+					$booking_id=$_REQUEST['booking_id'];
+					$branch_id=$_REQUEST['branch_id'];
+					$invoice_date=$_REQUEST['invoice_date'];
+					$goods_type=$_REQUEST['goods_type'];
+					$charges=$_REQUEST['charges'];
+					$source=$_REQUEST['source'];
+					$destination=$_REQUEST['destination'];
+					$payment_type=$_REQUEST['payment_type'];
+					$price=$_REQUEST['price'];
+						$arr=array("invoice_id"=>$invoice_id,"booking_id"=>$booking_id,"branch_id"=>$branch_id,"invoice_date"=>$invoice_date,"goods_type"=>$goods_type,"charges"=>$charges,"source"=>$source,"destination"=>$destination,"payment_type"=>$payment_type,"price"=>$price);
+					$res=$this->update('invoice',$arr,$where);
+					if($res)
+					{
+						echo "<script> 
+						alert('Update Success'); 
+						window.location='manage_invoice';
+						</script>";
+					}
+				}
+			}	
+			include_once('editinvoice.php');
+			break;
 			
 			case'/editfeedback':
 			$fetcharr=$this->selectall('customer_details');
@@ -717,7 +715,8 @@ class control extends model
 				{
 					$w_id=$_REQUEST['w_id'];
 					$kg=$_REQUEST['kg'];
-					$price=$_REQUEST['price'];
+					$rate=10;
+					$price=$kg*$rate;
 					$arr=array("w_id"=>$w_id,"kg"=>$kg,"price"=>$price);
 					$res=$this->update('w_rate',$arr,$where);
 					if($res)
@@ -764,6 +763,7 @@ class control extends model
 			break;
 
 			case '/editbooking':
+			$fetcharr=$this->selectall('customer_details');
 			if(isset($_REQUEST['edit_booking_id']))
 			{
 				$booking_id=$_REQUEST['edit_booking_id'];
@@ -777,9 +777,10 @@ class control extends model
 					$cate_id=$_REQUEST['cate_id'];
 					$source=$_REQUEST['source'];
 					$destination=$_REQUEST['destination'];
+					$book_date=$_REQUEST['book_date'];
 					$price=$_REQUEST['price'];
 					$payment_type=$_REQUEST['payment_type'];
-					$arr=array("booking_id"=>$booking_id,"cust_id"=>$cust_id,"cate_id"=>$cate_id,"source"=>$source,"destination"=>$destination,"price"=>$price,"payment_type"=>$payment_type);
+					$arr=array("booking_id"=>$booking_id,"cust_id"=>$cust_id,"cate_id"=>$cate_id,"source"=>$source,"destination"=>$destination,"book_date"=>$book_date,"price"=>$price,"payment_type"=>$payment_type);
 					$res=$this->update('booking',$arr,$where);
 					if($res)
 					{

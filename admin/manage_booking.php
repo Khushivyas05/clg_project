@@ -28,6 +28,7 @@ include_once('header.php');
 						<th>Category</th>
 						<th>Source</th>
                         <th>Destination</th>
+						<th>Booking date</th>
                         <th>Price</th>
                         <th>Payment type</th>
 						<th>Edit</th>
@@ -45,6 +46,7 @@ include_once('header.php');
 						<td><?php echo $m->vehicle_number;?></td>
 						<td><?php echo $m->source;?></td>
                         <td><?php echo $m->destination;?></td>
+						<td><?php echo $m->book_date;?></td>
                         <td><?php echo $m->price;?></td>
                         <td><?php echo $m->payment_type;?></td>
 						<td><a href="editbooking?edit_booking_id=<?php echo $m->booking_id;?>" class="btn btn-primary">Edit</a></td>
