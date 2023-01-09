@@ -28,7 +28,7 @@ include_once('header.php');
                         <th>Branch Name</th>
                         <th>Invoice date</th>
                         <th>Goods Type</th>
-                        <th>Charges</th>
+                        <th>Charges</th>b
                         <th>source</th>
                         <th>Destination</th>
                         <th>Payment Type</th>
