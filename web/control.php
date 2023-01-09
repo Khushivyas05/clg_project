@@ -22,6 +22,12 @@ class control extends model
             $fetcharr=$this->selectall('category');
             include_once('index.php');
             break;
+
+            
+            case '/booking':
+            $fetcharr=$this->selectall('booking');
+            include_once('booking.php');
+            break;
             
             case '/trackorder':
             include_once('trackorder.php');

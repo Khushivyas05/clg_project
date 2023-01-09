@@ -17,7 +17,7 @@ include_once('header.php');
 							<div class="">
 								<input type="text" name="name" class="form-input" placeholder="To a City or Location" />
 							</div>
-							<div class="">
+							<!--<div class="">
 								<input type="text" name="name" class="form-input" placeholder="Your Name" />
 							</div>
 							<div class="">
@@ -26,7 +26,7 @@ include_once('header.php');
 							<div class="">
 								<input type="tel" name="phone" class="form-input" placeholder="Phone" />
 							</div>
-							<button type="submit" class="btn">Submit</button>
+							<button type="submit" class="btn">Submit</button>-->
 						</form>
 					</div>
 				
