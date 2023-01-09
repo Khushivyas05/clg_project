@@ -2,12 +2,12 @@
 include_once('header.php');
 ?>
 <section class="form-12" id="home">
-	<div class="form-12-content">
-		<div class="container">
-			<div class="grid grid-column-2 ">
+	<div class="form-12-content" style="padding:80px" >
+		<div class="container" style="padding:70px">
+			<div class="grid grid-column-2" >
 				<div class="column2">
 					</div>
-				<div class="column1">
+				<div class="column1" >
 					<h3 class="tagline mb-3">Get a Free Moving Quote</h3>
 					
 						<form action="https://demo.w3layouts.com/" method="Get">
@@ -17,7 +17,7 @@ include_once('header.php');
 							<div class="">
 								<input type="text" name="name" class="form-input" placeholder="To a City or Location" />
 							</div>
-							<div class="">
+							<!--<div class="">
 								<input type="text" name="name" class="form-input" placeholder="Your Name" />
 							</div>
 							<div class="">
@@ -25,7 +25,7 @@ include_once('header.php');
 							</div>
 							<div class="">
 								<input type="tel" name="phone" class="form-input" placeholder="Phone" />
-							</div>
+							</div>-->
 							<button type="submit" class="btn">Submit</button>
 						</form>
 					</div>
@@ -247,7 +247,7 @@ include_once('header.php');
                          {
                     ?>
                
-                 <div class="grids4-info col-lg-4 col-md-6 offset-lg-0 offset-md-3 mt-lg-0 mt-4">
+                 <div class="grids4-info col-lg-4 col-md-6 offset-lg-0 offset-md-3 mt-lg-0 mt-4" style="padding:10px">
                     
                  <div class="info-bg editContent">
                             <a href="blog"><img src="../admin/images/<?php echo $data->img;?>" width="100%" height="200px" alt=""></a>
