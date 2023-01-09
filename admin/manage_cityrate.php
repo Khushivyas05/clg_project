@@ -24,7 +24,7 @@ d
 					<thead>
 					  <tr>
 					    <th>Cr_id</th>
-					    <th>City Name</th>
+					    <th>City</th>
 						<th>Rate</th>
 						<th>Edit</th>
 						<th>Delete</th>
