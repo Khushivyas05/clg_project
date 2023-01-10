@@ -25,7 +25,7 @@ include_once('header.php');
 							</div>
 							<div class="">
 								<input type="tel" name="phone" class="form-input" placeholder="Phone" />
-							</div>
+							</div>-->
 							<button type="submit" class="btn">Submit</button>
 						</form>
 					</div>
@@ -252,10 +252,8 @@ include_once('header.php');
                  <div class="info-bg editContent">
                             <a href="blog"><img src="../admin/images/<?php echo $data->img;?>" width="100%" height="200px" alt=""></a>
                             <h5 class="mt-4 mb-3 editContent"><a class="editContent" href="blog"></a></h5>
-                            <li class="pr-3"><span class="fa fa-calendar"></span>Model Name: <?php echo $data->model_name;?></li>
-                            <li class="pr-3"><span class="fa fa-calendar"></span>Company Name: <?php echo $data->company_name;?></li>
-                            <li class="pr-3"><span class="fa fa-calendar"></span>Vehicle Number: <?php echo $data->vehicle_number;?></li>
-                            <li class="pr-3"><span class="fa fa-calendar"></span>Capacity: <?php echo $data->truck_capacity;?></li><br>
+                            <li class="pr-3" ><h4><b><?php echo $data->model_name;?></h4></b></li><br>
+                            <li class="pr-3"><h5><?php echo $data->truck_capacity;?></h5></li><br>
                            
                         </div>
                     

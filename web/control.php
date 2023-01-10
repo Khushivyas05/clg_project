@@ -17,6 +17,10 @@ class control extends model
             case '/contact':
             include_once('contact.php');
             break;
+
+            case '/category':
+            include_once('category.php');
+            break;
             
             case '/index':
             $fetcharr=$this->selectall('category');
