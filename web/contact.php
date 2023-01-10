@@ -20,10 +20,10 @@ include_once('header.php');
     <div class="contact-top pt-5">
         <div class="container py-md-3">
             <div class="heading text-center mx-auto">
-                <h3 class="head">Have you a question?</h3>
-                <p class="my-3 head"> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                <h3 class="head">Contact</h3>
+               <!-- <p class="my-3 head"> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
                   Nulla mollis dapibus nunc, ut rhoncus
-                  turpis sodales quis. Integer sit amet mattis quam.</p>
+                  turpis sodales quis. Integer sit amet mattis quam.</p>-->
               </div>
             <div class="row cont-main-top mt-5 pt-3">
                
@@ -35,15 +35,15 @@ include_once('header.php');
                    
                     <form action="https://sendmail.w3layouts.com/submitForm" method="post" class="main-input">
                         <div class="top-inputs">
-                            <input type="text" placeholder="Name" name="w3lName" id="w3lName" required="">
+                        Name:<input type="text" placeholder="Name" name="w3lName" id="w3lName" required="">
                             
                         </div>
                         <div class="top-inputs">
                            
-                            <input type="email" name="email" placeholder="Email" id="w3lSender" required="">
+                         Email:<input type="email" name="email" placeholder="Email" id="w3lSender" required="">
                         </div>
-                        <input type="text" placeholder="Phone Number" name="w3lName" id="w3lName" required="">
-                        <textarea placeholder="Message" name="w3lMessage" id="w3lMessage" required=""></textarea>
+                        Contact:<input type="text" placeholder="Phone Number" name="w3lName" id="w3lName" required="">
+                       Message:<textarea placeholder="Message" name="w3lMessage" id="w3lMessage" required=""></textarea>
                         <div class="text-right">
                             <button type="submit" class="btn btn-theme2">Submit Now</button>
                         </div>

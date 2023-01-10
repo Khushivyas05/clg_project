@@ -25,7 +25,6 @@ class control extends model
 
             
             case '/booking':
-            $fetcharr=$this->selectall('booking');
             include_once('booking.php');
             break;
             
