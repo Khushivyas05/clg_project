@@ -230,7 +230,7 @@ class control extends model
 			break;
 
 			case'/editinvoice':
-			$fetcharr=$this->selectall('branch');
+			$fetcharr=$this->select_where_join1('invoice','booking','invoice.booking_id=booking.booking_id','branch','invoice.branch_id=branch.branch_id');
 			if(isset($_REQUEST['edit_invoice_id']))
 			{
 				$invoice_id=$_REQUEST['edit_invoice_id'];
@@ -250,7 +250,7 @@ class control extends model
 					$destination=$_REQUEST['destination'];
 					$payment_type=$_REQUEST['payment_type'];
 					$price=$_REQUEST['price'];
-						$arr=array("invoice_id"=>$invoice_id,"booking_id"=>$booking_id,"branch_id"=>$branch_id,"invoice_date"=>$invoice_date,"goods_type"=>$goods_type,"charges"=>$charges,"source"=>$source,"destination"=>$destination,"payment_type"=>$payment_type,"price"=>$price);
+					$arr=array("invoice_id"=>$invoice_id,"booking_id"=>$booking_id,"branch_id"=>$branch_id,"invoice_date"=>$invoice_date,"goods_type"=>$goods_type,"charges"=>$charges,"source"=>$source,"destination"=>$destination,"payment_type"=>$payment_type,"price"=>$price);
 					$res=$this->update('invoice',$arr,$where);
 					if($res)
 					{
