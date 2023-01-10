@@ -24,7 +24,7 @@ include_once('header.php');
       <div class="row ecom-page pt-3 mt-5">
         <div class="col-md-4">
           <div class="column text-center">
-            <a href="ecommerce-single.html"><img src="assets/images/t3.png" alt=""
+            <a href="ecommerce-single.html"><img src="assets/images/tr1.png" alt=""
                 class="img-responsive img-fluid" /></a>
             <div class="top-prts">
               <h4><a href="ecommerce-single.html">MAYUMI Corrugated Cardboard Packaging Box  (Pack of 5 Brown)</a></h4>
@@ -44,7 +44,7 @@ include_once('header.php');
         </div>
         <div class="col-md-4 my-md-0 my-4">
           <div class="column text-center">
-            <a href="ecommerce-single.html"><img src="assets/images/11.png" alt=""
+            <a href="ecommerce-single.html"><img src="assets/images/tr2.png" alt=""
                 class="img-responsive img-fluid" /></a>
             <div class="top-prts">
               <h4><a href="ecommerce-single"> Packaging, Shipping Packaging Box  (Pack of 25 Brown)</a></h4>
@@ -64,7 +64,7 @@ include_once('header.php');
         </div>
         <div class="col-md-4">
           <div class="column text-center">
-            <a href="ecommerce-single.html"><img src="assets/images/t2.png" alt=""
+            <a href="ecommerce-single.html"><img src="assets/images/tr3.png" alt=""
                 class="img-responsive img-fluid" /></a>
             <div class="top-prts">
               <h4><a href="ecommerce-single.html">Corrugated Cardboard Packaging Box  (Pack of 25 Brown)</a></h4>
@@ -86,7 +86,7 @@ include_once('header.php');
       <div class="row ecom-page my-md-4">
         <div class="col-md-4 my-md-0 my-4">
           <div class="column text-center">
-            <a href="ecommerce-single.html"><img src="assets/images/t4.png" alt=""
+            <a href="ecommerce-single.html"><img src="assets/images/tr4.png" alt=""
                 class="img-responsive img-fluid" /></a>
             <div class="top-prts">
               <h4><a href="ecommerce-single.html">Cardboard Storage, Shipping Packaging Box  (Pack of 10 Brown)</a></h4>
