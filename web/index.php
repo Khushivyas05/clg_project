@@ -25,7 +25,7 @@ include_once('header.php');
 							</div>
 							<div class="">
 								<input type="tel" name="phone" class="form-input" placeholder="Phone" />
-							</div>
+							</div>-->
 							<button type="submit" class="btn">Submit</button>
 						</form>
 					</div>
@@ -34,7 +34,7 @@ include_once('header.php');
 		</div>
 	</div>
 </section>
-<section class="w3l-features-1">-->
+<section class="w3l-features-1">
 	<!-- /features -->
 		<div class="features py-4">
             <div class="container">
