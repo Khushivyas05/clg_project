@@ -25,7 +25,7 @@ include_once('header.php');
 							</div>
 							<div class="">
 								<input type="tel" name="phone" class="form-input" placeholder="Phone" />
-							</div>-->
+							</div>
 							<button type="submit" class="btn">Submit</button>
 						</form>
 					</div>

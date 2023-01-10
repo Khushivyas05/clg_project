@@ -60,7 +60,7 @@ function validate()
 			
 			<div class="col-md-12 form-group1">
 			<label class="control-label">Book date</label>
-            <input type="text" placeholder="booking date" name="booking_id" value="<?php echo $fetch->book_date;?>" >
+            <input type="text" placeholder="booking date" name="booking_id" value="<?php echo $fetcharr->book_date;?>" >
             </div>
 			 <div class="clearfix"> </div>
 			
@@ -98,12 +98,12 @@ function validate()
 
 			<div class="col-md-12 form-group1">
               <label class="control-label">Source</label>
-              <input type="text" placeholder="source" name="source" value="<?php echo $fetch->source;?>"><br>
+              <input type="text" placeholder="source" name="source" value="<?php echo $fetcharr->source;?>"><br>
             </div>
 
             <div class="col-md-12 form-group1">
               <label class="control-label">Destination</label>
-              <input type="text" placeholder="destination" name="destination" value="<?php echo $fetch->destination;?>"><br>
+              <input type="text" placeholder="destination" name="destination" value="<?php echo $fetcharr->destination;?>"><br>
             </div>
 
 			<div class="col-md-12 form-group1">

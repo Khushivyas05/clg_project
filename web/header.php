@@ -283,7 +283,7 @@ RIGHT SIDEBAR TOGGLE SECTION
           <a class="nav-link" href="about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="booking.php">Booking</a>
+          <a class="nav-link" href="booking">Booking</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="category.php">Truck Type</a>

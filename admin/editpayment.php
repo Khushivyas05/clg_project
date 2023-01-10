@@ -63,7 +63,7 @@ function validate()
         <form name="paymentform" action="" method="post" enctype="multipart/form-data" onsubmit="return validate()">
          	<div class="vali-form">
             <div class="col-md-12 form-group1">
-              <label class="control-label">payment_id</label>
+              <label class="control-label">Payment Id</label>
               <input type="text" placeholder="payment_id" name="payment_id" value="<?php echo $fetch->payment_id;?>" >
             </div>
             
@@ -71,7 +71,7 @@ function validate()
             </div>
 			
 			<div class="col-md-12 form-group1">
-			<label class="control-label">cust name</label>
+			<label class="control-label">Customer name</label>
             <select name="cust_id" class="form-control">
 			<?php
 			foreach($fetcharr as $f)
@@ -93,17 +93,17 @@ function validate()
 			
 						
 			<div class="col-md-12 form-group1">
-              <label class="control-label">price</label>
+              <label class="control-label">Price</label>
               <input type="text" placeholder="price" name="price" value="<?php echo $fetch->price;?>"><br>
             </div>
             			
 			<div class="col-md-12 form-group1">
-              <label class="control-label">payment_type</label>
+              <label class="control-label">Payment Type</label>
               <input type="text" placeholder="payment_type" name="payment_type" value="<?php echo $fetch->payment_type;?>"><br>
             </div>
 
             <div class="col-md-12 form-group1">
-              <label class="control-label">date</label>
+              <label class="control-label">Date</label>
               <input type="date" placeholder="date" name="date" value="<?php echo $fetch->date;?>"><br>
             </div>
              <div class="clearfix"> </div>
