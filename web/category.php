@@ -44,7 +44,7 @@ include_once('header.php');
         </div>
         <div class="col-md-4 my-md-0 my-4">
           <div class="column text-center">
-            <a href="ecommerce-single.html"><img src="assets/images/11.png" alt=""
+            <a href="ecommerce-single.html"><img src="assets/images/t1.png" alt=""
                 class="img-responsive img-fluid" /></a>
             <div class="top-prts">
               <h4><a href="ecommerce-single.html"> Packaging, Shipping Packaging Box  (Pack of 25 Brown)</a></h4>
