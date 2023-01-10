@@ -285,6 +285,9 @@ RIGHT SIDEBAR TOGGLE SECTION
         <li class="nav-item">
           <a class="nav-link" href="booking.php">Booking</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="category.php">Truck Type</a>
+        </li>
         <!--<li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
