@@ -339,7 +339,7 @@ RIGHT SIDEBAR TOGGLE SECTION
         <a class="btn btn-secondary btn-theme" href="trackorder"> Track Order </a> 
       </form>
      
-    </div>
+  </div>
   </div>
   </nav>
 </section>
