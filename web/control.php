@@ -19,6 +19,7 @@ class control extends model
             break;
 
             case '/category':
+                $fetcharr=$this->selectall('category');
             include_once('category.php');
             break;
             
