@@ -34,7 +34,7 @@ include_once('header.php');
 		</div>
 	</div>
 </section>
-<section class="w3l-features-1">-->
+<section class="w3l-features-1">
 	<!-- /features -->
 		<div class="features py-4">
             <div class="container">
