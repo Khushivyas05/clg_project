@@ -8,7 +8,7 @@ include_once('header.php');
             <ul class="breadcrumbs-custom-path">
                
                 <li><a href="index.html">Home <span class="fa fa-angle-double-right" aria-hidden="true"></span></a></li>
-                <li class="active">Shop</li>
+                <li class="active">Truck Type</li>
             </ul>
         </div>
     </div>
@@ -22,12 +22,16 @@ include_once('header.php');
         <h3 class="head">Truck Type</h3>
         </div>
       <div class="row ecom-page pt-3 mt-5">
+        <?php
+        foreach($fetcharr as $data)
+        {
+        ?>
         <div class="col-md-4">
           <div class="column text-center">
-            <a href="ecommerce-single.html"><img src="assets/images/t3.png" alt=""
+            <a href="ecommerce-single.html"><img src="../admin/images/<?php echo $data->img;?>" alt=""
                 class="img-responsive img-fluid" /></a>
             <div class="top-prts">
-              <h4><a href="ecommerce-single.html">MAYUMI Corrugated Cardboard Packaging Box  (Pack of 5 Brown)</a></h4>
+              <h4><a href="ecommerce-single.html"><?php echo $data->company_name."<br>".$data->model_name;?></a></h4>
               <ul>
                 <li><a href="#"><span class="fa fa-star"></span></a></li>
                 <li><a href="#"><span class="fa fa-star"></span></a></li>
@@ -42,12 +46,16 @@ include_once('header.php');
             </div>
           </div>
         </div>
-        <div class="col-md-4 my-md-0 my-4">
+        <?php
+        }
+        ?>
+
+       <!--<div class="col-md-4 my-md-0 my-4">
           <div class="column text-center">
-            <a href="ecommerce-single.html"><img src="assets/images/t1.png" alt=""
+            <a href="ecommerce-single.html"><img src="assets/images/tr2.png" alt=""
                 class="img-responsive img-fluid" /></a>
             <div class="top-prts">
-              <h4><a href="ecommerce-single.html"> Packaging, Shipping Packaging Box  (Pack of 25 Brown)</a></h4>
+              <h4><a href="ecommerce-single"> Packaging, Shipping Packaging Box  (Pack of 25 Brown)</a></h4>
               <ul>
                 <li><a href="#"><span class="fa fa-star"></span></a></li>
                 <li><a href="#"><span class="fa fa-star"></span></a></li>
@@ -64,7 +72,7 @@ include_once('header.php');
         </div>
         <div class="col-md-4">
           <div class="column text-center">
-            <a href="ecommerce-single.html"><img src="assets/images/t2.png" alt=""
+            <a href="ecommerce-single.html"><img src="assets/images/tr3.png" alt=""
                 class="img-responsive img-fluid" /></a>
             <div class="top-prts">
               <h4><a href="ecommerce-single.html">Corrugated Cardboard Packaging Box  (Pack of 25 Brown)</a></h4>
@@ -86,7 +94,7 @@ include_once('header.php');
       <div class="row ecom-page my-md-4">
         <div class="col-md-4 my-md-0 my-4">
           <div class="column text-center">
-            <a href="ecommerce-single.html"><img src="assets/images/t4.png" alt=""
+            <a href="ecommerce-single.html"><img src="assets/images/tr4.png" alt=""
                 class="img-responsive img-fluid" /></a>
             <div class="top-prts">
               <h4><a href="ecommerce-single.html">Cardboard Storage, Shipping Packaging Box  (Pack of 10 Brown)</a></h4>
@@ -206,7 +214,7 @@ include_once('header.php');
             </div>
           </div>
         </div>
-      </div>
+      </div>-->
     </div>
   </div>
 </section>
