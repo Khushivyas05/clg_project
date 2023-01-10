@@ -8,7 +8,7 @@ include_once('header.php');
             <ul class="breadcrumbs-custom-path">
                
                 <li><a href="index.html">Home <span class="fa fa-angle-double-right" aria-hidden="true"></span></a></li>
-                <li class="active">Shop</li>
+                <li class="active">Truck Type</li>
             </ul>
         </div>
     </div>
@@ -47,7 +47,7 @@ include_once('header.php');
             <a href="ecommerce-single.html"><img src="assets/images/11.png" alt=""
                 class="img-responsive img-fluid" /></a>
             <div class="top-prts">
-              <h4><a href="ecommerce-single.html"> Packaging, Shipping Packaging Box  (Pack of 25 Brown)</a></h4>
+              <h4><a href="ecommerce-single"> Packaging, Shipping Packaging Box  (Pack of 25 Brown)</a></h4>
               <ul>
                 <li><a href="#"><span class="fa fa-star"></span></a></li>
                 <li><a href="#"><span class="fa fa-star"></span></a></li>
