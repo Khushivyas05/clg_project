@@ -335,9 +335,9 @@ RIGHT SIDEBAR TOGGLE SECTION
           <a class="nav-link" href="contact">Contact</a>
         </li>
       </ul>
-      <form class="form-inline">
+      <!--<form class="form-inline">
         <a class="btn btn-secondary btn-theme" href="trackorder"> Track Order </a> 
-      </form>
+      </form>-->
      
   </div>
   </div>

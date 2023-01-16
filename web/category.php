@@ -26,7 +26,7 @@ include_once('header.php');
         foreach($fetcharr as $data)
         {
         ?>
-        <div class="col-md-4">
+        <div class="col-md-4" style="padding:5px">
           <div class="column text-center">
             <a href="ecommerce-single.html"><img src="../admin/images/<?php echo $data->img;?>" alt=""
                 class="img-responsive img-fluid" /></a>
