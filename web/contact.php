@@ -42,7 +42,7 @@ include_once('header.php');
                            
                          Email:<input type="email" name="email" placeholder="Email" id="w3lSender" required="">
                         </div>
-                        Contact:<input type="text" placeholder="Phone Number" name="w3lName" id="w3lName" required="">
+                        Contact:<input type="text" placeholder="Phone Number" name="w3lName" id="w3lName" required=""><br>
                        Message:<textarea placeholder="Message" name="w3lMessage" id="w3lMessage" required=""></textarea>
                         <div class="text-right">
                             <button type="submit" class="btn btn-theme2">Submit Now</button>
@@ -60,7 +60,7 @@ include_once('header.php');
                            </div>
                            <div class="cont-add-rgt">
                             <h4>Office</h4>
-                            <p class="contact-text-sub">London, <br> 235 Terry,10001, Maple Building</p>
+                            <p class="contact-text-sub">F/F-4,Tarak Appartment, punitnagar, Ghodasar, Ahmedabad-380050</p>
                         </div>
                     </div>
                         <div class="cont-add my-4">
@@ -70,7 +70,7 @@ include_once('header.php');
                            <div class="cont-add-rgt">
                             <h4>Email</h4>
                             <a href="mailto:info@example.com">
-                                <p class="contact-text-sub">info@example.com</p>
+                                <p class="contact-text-sub">Gayatri21@gmail.com</p>
                             </a>
                         </div>
                     </div>
@@ -81,7 +81,7 @@ include_once('header.php');
                             <div class="cont-add-rgt">
                                  <h4>Phone</h4>
                                  <a href="tel:+7-800-999-800">
-                                    <p class="contact-text-sub">+7-800-999-800</p>
+                                    <p class="contact-text-sub">+9078243516</p>
                                  </a>
                             </div>
                         </div>
