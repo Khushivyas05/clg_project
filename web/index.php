@@ -53,19 +53,19 @@ include_once('header.php');
             <div class="cwp4-two row">
                
                 <div class="cwp4-text col-lg-6">
-                        <h3>Explore The Freight Service</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+                        <h3>A Smart Trucking Move</h3>
+                    <p>Bored with traditional truck booking practices? Looking for a smart and quick way to book a truck? No worries! We have introduced an innovative and sophisticated way to book trucks. Our online truck booking app and online portal will allow you to book truck online anywhere, anytime.
                     </p>
                     <h4>Benefits</h4>
                     <ul class="cont-4">
-                        <li><span class="fa fa-check"></span>Ut enim ad minim veniam, quis nostrud</li>
-                        <li><span class="fa fa-check"></span>Consectetur adipisicingelit, sed do </li>
-                        <li><span class="fa fa-check"></span>Sed do eiusmod tempor incididunt</li>
-                        <li><span class="fa fa-check"></span>Tempor incididunt ut labore et </li>
+                        <li><span class="fa fa-check"></span>Online transport booking is just a click away!</li>
+                        <li><span class="fa fa-check"></span>We are a full-service transport company backed </li>
+                        <li><span class="fa fa-check"></span> It will give you a better idea to manage your transportation budget.</li>
+                        <li><span class="fa fa-check"></span> We have introduced an innovative and sophisticated way to book trucks. </li>
                     </ul>
                 </div>
                 <div class="cwp4-image col-lg-6 pl-lg-5 mt-lg-0 mt-5">
-                    <img src="assets/images/h1.jpg" class="img-fluid" alt="" />
+                    <img src="../admin/images/tr5.png" class="img-fluid" alt="" />
                 </div>
             </div>
         </div>
@@ -118,7 +118,7 @@ include_once('header.php');
       <div class="container py-md-5">  
             <div class="team-1 row">  
               <div class="right-single-team col-lg-6">
-                <h6>Here are a few places to explore shipping.</h6>
+             <!--   <h6>Here are a few places to explore shipping.</h6>-->
                    <h3 class="mb-4">Are You a Sender?</h3>
                   <li><span class="fa fa-check"></span> Core freight</li>
                   <li><span class="fa fa-check"></span> Integrated logistics – LLP</li>
@@ -127,7 +127,7 @@ include_once('header.php');
                   <li><span class="fa fa-check"></span> Geo-Gateways</li>
                </div>
                 <div class="left-single-team  col-lg-6">
-                      <h6>Things need to know about shipping.</h6>
+                      <!--<h6>Things need to know about shipping.</h6>-->
                       <h3 class="mb-4">Are You a Shipper?</h3>
                              <li><span class="fa fa-check"></span> Customs & Tax Representation</li>
                             <li><span class="fa fa-check"></span> Reusable Packaging</li>
