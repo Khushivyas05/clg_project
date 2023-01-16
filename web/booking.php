@@ -31,7 +31,7 @@ include_once('header.php');
                
                 <!-- //contact address -->
                  <!-- contact form -->
-                 <div class="contacts12-main col-lg-7 pr-lg-5 pr-3">
+                 <div class="contacts12-main col-lg-12 pr-lg-5 pr-3">
                    
                     <form action="https://sendmail.w3layouts.com/submitForm" method="post" class="main-input">
                         <div class="top-inputs">

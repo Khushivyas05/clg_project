@@ -18,8 +18,13 @@ class control extends model
             include_once('contact.php');
             break;
 
+            case '/truck':
+            $fetcharr=$this->selectall('category');
+            include_once('truck.php');
+            break;
+
             case '/category':
-                $fetcharr=$this->selectall('category');
+            $fetcharr=$this->selectall('category');
             include_once('category.php');
             break;
             
