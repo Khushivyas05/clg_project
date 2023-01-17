@@ -93,7 +93,7 @@ include_once('header.php');
 					 <div class="icon"> <span class="fa fa-bullseye" aria-hidden="true"></span></div>
 					 <div class="icon-info">
 						<h5>4</h5>
-					    <p>Transport solution offers cutting-edge and state-of-the-art transport solutions to its customers, helping them to focus on their core competencies and business operations. </p>
+					    <p>We are a dedicated group of professionals, committed to delivering value for you.  You will get what we have promised you. We don’t make false promises and don’t hide anything from you. When we make the commitment, you will get the delivery- no excuses.</p>
 					</div>
 					 
 				</div>	
