@@ -42,6 +42,10 @@ class control extends model
             include_once('trackorder.php');
             break; 
 
+            case '/cart':
+            include_once('cart.php');
+            break;
+
             case '/signup':
             $fetcharr=$this->selectall('city');
             if(isset($_REQUEST['submit']))

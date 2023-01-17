@@ -70,7 +70,7 @@ include_once('header.php');
           <?php
            }
          ?>
-          <a href="ecommerce-cart.html" class="btn btn-secondary btn-theme mt-3">
+          <a href="cart" class="btn btn-secondary btn-theme mt-3">
             Add to Cart
           </a>
         </div>
