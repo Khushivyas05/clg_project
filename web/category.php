@@ -40,7 +40,7 @@ include_once('header.php');
                 <li><a href="#"><span class="fa fa-star"></span></a></li>
               </ul>-->
               <p>₹500(approx)</p>
-              <a href="ecommerce-cart.html" class="btn btn-secondary btn-theme1">
+              <a href="cart" class="btn btn-secondary btn-theme1">
                 Add to Cart
               </a>
             </div>

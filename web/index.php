@@ -235,7 +235,7 @@ include_once('header.php');
     <div id="grids4-block" class="py-5">
        <div class="container py-md-5">
 			<div class="heading text-center mx-auto">
-      <h3 class="head">Latest News</h3>
+      <h3 class="head">Available Trucks</h3>
       <p class="my-3 head"> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
         Nulla mollis dapibus nunc, ut rhoncus
         turpis sodales quis. Integer sit amet mattis quam.</p>
@@ -247,7 +247,7 @@ include_once('header.php');
                          {
                     ?>
                
-                 <div class="grids4-info col-lg-4 col-md-6 offset-lg-0 offset-md-3 mt-lg-0 mt-4" style="padding:10px">
+                 <div class="grids4-info col-lg-4 col-md-6 offset-lg-0 offset-md-3 mt-lg-0 mt-4" style="padding:5px">
                     
                  <div class="info-bg editContent">
                             <a href="category"><img src="../admin/images/<?php echo $data->img;?>" width="100%" height="275px" alt=""></a>

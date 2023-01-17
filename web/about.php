@@ -25,7 +25,7 @@ include_once('header.php');
 			  </div>
 			<div class="calltoaction-20-content row mt-5 pt-3">
 				<div class="column ccont-left col-lg-6">
-					<img src="assets/images/g9.jpg" class="img-responsive" alt="">
+					<img src="assets/images/tr4.png" class="img-responsive" alt="">
 				</div>
 				
 				<div class="column center-align-self col-lg-6 mt-lg-0 mt-4 pl-lg-5 pl-3">
