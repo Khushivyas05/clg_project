@@ -9,7 +9,7 @@ include_once('header.php');
             <ul class="breadcrumbs-custom-path">
                
                 <li><a href="index">Home <span class="fa fa-angle-double-right" aria-hidden="true"></span></a></li>
-                 <li class="active">booking</li>
+                 <li class="active">Booking</li>
             </ul>
         </div>
     </div>
@@ -51,7 +51,7 @@ include_once('header.php');
                          Date:<input type="date" name="book_date" placeholder="Date" class="form-control" required="">
                         </div>
                         <div class="top-inputs">    
-                         Price:<input type="text" name="price" placeholder="price" class="form-control" required="">
+                         Price:<input type="text" name="price" placeholder="Price" class="form-control" required="">
                         </div>
                         <div class="top-inputs">    
                          Payment Type:<input type="text" name="payment_type" placeholder="Payment type" class="form-control" required="">
