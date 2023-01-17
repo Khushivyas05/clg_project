@@ -54,7 +54,7 @@ include_once('header.php');
                          Price:<input type="text" name="price" placeholder="Price" class="form-control" required="">
                         </div>
                         <div class="top-inputs">    
-                         Payment Type:<input type="text" name="payment_type" placeholder="Payment type" class="form-control" required="">
+                         Payment Type:<input type="text" name="payment_type" placeholder="Payment Type" class="form-control" required="">
                         </div>
                         
                         <div class="text-right">
