@@ -54,12 +54,12 @@ include_once('header.php');
                
                 <div class="cwp4-text col-lg-6">
                         <h3>A Smart Trucking Move</h3>
-                    <p>Bored with traditional truck booking practices? Looking for a smart and quick way to book a truck? No worries! We have introduced an innovative and sophisticated way to book trucks. Our online truck booking app and online portal will allow you to book truck online anywhere, anytime.
+                    <p>Bored with traditional truck booking practices? Looking for a smart and quick way to book a truck? No worries! We have introduced an innovative and sophisticated way to book trucks. Our online truck booking website will allow you to book truck online anywhere, anytime.
                     </p>
                     <h4>Benefits</h4>
                     <ul class="cont-4">
                         <li><span class="fa fa-check"></span>Online transport booking is just a click away!</li>
-                        <li><span class="fa fa-check"></span>We are a full-service transport company backed </li>
+                        <li><span class="fa fa-check"></span>We are a full-service transport company. </li>
                         <li><span class="fa fa-check"></span> It will give you a better idea to manage your transportation budget.</li>
                         <li><span class="fa fa-check"></span> We have introduced an innovative and sophisticated way to book trucks. </li>
                     </ul>
