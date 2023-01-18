@@ -19,7 +19,14 @@ class control extends model
             break;
 
             case '/truck':
-            $fetcharr=$this->selectall('category');
+            if(isset($_REQUEST['cate_id']))
+            {
+                $cate_id=$_REQUEST['cate_id'];
+                $where=array("cate_id"=>$cate_id);
+                $run=$this->select_where('category',$where);
+                $fetch=$run->fetch_object();
+
+            }
             include_once('truck.php');
             break;
 

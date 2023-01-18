@@ -28,10 +28,10 @@ include_once('header.php');
         ?>
         <div class="col-md-4" style="padding:5px">
           <div class="column text-center">
-            <a href="truck"><img src="../admin/images/<?php echo $data->img;?>" alt=""
+            <a href="truck?cate_id=<?php echo $data->cate_id;?>"><img src="../admin/images/<?php echo $data->img;?>" alt=""
                 class="img-responsive img-fluid" /></a>
             <div class="top-prts">
-              <h4><a href="truck"><?php echo $data->company_name."<br>".$data->model_name;?></a></h4>
+              <h4><a href="truck?cate_id=<?php echo $data->cate_id;?>"><?php echo $data->company_name."<br>".$data->model_name;?></a></h4>
               <!--<ul>
                 <li><a href="#"><span class="fa fa-star"></span></a></li>
                 <li><a href="#"><span class="fa fa-star"></span></a></li>
