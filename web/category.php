@@ -26,7 +26,7 @@ include_once('header.php');
         foreach($fetcharr as $data)
         {
         ?>
-        <div class="col-md-4">
+        <div class="col-md-4" style="padding:5px">
           <div class="column text-center">
             <a href="truck"><img src="../admin/images/<?php echo $data->img;?>" alt=""
                 class="img-responsive img-fluid" /></a>
@@ -39,8 +39,8 @@ include_once('header.php');
                 <li><a href="#"><span class="fa fa-star"></span></a></li>
                 <li><a href="#"><span class="fa fa-star"></span></a></li>
               </ul>-->
-              <p>$36.80</p>
-              <a href="ecommerce-cart.html" class="btn btn-secondary btn-theme1">
+              <p>₹500(approx)</p>
+              <a href="cart" class="btn btn-secondary btn-theme1">
                 Add to Cart
               </a>
             </div>

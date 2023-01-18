@@ -234,8 +234,8 @@ RIGHT SIDEBAR TOGGLE SECTION
 		<div class="container">
 	<header class="row">
 		<div class="accounts col-sm-9 col-6">
-				<li class="top_li"><span class="fa fa-mobile"></span><a href="tel:+142 5897555">+142 5897555</a> </li>
-				<li class="top_li1"><span class="fa fa-map-marker"></span> 158 Avenues Street	</li>
+				<li class="top_li"><span class="fa fa-mobile"></span>+919078243516</li>
+				<li class="top_li1"><span class="fa fa-map-marker"></span>Ghodasar,Ahmedabad	</li>
 				<li class="top_li2"><span class="fa fa-clock-o"></span> Mon - Sat 6:00 - 18:00 </li>
 		</div>
        <?php
@@ -335,9 +335,9 @@ RIGHT SIDEBAR TOGGLE SECTION
           <a class="nav-link" href="contact">Contact</a>
         </li>
       </ul>
-      <form class="form-inline">
+      <!--<form class="form-inline">
         <a class="btn btn-secondary btn-theme" href="trackorder"> Track Order </a> 
-      </form>
+      </form>-->
      
   </div>
   </div>

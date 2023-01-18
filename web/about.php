@@ -25,7 +25,7 @@ include_once('header.php');
 			  </div>
 			<div class="calltoaction-20-content row mt-5 pt-3">
 				<div class="column ccont-left col-lg-6">
-					<img src="assets/images/g9.jpg" class="img-responsive" alt="">
+					<img src="assets/images/tr4.png" class="img-responsive" alt="">
 				</div>
 				
 				<div class="column center-align-self col-lg-6 mt-lg-0 mt-4 pl-lg-5 pl-3">
@@ -93,7 +93,7 @@ include_once('header.php');
 					 <div class="icon"> <span class="fa fa-bullseye" aria-hidden="true"></span></div>
 					 <div class="icon-info">
 						<h5>4</h5>
-					    <p>Transport solution offers cutting-edge and state-of-the-art transport solutions to its customers, helping them to focus on their core competencies and business operations. </p>
+					    <p>We are a dedicated group of professionals, committed to delivering value for you.  You will get what we have promised you. We don’t make false promises and don’t hide anything from you. When we make the commitment, you will get the delivery- no excuses.</p>
 					</div>
 					 
 				</div>	

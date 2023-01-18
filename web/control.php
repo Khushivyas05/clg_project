@@ -35,12 +35,17 @@ class control extends model
 
             
             case '/booking':
+            $fetcharr=$this->selectall('booking'); 
             include_once('booking.php');
             break;
             
             case '/trackorder':
             include_once('trackorder.php');
             break; 
+
+            case '/cart':
+            include_once('cart.php');
+            break;
 
             case '/signup':
             $fetcharr=$this->selectall('city');

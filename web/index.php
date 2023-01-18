@@ -53,19 +53,19 @@ include_once('header.php');
             <div class="cwp4-two row">
                
                 <div class="cwp4-text col-lg-6">
-                        <h3>Explore The Freight Service</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+                        <h3>A Smart Trucking Move</h3>
+                    <p>Bored with traditional truck booking practices? Looking for a smart and quick way to book a truck? No worries! We have introduced an innovative and sophisticated way to book trucks. Our online truck booking website will allow you to book truck online anywhere, anytime.
                     </p>
                     <h4>Benefits</h4>
                     <ul class="cont-4">
-                        <li><span class="fa fa-check"></span>Ut enim ad minim veniam, quis nostrud</li>
-                        <li><span class="fa fa-check"></span>Consectetur adipisicingelit, sed do </li>
-                        <li><span class="fa fa-check"></span>Sed do eiusmod tempor incididunt</li>
-                        <li><span class="fa fa-check"></span>Tempor incididunt ut labore et </li>
+                        <li><span class="fa fa-check"></span>Online transport booking is just a click away!</li>
+                        <li><span class="fa fa-check"></span>We are a full-service transport company. </li>
+                        <li><span class="fa fa-check"></span> It will give you a better idea to manage your transportation budget.</li>
+                        <li><span class="fa fa-check"></span> We have introduced an innovative and sophisticated way to book trucks. </li>
                     </ul>
                 </div>
                 <div class="cwp4-image col-lg-6 pl-lg-5 mt-lg-0 mt-5">
-                    <img src="assets/images/h1.jpg" class="img-fluid" alt="" />
+                    <img src="../admin/images/tr5.png" class="img-fluid" alt="" />
                 </div>
             </div>
         </div>
@@ -118,7 +118,7 @@ include_once('header.php');
       <div class="container py-md-5">  
             <div class="team-1 row">  
               <div class="right-single-team col-lg-6">
-                <h6>Here are a few places to explore shipping.</h6>
+             <!--   <h6>Here are a few places to explore shipping.</h6>-->
                    <h3 class="mb-4">Are You a Sender?</h3>
                   <li><span class="fa fa-check"></span> Core freight</li>
                   <li><span class="fa fa-check"></span> Integrated logistics – LLP</li>
@@ -127,7 +127,7 @@ include_once('header.php');
                   <li><span class="fa fa-check"></span> Geo-Gateways</li>
                </div>
                 <div class="left-single-team  col-lg-6">
-                      <h6>Things need to know about shipping.</h6>
+                      <!--<h6>Things need to know about shipping.</h6>-->
                       <h3 class="mb-4">Are You a Shipper?</h3>
                              <li><span class="fa fa-check"></span> Customs & Tax Representation</li>
                             <li><span class="fa fa-check"></span> Reusable Packaging</li>
@@ -235,7 +235,7 @@ include_once('header.php');
     <div id="grids4-block" class="py-5">
        <div class="container py-md-5">
 			<div class="heading text-center mx-auto">
-      <h3 class="head">Latest News</h3>
+      <h3 class="head">Available Trucks</h3>
       <p class="my-3 head"> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
         Nulla mollis dapibus nunc, ut rhoncus
         turpis sodales quis. Integer sit amet mattis quam.</p>
@@ -247,10 +247,10 @@ include_once('header.php');
                          {
                     ?>
                
-                 <div class="grids4-info col-lg-4 col-md-6 offset-lg-0 offset-md-3 mt-lg-0 mt-4" style="padding:10px">
+                 <div class="grids4-info col-lg-4 col-md-6 offset-lg-0 offset-md-3 mt-lg-0 mt-4" style="padding:5px">
                     
                  <div class="info-bg editContent">
-                            <a href="blog"><img src="../admin/images/<?php echo $data->img;?>" width="100%" height="275px" alt=""></a>
+                            <a href="category"><img src="../admin/images/<?php echo $data->img;?>" width="100%" height="275px" alt=""></a>
                             <h5 class="mt-4 mb-3 editContent"><a class="editContent" href="blog"></a></h5>
                             <li class="pr-3" ><h4><b><?php echo $data->model_name;?></h4></b></li><br>
                             <li class="pr-3"><h5><?php echo $data->truck_capacity;?></h5></li><br>
@@ -260,8 +260,8 @@ include_once('header.php');
                     </div>
 					
                 
-                <?php
-                         }
+                     <?php
+                     }
                      ?>
            </div>
            

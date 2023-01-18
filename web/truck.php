@@ -9,7 +9,7 @@ include_once('header.php');
             <ul class="breadcrumbs-custom-path">
                
                 <li><a href="index.html">Home <span class="fa fa-angle-double-right" aria-hidden="true"></span></a></li>
-                <li class="active">Shop Single</li>
+                <li class="active">Truck</li>
             </ul>
         </div>
     </div>
@@ -70,7 +70,7 @@ include_once('header.php');
           <?php
            }
          ?>
-          <a href="ecommerce-cart.html" class="btn btn-secondary btn-theme mt-3">
+          <a href="cart" class="btn btn-secondary btn-theme mt-3">
             Add to Cart
           </a>
         </div>
