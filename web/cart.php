@@ -23,22 +23,27 @@ include_once('header.php');
           <table class="timetable_sub">
             <thead>
               <tr>
-                <th>Product</th>
-                <th>Product Name</th>
-                <th>Quantity</th>
+                <th>Truck</th>
+                <th>Model Name</th>
+                <th>Company Name</th>
+                <th>Capacity</th>
+                <th>City Rate</th>
+                <th>Weight Rate</th>
                 <th>Price</th>
               </tr>
             </thead>
             <tbody>
               <tr class="rem1">
                 <td class="invert-image">
-                  <a href="ecommerce-single.html">
-                    <img src="assets/images/s1.jpg" alt=" " class="img-responsive">
+                  <a href="truck">
+                    <img src="assets/images/<?php echo $fetch->img;?>" alt=" " class="img-responsive">
                   </a>
                 </td>
-                <td class="invert product-name"><a href="ecommerce-single.html">
-                  Cardboard Packaging Box (Pack of 100 Brown)</a>
-
+                <td class="invert product-name"><a href="truck">
+                  <?php echo $fetch->model_name;?></a>
+                </td>
+                <td class="invert product-name"><a href="truck">
+                  <?php echo $fetch->company_name;?></a>
                 </td>
                 <td class="invert">
                   <div class="quantity">
@@ -50,7 +55,7 @@ include_once('header.php');
                 <td class="invert price">$ 36.80 </td>
 
               </tr>
-              <tr class="rem2">
+             <!-- <tr class="rem2">
                 <td class="invert-image">
                   <a href="ecommerce-single.html">
                     <img src="assets/images/s4.jpg" alt=" " class="img-responsive">
@@ -92,7 +97,7 @@ include_once('header.php');
                 </td>
                 <td class="invert price">$ 14.90</td>
 
-              </tr>
+              </tr>-->
 
               <tr>
                 <td></td>

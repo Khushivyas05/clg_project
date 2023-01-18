@@ -66,7 +66,7 @@ include_once('header.php');
               <input type="number" value="1" min="1"> kg
             </div>
           </div>
-          <a href="cart" class="btn btn-secondary btn-theme mt-3">
+          <a href="cart?cate_id=<?php echo $fetch->cate_id;?>" class="btn btn-secondary btn-theme mt-3">
             Add to Cart
           </a>
         </div>
