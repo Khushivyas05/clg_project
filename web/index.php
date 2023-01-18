@@ -121,7 +121,7 @@ include_once('header.php');
              <!--   <h6>Here are a few places to explore shipping.</h6>-->
                    <h3 class="mb-4">Are You a Sender?</h3>
                   <li><span class="fa fa-check"></span> Core freight</li>
-                  <li><span class="fa fa-check"></span> Integrated logistics – LLP</li>
+                  <li><span class="fa fa-check"></span> Integrated logistics - LLP</li>
                   <li><span class="fa fa-check"></span> Strategic-Xpert</li>
                   <li><span class="fa fa-check"></span> One time solutions</li>
                   <li><span class="fa fa-check"></span> Geo-Gateways</li>

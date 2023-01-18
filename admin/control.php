@@ -214,7 +214,7 @@ class control extends model
 					$cust_id=$_REQUEST['cust_id'];
 					$weight=$_REQUEST['weight'];
 					$type=$_REQUEST['type'];
-						$arr=array("parcel_id"=>$parcel_id,"cust_id"=>$cust_id,"weight"=>$weight,"type"=>$type);
+					$arr=array("parcel_id"=>$parcel_id,"cust_id"=>$cust_id,"weight"=>$weight,"type"=>$type);
 					$res=$this->update('parcel',$arr,$where);
 					if($res)
 					{
