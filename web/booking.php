@@ -1,6 +1,7 @@
 <?php
 include_once('header.php');
 ?>
+hhh
 <!-- inner banner -->
 <section class="w3l-inner-banner-main">
     <div class="about-inner sear-1">
@@ -54,7 +55,7 @@ include_once('header.php');
                          Price:<input type="text" name="price" placeholder="Price" class="form-control" required="">
                         </div>
                         <div class="top-inputs">    
-                         Payment Type:<input type="text" name="payment_type" placeholder="Payment type" class="form-control" required="">
+                         Payment Type:<input type="text" name="payment_type" placeholder="Payment Type" class="form-control" required="">
                         </div>
                         
                         <div class="text-right">
