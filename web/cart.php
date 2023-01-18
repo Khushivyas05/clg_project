@@ -45,7 +45,7 @@ include_once('header.php');
                 <td class="invert product-name"><a href="truck?cate_id=<?php echo $fetch->cate_id;?>">
                   <?php echo $fetch->company_name;?></a>
                 </td>
-                <td class="invert product-name"><a href="truck">
+                <td class="invert product-name"><a href="truck?cate_id=<?php echo $fetch->cate_id;?>">
                   <?php echo $fetch->truck_capacity;?></a>
                 </td>
                 <td class="invert">
