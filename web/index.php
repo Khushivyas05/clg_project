@@ -243,7 +243,7 @@ include_once('header.php');
     
             <div class="row mt-5 pt-3">
                     <?php 
-                         foreach($fetcharr as $data)
+                         foreach(array_slice($fetcharr,0,3) as $data)
                          {
                     ?>
                
