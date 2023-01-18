@@ -36,17 +36,17 @@ hhh
             <tbody>
               <tr class="rem1">
                 <td class="invert-image">
-                  <a href="truck">
+                  <a href="truck?cate_id=<?php echo $fetch->cate_id;?>">
                     <img src="assets/images/<?php echo $fetch->img;?>" alt=" " class="img-responsive">
                   </a>
                 </td>
-                <td class="invert product-name"><a href="truck">
+                <td class="invert product-name"><a href="truck?cate_id=<?php echo $fetch->cate_id;?>">
                   <?php echo $fetch->model_name;?></a>
                 </td>
-                <td class="invert product-name"><a href="truck">
+                <td class="invert product-name"><a href="truck?cate_id=<?php echo $fetch->cate_id;?>">
                   <?php echo $fetch->company_name;?></a>
                 </td>
-                <td class="invert product-name"><a href="truck">
+                <td class="invert product-name"><a href="truck?cate_id=<?php echo $fetch->cate_id;?>">
                   <?php echo $fetch->truck_capacity;?></a>
                 </td>
                 <td class="invert">
