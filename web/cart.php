@@ -63,7 +63,7 @@ include_once('header.php');
                 </td>
                 <td class=" invert product-name"><a href="ecommerce-single.html">
                   Packaging, Shipping Packaging Box (Pack of 25 Brown)
-                  </a>n
+                  </a>
 
 
                 </td>
