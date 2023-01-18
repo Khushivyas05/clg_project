@@ -29,7 +29,7 @@ include_once('header.php');
                 <th>Capacity</th>
                 <th>City Rate</th>
                 <th>Weight Rate</th>
-                <th>Price</th>
+                <th>Total Price</th>
               </tr>
             </thead>
             <tbody>
@@ -44,6 +44,9 @@ include_once('header.php');
                 </td>
                 <td class="invert product-name"><a href="truck?cate_id=<?php echo $fetch->cate_id;?>">
                   <?php echo $fetch->company_name;?></a>
+                </td>
+                <td class="invert product-name"><a href="truck">
+                  <?php echo $fetch->truck_capacity;?></a>
                 </td>
                 <td class="invert">
                   <div class="quantity">
