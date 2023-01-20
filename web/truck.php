@@ -23,7 +23,8 @@ include_once('header.php');
         <div class="col-md-4 cart-image">
           <a href="ecommerce-single.html" class="column-img" id="zoomIn">
          
-              <img src="assets/images/tr1.png" alt="product" class="img-responsive" />
+              <img src="assets/images/<?php echo $fetch->img;?>" alt="" class="img-responsive">
+              
        
           </a>
         </div>
