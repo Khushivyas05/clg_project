@@ -55,11 +55,11 @@ include_once('header.php');
           <p class="single">Dolor sit amet consectetur adipisicing elit. Animi iste,
             minus quibusdam quam ipsam autem nihil atque velit, nesciunt quo
             dolores tempora praesentium consequuntur deserunt eum natus beatae dolor.</p>-->
-         <?php
-          foreach($fetcharr as $data)
-          {
-         ?>
-              Capacity: <?php echo $data->model_name;?> 
+           
+            Model Name:<?php echo $fetch->model_name;?><br>
+            Company Name:<?php echo $fetch->company_name;?><br>
+            Capacity:<?php echo $fetch->truck_capacity;?> <br>
+
            
           <div class="sec-grid-1">
             <label>Quantity:</label>
