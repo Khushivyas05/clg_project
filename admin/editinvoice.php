@@ -2,6 +2,7 @@
 include_once('header.php');
 ?>
 <script>
+	11
 function validate()
 {
 	var feedback_id=document.forms["feedbackform"]["feedback_id"].value;
