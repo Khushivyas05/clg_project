@@ -25,7 +25,7 @@ include_once('header.php');
 					  <tr>
 						<th>Booking_id</th>
 						<th>Customer Name</th>
-						<th>Category</th>
+						<th>Vehicle Number</th>
 						<th>Source</th>
                         <th>Destination</th>
 						<th>Booking date</th>
