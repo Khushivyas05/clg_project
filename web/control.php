@@ -50,7 +50,7 @@ class control extends model
             include_once('trackorder.php');
             break; 
 
-            case '/cart':
+            case '/cart':b
             if(isset($_REQUEST['cate_id']))
             {
                 $cate_id=$_REQUEST['cate_id'];
