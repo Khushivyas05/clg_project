@@ -21,9 +21,10 @@ include_once('header.php');
     <div class="container">
       <div class="row ecommerce-cart-two pt-2">
         <div class="col-md-4 cart-image">
-          <a href="" class="column-img" id="zoomIn">
+          <a href="ecommerce-single.html" class="column-img" id="zoomIn">
          
-              <img src="assets/images/<?php echo $fetch->img;?>" alt="product" class="img-responsive" />
+              <img src="assets/images/<?php echo $fetch->img;?>" alt="" class="img-responsive">
+              
        
           </a>
         </div>
@@ -55,15 +56,16 @@ include_once('header.php');
           <p class="single">Dolor sit amet consectetur adipisicing elit. Animi iste,
             minus quibusdam quam ipsam autem nihil atque velit, nesciunt quo
             dolores tempora praesentium consequuntur deserunt eum natus beatae dolor.</p>-->
-         
-           Model Name: <?php echo $fetch->model_name;?> <br>
-           Company name: <?php echo $fetch->company_name;?><br>
-           Capacity: <?php echo $fetch->truck_capacity;?><br>
+           
+            Model Name:<?php echo $fetch->model_name;?><br>
+            Company Name:<?php echo $fetch->company_name;?><br>
+            Capacity:<?php echo $fetch->truck_capacity;?> <br>
+
            
           <div class="sec-grid-1">
-            <label>Weight:</label>
+            <label>Quantity:</label>
             <div class="disply-cont">
-              <input type="number" value="1" min="1"> kg
+              <input type="number" value="1" min="1">
             </div>
           </div>
           <a href="cart?cate_id=<?php echo $fetch->cate_id;?>" class="btn btn-secondary btn-theme mt-3">
