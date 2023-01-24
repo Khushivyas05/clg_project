@@ -35,7 +35,7 @@ include_once('header.php');
             </thead>
             <tbody>
               <tr class="rem1">
-                <td class="invert-image">
+                <td class="invert-image">bb
                   <a href="truck?cate_id=<?php echo $fetch->cate_id;?>">
                     <img src="assets/images/<?php echo $fetch->img;?>" alt=" " class="img-responsive">
                   </a>
