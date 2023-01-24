@@ -762,7 +762,7 @@ class control extends model
 			include_once('editpayment.php');
 			break;
 
-			case '/editbooking':
+			/*case '/editbooking':
 			$fetcharr=$this->selectall('customer_details');
 			if(isset($_REQUEST['edit_booking_id']))
 			{
@@ -792,7 +792,7 @@ class control extends model
 				}
 			}
 			include_once('editbooking.php');
-			break;
+			break;*/
 
 			case '/editfuel':
 			if(isset($_REQUEST['edit_fuel_id']))

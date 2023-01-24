@@ -5,7 +5,8 @@
             <div class="d-grid grid-col-4 footer-top-29">
                 <div class="footer-list-29 footer-1">
                     <h6 class="footer-title-29"><a href="index.html"><span class="fa fa-truck"></span>YTS</a></h6>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+                   <p>We at Your Transport Solution believe in providing world-class logistics services 
+                    to wide ranges of clients across the country at a very affordable price.</p>
                    <div class="main-social-footer-29">
                 </div>
                 </div>
@@ -56,8 +57,7 @@
                 
                        // When the user clicks on the button, scroll to the top of the document
                        function topFunction() {
-                           document.body.scrollTop = 0;
-                           document.documentElement.scrollTop = 0;
+                           $(window).scrollTop(0);
                        }
                    </script>
                    <!-- /move top -->
