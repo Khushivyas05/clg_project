@@ -61,7 +61,7 @@ function validate()
 			
 			<div class="col-md-12 form-group1">
 			<label class="control-label">Book date</label>
-            <input type="text" placeholder="booking date" name="booking_id" value="<?php echo $fetcharr->book_date;?>" >
+            <input type="text" placeholder="booking date" name="booking_id" value="<?php echo $fetch->booking_id;?>" >
             </div>
 			 <div class="clearfix"> </div>
 			
