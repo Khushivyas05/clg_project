@@ -99,12 +99,12 @@ function validate()
 
 			<div class="col-md-12 form-group1">
               <label class="control-label">Source</label>
-              <input type="text" placeholder="source" name="source" value="<?php echo $fetcharr->source;?>"><br>
+              <input type="text" placeholder="source" name="source" value="<?php echo $fetch->source;?>"><br>
             </div>
 
             <div class="col-md-12 form-group1">
               <label class="control-label">Destination</label>
-              <input type="text" placeholder="destination" name="destination" value="<?php echo $fetcharr->destination;?>"><br>
+              <input type="text" placeholder="destination" name="destination" value="<?php echo $fetch->destination;?>"><br>
             </div>
 
 			<div class="col-md-12 form-group1">
