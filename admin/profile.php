@@ -35,6 +35,10 @@ include_once('header.php');
 				<img src="images/pr.jpg" alt="">
 			</div>
 			<div class="col-md-8 profile-text">
+				<?php
+				if(isset($_SESSION['admin_details']))
+				{
+				?>
 				<h6>Id:<?php echo $fetch->admin_id;?> </h6>
 				<table>
 				<tr><td>Username</td>  
@@ -42,6 +46,45 @@ include_once('header.php');
 				<td><?php echo $fetch->username;?></td>
 				</tr>
 				</table>
+				<?php
+				}
+				if(isset($_SESSION['employee_details']))
+				{
+				?>
+				<h6>Id:<?php echo $fetch->emp_id;?> </h6>
+				<table>
+				<tr><td>Userame</td>  
+				<td>:</td>  
+				<td><?php echo $fetch->username;?></td>
+				</tr>
+				<tr><td>Name</td>  
+				<td>:</td>  
+				<td><?php echo $fetch->emp_name;?></td>
+				</tr>
+				<tr><td>Address</td>  
+				<td>:</td>  
+				<td><?php echo $fetch->emp_add;?></td>
+				</tr>
+				<tr><td>Desgination</td>  
+				<td>:</td>  
+				<td><?php echo $fetch->designation;?></td>
+				</tr>
+				<tr><td>Email</td>  
+				<td>:</td>  
+				<td><?php echo $fetch->email;?></td>
+				</tr>
+				<tr><td>Contact</td>  
+				<td>:</td>  
+				<td><?php echo $fetch->contact;?></td>
+				</tr>
+				<tr><td>Driving licence</td>  
+				<td>:</td>  
+				<td><?php echo $fetch->driving_licence;?></td>
+				</tr>
+				</table>
+				<?php
+				}
+				?>
 			</div>
 			
 			</div>
