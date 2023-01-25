@@ -49,6 +49,9 @@ include_once('header.php');
                 <td class="invert product-name"><a href="truck?cate_id=<?php echo $fetch->cate_id;?>">
                   <?php echo $fetch->truck_capacity;?></a>
                 </td>
+                <td class="invert product-name"><a href="truck?cr_id=<?php echo $fetch->cr_id;?>">
+                  <?php echo $fetch->rate;?></a>
+                </td>
                 <td class="invert">
                   <div class="quantity">
                     <div class="quantity-select d-flex">
