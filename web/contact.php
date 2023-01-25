@@ -33,19 +33,19 @@ include_once('header.php');
                  <!-- contact form -->
                  <div class="contacts12-main col-lg-7 pr-lg-5 pr-3">
                    
-                    <form action="https://sendmail.w3layouts.com/submitForm" method="post" class="main-input">
+                    <form action="" method="post" class="main-input">
                         <div class="top-inputs">
-                        Name:<input type="text" placeholder="Name" name="w3lName" id="w3lName" required="">
+                        Name:<input type="text" placeholder="Name" name="name" required="">
                             
                         </div>
                         <div class="top-inputs">
                            
-                         Email:<input type="email" name="email" placeholder="Email" id="w3lSender" required="">
+                         Email:<input type="email" name="email" placeholder="Email" required="">
                         </div>
-                        Contact:<input type="text" placeholder="Phone Number" name="w3lName" id="w3lName" required=""><br>
-                       Message:<textarea placeholder="Message" name="w3lMessage" id="w3lMessage" required=""></textarea>
+                        Contact:<input type="text" placeholder="Phone Number" name="contact" required=""><br>
+                       Message:<textarea placeholder="Message" name="message" required=""></textarea>
                         <div class="text-right">
-                            <button type="submit" class="btn btn-theme2">Submit Now</button>
+                            <button type="submit" name="submit" class="btn btn-theme2">Submit Now</button>
                         </div>
                     </form>
                 </div>
