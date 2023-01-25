@@ -42,7 +42,12 @@ class control extends model
 
             
             case '/booking':
-            $fetcharr=$this->selectall('booking'); 
+            $fetcharr=$this->selectall('booking');
+            if(isset($_REQUEST['submit'])) 
+            {
+                $cust_id=$_REQUEST['cust_id'];
+                
+            }
             include_once('booking.php');
             break;
             
