@@ -15,6 +15,56 @@ class control extends model
             break;
 
             case '/contact':
+                ini_set("localhost","stmp.gmail.com");
+            if(isset($_REQUEST['submit']))
+            {
+                $name=$_REQUEST['name'];
+                $email=$_REQUEST['email'];
+                $contact=$_REQUEST['contact'];
+                $message=$_REQUEST['message'];
+
+                $fullMessage = '<html><body>';
+                $fullMessage = $fullMessage."<br/><br/>";
+                $fullMessage = $fullMessage."".$from." sent a message using Inquiry Form";
+                $fullMessage = $fullMessage."<br/><br/>";
+                $fullMessage = $fullMessage."<table align=left border=1>";
+
+                $fullMessage = $fullMessage."<tr ><td width=200px> Name</td> <td width=200px>".$name."</td></tr>";
+            
+                $fullMessage = $fullMessage."<tr ><td width=200px>E-Mail</td> <td width=200px>".$email."</td></tr>";
+
+
+                
+                $fullMessage = $fullMessage."<tr ><td width=200px>Subject</td> <td width=200px>".$contact."</td></tr>";
+
+
+        
+                $fullMessage = $fullMessage."<tr ><td width=200px>Message</td> <td width=200px>".$message."</td></tr>";
+                        
+                $fullMessage = $fullMessage.'</table></body></html>';
+
+                $admin="khushignc@gmail.com";
+                $to=$admin;
+                $from=$email;
+                $subject="New inquiry";
+                mail($to,$subject,$fullMessage);
+
+                $from1=$admin;
+                $to1=$email;
+                $subject1="Thanks for Inquiry";
+                $fullMessage1 = '<html><body><br/>Thank you for contact us. <br/>We will get back you shortly.';
+		        $fullMessage1 = $fullMessage1.'</body></html>';
+                mail($to1,$subject1,$fullMessage1);
+
+                echo '<br/><div style="color:#ff0000;margin-left:40px">';
+                echo "Thank you for your Inquiry Us, We will in touch with you less then 12 hours.";
+                echo "</div><br/>";
+
+                $name="";
+                $email="";
+                $contact="";
+                $message="";
+            }
             include_once('contact.php');
             break;
 
