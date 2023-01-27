@@ -119,21 +119,22 @@ include_once('header.php');
             <div class="team-1 row">  
               <div class="right-single-team col-lg-6">
              <!--   <h6>Here are a few places to explore shipping.</h6>-->
-                   <h3 class="mb-4">Are You a Sender?</h3>
-                  <li><span class="fa fa-check"></span> Core freight</li>
-                  <li><span class="fa fa-check"></span> Integrated logistics - LLP</li>
-                  <li><span class="fa fa-check"></span> Strategic-Xpert</li>
-                  <li><span class="fa fa-check"></span> One time solutions</li>
-                  <li><span class="fa fa-check"></span> Geo-Gateways</li>
+                   <h3 class="mb-4">Reliability and safety</h3>
+                 <li><span class="fa fa-check"></span> Reliability and safety in transport </li>
+                  <li><span class="fa fa-check"></span> Advanced security tools and technologies</li>
+                  <li><span class="fa fa-check"></span>It further helps you to drive efficiency and achieve operational.</li>
+                <!--  <li><span class="fa fa-check"></span> One time solutions</li>
+                  <li><span class="fa fa-check"></span> Geo-Gateways</li>-->
+                  
                </div>
                 <div class="left-single-team  col-lg-6">
                       <!--<h6>Things need to know about shipping.</h6>-->
-                      <h3 class="mb-4">Are You a Shipper?</h3>
-                             <li><span class="fa fa-check"></span> Customs & Tax Representation</li>
-                            <li><span class="fa fa-check"></span> Reusable Packaging</li>
-                            <li><span class="fa fa-check"></span> Warehousing</li>
-                            <li><span class="fa fa-check"></span> Finished Vehicle Logistics</li>
-                            <li><span class="fa fa-check"></span> Control Tower</li>
+                      <h3 class="mb-4">Advanced technology  </h3>
+                        <li><span class="fa fa-check"></span> Drivers helps to serve you anywhere.</li>
+                        <li><span class="fa fa-check"></span> Drivers helps us to serve you anywhere, anytime across any part of the country.</li>
+                        <!--<li><span class="fa fa-check"></span>  </li>
+                        <li><span class="fa fa-check"></span> Finished Vehicle Logistics</li>
+                        <li><span class="fa fa-check"></span> Control Tower</li>-->
                      </div>
                 </div>
               </div>
@@ -185,16 +186,15 @@ include_once('header.php');
 		<div class="customers_sur py-5">
             <div class="container py-md-5">
                 <div class="heading text-center mx-auto">
-                    <h3 class="head text-white">Words From Our Clients</h3>
-                    <p class="my-3 head text-white"> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-                      Nulla mollis dapibus nunc, ut rhoncus
-                      turpis sodales quis. Integer sit amet mattis quam.</p>
+                    <h3 class="head text-white">Rich industry experience</h3>
+                    <p class="my-3 head text-white"> We bring together years of diverse experience in the transport industry. As the best online transport booking company, we know what all it needs to bring you effective and affordable solutions to suit your every transport need.</p>
                   </div>
                 <div class="customers-top_sur row mt-5 pt-3">
                     <div class="customers-left_sur col-md-6">
                         <div class="customers_grid">
                             
-                            <p class="sub-test"><span class="fa fa-quote-left"></span> Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+                            <p class="sub-test"><span class="fa fa-quote-left"></span> "Thanks for all the help for shifting my home stuff great service and commitment."
+</p>
                             
                         </div>
                         <div class="customers-bottom_sur row">
@@ -202,8 +202,8 @@ include_once('header.php');
                                 <img src="assets/images/te2.jpg" alt=" " class="img-responsive">
                             </div>
                             <div class="custo_grid col-10">
-                                <h5 class="text-white">Khushi Vyas</h5>
-                                <span>Co-founder</span>
+                                <h5 class="text-white">Dhara Patel</h5>
+                                <span>Customer</span>
                             </div>
                         
                         </div>
@@ -211,7 +211,7 @@ include_once('header.php');
                      <div class="customers-middle_sur col-md-6 mt-md-0 mt-4">
                         <div class="customers_grid">
                             
-                            <p class="sub-test"><span class="fa fa-quote-left"></span> Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+                            <p class="sub-test"><span class="fa fa-quote-left"></span>"They are legit and offer the best rates when compared to other transporters."</p>
                             
                         </div>
                         <div class="customers-bottom_sur row">
@@ -219,7 +219,7 @@ include_once('header.php');
                                  <img src="assets/images/te1.jpg" alt=" " class="img-responsive">
                             </div>
                             <div class="custo_grid col-10">
-                                <h5 class="text-white">Disha Panchal</h5>
+                                <h5 class="text-white">Nidhi Panchal</h5>
                                 <span>Client</span>
                             </div>
                             
@@ -236,9 +236,7 @@ include_once('header.php');
        <div class="container py-md-5">
 			<div class="heading text-center mx-auto">
       <h3 class="head">Available Trucks</h3>
-      <p class="my-3 head"> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-        Nulla mollis dapibus nunc, ut rhoncus
-        turpis sodales quis. Integer sit amet mattis quam.</p>
+      <p class="my-3 head"> We understand the value of time for you as well as for us. That is why we try to deliver your consignment on time, every time.</p>
     </div>
     
             <div class="row mt-5 pt-3">

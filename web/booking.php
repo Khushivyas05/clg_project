@@ -35,12 +35,19 @@ include_once('header.php');
                    
                     <form action="" method="post" class="main-input">
                         <div class="top-inputs">
-                        Customer Name:<input type="text" name="cust_name" placeholder="Customer Name" class="form-control" required="">
-                            
+                        Customer Name:
+                        <select name="cust_id" class="form-control">
+                            <?php
+                            foreach($fetcharr as $f)
+                            {
+                            ?>
+                            <option value="<?php echo $f->cust_id?>"><?php echo $f->cust_name?></option>
+                            <?php
+                            }
+                            ?>
+                         </select>
                         </div>
-                        <div class="top-inputs">    
-                         Vehicle Number:<input type="text" name="cate_id" placeholder="Vehicle number" class="form-control" required="">
-                        </div>
+                        
                         <div class="top-inputs">    
                          Source:<input type="text" name="source" placeholder="Source" class="form-control" required="">
                         </div>
@@ -58,7 +65,7 @@ include_once('header.php');
                         </div>
                         
                         <div class="text-right">
-                            <button type="submit" class="btn btn-theme2">Submit Now</button>
+                            <button type="submit" name="submit" class="btn btn-theme2">Submit Now</button>
                         </div>
                     </form>
                 </div>
