@@ -37,7 +37,7 @@ include_once('header.php');
                         <div class="top-inputs">
                         Name:<input type="text" placeholder="Name" name="name" required="">
                             
-                        </div>k
+                        </div>
                         <div class="top-inputs">
                            
                          Email:<input type="email" name="email" placeholder="Email" required="">
