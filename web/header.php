@@ -282,9 +282,9 @@ RIGHT SIDEBAR TOGGLE SECTION
         <li class="nav-item">
           <a class="nav-link" href="about">About</a>
         </li>
-        <li class="nav-item">
+       <!-- <li class="nav-item">
           <a class="nav-link" href="booking">Booking</a>
-        </li>
+        </li>-->
         <li class="nav-item">
           <a class="nav-link" href="category">Truck Type</a>
         </li>
