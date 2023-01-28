@@ -14,6 +14,14 @@ class control extends model
             include_once('about.php');
             break;
 
+            case '/profile':
+            $fetcharr=$this->select_where_join('customer_details','city','customer_details.city_id=city.city_id');
+            $where=array("username"=>$_SESSION['username']);
+            $run=$this->select_where('customer_details',$where);
+            $fetch=$run->fetch_object();
+            include_once('profile.php');
+            break;
+
             case '/contact':
                 ini_set("localhost","stmp.gmail.com");
             if(isset($_REQUEST['submit']))
@@ -122,6 +130,7 @@ class control extends model
             break; 
 
             case '/cart':
+            $fetcharr=$this->selectall('category','total_price','category.tp_id=total_price.tp_id');
             if(isset($_REQUEST['cate_id']))
             {
                 $cate_id=$_REQUEST['cate_id'];
