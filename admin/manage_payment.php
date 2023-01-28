@@ -23,12 +23,12 @@ include_once('header.php');
 				  <table class="table table-bordered table-striped">
 					<thead>
 					  <tr>
-						<th>payment_id</th>
-						<th>cust_name</th>
-						<th>invoice Date</th>
-						<th>price</th>
-                        <th>payment_type</th>
-						<th>date</th>
+						<th>Payment_id</th>
+						<th>Customer Name</th>
+						<th>Invoice Date</th>
+						<th>Price</th>
+                        <th>Payment_type</th>
+						<th>Date</th>
 						<th>Edit</th>
 						<th>Delete</th>
                        </tr>

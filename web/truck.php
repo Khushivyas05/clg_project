@@ -74,19 +74,14 @@ include_once('header.php');
         </div>
       </div>
       <div class="text24-max-align mt-5">
-        <h5 class="text24-heading">Product Decription</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-          et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
-          quia non numquam eius modi tempora incidunt ut labore et dolore magnam </p>
+        <h5 class="text24-heading">Product Description</h5>
+        <p>This is a TATA company truck.It's model name is ACE Gold.</p>
+        <p>It can carry weight upto 1.5 Tons</p>
         <div class="text24-list">
           <ol class="p-0">
-            <li>Ut enim ad minima veniam, quis nostrum</li>
-            <li class="gap-list">Exercitationem ullam corporis suscipit</li>
-            <li>Nisi ut aliquid ex ea commodi consequatur</li>
+            <!--<li></li>
+            <li class="gap-list"></li>
+            <li></li>-->
           </ol>
         </div>
       </div>

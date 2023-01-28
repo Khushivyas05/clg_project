@@ -220,7 +220,7 @@ include_once('header.php');
                             </div>
                             <div class="custo_grid col-10">
                                 <h5 class="text-white">Nidhi Panchal</h5>
-                                <span>Client</span>
+                                <span>Customer</span>
                             </div>
                             
                         </div>

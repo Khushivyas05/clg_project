@@ -101,7 +101,6 @@ class control extends model
             
             case '/booking':
             $fetcharr=$this->selectall('customer_details');
-            $fetch=$this->selectall('category');
             if(isset($_REQUEST['submit'])) 
             {
                 $cust_id=$_REQUEST['cust_id'];
@@ -112,7 +111,7 @@ class control extends model
                 $price=$_REQUEST['price'];
                 $payment_type=$_REQUEST['payment_type'];
 
-                $arr=array("cust_id"=>$cust_id,"cate_id"=>cate_id,"source"=>$source,"destination"=>$destination,"book_date"=>$book_date,"price"=>$price,"payment_type"=>$payment_type);
+                $arr=array("cust_id"=>$cust_id,"cate_id"=>$cate_id,"source"=>$source,"destination"=>$destination,"book_date"=>$book_date,"price"=>$price,"payment_type"=>$payment_type);
                 $res=$this->insert('booking',$arr);
 				if($res)
 				{
