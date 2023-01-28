@@ -37,7 +37,7 @@
             </div>
         </div>
     </div>
-     <!-- move top -->
+     <!-- move top
 		<button onclick="topFunction()" id="movetop" title="Go to top">
                 <span class="fa fa-angle-up"></span>
                    </button>
@@ -60,7 +60,7 @@
                            $(window).scrollTop(0);
                        }
                    </script>
-                   <!-- /move top -->
+                   /move top -->
 </section>
 <script src="assets/js/jquery-3.3.1.min.js"></script>
 <!-- //footer-28 block -->
