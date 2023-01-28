@@ -47,7 +47,9 @@ include_once('header.php');
                             ?>
                          </select>
                         </div>
-                        
+                        <div class="top-inputs">    
+                         Model Name:<input type="text" name="cate_id" placeholder="model name" value="<?php echo $fetch->model_name;?>" class="form-control" required="">
+                        </div>
                         <div class="top-inputs">    
                          Source:<input type="text" name="source" placeholder="Source" class="form-control" required="">
                         </div>

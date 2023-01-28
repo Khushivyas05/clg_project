@@ -243,7 +243,7 @@ RIGHT SIDEBAR TOGGLE SECTION
        {
        ?>
         <a class="btn btn-secondary mr-2" href="logout">Logout</a> 
-        <!--<a class="btn btn-secondary" href="profile">Profile</a>-->
+        <a class="btn btn-secondary" href="profile">Profile</a>
       <?php
        }
        else
