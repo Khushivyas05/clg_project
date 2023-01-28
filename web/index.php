@@ -193,10 +193,8 @@ include_once('header.php');
                     <div class="customers-left_sur col-md-6">
                         <div class="customers_grid">
                             
-                            <p class="sub-test"><span class="fa fa-quote-left"></span> We make services faster.
-We adopt a systematic and collaborative approach.
-Save you on money by reducing operational expenses.
-Safe, quick and on-time delivery.</p>
+                            <p class="sub-test"><span class="fa fa-quote-left"></span> "Thanks for all the help for shifting my home stuff great service and commitment."
+</p>
                             
                         </div>
                         <div class="customers-bottom_sur row">
@@ -204,8 +202,8 @@ Safe, quick and on-time delivery.</p>
                                 <img src="assets/images/te2.jpg" alt=" " class="img-responsive">
                             </div>
                             <div class="custo_grid col-10">
-                                <h5 class="text-white">Khushi Vyas</h5>
-                                <span>Co-founder</span>
+                                <h5 class="text-white">Dhara Patel</h5>
+                                <span>Customer</span>
                             </div>
                         
                         </div>
@@ -213,7 +211,7 @@ Safe, quick and on-time delivery.</p>
                      <div class="customers-middle_sur col-md-6 mt-md-0 mt-4">
                         <div class="customers_grid">
                             
-                            <p class="sub-test"><span class="fa fa-quote-left"></span> Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+                            <p class="sub-test"><span class="fa fa-quote-left"></span>"They are legit and offer the best rates when compared to other transporters."</p>
                             
                         </div>
                         <div class="customers-bottom_sur row">
@@ -221,7 +219,7 @@ Safe, quick and on-time delivery.</p>
                                  <img src="assets/images/te1.jpg" alt=" " class="img-responsive">
                             </div>
                             <div class="custo_grid col-10">
-                                <h5 class="text-white">Disha Panchal</h5>
+                                <h5 class="text-white">Nidhi Panchal</h5>
                                 <span>Client</span>
                             </div>
                             
