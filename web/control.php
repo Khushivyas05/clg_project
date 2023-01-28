@@ -93,18 +93,17 @@ class control extends model
             
             case '/booking':
             $fetcharr=$this->selectall('customer_details');
-          
             if(isset($_REQUEST['submit'])) 
             {
                 $cust_id=$_REQUEST['cust_id'];
-                
+                $cate_id=$_REQUEST['cate_id'];
                 $source=$_REQUEST['source'];
                 $destination=$_REQUEST['destination'];
                 $book_date=$_REQUEST['book_date'];
                 $price=$_REQUEST['price'];
                 $payment_type=$_REQUEST['payment_type'];
 
-                $arr=array("cust_id"=>$cust_id,"source"=>$source,"destination"=>$destination,"book_date"=>$book_date,"price"=>$price,"payment_type"=>$payment_type);
+                $arr=array("cust_id"=>$cust_id,"cate_id"=>$cate_id,"source"=>$source,"destination"=>$destination,"book_date"=>$book_date,"price"=>$price,"payment_type"=>$payment_type);
                 $res=$this->insert('booking',$arr);
 				if($res)
 				{
