@@ -23,7 +23,7 @@ function validate()
 		alert("Please fill out the invoice id");
 		return false;
 	}
-	var price=document.forms["paymentform"]["price"].value;
+	var price=document.forms["paymentform"]["Price"].value;
 	if(price=="" || price==null)
 	{
 		alert("Please fill out the price");
@@ -94,7 +94,7 @@ function validate()
 						
 			<div class="col-md-12 form-group1">
               <label class="control-label">Price</label>
-              <input type="text" placeholder="price" name="price" value="<?php echo $fetch->price;?>"><br>
+              <input type="text" placeholder="Price" name="Price" value="<?php echo $fetch->Price;?>"><br>
             </div>
             			
 			<div class="col-md-12 form-group1">

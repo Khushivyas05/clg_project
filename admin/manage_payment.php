@@ -42,7 +42,7 @@ include_once('header.php');
 						<td><?php echo $c->payment_id;?></td>
 						<td><?php echo $c->cust_name;?></td>
 						<td><?php echo $c->invoice_date;?></td>
-						<td><?php echo $c->price;?></td>
+						<td><?php echo $c->Price;?></td>
                         <td><?php echo $c->payment_type;?></td>
 						<td><?php echo $c->date;?></td>
 						<td><a href="editpayment?edit_payment_id=<?php echo $c->payment_id;?>" class="btn btn-primary">Edit</a></td>
