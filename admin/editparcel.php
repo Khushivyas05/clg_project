@@ -54,7 +54,7 @@ function validate()
               <label class="control-label">Parcel_id</label>
               <input type="text" placeholder="parcel_id" name="parcel_id" value="<?php echo $fetch->parcel_id;?>" >
             </div>
-            d
+            
             <div class="clearfix"> </div>
             </div>
 			
