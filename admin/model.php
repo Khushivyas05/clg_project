@@ -83,7 +83,7 @@ class model
 		}
 	}
 
-	function like($tbl,$where)
+	/*function like($tbl,$where)
 	{
 		$key_arr=array_keys($where);
 		$value_arr=array_values($where);
@@ -97,7 +97,7 @@ class model
 		}
 		$run=$this->conn->query($sel);
 		return $run;
-	}
+	}*/
 	
 	function delete_where($tbl,$where)
 	{
