@@ -94,7 +94,10 @@ class control extends model
             break;
             
             case '/index':
-            $fetcharr=$this->selectall('category');
+            $city_name=$_REQUEST['city_name'];
+            $where=array("city_name"=>$city_name);
+            $fetcharr=$this->like('city',$where);
+            //$fetcharr=$this->selectall('category');
             include_once('index.php');
             break;
 

@@ -29,7 +29,6 @@ include_once('header.php');
 						<th>Source</th>
                         <th>Destination</th>
 						<th>Booking date</th>
-                        <th>Price</th>
                         <th>Payment type</th>
 						<th>Delete</th>
 					  </tr>
@@ -46,7 +45,6 @@ include_once('header.php');
 						<td><?php echo $m->source;?></td>
                         <td><?php echo $m->destination;?></td>
 						<td><?php echo $m->book_date;?></td>
-                        <td><?php echo $m->price;?></td>
                         <td><?php echo $m->payment_type;?></td>
 						<td><a href="delete?del_booking_id=<?php echo $m->booking_id?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
