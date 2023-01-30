@@ -12,7 +12,7 @@ class model
 		$key=implode(",",$key_arr);
 		$value_arr=array_values($arr);
 		$value=implode("','",$value_arr);
-	    echo $ins="insert into $tbl($key) values('$value')";
+	    $ins="insert into $tbl($key) values('$value')";
 		$run=$this->conn->query($ins);
 		return $run;
 	}
@@ -82,6 +82,23 @@ class model
 			return $arr=array("Data not found");
 		}
 	}
+
+	function like($tbl,$where)
+	{
+		$key_arr=array_keys($where);
+		$value_arr=array_values($where);
+		
+		$sel="select * from $tbl where 1=1";
+		$i=0;
+		foreach($where as $w)
+		{
+			echo $sel.=" and $key_arr[$i] Like '$value_arr[$i]%'";
+			$i++;
+		}
+		$run=$this->conn->query($sel);
+		return $run;
+	}
+	
 	function delete_where($tbl,$where)
 	{
 		$key_arr=array_keys($where);

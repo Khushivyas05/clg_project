@@ -72,9 +72,6 @@ include_once('header.php');
                          Date:<input type="date" name="book_date" placeholder="Date" class="form-control" required="">
                         </div>
                         <div class="top-inputs">    
-                         Price:<input type="text" name="price" placeholder="Price" class="form-control" required="">
-                        </div>
-                        <div class="top-inputs">    
                          Payment Type:
                          <input type="radio" name="payment_type" class="form-control" required="">Cash
                          <input type="radio" name="payment_type" class="form-control" required="">Card

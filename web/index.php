@@ -10,12 +10,12 @@ include_once('header.php');
 				<div class="column1" >
 					<h3 class="tagline mb-3">Get a Free Moving Quote</h3>
 					
-						<form action="https://demo.w3layouts.com/" method="Get">
+						<form action="" method="post">
 							<div class="">
-								<input type="text" name="name" class="form-input" placeholder="From a City or Location" />
+								<input type="text" name="city_name" class="form-input" placeholder="From a City or Location" />
 							</div>
 							<div class="">
-								<input type="text" name="name" class="form-input" placeholder="To a City or Location" />
+								<input type="text" name="city_name" class="form-input" placeholder="To a City or Location" />
 							</div>
 							<!--<div class="">
 								<input type="text" name="name" class="form-input" placeholder="Your Name" />

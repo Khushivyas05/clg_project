@@ -385,7 +385,7 @@ class control extends model
 					if($_FILES['img']['size']>0)
 					{
 						$img=$_FILES['img']['name'];
-						$path='images/'.$img;
+						$path='pictures/'.$img;
 						$dup_file=$_FILES['img']['tmp_name'];
 						move_uploaded_file($dup_file,$path);
 								
@@ -393,7 +393,7 @@ class control extends model
 						$res=$this->update('category',$arr,$where);
 						if($res)
 						{
-							unlink('images/'.$old_file);
+							unlink('pictures/'.$old_file);
 							echo "<script>
 							alert('Update success');
 							window.location='manage_category';
@@ -496,7 +496,7 @@ class control extends model
 				$truck_capacity=$_REQUEST['truck_capacity'];
 
 				$img=$_FILES['img']['name'];
-				$path='images/'.$img;
+				$path='pictures/'.$img;
 				$dup_file=$_FILES['img']['tmp_name'];
 				move_uploaded_file($dup_file,$path);
 
@@ -754,10 +754,10 @@ class control extends model
 					$payment_id=$_REQUEST['payment_id'];
 					$cust_id=$_REQUEST['cust_id'];
 					$invoice_id=$_REQUEST['invoice_id'];
-					$price=$_REQUEST['price'];
+					$Price=$_REQUEST['Price'];
 					$payment_type=$_REQUEST['payment_type'];
 					$date=$_REQUEST['date'];
-					$arr=array("payment_id"=>$payment_id,"cust_id"=>$cust_id,"invoice_id"=>$invoice_id,"price"=>$price,"payment_type"=>$payment_type,"date"=>$date);
+					$arr=array("payment_id"=>$payment_id,"cust_id"=>$cust_id,"invoice_id"=>$invoice_id,"Price"=>$Price,"payment_type"=>$payment_type,"date"=>$date);
 					$res=$this->update('payment',$arr,$where);
 					if($res)
 					{
