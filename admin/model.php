@@ -12,7 +12,7 @@ class model
 		$key=implode(",",$key_arr);
 		$value_arr=array_values($arr);
 		$value=implode("','",$value_arr);
-	    echo $ins="insert into $tbl($key) values('$value')";
+	    $ins="insert into $tbl($key) values('$value')";
 		$run=$this->conn->query($ins);
 		return $run;
 	}

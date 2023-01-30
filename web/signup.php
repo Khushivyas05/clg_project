@@ -13,7 +13,7 @@ Author URL: http://w3layouts.com
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Packers a Packers & Movers Category Bootstrap Responsive Website Template | Signup </title>
+    <title>Signup</title>
     <!-- web fonts -->
     <link href="http://fonts.googleapis.com/css?family=Karla:400,700&amp;display=swap" rel="stylesheet">
     <!-- //web fonts -->

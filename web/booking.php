@@ -48,6 +48,20 @@ include_once('header.php');
                          </select>
                         </div>
                         
+                        <div class="top-inputs">
+                        Select Truck:
+                        <select name="cate_id" class="form-control">
+                            <?php
+                            foreach($fetch as $f)
+                            {
+                            ?>
+                            <option value="<?php echo $f->cate_id?>"><?php echo $f->model_name?></option>
+                            <?php
+                            }
+                            ?>
+                         </select>
+                        </div>
+
                         <div class="top-inputs">    
                          Source:<input type="text" name="source" placeholder="Source" class="form-control" required="">
                         </div>
@@ -58,10 +72,9 @@ include_once('header.php');
                          Date:<input type="date" name="book_date" placeholder="Date" class="form-control" required="">
                         </div>
                         <div class="top-inputs">    
-                         Price:<input type="text" name="price" placeholder="Price" class="form-control" required="">
-                        </div>
-                        <div class="top-inputs">    
-                         Payment Type:<input type="text" name="payment_type" placeholder="Payment Type" class="form-control" required="">
+                         Payment Type:
+                         <input type="radio" name="payment_type" class="form-control" required="">Cash
+                         <input type="radio" name="payment_type" class="form-control" required="">Card
                         </div>
                         
                         <div class="text-right">

@@ -99,7 +99,22 @@ function validate()
             			
 			<div class="col-md-12 form-group1">
               <label class="control-label">Payment Type</label>
-              <input type="text" placeholder="payment_type" name="payment_type" value="<?php echo $fetch->payment_type;?>"><br>
+              <?php
+				if($fetch->payment_type=="Cash")
+				{
+				?>
+				 Cash<input type="radio" name="payment_type" value="Cash" checked>
+				 Card<input type="radio" name="payment_type" value="Card">
+				<?php
+				}
+				elseif($fetch->payment_type=="Card")
+				{
+				?>
+				 Cash<input type="radio" name="payment_type" value="Cash">
+				 Card<input type="radio" name="payment_type" value="Card" checked>
+				<?php
+				}
+				?>
             </div>
 
             <div class="col-md-12 form-group1">

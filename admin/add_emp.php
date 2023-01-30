@@ -108,7 +108,7 @@ include_once('header.php');
 			 <div class="vali-form vali-form1">
             <div class="col-md-12 form-group1">
               <label class="control-label">Password</label>
-              <input type="password" name="password" placeholder="password" >
+              <input type="password" name="password" placeholder="Password" >
             </div>
             
 

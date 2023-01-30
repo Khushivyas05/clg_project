@@ -10,7 +10,7 @@ include_once('header.php');
             <ul class="breadcrumbs-custom-path">
                
                 <li><a href="index.html">Home <span class="fa fa-angle-double-right" aria-hidden="true"></span></a></li>
-                <li class="active">Cart</li>
+                <li class="active">Profile</li>
             </ul>
         </div>
     </div>
@@ -24,31 +24,33 @@ include_once('header.php');
           <table class="timetable_sub">
             <thead>
               <tr>
-                <th>Truck</th>
-                <th>Model Name</th>
-                <th>Company Name</th>
-                <th>Capacity</th>
-                <th>Total Price</th>
+                <th>Customer Name</th>
+                <th>City Name</th>
+                <th>Customer Address</th>
+                <th>Contact No</th>
+                <th>Email</th>
+                <th>Username</th>
               </tr>
             </thead>
             <tbody>
               <tr class="rem1">
-                <td class="invert-image">
-                  <a href="truck?cate_id=<?php echo $fetch->cate_id;?>">
-                    <img src="assets/images/<?php echo $fetch->img;?>" alt=" " class="img-responsive">
-                  </a>
+              <td class="invert product-name">
+                  <?php echo $fetch->cust_name;?>
                 </td>
-                <td class="invert product-name"><a href="truck?cate_id=<?php echo $fetch->cate_id;?>">
-                  <?php echo $fetch->model_name;?></a>
+                <td class="invert product-name">
+                <?php echo $fetcharr->city_name;?>
                 </td>
-                <td class="invert product-name"><a href="truck?cate_id=<?php echo $fetch->cate_id;?>">
-                  <?php echo $fetch->company_name;?></a>
+                <td class="invert product-name">
+                  <?php echo $fetch->cust_add;?>
                 </td>
-                <td class="invert product-name"><a href="truck?cate_id=<?php echo $fetch->cate_id;?>">
-                  <?php echo $fetch->truck_capacity;?></a>
+                <td class="invert product-name">
+                  <?php echo $fetch->contact_no;?>
                 </td>
-                <td class="invert product-name"><a href="truck?cate_id=<?php echo $fetch->cate_id;?>">
-                  <?php echo $fetch->total_price;?></a>
+                <td class="invert product-name">
+                  <?php echo $fetch->email;?>
+                </td>
+                <td class="invert product-name">
+                  <?php echo $fetch->username;?>
                 </td>
                 <!--<td class="invert">
                   <div class="quantity">
