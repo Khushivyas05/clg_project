@@ -754,10 +754,10 @@ class control extends model
 					$payment_id=$_REQUEST['payment_id'];
 					$cust_id=$_REQUEST['cust_id'];
 					$invoice_id=$_REQUEST['invoice_id'];
-					$price=$_REQUEST['price'];
+					$Price=$_REQUEST['Price'];
 					$payment_type=$_REQUEST['payment_type'];
 					$date=$_REQUEST['date'];
-					$arr=array("payment_id"=>$payment_id,"cust_id"=>$cust_id,"invoice_id"=>$invoice_id,"price"=>$price,"payment_type"=>$payment_type,"date"=>$date);
+					$arr=array("payment_id"=>$payment_id,"cust_id"=>$cust_id,"invoice_id"=>$invoice_id,"Price"=>$Price,"payment_type"=>$payment_type,"date"=>$date);
 					$res=$this->update('payment',$arr,$where);
 					if($res)
 					{
