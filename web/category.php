@@ -28,7 +28,7 @@ include_once('header.php');
         ?>
         <div class="col-md-4" style="padding:5px">
           <div class="column text-center">
-            <a href="truck?cate_id=<?php echo $data->cate_id;?>"><img src="../admin/images/<?php echo $data->img;?>" alt=""
+            <a href="truck?cate_id=<?php echo $data->cate_id;?>"><img src="../admin/pictures/<?php echo $data->img;?>" alt=""
                 class="img-responsive img-fluid" /></a>
             <div class="top-prts">
               <h4><a href="truck?cate_id=<?php echo $data->cate_id;?>"><?php echo $data->company_name."<br>".$data->model_name;?></a></h4>
