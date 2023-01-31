@@ -102,7 +102,6 @@ include_once('header.php');
                 </td>
                 <td class="invert price">$ 14.90</td>
 
-              </tr>-->
 
               <tr>
                 <td></td>
@@ -117,6 +116,7 @@ include_once('header.php');
                   <h5 class="price">$15.50</h5>
                   <h6 class="totla-pay">$206.65</h6>
                 </td>
+              </tr>-->
               </tr>
 
             </tbody>
