@@ -47,8 +47,8 @@ include_once('header.php');
                 <td class="invert product-name"><a href="truck?cate_id=<?php echo $fetch->cate_id;?>">
                   <?php echo $fetch->truck_capacity;?></a>
                 </td>
-                <td class="invert product-name"><a href="truck?cate_id=<?php echo $fetch->cate_id;?>">
-                  <?php echo $fetch->total_price;?></a>
+                <td class="invert product-name">
+                  <?php echo $fetch->total_price;?>
                 </td>
                 <!--<td class="invert">
                   <div class="quantity">
@@ -130,8 +130,22 @@ include_once('header.php');
             <a href="category" class="btn btn-secondary btn-theme">
               <div class="anim"></div><span>Add to Cart</span>
             </a>
+            <?php
+            if(isset($_SESSION['username']))
+            {
+            ?>
             <a href="booking" class="btn btn-theme3">Checkout
             </a>
+            <?php
+            }
+            else
+            {
+            ?>
+            <a href="login" class="btn btn-theme3">Checkout
+            </a>
+            <?php
+            }
+            ?>
           </div>
         </div>
         <div class="clearfix"> </div>

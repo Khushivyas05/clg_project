@@ -63,10 +63,10 @@ include_once('header.php');
 
            
           <div class="sec-grid-1">
-            <label>Quantity:</label>
+           <!-- <label>Weight:</label>
             <div class="disply-cont">
-              <input type="number" value="1" min="1">
-            </div>
+              <input type="number" value="1" min="1"> Kg
+            </div>-->
           </div>
           <a href="cart?cate_id=<?php echo $fetch->cate_id;?>" class="btn btn-secondary btn-theme mt-3">
             Add to Cart

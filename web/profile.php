@@ -20,12 +20,13 @@ include_once('header.php');
   <div class="product-inner">
     <div class="container pt-2">
       <div class="checkout-right">
+        <h3 class="head"><b>CUSTOMER PROFILE</b><h3>
         <div class="table-responsive">
           <table class="timetable_sub">
             <thead>
               <tr>
                 <th>Customer Name</th>
-                <th>City Name</th>
+                <th>City Id</th>
                 <th>Customer Address</th>
                 <th>Contact No</th>
                 <th>Email</th>
@@ -38,7 +39,7 @@ include_once('header.php');
                   <?php echo $fetch->cust_name;?>
                 </td>
                 <td class="invert product-name">
-                <?php echo $fetcharr->city_name;?>
+                <?php echo $fetch->city_id;?>
                 </td>
                 <td class="invert product-name">
                   <?php echo $fetch->cust_add;?>
@@ -106,20 +107,7 @@ include_once('header.php');
 
               </tr>-->
 
-              <tr>
-                <td></td>
-                <td></td>
-                <td class="invert price total-price">
-                  <h5 class="price">Price (3 Items):</h5>
-                  <h5 class="price">Delivery :</h5>
-                  <h6 class="totla-pay">Total Payable :</h6>
-                </td>
-                <td class="invert price total-price">
-                  <h5 class="price">$191.15</h5>
-                  <h5 class="price">$15.50</h5>
-                  <h6 class="totla-pay">$206.65</h6>
-                </td>
-              </tr>
+             
 
             </tbody>
           </table>
@@ -129,11 +117,11 @@ include_once('header.php');
       <div class="checkout-left">
         <div class="address_form_hny">
           <div class="checkout-right-basket">
-            <a href="category" class="btn btn-secondary btn-theme">
-              <div class="anim"></div><span>Add to Cart</span>
+            <!--<a href="" class="btn btn-secondary btn-theme">
+              <div class="anim"></div><span>Edit Profile</span>
             </a>
-            <a href="booking" class="btn btn-theme3">Checkout
-            </a>
+            <a href="" class="btn btn-theme3">
+            </a>-->
           </div>
         </div>
         <div class="clearfix"> </div>
