@@ -35,31 +35,21 @@ include_once('header.php');
                    
                     <form action="" method="post" class="main-input">
                         <div class="top-inputs">
-                        Customer Name:
-                        <select name="cust_id" class="form-control">
-                            <?php
-                            foreach($fetcharr as $f)
-                            {
-                            ?>
-                            <option value="<?php echo $f->cust_id?>"><?php echo $f->cust_name?></option>
-                            <?php
-                            }
-                            ?>
-                         </select>
+                        Customer Name:<input type="text" name="cust_id" placeholder="Customer Name" class="form-control" required="">
                         </div>
                         
                         <div class="top-inputs">
                         Select Truck:
                         <select name="cate_id" class="form-control">
                             <?php
-                            foreach($fetch as $f)
+                            foreach($fetcharr as $f)
                             {
                             ?>
-                            <option value="<?php echo $f->cate_id?>"><?php echo $f->model_name?></option>
+                            <option value="<?php echo $f->cate_id?>"><?php echo $f->company_name; echo "&nbsp &nbsp"; echo $f->model_name;?></option>
                             <?php
                             }
                             ?>
-                         </select>
+                        </select>
                         </div>
 
                         <div class="top-inputs">    
@@ -73,8 +63,8 @@ include_once('header.php');
                         </div>
                         <div class="top-inputs">    
                          Payment Type:
-                         <input type="radio" name="payment_type" class="form-control" required="">Cash
-                         <input type="radio" name="payment_type" class="form-control" required="">Card
+                         <input type="radio" name="payment_type" value="Cash" class="form-control" required="">Cash
+                         <input type="radio" name="payment_type" value="Card" class="form-control" required="">Card
                         </div>
                         
                         <div class="text-right">
@@ -94,9 +84,3 @@ include_once('header.php');
 <?php
 include_once('footer.php');
 ?>
-
-
-
-
-
- 

@@ -12,7 +12,7 @@ class model
 		$key=implode(",",$key_arr);
 		$value_arr=array_values($arr);
 		$value=implode("','",$value_arr);
-	    $ins="insert into $tbl($key) values('$value')";
+	    echo $ins="insert into $tbl($key) values('$value')";
 		$run=$this->conn->query($ins);
 		return $run;
 	}
@@ -83,7 +83,7 @@ class model
 		}
 	}
 
-	function like($tbl,$where)
+	/*function like($tbl,$where)
 	{
 		$key_arr=array_keys($where);
 		$value_arr=array_values($where);
@@ -97,7 +97,7 @@ class model
 		}
 		$run=$this->conn->query($sel);
 		return $run;
-	}
+	}*/
 	
 	function delete_where($tbl,$where)
 	{
