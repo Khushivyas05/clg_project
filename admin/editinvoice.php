@@ -27,7 +27,7 @@ function validate()
 	var date=document.forms["feedbackform"]["date"].value;
 	if(date=="" || date==null)
 	{
-		alert("Please fill out the date");
+		alert("Please fill out the Date");
 		return false;
 	}
 	
