@@ -92,9 +92,7 @@ class control extends model
             break;
             
             case '/index':
-            /*$city_name=$_REQUEST['city_name'];
-            $where=array("city_name"=>$city_name);
-            $fetcharr=$this->like('city',$where);*/
+            $arr=$this->selectall('city');
             $fetcharr=$this->selectall('category');
             include_once('index.php');
             break;
@@ -102,6 +100,7 @@ class control extends model
             
             case '/booking':
             $fetcharr=$this->selectall('category');
+            $arr=$this->selectall('customer_details');
             if(isset($_REQUEST['submit'])) 
             {
                 $cust_id=$_REQUEST['cust_id'];
