@@ -12,10 +12,30 @@ include_once('header.php');
 					
 						<form action="" method="post">
 							<div class="">
-								<input type="text" name="city_name" class="form-input" placeholder="From a City or Location" />
-							</div>
+                            From City:
+                            <select name="city_id" class="form-control">
+                            <?php
+                            foreach($arr as $f)
+                            {
+                            ?>
+                            <option value="<?php echo $f->city_id?>"><?php echo $f->city_name;?></option>
+                            <?php
+                            }
+                            ?>
+                        </select>
+							</div><br>
+                            To City:
 							<div class="">
-								<input type="text" name="city_name" class="form-input" placeholder="To a City or Location" />
+                            <select name="city_id" class="form-control">
+                            <?php
+                            foreach($arr as $f)
+                            {
+                            ?>
+                            <option value="<?php echo $f->city_id?>"><?php echo $f->city_name;?></option>
+                            <?php
+                            }
+                            ?>
+                        </select>
 							</div>
 							<!--<div class="">
 								<input type="text" name="name" class="form-input" placeholder="Your Name" />
