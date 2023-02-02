@@ -35,6 +35,17 @@ include_once('header.php');
                    
                     <form action="" method="post" class="main-input">
                         <div class="top-inputs">
+                        Customer Name:
+                        <select name="cust_id" class="form-control">
+                            <?php
+                            foreach($arr as $f)
+                            {
+                            ?>
+                            <option value="<?php echo $f->cust_id?>"><?php echo $f->cust_name;?></option>
+                            <?php
+                            }
+                            ?>
+                        </select>
                         Customer Name:<input type="hidden" name="cust_id" placeholder="Customer Name" class="form-control" required="">
                         </div>
                         
