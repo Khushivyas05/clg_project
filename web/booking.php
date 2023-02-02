@@ -35,7 +35,7 @@ include_once('header.php');
                    
                     <form action="" method="post" class="main-input">
                         <div class="top-inputs">
-                        Customer Name:<input type="text" name="cust_id" placeholder="Customer Name" class="form-control" required="">
+                        Customer Name:<input type="hidden" name="cust_id" placeholder="Customer Name" class="form-control" required="">
                         </div>
                         
                         <div class="top-inputs">

@@ -1,7 +1,6 @@
 <?php
 include_once('header.php');
 ?>
-hhh
 <section class="form-12" id="home">
 	<div class="form-12-content" style="padding:80px" >
 		<div class="container" style="padding:70px">
