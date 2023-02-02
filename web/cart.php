@@ -47,7 +47,7 @@ include_once('header.php');
                   <?php echo $fetch->truck_capacity;?></a>
                 </td>
                 <td class="invert product-name">
-                  <?php echo $fetch->total_price;?>
+                  <?php echo $arr->total_price;?>
                 </td>
                 <!--<td class="invert">
                   <div class="quantity">

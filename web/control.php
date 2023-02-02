@@ -16,7 +16,7 @@ class control extends model
 
             case '/profile':
             $where=array("username"=>$_SESSION['username']);
-            $run=$this->select_where('customer_details',$where);
+            $run=$this->select_where_join2('customer_details','city','customer_details.city_id=city.city_id',$where);
             $fetch=$run->fetch_object();
             include_once('profile.php');
             break;
@@ -129,6 +129,7 @@ class control extends model
             break; 
 
             case '/cart':
+            $arr=$this->selectall('total_price');
             $fetcharr=$this->selectall('category','total_price','category.tp_id=total_price.tp_id');
             if(isset($_REQUEST['cate_id']))
             {
