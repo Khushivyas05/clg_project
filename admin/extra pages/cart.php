@@ -1,7 +1,6 @@
 <?php
 include_once('header.php');
 ?>
-
 <!-- inner banner -->
 <section class="w3l-inner-banner-main">
     <div class="about-inner ecomerce-1">
@@ -48,7 +47,7 @@ include_once('header.php');
                   <?php echo $fetch->truck_capacity;?></a>
                 </td>
                 <td class="invert product-name">
-                  <?php echo $fetch->total_price;?>
+                  <?php echo $arr->total_price;?>
                 </td>
                 <!--<td class="invert">
                   <div class="quantity">
@@ -102,7 +101,6 @@ include_once('header.php');
                 </td>
                 <td class="invert price">$ 14.90</td>
 
-              </tr>-->
 
               <tr>
                 <td></td>
@@ -117,6 +115,7 @@ include_once('header.php');
                   <h5 class="price">$15.50</h5>
                   <h6 class="totla-pay">$206.65</h6>
                 </td>
+              </tr>-->
               </tr>
 
             </tbody>

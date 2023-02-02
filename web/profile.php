@@ -26,7 +26,7 @@ include_once('header.php');
             <thead>
               <tr>
                 <th>Customer Name</th>
-                <th>City Id</th>
+                <th>City Name</th>
                 <th>Customer Address</th>
                 <th>Contact No</th>
                 <th>Email</th>
@@ -39,7 +39,7 @@ include_once('header.php');
                   <?php echo $fetch->cust_name;?>
                 </td>
                 <td class="invert product-name">
-                <?php echo $fetch->city_id;?>
+                <?php echo $fetch->city_name;?>
                 </td>
                 <td class="invert product-name">
                   <?php echo $fetch->cust_add;?>

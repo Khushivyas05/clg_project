@@ -40,8 +40,8 @@ include_once('header.php');
                 <li><a href="#"><span class="fa fa-star"></span></a></li>
               </ul>-->
               <p>₹500(approx)</p>
-              <a href="cart?cate_id=<?php echo $data->cate_id;?>" class="btn btn-secondary btn-theme1">
-                Add to Cart
+              <a href="booking" class="btn btn-secondary btn-theme1">
+                Book Now
                 
               </a>
             </div>
