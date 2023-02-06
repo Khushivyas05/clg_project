@@ -128,19 +128,6 @@ class control extends model
             include_once('trackorder.php');
             break; 
 
-            case '/cart':
-            $arr=$this->selectall('total_price');
-            $fetcharr=$this->selectall('category','total_price','category.tp_id=total_price.tp_id');
-            if(isset($_REQUEST['cate_id']))
-            {
-                $cate_id=$_REQUEST['cate_id'];
-                $where=array("cate_id"=>$cate_id);
-                $run=$this->select_where('category',$where);
-                $fetch=$run->fetch_object();
-            }
-            include_once('cart.php');
-            break;
-
             case '/signup':
             $fetcharr=$this->selectall('city');
             if(isset($_REQUEST['submit']))

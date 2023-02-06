@@ -68,7 +68,7 @@ function validate()
 			
 			
 			<div class="col-md-12 form-group1">
-              <label class="control-label">city name</label>
+              <label class="control-label">City name</label>
               <input type="text" placeholder="city_name"   name="city_name" value="<?php echo $fetch->city_name;?>"><br>
             </div>
 			

@@ -1,4 +1,8 @@
 <?php
+if(isset($_SESSION['username']))
+{
+
+}
 include_once('header.php');
 ?>
 <!-- inner banner -->
@@ -35,8 +39,7 @@ include_once('header.php');
                    
                     <form action="" method="post" class="main-input">
                         <div class="top-inputs">
-                        Customer Name:
-                        
+                        <input type="hidden" name="cust_id" placeholder="" value="<?php echo $_SESSION['username']=session_id();?>" class="form-control" required="">
                         </div>
                         
                         <div class="top-inputs">
