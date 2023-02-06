@@ -1,5 +1,4 @@
 <?php
-
 if(isset($_SESSION['admin_details']))
 {
 	echo "<script>

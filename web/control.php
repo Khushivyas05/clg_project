@@ -172,6 +172,7 @@ class control extends model
 				if($res==1)
                 {
                     $_SESSION['username']=$username;
+                    $_SESSION['cust_id']=$res['cust_id'];
                     echo "<script> 
                     alert('Login Success') 
                     window.location='index';
