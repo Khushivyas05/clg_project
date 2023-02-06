@@ -40,7 +40,7 @@ h
                    
                     <form action="" method="post" class="main-input">
                         <div class="top-inputs">
-                        <input type="hidden" name="cust_id" placeholder="" value="<?php echo $_SESSION['username']=session_id();?>" class="form-control" required="">
+                        <input type="hidden" name="cust_id" placeholder="" value="<?php $_SESSION['cust_id'];?>" class="form-control" required="">
                         </div>
                         
                         <div class="top-inputs">
