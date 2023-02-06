@@ -607,6 +607,7 @@ class control extends model
 				if(isset($_REQUEST['submit']))
 				{
 					$emp_id=$_REQUEST['emp_id'];
+					$city_id=$_REQUEST['city_id'];
 					$emp_name=$_REQUEST['emp_name'];
 					$emp_add=$_REQUEST['emp_add'];
 					$username=$_REQUEST['username'];
@@ -615,7 +616,7 @@ class control extends model
 				    $contact=$_REQUEST['contact'];
 				    $driving_licence=$_REQUEST['driving_licence'];
 					
-					$arr=array("emp_id"=>$emp_id,"emp_name"=>$emp_name,"emp_add"=>$emp_add,"username"=>$username,"designation"=>$designation,"email"=>$email,"contact"=>$contact,"driving_licence"=>$driving_licence);
+					$arr=array("emp_id"=>$emp_id,"city_id"=>$city_id,"emp_name"=>$emp_name,"emp_add"=>$emp_add,"username"=>$username,"designation"=>$designation,"email"=>$email,"contact"=>$contact,"driving_licence"=>$driving_licence);
 					$res=$this->update('employee_details',$arr,$where);
 					if($res)
 					{
