@@ -1,3 +1,19 @@
+<?php
+if(isset($_SESSION['admin_details']))
+{
+    
+}
+elseif(isset($_SESSION['employee_details']))
+{
+    
+}
+else
+{
+    echo "<script>
+          window.location='index';
+         </script>";
+}
+?>
 <!DOCTYPE HTML>
 <html>
 <head>

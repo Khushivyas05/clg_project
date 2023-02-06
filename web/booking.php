@@ -1,11 +1,8 @@
 <?php
-if(isset($_SESSION['username']))
-{
-
-}
 include_once('header.php');
 ?>
 <!-- inner banner -->
+
 <section class="w3l-inner-banner-main">
     <div class="about-inner sear-1">
         <div class="container">
@@ -39,7 +36,7 @@ include_once('header.php');
                    
                     <form action="" method="post" class="main-input">
                         <div class="top-inputs">
-                        <input type="hidden" name="cust_id" placeholder="" value="<?php echo $_SESSION['username']=session_id();?>" class="form-control" required="">
+                        <input type="hidden" name="cust_id" placeholder="" value="<?php $_SESSION['cust_id'];?>" class="form-control" required="">
                         </div>
                         
                         <div class="top-inputs">
@@ -57,11 +54,25 @@ include_once('header.php');
                         </div>
 
                         <div class="top-inputs">    
-                         Source:<input type="text" name="source" placeholder="Source" class="form-control" required="">
+                         Source:<!--<input type="text" name="source" placeholder="Source" class="form-control" required="">-->
+                         <select name="source" class="form-control">
+                            <option value="Ahmedabad">Ahmedabad</option>
+                            <option value="Indore">Indore</option>
+                            <option value="Surat">Surat</option>
+                            <option value="Bhopal">Bhopal</option>
+                            <option value="Rajkot">Rajkot</option>
+                        </select>
                         </div>
                         <div class="top-inputs">    
-                         Destination:<input type="text" name="destination" placeholder="Destination" class="form-control" required="">
-                        </div>
+                         Destination:<!--<input type="text" name="destination" placeholder="Destination" class="form-control" required="">-->
+                          <select name="source" class="form-control">
+                            <option value="Ahmedabad">Ahmedabad</option>
+                            <option value="Indore">Indore</option>
+                            <option value="Surat">Surat</option>
+                            <option value="Bhopal">Bhopal</option>
+                            <option value="Rajkot">Rajkot</option>
+                        </select>
+                       </div>
                         <div class="top-inputs">    
                          Date:<input type="date" name="book_date" placeholder="Date" class="form-control" required="">
                         </div>
