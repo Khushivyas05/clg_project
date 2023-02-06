@@ -1,8 +1,4 @@
 <?php
-if(isset($_SESSION['username']))
-{
-
-}
 include_once('header.php');
 ?>
 <!-- inner banner -->
