@@ -59,7 +59,7 @@ include_once('header.php');
            
             Model Name:<?php echo $fetch->model_name;?><br>
             Company Name:<?php echo $fetch->company_name;?><br>
-            capacity:<?php echo $fetch->truck_capacity;?> <br>
+            Capacity:<?php echo $fetch->truck_capacity;?> <br>
 
            
           <div class="sec-grid-1">
