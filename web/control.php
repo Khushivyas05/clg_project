@@ -110,7 +110,7 @@ class control extends model
 					echo "<script>alert('Not success')</script>";
 				}
             }
-            include_once('feedback');
+            include_once('feedback.php');
             break;    
             
             case '/index':
