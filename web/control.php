@@ -90,6 +90,28 @@ class control extends model
             $fetcharr=$this->selectall('category');
             include_once('category.php');
             break;
+
+            case '/feedback':
+            if(isset($_REQUEST['submit'])) 
+            {
+                $feedback_id=$_REQUEST['feedback_id'];
+                $cust_id=$_REQUEST['cust_id'];
+                $comment=$_REQUEST['comment'];
+                $date=$_REQUEST['date'];
+
+                $arr=array("feedback_id"=>$feedback_id,"cust_id"=>$cust_id,"comment"=>$comment,"date"=>$date);
+                $res=$this->insert('feedback',$arr);
+				if($res)
+				{
+					echo  "<script>alert('Register success')</script>";
+				}
+				else
+				{
+					echo "<script>alert('Not success')</script>";
+				}
+            }
+            include_once('feedback');
+            break;    
             
             case '/index':
             $arr=$this->selectall('city');
