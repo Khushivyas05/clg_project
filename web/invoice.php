@@ -26,6 +26,8 @@ hh
             <thead>
               <tr>
                 <th>Invoice ID</th>
+                <th>Booking Date</th>
+                <th>Branch Name</th>
                 <th>Invoice Date</th>
                 <th>Goods Type</th>
                 <th>Charges</th>
@@ -43,6 +45,12 @@ hh
               <tr class="rem1">
               <td class="invert product-name">
                   <?php echo $i->invoice_id;?>
+                </td>
+                <td class="invert product-name">
+                  <?php echo $i->book_date;?>
+                </td>
+                <td class="invert product-name">
+                  <?php echo $i->branch_name;?>
                 </td>
                 <td class="invert product-name">
                 <?php echo $i->invoice_date;?>
