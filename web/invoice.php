@@ -1,7 +1,7 @@
 <?php
 include_once('header.php');
 ?>
-
+hh
 <!-- inner banner -->
 <section class="w3l-inner-banner-main">
     <div class="about-inner ecomerce-1">
@@ -26,6 +26,8 @@ include_once('header.php');
             <thead>
               <tr>
                 <th>Invoice ID</th>
+                <th>Booking Date</th>
+                <th>Branch Name</th>
                 <th>Invoice Date</th>
                 <th>Goods Type</th>
                 <th>Charges</th>
@@ -43,6 +45,12 @@ include_once('header.php');
               <tr class="rem1">
               <td class="invert product-name">
                   <?php echo $i->invoice_id;?>
+                </td>
+                <td class="invert product-name">
+                  <?php echo $i->book_date;?>
+                </td>
+                <td class="invert product-name">
+                  <?php echo $i->branch_name;?>
                 </td>
                 <td class="invert product-name">
                 <?php echo $i->invoice_date;?>
