@@ -100,7 +100,6 @@ class control extends model
             
             case '/booking':
             $fetcharr=$this->selectall('category');
-            $arr=$this->selectall('customer_details');
             if(isset($_REQUEST['submit'])) 
             {
                 $cust_id=$_REQUEST['cust_id'];
@@ -167,12 +166,12 @@ class control extends model
 				
                 $where=array("username"=>$username,"password"=>$password);
 				$run=$this->select_where('customer_details',$where);
-
+                $fetch=$run->fetch_object();
                 $res=$run->num_rows; 
 				if($res==1)
                 {
                     $_SESSION['username']=$username;
-                    $_SESSION['cust_id']=$res['cust_id'];
+                    $_SESSION['cust_id']=$fetch->cust_id;
                     echo "<script> 
                     alert('Login Success') 
                     window.location='index';
