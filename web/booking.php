@@ -87,7 +87,7 @@ include_once('header.php');
                         </div>
                         
                         <div class="text-right">
-                            <button type="submit" name="submit" class="btn btn-theme2">Submit Now</button>
+                            <button type="submit" name="submit" class="btn btn-theme2"><a href="invoice">Submit Now</a></button>
                         </div>
                     </form>
                 </div>

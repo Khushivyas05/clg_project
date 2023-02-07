@@ -128,6 +128,11 @@ class control extends model
             include_once('trackorder.php');
             break; 
 
+            case '/invoice':
+            $invoice_arr=$this->selectall('invoice');
+            include_once('invoice.php');
+            break;
+
             case '/signup':
             $fetcharr=$this->selectall('city');
             if(isset($_REQUEST['submit']))
