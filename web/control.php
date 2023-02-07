@@ -90,6 +90,28 @@ class control extends model
             $fetcharr=$this->selectall('category');
             include_once('category.php');
             break;
+
+            case '/feedback':
+            if(isset($_REQUEST['submit'])) 
+            {
+                $feedback_id=$_REQUEST['feedback_id'];
+                $cust_id=$_REQUEST['cust_id'];
+                $comment=$_REQUEST['comment'];
+                $date=$_REQUEST['date'];
+
+                $arr=array("feedback_id"=>$feedback_id,"cust_id"=>$cust_id,"comment"=>$comment,"date"=>$date);
+                $res=$this->insert('feedback',$arr);
+				if($res)
+				{
+					echo  "<script>alert('Register success')</script>";
+				}
+				else
+				{
+					echo "<script>alert('Not success')</script>";
+				}
+            }
+            include_once('feedback');
+            break;    
             
             case '/index':
             $arr=$this->selectall('city');
@@ -100,7 +122,6 @@ class control extends model
             
             case '/booking':
             $fetcharr=$this->selectall('category');
-            $arr=$this->selectall('customer_details');
             if(isset($_REQUEST['submit'])) 
             {
                 $cust_id=$_REQUEST['cust_id'];
@@ -172,12 +193,12 @@ class control extends model
 				
                 $where=array("username"=>$username,"password"=>$password);
 				$run=$this->select_where('customer_details',$where);
-
+                $fetch=$run->fetch_object();
                 $res=$run->num_rows; 
 				if($res==1)
                 {
                     $_SESSION['username']=$username;
-                    $_SESSION['cust_id']=$res['cust_id'];
+                    $_SESSION['cust_id']=$fetch->cust_id;
                     echo "<script> 
                     alert('Login Success') 
                     window.location='index';

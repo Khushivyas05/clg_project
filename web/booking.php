@@ -34,9 +34,9 @@ include_once('header.php');
                  <!-- contact form -->
                  <div class="contacts12-main col-lg-12 pr-lg-5 pr-3">
                    
-                    <form action="" method="post" class="main-input">
+                    <form name="bookingform" action="" method="post" enctype="multipart/form-data" class="main-input">
                         <div class="top-inputs">
-                        <input type="hidden" name="cust_id" placeholder="" value="<?php $_SESSION['cust_id'];?>" class="form-control" required="">
+                        <input type="hidden" name="cust_id" placeholder="" value="<?php echo $_SESSION['cust_id'];?>" class="form-control" required="">
                         </div>
                         
                         <div class="top-inputs">
@@ -65,7 +65,7 @@ include_once('header.php');
                         </div>
                         <div class="top-inputs">    
                          Destination:<!--<input type="text" name="destination" placeholder="Destination" class="form-control" required="">-->
-                          <select name="source" class="form-control">
+                          <select name="destination" class="form-control">
                             <option value="Ahmedabad">Ahmedabad</option>
                             <option value="Indore">Indore</option>
                             <option value="Surat">Surat</option>
@@ -83,7 +83,7 @@ include_once('header.php');
                         </div>
                         
                         <div class="text-right">
-                            <button type="submit" name="submit" class="btn btn-theme2"><a href="invoice">Submit Now</a></button>
+                            <button type="submit" name="submit" class="btn btn-theme2">Book Now</button>
                         </div>
                     </form>
                 </div>

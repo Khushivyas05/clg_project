@@ -117,10 +117,10 @@ include_once('header.php');
       <div class="checkout-left">
         <div class="address_form_hny">
           <div class="checkout-right-basket">
-            <!--<a href="" class="btn btn-secondary btn-theme">
-              <div class="anim"></div><span>Edit Profile</span>
+            <a href="feedback" class="btn btn-secondary btn-theme">
+              <div class="anim"></div><span>Add Feedback</span>
             </a>
-            <a href="" class="btn btn-theme3">
+           <!-- <a href="" class="btn btn-theme3">
             </a>-->
           </div>
         </div>
