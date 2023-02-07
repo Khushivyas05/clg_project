@@ -10,7 +10,7 @@ include_once('header.php');
             <ul class="breadcrumbs-custom-path">
                
                 <li><a href="index">Home <span class="fa fa-angle-double-right" aria-hidden="true"></span></a></li>
-                <li class="active">Profile</li>
+                <li class="active">Invoice</li>
             </ul>
         </div>
     </div>
@@ -20,39 +20,54 @@ include_once('header.php');
   <div class="product-inner">
     <div class="container pt-2">
       <div class="checkout-right">
-        <h3 class="head"><b>CUSTOMER PROFILE</b><h3>
+        <h3 class="head"><b>INVOICE</b><h3>
         <div class="table-responsive">
           <table class="timetable_sub">
             <thead>
               <tr>
-                <th>Customer Name</th>
-                <th>City Name</th>
-                <th>Customer Address</th>
-                <th>Contact No</th>
-                <th>Email</th>
-                <th>Username</th>
+                <th>Invoice ID</th>
+                <th>Invoice Date</th>
+                <th>Goods Type</th>
+                <th>Charges</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Payment Type</th>
+                <th>Price</th>
               </tr>
             </thead>
             <tbody>
+              <?php
+              foreach($invoice_arr as $i)
+              {
+              ?>
               <tr class="rem1">
               <td class="invert product-name">
-                  <?php echo $fetch->cust_name;?>
+                  <?php echo $i->invoice_id;?>
                 </td>
                 <td class="invert product-name">
-                <?php echo $fetch->city_name;?>
+                <?php echo $i->invoice_date;?>
                 </td>
                 <td class="invert product-name">
-                  <?php echo $fetch->cust_add;?>
+                  <?php echo $i->goods_type;?>
                 </td>
                 <td class="invert product-name">
-                  <?php echo $fetch->contact_no;?>
+                  <?php echo $i->charges;?>
                 </td>
                 <td class="invert product-name">
-                  <?php echo $fetch->email;?>
+                  <?php echo $i->Source;?>
                 </td>
                 <td class="invert product-name">
-                  <?php echo $fetch->username;?>
+                  <?php echo $i->Destination;?>
                 </td>
+                <td class="invert product-name">
+                  <?php echo $i->payment_type;?>
+                </td>
+                <td class="invert product-name">
+                  <?php echo $i->price;?>
+                </td>
+                <?php
+                }
+                ?>
                 <!--<td class="invert">
                   <div class="quantity">
                     <div class="quantity-select d-flex">
@@ -117,10 +132,10 @@ include_once('header.php');
       <div class="checkout-left">
         <div class="address_form_hny">
           <div class="checkout-right-basket">
-            <a href="feedback" class="btn btn-secondary btn-theme">
-              <div class="anim"></div><span>Add Feedback</span>
+            <!--<a href="" class="btn btn-secondary btn-theme">
+              <div class="anim"></div><span>Edit Profile</span>
             </a>
-           <!-- <a href="" class="btn btn-theme3">
+            <a href="" class="btn btn-theme3">
             </a>-->
           </div>
         </div>
@@ -133,7 +148,3 @@ include_once('header.php');
 include_once('footer.php');
 ?>
  
- 
-
-
-

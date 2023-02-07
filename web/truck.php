@@ -75,8 +75,8 @@ include_once('header.php');
       </div>
       <div class="text24-max-align mt-5">
         <h5 class="text24-heading">Product Description</h5>
-        <p>This is a TATA company truck.It's model name is ACE Gold.</p>
-        <p>It can carry weight upto 1.5 Tons</p>
+        <p><?php echo $fetch->description;?>
+        </p>
         <div class="text24-list">
           <ol class="p-0">
             <!--<li></li>
