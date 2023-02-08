@@ -1,7 +1,8 @@
 <?php
+if(isset($_SESSION['cust_id']))
+{}
 include_once('header.php');
 ?>
-
 <!-- inner banner -->
 <section class="w3l-inner-banner-main">
     <div class="about-inner ecomerce-1">
@@ -10,7 +11,7 @@ include_once('header.php');
             <ul class="breadcrumbs-custom-path">
                
                 <li><a href="index">Home <span class="fa fa-angle-double-right" aria-hidden="true"></span></a></li>
-                <li class="active">Profile</li>
+                <li class="active">Your Order</li>
             </ul>
         </div>
     </div>
@@ -20,38 +21,34 @@ include_once('header.php');
   <div class="product-inner">
     <div class="container pt-2">
       <div class="checkout-right">
-        <h3 class="head"><b>CUSTOMER PROFILE</b><h3>
+        <h3 class="head"><b>Your Order</b><h3>
         <div class="table-responsive">
           <table class="timetable_sub">
             <thead>
               <tr>
-                <th>Customer Name</th>
-                <th>City Name</th>
-                <th>Customer Address</th>
-                <th>Contact No</th>
-                <th>Email</th>
-                <th>Username</th>
+                <th>Vehicle Number</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Booking Date</th>
+                <th>Payment Type</th>
               </tr>
             </thead>
             <tbody>
               <tr class="rem1">
-              <td class="invert product-name">
-                  <?php echo $fetch->cust_name;?>
+                <td class="invert product-name">
+                  <?php echo $fetch->vehicle_number;?>
                 </td>
                 <td class="invert product-name">
-                <?php echo $fetch->city_name;?>
+                  <?php echo $fetch->source;?>
                 </td>
                 <td class="invert product-name">
-                  <?php echo $fetch->cust_add;?>
+                <?php echo $fetch->destination;?>
                 </td>
                 <td class="invert product-name">
-                  <?php echo $fetch->contact_no;?>
+                  <?php echo $fetch->book_date;?>
                 </td>
                 <td class="invert product-name">
-                  <?php echo $fetch->email;?>
-                </td>
-                <td class="invert product-name">
-                  <?php echo $fetch->username;?>
+                  <?php echo $fetch->payment_type;?>
                 </td>
                 <!--<td class="invert">
                   <div class="quantity">
@@ -117,13 +114,10 @@ include_once('header.php');
       <div class="checkout-left">
         <div class="address_form_hny">
           <div class="checkout-right-basket">
-            <a href="feedback" class="btn btn-secondary btn-theme">
-              <div class="anim"></div><span>Add Feedback</span>
+            <!--<a href="" class="btn btn-secondary btn-theme">
+              <div class="anim"></div><span>Edit Profile</span>
             </a>
-            <a href="order" class="btn btn-secondary btn-theme">
-              <div class="anim"></div><span>Your Order</span>
-            </a>
-           <!-- <a href="" class="btn btn-theme3">
+            <a href="" class="btn btn-theme3">
             </a>-->
           </div>
         </div>
@@ -136,7 +130,3 @@ include_once('header.php');
 include_once('footer.php');
 ?>
  
- 
-
-
-
