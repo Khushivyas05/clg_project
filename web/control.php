@@ -94,12 +94,11 @@ class control extends model
             case '/feedback':
             if(isset($_REQUEST['submit'])) 
             {
-                $feedback_id=$_REQUEST['feedback_id'];
                 $cust_id=$_REQUEST['cust_id'];
                 $comment=$_REQUEST['comment'];
                 $date=$_REQUEST['date'];
 
-                $arr=array("feedback_id"=>$feedback_id,"cust_id"=>$cust_id,"comment"=>$comment,"date"=>$date);
+                $arr=array("cust_id"=>$cust_id,"comment"=>$comment,"date"=>$date);
                 $res=$this->insert('feedback',$arr);
 				if($res)
 				{
