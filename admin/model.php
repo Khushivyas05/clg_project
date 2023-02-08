@@ -58,7 +58,7 @@ class model
 		$i=0;
 		foreach($where as $w)
 		{
-			$sel.=" and $key_arr[$i]='$value_arr[$i]'";
+			echo $sel.=" and $key_arr[$i]='$value_arr[$i]'";
 			$i++;
 		}
 		$run=$this->conn->query($sel);
