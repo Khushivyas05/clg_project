@@ -149,8 +149,15 @@ class control extends model
             break; 
 
             case '/invoice':
-            $invoice_arr=$this->selectall('invoice');
+            $invoice_arr=$this->select_where_join1('invoice','booking','invoice.booking_id=booking.booking_id','branch','invoice.branch_id=branch.branch_id');
             include_once('invoice.php');
+            break;
+
+            case '/order':
+            $where=array("cust_id"=>$_SESSION['cust_id']);
+            $run=$this->select_where_join2('booking','category','booking.cate_id=category.cate_id',$where);
+            $fetch=$run->fetch_object();
+            include_once('order.php');
             break;
 
             case '/signup':
