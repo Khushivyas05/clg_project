@@ -149,7 +149,7 @@ class control extends model
             break; 
 
             case '/invoice':
-            $invoice_arr=$this->selectall('invoice');
+            $invoice_arr=$this->select_where_join1('invoice','booking','invoice.booking_id=booking.booking_id','branch','invoice.branch_id=branch.branch_id');
             include_once('invoice.php');
             break;
 
