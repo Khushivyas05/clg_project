@@ -38,7 +38,7 @@ include_once('header.php');
                    
                     <form name="feedbackform" action="" method="post" enctype="multipart/form-data" class="main-input">
                         <div class="top-inputs">
-                        <input type="hidden" name="cust_id" placeholder="" value="<?php $_SESSION['cust_id'];?>" class="form-control" required="">
+                        <input type="hidden" name="cust_id" placeholder="" value="<?php echo $_SESSION['cust_id'];?>" class="form-control" required="">
                         </div>
                         
                         <div class="top-inputs">
@@ -49,7 +49,7 @@ include_once('header.php');
                         </div>
                         
                         <div class="text-right">
-                            <button type="submit" name="submit" class="btn btn-theme2">Book Now</button>
+                            <button type="submit" name="submit" class="btn btn-theme2">Submit</button>
                         </div>
                     </form>
                 </div>
