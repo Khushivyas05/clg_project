@@ -31,6 +31,7 @@ include_once('header.php');
                 <th>Destination</th>
                 <th>Booking Date</th>
                 <th>Payment Type</th>
+                <th>Show Invoice</th>
               </tr>
             </thead>
             <tbody>
@@ -49,6 +50,10 @@ include_once('header.php');
                 </td>
                 <td class="invert product-name">
                   <?php echo $fetch->payment_type;?>
+                </td>
+                <td>
+                <a href="invoice" class="btn btn-secondary btn-theme">Invoice
+            </a>
                 </td>
                 <!--<td class="invert">
                   <div class="quantity">

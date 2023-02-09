@@ -254,6 +254,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <li><a href="manage_state" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage State</a></li>
 					   </ul>
                     </li>
+
+                    <li>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Goods Type</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="add_goodstype" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Goods Type</a></li>
+                            
+                            <li><a href="manage_goodstype" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Goods Type</a></li>
+					   </ul>
+                    </li>
+
                   <?php
                   }
                   ?>

@@ -25,11 +25,9 @@ include_once('header.php');
 					  <tr>
 					    <th>Parcel id</th>
 					    <th>Customer Name</th>
+						<th>Type</th>
 						<th>Weight</th>
-                        <th>Type</th>
-						<th>Source</th>
-						<th>Destination</th>
-						<th>Date</th>
+						<th>Quantity</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>
@@ -42,11 +40,9 @@ include_once('header.php');
 					  <tr>
 					    <td><?php echo $c->parcel_id;?></td>
 						<td><?php echo $c->cust_name;?></td>
+						<td><?php echo $c->g_type;?></td>
 						<td><?php echo $c->weight;?></td>
-                        <td><?php echo $c->type;?></td>
-						<td><?php echo $c->source;?></td>
-						<td><?php echo $c->destination;?></td>
-						<td><?php echo $c->date;?></td>
+						<td><?php echo $c->quantity;?></td>
 						<td><a href="editparcel?edit_parcel_id=<?php echo $c->parcel_id?>" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_parcel_id=<?php echo $c->parcel_id?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
