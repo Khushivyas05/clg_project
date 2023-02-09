@@ -1,7 +1,7 @@
 <?php
 include_once('header.php');
 ?>
- dd
+ 
  	<!--banner-->	
 		     <div class="banner">
 		    	<h2>
