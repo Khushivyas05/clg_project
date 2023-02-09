@@ -44,7 +44,10 @@ function validate()
   	    
         <form name="cityform" action="" method="post" enctype="multipart/form-data" onsubmit="return validate()">
          	<div class="vali-form">
-           
+             <div class="col-md-12 form-group1">
+              <label class="control-label">Goods Type ID</label>
+              <input type="text" placeholder="gt_id"   name="gt_id" value="<?php echo $fetch->gt_id;?>"><br>
+            </div>
 			
 			
 			<div class="col-md-12 form-group1">
