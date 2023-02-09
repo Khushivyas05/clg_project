@@ -16,6 +16,12 @@ function validate()
 		alert("Please fill out the cust_id");
 		return false;
 	}
+	var gt_id=document.forms["parcelform"]["gt_id"].value;
+	if(gt_id=="" || gt_id==null)
+	{
+		alert("Please fill out the gt_id");
+		return false;
+	}
 	
 	var weight=document.forms["parcelform"]["weight"].value;
 	if(weight=="" || weight==null)
@@ -23,10 +29,10 @@ function validate()
 		alert("Please fill out the weight");
 		return false;
 	}
-	var type=document.forms["parcelform"]["type"].value;
-	if(type=="" || type==null)
+	var quantity=document.forms["parcelform"]["quantity"].value;
+	if(quantity=="" || quantity==null)
 	{
-		alert("Please fill out the type");
+		alert("Please fill out the quantity");
 		return false;
 	}
 	
@@ -54,6 +60,7 @@ function validate()
               <label class="control-label">Parcel_id</label>
               <input type="text" placeholder="parcel_id" name="parcel_id" value="<?php echo $fetch->parcel_id;?>" >
             </div>
+
             
             <div class="clearfix"> </div>
             </div>
@@ -73,18 +80,34 @@ function validate()
 			</select>
             </div>
 			 <div class="clearfix"> </div>
+
+			<div class="col-md-12 form-group1">
+			<label class="control-label">Goods Type</label>
+            <select name="gt_id" class="form-control">
+			<?php
+			foreach($arr as $f)
+			{
+			?>
+			<option value="<?php echo $f->gt_id?>"><?php echo $f->g_type?></option>
+			<?php
+			}
+			?>
+			</select>
+            </div>
+			 <div class="clearfix"> </div>
             
 			
 			
-			<div class="col-md-12 form-group1">
-              <label class="control-label">Weight</label>
-              <input type="text" placeholder="weight"   name="weight" value="<?php echo $fetch->weight;?>"><br>
-            </div>
-			
 						
 			<div class="col-md-12 form-group1">
-              <label class="control-label">Type</label>
-              <input type="text" placeholder="type" name="type" value="<?php echo $fetch->type;?>"><br>
+              <label class="control-label">Weight</label>
+              <input type="text" placeholder="weight" name="weight" value="<?php echo $fetch->weight;?>"><br>
+            </div>
+
+						
+			<div class="col-md-12 form-group1">
+              <label class="control-label">Quantity</label>
+              <input type="text" placeholder="quantity" name="quantity" value="<?php echo $fetch->quantity;?>"><br>
             </div>
              <div class="clearfix"> </div>
    

@@ -179,6 +179,11 @@ class control extends model
 			include_once('manage_payment.php');
 			break;
 
+			case '/manage_goodstype':
+			$manage_goodstype_arr=$this->selectall('goods_type');	
+			include_once('manage_goodstype.php');
+			break;	
+
 			case '/add_emp':
 			$fetcharr=$this->selectall('city');
 			if(isset($_REQUEST['submit']))
@@ -210,6 +215,7 @@ class control extends model
 
 			case'/editparcel':
 			$fetcharr=$this->selectall('customer_details');
+			$arr=$this->selectall('goods_type');
 			if(isset($_REQUEST['edit_parcel_id']))
 			{
 				$parcel_id=$_REQUEST['edit_parcel_id'];
@@ -221,9 +227,10 @@ class control extends model
 				{
 					$parcel_id=$_REQUEST['parcel_id'];
 					$cust_id=$_REQUEST['cust_id'];
+					$gt_id=$_REQUEST['gt_id'];
 					$weight=$_REQUEST['weight'];
-					$type=$_REQUEST['type'];
-					$arr=array("parcel_id"=>$parcel_id,"cust_id"=>$cust_id,"weight"=>$weight,"type"=>$type);
+					$quantity=$_REQUEST['quantity'];
+					$arr=array("parcel_id"=>$parcel_id,"cust_id"=>$cust_id,"gt_id"=>$gt_id,"weight"=>$weight,"quantity"=>$quantity);
 					$res=$this->update('parcel',$arr,$where);
 					if($res)
 					{
@@ -846,6 +853,7 @@ class control extends model
 					  </script>";
 				 }
 			 }
+
 		     if(isset($_REQUEST['del_cust_id']))
 			 {
 				 $cust_id=$_REQUEST['del_cust_id'];
@@ -1027,6 +1035,20 @@ class control extends model
 					</script>";
 				}
 			}
+
+			if(isset($_REQUEST['del_gt_id']))
+			 {
+				 $gt_id=$_REQUEST['del_gt_id'];
+				 $where=array("gt_id"=>$gt_id);
+				 $res=$this->delete_where('goods_type',$where);
+				 if($res)
+				 {
+					echo "<script>
+					  alert('Delete success')
+					  window.location='manage_goodstype';
+					  </script>";
+				 }
+			 }
 			
 			break;
 
