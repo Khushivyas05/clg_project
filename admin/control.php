@@ -170,7 +170,7 @@ class control extends model
 			break;
 
 			case '/manage_parcel':
-			$manage_parcel_arr=$this->select_where_join('parcel','customer_details','parcel.cust_id=customer_details.cust_id');
+			$manage_parcel_arr=$this->select_where_join1('parcel','customer_details','parcel.cust_id=customer_details.cust_id','goods_type','parcel.gt_id=goods_type.gt_id');
 			include_once('manage_parcel.php');
 			break;
 
@@ -178,6 +178,11 @@ class control extends model
 			$manage_payment_arr=$this->select_where_join1('payment','customer_details','payment.cust_id=customer_details.cust_id','invoice','payment.invoice_id=invoice.invoice_id');
 			include_once('manage_payment.php');
 			break;
+
+			case '/manage_goodstype':
+			$manage_goodstype_arr=$this->selectall('goods_type');	
+			include_once('manage_goodstype.php');
+			break;	
 
 			case '/add_emp':
 			$fetcharr=$this->selectall('city');
@@ -208,8 +213,27 @@ class control extends model
 			include_once('add_emp.php');
 			break;
 
-			case'/editparcel':
+			case '/add_goodstype':
+			if(isset($_REQUEST['submit']))
+			{
+				$g_type=$_REQUEST['g_type'];
+				$arr=array("g_type"=>$g_type);
+				$res=$this->insert('goods_type',$arr);
+				if($res)
+				{
+					echo "<script>alert('Data Inserted successfully')</script>";
+				}
+				else
+				{
+					echo "<script>alert('Data is not inserted')</script>";
+				}
+			}	
+			include_once('add_goodstype.php');
+			break;
+
+			case '/editparcel':
 			$fetcharr=$this->selectall('customer_details');
+			$arr=$this->selectall('goods_type');
 			if(isset($_REQUEST['edit_parcel_id']))
 			{
 				$parcel_id=$_REQUEST['edit_parcel_id'];
@@ -221,9 +245,10 @@ class control extends model
 				{
 					$parcel_id=$_REQUEST['parcel_id'];
 					$cust_id=$_REQUEST['cust_id'];
+					$gt_id=$_REQUEST['gt_id'];
 					$weight=$_REQUEST['weight'];
-					$type=$_REQUEST['type'];
-					$arr=array("parcel_id"=>$parcel_id,"cust_id"=>$cust_id,"weight"=>$weight,"type"=>$type);
+					$quantity=$_REQUEST['quantity'];
+					$arr=array("parcel_id"=>$parcel_id,"cust_id"=>$cust_id,"gt_id"=>$gt_id,"weight"=>$weight,"quantity"=>$quantity);
 					$res=$this->update('parcel',$arr,$where);
 					if($res)
 					{
@@ -868,6 +893,7 @@ class control extends model
 					  </script>";
 				 }
 			 }
+
 		     if(isset($_REQUEST['del_cust_id']))
 			 {
 				 $cust_id=$_REQUEST['del_cust_id'];
@@ -1049,6 +1075,20 @@ class control extends model
 					</script>";
 				}
 			}
+
+			if(isset($_REQUEST['del_gt_id']))
+			 {
+				 $gt_id=$_REQUEST['del_gt_id'];
+				 $where=array("gt_id"=>$gt_id);
+				 $res=$this->delete_where('goods_type',$where);
+				 if($res)
+				 {
+					echo "<script>
+					  alert('Delete success')
+					  window.location='manage_goodstype';
+					  </script>";
+				 }
+			 }
 			
 			break;
 

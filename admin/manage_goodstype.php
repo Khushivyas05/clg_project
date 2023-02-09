@@ -7,7 +7,7 @@ include_once('header.php');
 		    	<h2>
 				<a href="manage_customer">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Manage Parcel</span>
+				<span>Manage GoodsType</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -18,33 +18,27 @@ include_once('header.php');
 			<div class="blank-page" style="overflow:auto">
 				
 				<div class="container mt-3">
-				  <h2>Manage Parcel</h2>
+				  <h2>Manage GoodsType</h2>
 
 				  <table class="table table-bordered table-striped">
 					<thead>
 					  <tr>
-					    <th>Parcel id</th>
-					    <th>Customer Name</th>
-						<th>Type</th>
-						<th>Weight</th>
-						<th>Quantity</th>
+					    <th>GoodsType Id</th>
+						<th>Goods Type</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>
 					</thead>
 					<tbody>
 					<?php
-					foreach($manage_parcel_arr as $c)
+					foreach($manage_goodstype_arr as $c)
 					{
 					?>	
 					  <tr>
-					    <td><?php echo $c->parcel_id;?></td>
-						<td><?php echo $c->cust_name;?></td>
+					    <td><?php echo $c->gt_id;?></td>
 						<td><?php echo $c->g_type;?></td>
-						<td><?php echo $c->weight;?></td>
-						<td><?php echo $c->quantity;?></td>
-						<td><a href="editparcel?edit_parcel_id=<?php echo $c->parcel_id?>" class="btn btn-primary">Edit</a></td>
-						<td><a href="delete?del_parcel_id=<?php echo $c->parcel_id?>" class="btn btn-danger">Delete</a></td>
+						<td><a href="editgoodstype?edit_gt_id=<?php echo $c->gt_id?>" class="btn btn-primary">Edit</a></td>
+						<td><a href="delete?del_gt_id=<?php echo $c->gt_id?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
 					<?php
 					}
