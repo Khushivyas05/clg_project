@@ -170,7 +170,7 @@ class control extends model
 			break;
 
 			case '/manage_parcel':
-			$manage_parcel_arr=$this->select_where_join('parcel','customer_details','parcel.cust_id=customer_details.cust_id');
+			$manage_parcel_arr=$this->select_where_join1('parcel','customer_details','parcel.cust_id=customer_details.cust_id','goods_type','parcel.gt_id=goods_type.gt_id');
 			include_once('manage_parcel.php');
 			break;
 
@@ -208,7 +208,25 @@ class control extends model
 			include_once('add_emp.php');
 			break;
 
-			case'/editparcel':
+			case '/add_goodstype':
+			if(isset($_REQUEST['submit']))
+			{
+				$g_type=$_REQUEST['g_type'];
+				$arr=array("g_type"=>$g_type);
+				$res=$this->insert('goods_type',$arr);
+				if($res)
+				{
+					echo "<script>alert('Data Inserted successfully')</script>";
+				}
+				else
+				{
+					echo "<script>alert('Data is not inserted')</script>";
+				}
+			}	
+			include_once('add_goodstype.php');
+			break;
+
+			case '/editparcel':
 			$fetcharr=$this->selectall('customer_details');
 			if(isset($_REQUEST['edit_parcel_id']))
 			{
