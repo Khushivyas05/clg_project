@@ -534,6 +534,30 @@ class control extends model
 			include_once('add_branch.php');
 			break;
 
+            case '/add_parcel':
+				$fetcharr=$this->selectall('customer_details');
+				$arr=$this->selectall('goods_type');
+				if(isset($_REQUEST['submit']))
+				{
+					$cust_id=$_REQUEST['cust_id'];
+					$gt_id=$_REQUEST['gt_id'];
+					$weight=$_REQUEST['weight'];
+					$quantity=$_REQUEST['quantity'];
+					
+					$arr=array("cust_id"=>$cust_id,"gt_id"=>$gt_id,"weight"=>$weight,"quantity"=>$quantity);
+					$res=$this->insert('parcel',$arr);
+					if($res)
+					{
+						echo "<script>alert('Data Inserted successfully')</script>";
+					}
+					else
+					{
+						echo "<script>alert('Data is not inserted')</script>";
+					}
+				}
+				include_once('add_parcel.php');
+				break;
+
 			case '/add_state':
 			if(isset($_REQUEST['submit']))
 			{
@@ -714,32 +738,30 @@ class control extends model
 			include_once('editstate.php');
 			break;
 
-			case '/editwrate':
-			if(isset($_REQUEST['edit_w_id']))
-			{
-				$w_id=$_REQUEST['edit_w_id'];
-				$where=array("w_id"=>$w_id);
-				$run=$this->select_where('w_rate',$where);
-				$fetch=$run->fetch_object();
-				if(isset($_REQUEST['submit']))
+			case '/editgoodstype':
+				if(isset($_REQUEST['edit_gt_id']))
 				{
-					$w_id=$_REQUEST['w_id'];
-					$kg=$_REQUEST['kg'];
-					$rate=10;
-					$price=$kg*$rate;
-					$arr=array("w_id"=>$w_id,"kg"=>$kg,"price"=>$price);
-					$res=$this->update('w_rate',$arr,$where);
-					if($res)
+					$gt_id=$_REQUEST['edit_gt_id'];
+					$where=array("gt_id"=>$gt_id);
+					$run=$this->select_where('goods_type',$where);
+					$fetch=$run->fetch_object();
+					if(isset($_REQUEST['submit']))
 					{
-						echo "<script>
-						alert('update success');
-						window.location='manage_wrate';
-						</script>";
+						$gt_id=$_REQUEST['gt_id'];
+						$g_type=$_REQUEST['g_type'];
+						$arr=array("gt_id"=>$gt_id,"g_type"=>$g_type);
+						$res=$this->update('goods_type',$arr,$where);
+						if($res)
+						{
+							echo "<script>
+							alert('update success');
+							window.location='manage_goodstype';
+							</script>";
+						}
 					}
 				}
-			}
-			include_once('editwrate.php');
-			break;
+				include_once('editgoodstype.php');
+				break;
 
 			
 			case '/editpayment':
