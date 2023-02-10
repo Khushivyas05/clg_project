@@ -1092,7 +1092,40 @@ class control extends model
 			
 			break;
 
-	
+            case '/status':
+			if(isset($_REQUEST['status_payment_id']))
+			{
+				$payment_id=$_REQUEST['status_payment_id'];
+				$where=array("payment_id"=>$payment_id);
+				$run=$this->select_where('payment',$where);
+				$fetch=$run->fetch_object();
+				$status=$fetch->status;
+				if($status==Paid)
+				{
+					$arr=array("status"=>"Unpaid");
+					$res=$this->update('payment',$arr,$where);
+					if($res)
+					{
+						echo "<script> 
+							alert('Unpaid Success') 
+							window.location='manage_payment';
+							</script>";
+					}
+				}
+				else
+				{
+					$arr=array("status"=>"Paid");
+					$res=$this->update('payment',$arr,$where);
+					if($res)
+					{
+						unset($_SESSION['admin_details']);
+						echo "<script> 
+							alert('Paid Success') 
+							window.location='manage_payment';
+							</script>";
+					}
+				}
+			}	
 			
      		default :
 			include_once('404.php');
