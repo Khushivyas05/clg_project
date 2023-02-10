@@ -47,10 +47,10 @@ function validate()
               <label class="control-label">Customer name</label>
               <select name="cust_id" class="form-control">
               <?php
-			foreach($fetcharr as $f)
-			{
-			?>
-                <option value="<?php echo $f->cust_id?>"><?php echo $f->cust_name;?></option>
+              foreach($fetcharr as $f)
+              {
+              ?>
+              <option value="<?php echo $f->cust_id?>"><?php echo $f->cust_name;?></option>
             <?php
             }
             ?>
@@ -63,13 +63,13 @@ function validate()
               <label class="control-label">Goods type</label>
               <select name="gt_id" class="form-control">
               <?php
-			foreach($arr as $f)
-			{
-			?>
+              foreach($arr as $f)
+              {
+              ?>
                 <option value="<?php echo $f->gt_id?>"><?php echo $f->g_type;?></option>
-            <?php
-            }
-            ?>
+              <?php
+              }
+              ?>
               </select>
             </div>
 

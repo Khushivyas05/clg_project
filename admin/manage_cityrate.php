@@ -24,7 +24,8 @@ include_once('header.php');
 					<thead>
 					  <tr>
 					    <th>Cr_id</th>
-					    <th>City</th>
+					    <th>Source</th>
+						<th>Destination</th>
 						<th>Rate</th>
 						<th>Edit</th>
 						<th>Delete</th>
@@ -37,7 +38,8 @@ include_once('header.php');
 					?>	
 					  <tr>
 					    <td><?php echo $c->cr_id;?></td>
-						<td><?php echo $c->city_name;?></td>
+						<td><?php echo $c->source;?></td>
+						<td><?php echo $c->destination;?></td>
 						<td><?php echo $c->rate;?></td>
 						<td><a href="editcityrate?edit_cr_id=<?php echo $c->cr_id?>" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_cr_id=<?php echo $c->cr_id?>" class="btn btn-danger">Delete</a></td>

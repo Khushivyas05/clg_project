@@ -115,7 +115,7 @@ class control extends model
 			break;
 			
 			case '/manage_cityrate':
-			$manage_cityrate_arr=$this->select_where_join('city_rate','city','city_rate.city_id=city.city_id');
+			$manage_cityrate_arr=$this->selectall('city_rate');
 			include_once('manage_cityrate.php');
 			break;
 			
@@ -264,7 +264,7 @@ class control extends model
 			break;
 
 			case'/editinvoice':
-			$fetcharr=$this->select_where_join1('invoice','booking','invoice.booking_id=booking.booking_id','branch','invoice.branch_id=branch.branch_id');
+			$fetcharr=$this->select_where_join3('invoice','booking','invoice.booking_id=booking.booking_id','branch','invoice.branch_id=branch.branch_id','parcel','invoice.parcel_id=parcel.parcel_id');
 			if(isset($_REQUEST['edit_invoice_id']))
 			{
 				$invoice_id=$_REQUEST['edit_invoice_id'];
@@ -277,6 +277,7 @@ class control extends model
 					$invoice_id=$_REQUEST['invoice_id'];
 					$booking_id=$_REQUEST['booking_id'];
 					$branch_id=$_REQUEST['branch_id'];
+					$parcel_id=$_REQUEST['parcel_id'];
 					$invoice_date=$_REQUEST['invoice_date'];
 					$goods_type=$_REQUEST['goods_type'];
 					$charges=$_REQUEST['charges'];
@@ -284,7 +285,7 @@ class control extends model
 					$destination=$_REQUEST['destination'];
 					$payment_type=$_REQUEST['payment_type'];
 					$price=$_REQUEST['price'];
-					$arr=array("invoice_id"=>$invoice_id,"booking_id"=>$booking_id,"branch_id"=>$branch_id,"invoice_date"=>$invoice_date,"goods_type"=>$goods_type,"charges"=>$charges,"source"=>$source,"destination"=>$destination,"payment_type"=>$payment_type,"price"=>$price);
+					$arr=array("invoice_id"=>$invoice_id,"booking_id"=>$booking_id,"branch_id"=>$branch_id,"parcel_id"=>$parcel_id,"invoice_date"=>$invoice_date,"goods_type"=>$goods_type,"charges"=>$charges,"source"=>$source,"destination"=>$destination,"payment_type"=>$payment_type,"price"=>$price);
 					$res=$this->update('invoice',$arr,$where);
 					if($res)
 					{
@@ -493,12 +494,12 @@ class control extends model
 
 				
 			case '/add_cityrate':
-			$fetcharr=$this->selectall('city');
 			if(isset($_REQUEST['submit']))
 			{
-				$city_id=$_REQUEST['city_id'];
+				$source=$_REQUEST['source'];
+				$destination=$_REQUEST['destination'];
 				$rate=$_REQUEST['rate'];
-				$arr=array("city_id"=>$city_id,"rate"=>$rate);
+				$arr=array("source"=>$source,"destination"=>$destination,"rate"=>$rate);
 				$res=$this->insert('city_rate',$arr);
 				if($res)
 				{
