@@ -171,12 +171,13 @@ class control extends model
 				if(isset($_REQUEST['submit']))
 				{
 					$cust_name=$_REQUEST['cust_name'];
+                    $city_id=$_REQUEST['city_id'];
                     $cust_add=$_REQUEST['cust_add'];
 					$contact_no=$_REQUEST['contact_no'];
 					$email=$_REQUEST['email'];
 					$username=$_REQUEST['username'];
 					
-					$arr=array("cust_name"=>$cust_name,"cust_add"=>$cust_add,"contact_no"=>$contact_no,"email"=>$email,"username"=>$username);
+					$arr=array("cust_name"=>$cust_name,"city_id"=>$city_id,"cust_add"=>$cust_add,"contact_no"=>$contact_no,"email"=>$email,"username"=>$username);
 					$res=$this->update('customer_details',$arr,$where);
 					if($res)
 					{
