@@ -29,6 +29,7 @@ include_once('header.php');
 						<th>Price</th>
                         <th>Payment_type</th>
 						<th>Date</th>
+						<th>Status</th>
 						<th>Edit</th>
 						<th>Delete</th>
                        </tr>
@@ -45,6 +46,7 @@ include_once('header.php');
 						<td><?php echo $c->Price;?></td>
                         <td><?php echo $c->payment_type;?></td>
 						<td><?php echo $c->date;?></td>
+						<td><a href="status?status_payment_id=<?php echo $c->payment_id;?>" class="btn btn-primary"><?php echo $c->status;?></a></td>
 						<td><a href="editpayment?edit_payment_id=<?php echo $c->payment_id;?>" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_payment_id=<?php echo $c->payment_id;?>" class="btn btn-danger">Delete</a></td>
 					  </tr>

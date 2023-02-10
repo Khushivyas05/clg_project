@@ -35,26 +35,33 @@ include_once('header.php');
               </tr>
             </thead>
             <tbody>
+              <?php
+              foreach($fetch as $f)
+              {
+              ?>
               <tr class="rem1">
                 <td class="invert product-name">
-                  <?php echo $fetch->vehicle_number;?>
+                  <?php echo $f->vehicle_number;?>
                 </td>
                 <td class="invert product-name">
-                  <?php echo $fetch->source;?>
+                  <?php echo $f->source;?>
                 </td>
                 <td class="invert product-name">
-                <?php echo $fetch->destination;?>
+                <?php echo $f->destination;?>
                 </td>
                 <td class="invert product-name">
-                  <?php echo $fetch->book_date;?>
+                  <?php echo $f->book_date;?>
                 </td>
                 <td class="invert product-name">
-                  <?php echo $fetch->payment_type;?>
+                  <?php echo $f->payment_type;?>
                 </td>
                 <td>
                 <a href="invoice" class="btn btn-secondary btn-theme">Invoice
             </a>
                 </td>
+                <?php
+                }
+                ?>
                 <!--<td class="invert">
                   <div class="quantity">
                     <div class="quantity-select d-flex">

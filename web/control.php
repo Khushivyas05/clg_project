@@ -160,6 +160,37 @@ class control extends model
             include_once('order.php');
             break;
 
+            case '/editprofile':
+            if(isset($_REQUEST['edit_cust_id']))
+            {
+                $cust_id=$_REQUEST['edit_cust_id'];
+				$where=array("cust_id"=>$cust_id);
+				$run=$this->select_where('customer_details',$where);
+				$fetch=$run->fetch_object();
+				
+				if(isset($_REQUEST['submit']))
+				{
+					$cust_name=$_REQUEST['cust_name'];
+                    $city_id=$_REQUEST['city_id'];
+                    $cust_add=$_REQUEST['cust_add'];
+					$contact_no=$_REQUEST['contact_no'];
+					$email=$_REQUEST['email'];
+					$username=$_REQUEST['username'];
+					
+					$arr=array("cust_name"=>$cust_name,"city_id"=>$city_id,"cust_add"=>$cust_add,"contact_no"=>$contact_no,"email"=>$email,"username"=>$username);
+					$res=$this->update('customer_details',$arr,$where);
+					if($res)
+					{
+						echo "<script>
+						alert('Update Success');
+						window.location='profile';
+						</script>";
+					}
+				}
+            }
+            include_once('editprofile.php');
+            break;
+
             case '/signup':
             $fetcharr=$this->selectall('city');
             if(isset($_REQUEST['submit']))

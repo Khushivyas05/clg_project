@@ -1100,7 +1100,7 @@ class control extends model
 				$run=$this->select_where('payment',$where);
 				$fetch=$run->fetch_object();
 				$status=$fetch->status;
-				if($status==Paid)
+				if($status=='Paid')
 				{
 					$arr=array("status"=>"Unpaid");
 					$res=$this->update('payment',$arr,$where);
@@ -1118,7 +1118,6 @@ class control extends model
 					$res=$this->update('payment',$arr,$where);
 					if($res)
 					{
-						unset($_SESSION['admin_details']);
 						echo "<script> 
 							alert('Paid Success') 
 							window.location='manage_payment';
