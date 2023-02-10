@@ -19,7 +19,7 @@ function validate()
 	var destination=document.forms["cityrateform"]["destination"].value;
 	if(destination=="" || destination==null)
 	{
-		alert("Please fill out the city_id");
+		alert("Please fill out the destination");
 		return false;
 	}
 	
