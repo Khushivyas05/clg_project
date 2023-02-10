@@ -48,19 +48,19 @@ include_once('header.php');
                        
                         
 						<div class="top-inputs">
-                        Customer Name: <input type="text" name="city_name" placeholder="city_name"  class="form-control" required="">
+                        Customer Name: <input type="text" name="cust_name" placeholder="Customer Name"  class="form-control" required="">
                         </div>
 
 						<div class="top-inputs">
-                        City Name: <input type="text" name="city_name" placeholder="city_name"  class="form-control" required="">
+                        City Name: <input type="text" name="city_name" placeholder="City Name"  class="form-control" required="">
                         </div>
 
 						<div class="top-inputs">    
-                        Customer Address<input type="text" name="cust_add" placeholder="cust_add" class="form-control" required="">
+                        Customer Address<input type="text" name="cust_add" placeholder="Customer Address" class="form-control" required="">
                         </div>
 
 						<div class="top-inputs">    
-                         Contact No:<input type="text" name="contact_no" placeholder="contact_no" class="form-control" required="">
+                         Contact No:<input type="text" name="contact_no" placeholder="Contact No" class="form-control" required="">
                         </div>
 
 						
