@@ -161,6 +161,7 @@ class control extends model
             break;
 
             case '/editprofile':
+            $fetcharr=$this->selectall('city');
             if(isset($_REQUEST['edit_cust_id']))
             {
                 $cust_id=$_REQUEST['edit_cust_id'];

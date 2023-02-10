@@ -27,11 +27,11 @@ include_once('header.php');
 </section>
 <!-- //covers -->
 <!-- contact -->
-<section class="w3l-contacts-12" id="booking">
+<section class="w3l-contacts-12" id="profile">
     <div class="contact-top pt-5">
         <div class="container py-md-3">
             <div class="heading text-center mx-auto">
-                <h3 class="head">PROFILE</h3>
+                <h3 class="head">EDIT PROFILE</h3>
                <!-- <p class="my-3 head"> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
                   Nulla mollis dapibus nunc, ut rhoncus
                   turpis sodales quis. Integer sit amet mattis quam.</p>-->
@@ -44,33 +44,43 @@ include_once('header.php');
                  <!-- contact form -->
                  <div class="contacts12-main col-lg-12 pr-lg-5 pr-3">
                    
-                    <form name="bookingform" action="" method="post" enctype="multipart/form-data" class="main-input">
+                    <form name="profileform" action="" method="post" enctype="multipart/form-data" class="main-input">
                        
                         
 						<div class="top-inputs">
-                        Customer Name: <input type="text" name="cust_name" placeholder="Customer Name"  class="form-control" required="">
+                        Customer Name: <input type="text" name="cust_name" placeholder="Customer Name"  class="form-control" value="<?php echo $fetch->cust_name;?>" required="">
                         </div>
 
 						<div class="top-inputs">
-                        City Name: <input type="text" name="city_name" placeholder="City Name"  class="form-control" required="">
+                        City Name: 
+						<select name="city_id" class="form-control">
+						<?php
+						foreach($fetcharr as $f)
+						{
+						?>
+						<option value="<?php echo $f->city_id?>"><?php echo $f->city_name?></option>
+						<?php
+						}
+						?>
+						</select>
                         </div>
 
 						<div class="top-inputs">    
-                        Customer Address<input type="text" name="cust_add" placeholder="Customer Address" class="form-control" required="">
+                        Customer Address<input type="text" name="cust_add" placeholder="Customer Address" class="form-control" value="<?php echo $fetch->cust_add;?>" required="">
                         </div>
 
 						<div class="top-inputs">    
-                         Contact No:<input type="text" name="contact_no" placeholder="Contact No" class="form-control" required="">
+                         Contact No:<input type="text" name="contact_no" placeholder="Contact No" class="form-control" value="<?php echo $fetch->contact_no;?>" required="">
                         </div>
 
 						
 						<div class="top-inputs">    
-                         Email:<input type="text" name="email" placeholder="email" class="form-control" required="">
+                         Email:<input type="text" name="email" placeholder="email" class="form-control" value="<?php echo $fetch->email;?>" required="">
                         </div>
 
 						
 						<div class="top-inputs">    
-                         User Name:<input type="text" name="username" placeholder="username" class="form-control" required="">
+                         User Name:<input type="text" name="username" placeholder="username" class="form-control" value="<?php echo $fetch->username;?>" required="">
                         </div>
 
 						
@@ -95,7 +105,7 @@ include_once('header.php');
                        </div>-->
 
                         <div class="text-right">
-                            <button type="submit" name="submit" class="btn btn-theme2">Book Now</button>
+                            <button type="submit" name="submit" class="btn btn-theme2">Edit Profile</button>
                         </div>
                     </form>
                 </div>
