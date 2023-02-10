@@ -165,7 +165,7 @@ class control extends model
 			break;
 
 			case '/manage_invoice':
-			$manage_invoice_arr=$this->select_where_join1('invoice','booking','invoice.booking_id=booking.booking_id','branch','invoice.branch_id=branch.branch_id');
+			$manage_invoice_arr=$this->select_where_join3('invoice','booking','invoice.booking_id=booking.booking_id','branch','invoice.branch_id=branch.branch_id','parcel','invoice.parcel_id=parcel.parcel_id');
 			include_once('manage_invoice.php');
 			break;
 
@@ -362,7 +362,6 @@ class control extends model
 			break;
 
 			case'/editcityrate':
-			$fetcharr=$this->selectall('city');
 			if(isset($_REQUEST['edit_cr_id']))
 			{
 				$cr_id=$_REQUEST['edit_cr_id'];
@@ -373,9 +372,10 @@ class control extends model
 				if(isset($_REQUEST['submit']))
 				{
 					$cr_id=$_REQUEST['cr_id'];
-					$city_id=$_REQUEST['city_id'];
+					$source=$_REQUEST['source'];
+					$destination=$_REQUEST['destination'];
 					$rate=$_REQUEST['rate'];
-					$arr=array("cr_id"=>$cr_id,"city_id"=>$city_id,"rate"=>$rate);
+					$arr=array("cr_id"=>$cr_id,"source"=>$source,"destination"=>$destination,"rate"=>$rate);
 					$res=$this->update('city_rate',$arr,$where);
 					if($res)
 					{
