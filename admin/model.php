@@ -83,6 +83,24 @@ class model
 		}
 	}
 
+	function select_where_join3($tbl1,$tbl2,$on1,$tbl3,$on2,$tbl4,$on3)
+	{
+	    $ins="select * from $tbl1 join $tbl2 on $on1 join $tbl3 on $on2 join $tbl4 on $on3";
+		$run=$this->conn->query($ins);
+		while($fetch=$run->fetch_object())
+		{
+			$arr[]=$fetch;
+		}
+		if(!empty($arr))
+		{
+			return $arr;
+		}
+		else
+		{
+			return $arr=array("Data not found");
+		}
+	}
+
 	function select_where_join($tbl1,$tbl2,$on1)
 	{
 	    $ins="select * from $tbl1 join $tbl2 on $on1";

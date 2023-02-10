@@ -26,6 +26,7 @@ include_once('header.php');
 						<th>Invoice id</th>
 						<th>Booking date</th>
                         <th>Branch Name</th>
+						<th>Parcel Quantity</th>
                         <th>Invoice date</th>
                         <th>Goods Type</th>
                         <th>Charges</th>
@@ -46,6 +47,7 @@ include_once('header.php');
 						<td><?php echo $m->invoice_id;?></td>
 						<td><?php echo $m->book_date;?></td>
                         <td><?php echo $m->branch_name;?></td>
+						<td><?php echo $m->quantity;?></td>
                         <td><?php echo $m->invoice_date;?></td>
                         <td><?php echo $m->goods_type;?></td>
                         <td><?php echo $m->charges;?></td>
