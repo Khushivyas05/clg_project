@@ -42,20 +42,15 @@ function validate()
             </div>
 			
 			<div class="col-md-12 form-group1">
-			<label class="control-label">City:</label>
-            <select name="city_id" class="form-control">
-			<?php
-			foreach($fetcharr as $f)
-			{
-			?>
-			<option value="<?php echo $f->city_id?>"><?php echo $f->city_name?></option>
-			<?php
-			}
-			?>
-			</select>
+              <label class="control-label">Source</label>
+              <input type="text"  name="source" placeholder="source" >
             </div>
 			
-			
+			<div class="col-md-12 form-group1">
+              <label class="control-label">Destination</label>
+              <input type="text"  name="destination" placeholder="destination" >
+            </div>
+
 			<div class="col-md-12 form-group1">
               <label class="control-label">Rate</label>
               <input type="text"  name="rate" placeholder="rate" >

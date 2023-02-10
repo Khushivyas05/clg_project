@@ -122,7 +122,7 @@ include_once('header.php');
             <a href="order" class="btn btn-secondary btn-theme">
               <div class="anim"></div><span>Your Order</span>
             </a>
-           <a href="editprofile" class="btn btn-theme3">
+           <a href="editprofile?edit_cust_id=<?php echo $fetch->cust_id;?>" class="btn btn-theme3">
             Edit Profile
             </a>
           </div>
