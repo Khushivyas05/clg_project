@@ -10,6 +10,18 @@ function validate()
 		alert("Please fill out the city id");
 		return false;
 	}
+	var source=document.forms["cityrateform"]["source"].value;
+	if(source=="" ||source==null)
+	{
+		alert("Please fill out the source");
+		return false;
+	}
+	var destination=document.forms["cityrateform"]["destination"].value;
+	if(radestinationte=="" ||destination==null)
+	{
+		alert("Please fill out the destination");
+		return false;
+	}
 	var rate=document.forms["cityrateform"]["rate"].value;
 	if(rate=="" ||rate==null)
 	{
