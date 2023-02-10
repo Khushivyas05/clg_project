@@ -1,7 +1,6 @@
 <?php
 include_once('header.php');
 ?>
-h
 <!-- inner banner -->
 <section class="w3l-inner-banner-main">
     <div class="about-inner ecomerce-1">
@@ -123,8 +122,9 @@ h
             <a href="order" class="btn btn-secondary btn-theme">
               <div class="anim"></div><span>Your Order</span>
             </a>
-           <!-- <a href="" class="btn btn-theme3">
-            </a>-->
+           <a href="editprofile" class="btn btn-theme3">
+            Edit Profile
+            </a>
           </div>
         </div>
         <div class="clearfix"> </div>
