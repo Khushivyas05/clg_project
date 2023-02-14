@@ -1,4 +1,4 @@
-<?php d
+<?php 
 if(isset($_SESSION['username']))
 {
 
