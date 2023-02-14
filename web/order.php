@@ -1,6 +1,4 @@
 <?php
-if(isset($_SESSION['cust_id']))
-{}
 include_once('header.php');
 ?>
 <!-- inner banner -->
@@ -36,7 +34,7 @@ include_once('header.php');
             </thead>
             <tbody>
               <?php
-              foreach($fetch as $f)
+              foreach($fetcharr as $f)
               {
               ?>
               <tr class="rem1">

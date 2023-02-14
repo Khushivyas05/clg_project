@@ -155,8 +155,7 @@ class control extends model
 
             case '/order':
             $where=array("cust_id"=>$_SESSION['cust_id']);
-            $run=$this->select_where_join2('booking','category','booking.cate_id=category.cate_id',$where);
-            $fetch=$run->fetch_object();
+            $fetcharr=$this->select_where_join2('booking','category','booking.cate_id=category.cate_id',$where);
             include_once('order.php');
             break;
 
