@@ -54,7 +54,7 @@ include_once('header.php');
                   <?php echo $f->payment_type;?>
                 </td>
                 <td>
-                <a href="invoice" class="btn btn-secondary btn-theme">Invoice
+                <a href="invoice?booking_id=<?php echo $f->booking_id;?>" class="btn btn-secondary btn-theme">Invoice
             </a>
                 </td>
                 <?php

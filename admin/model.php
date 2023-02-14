@@ -58,11 +58,38 @@ class model
 		$i=0;
 		foreach($where as $w)
 		{
-			echo $sel.=" and $key_arr[$i]='$value_arr[$i]'";
+			$sel.=" and $key_arr[$i]='$value_arr[$i]'";
 			$i++;
 		}
 		$run=$this->conn->query($sel);
 		return $run;
+	}
+
+	function select_where_join4($tbl1,$tbl2,$on1,$where)
+	{
+		$key_arr=array_keys($where);
+		$value_arr=array_values($where);
+		
+		$sel="select * from $tbl1 join $tbl2 on $on1 where 1=1";
+		$i=0;
+		foreach($where as $w)
+		{
+			$sel.=" and $key_arr[$i]='$value_arr[$i]'";
+			$i++;
+		}
+		$run=$this->conn->query($sel);
+		while($fetch=$run->fetch_object())
+		{
+			$arr[]=$fetch;
+		}
+		if(!empty($arr))
+		{
+			return $arr;
+		}
+		else
+		{
+			return $arr=array("Data not found");
+		}
 	}
 
 	function select_where_join1($tbl1,$tbl2,$on1,$tbl3,$on2)
