@@ -1,6 +1,4 @@
 <?php
-if(isset($_SESSION['cust_id']))
-{}
 include_once('header.php');
 ?>
 <!-- inner banner -->
@@ -36,7 +34,7 @@ include_once('header.php');
             </thead>
             <tbody>
               <?php
-              foreach($fetch as $f)
+              foreach($fetcharr as $f)
               {
               ?>
               <tr class="rem1">
@@ -56,7 +54,7 @@ include_once('header.php');
                   <?php echo $f->payment_type;?>
                 </td>
                 <td>
-                <a href="invoice" class="btn btn-secondary btn-theme">Invoice
+                <a href="invoice?booking_id=<?php echo $f->booking_id;?>" class="btn btn-secondary btn-theme">Invoice
             </a>
                 </td>
                 <?php

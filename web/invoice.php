@@ -13,7 +13,6 @@ include_once('header.php');
 		}
 		
 		div.invoice {
-      align:center;
 		border:1px solid #ccc;
 		padding:10px;
 		height:740pt;
@@ -72,8 +71,8 @@ include_once('header.php');
 	</head>
 
 	<body>
+  <h1 class="head" style="align:center"><b>Invoice</b></h1>
 	<div class="invoice">
-    <h1 class="head" style="align:center"><b>Invoice</b></h1>
 		<div class="company-address">
 			ACME ltd
 			<br />
@@ -82,13 +81,17 @@ include_once('header.php');
 			London, AF3Z 7BP
 			<br />
 		</div>
-	
+    <?php 
+    foreach($invoice_arr as $i)
+    {
+    ?>
 		<div class="invoice-details">
-			Invoice N°: 564
+			Invoice No:1
 			<br />
-			Date: 24/01/2012
+			Date: 19/11/2020
 		</div>
-		
+		<?php
+    }?>
 		<div class="customer-address">
 			To:
 			<br />

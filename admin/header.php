@@ -124,7 +124,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li><a href="manage_feedback" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Feedback </a></li>
 					<li><a href="manage_booking" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Booking</a></li>
 					<li><a href="manage_fuel" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Fuel</a></li>
-					<li><a href="manage_invoice" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Invoice</a></li>
 					<li><a href="manage_payment" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Payment</a></li>
 					<li><a href="manage_parcel" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Parcel</a></li>
                     <li>
@@ -137,6 +136,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					   </ul>
                     </li>
 					
+                    <li>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Invoice</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="add_invoice" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Invoice</a></li>
+                            
+                            <li><a href="manage_invoice" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Invoice</a></li>
+
+					   </ul>
+                    </li>
+
 					<li>
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Branch</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">

@@ -231,6 +231,35 @@ class control extends model
 			include_once('add_goodstype.php');
 			break;
 
+			case '/add_invoice':
+			if(isset($_REQUEST['submit']))
+			{
+				$booking_id=$_REQUEST['booking_id'];
+				$branch_id=$_REQUEST['branch_id'];
+				$parcel_id=$_REQUEST['parcel_id'];
+				$invoice_date=$_REQUEST['invoice_date'];
+				$goods_type=$_REQUEST['goods_type'];
+				$charges=$_REQUEST['charges'];
+				$source=$_REQUEST['source'];
+				$destination=$_REQUEST['destination'];
+				$payment_type=$_REQUEST['payment_type'];
+				$price=$_REQUEST['price'];
+					
+				$arr=array("booking_id"=>$booking_id,"branch_id"=>$branch_id,"parcel_id"=>$parcel_id,"invoice_date"=>$invoice_date,"goods_type"=>$goods_type,"charges"=>$charges,"source"=>$source,"destination"=>$destination,"payment_type"=>$payment_type,"price"=>$price);
+					
+				$res=$this->insert('invoice',$arr);
+				if($res)
+				{
+					echo  "<script>alert('Register success')</script>";
+				}
+				else
+				{
+					echo "not success";
+				}
+			}
+			include_once('add_invoice.php');
+			break;
+
 			case '/editparcel':
 			$fetcharr=$this->selectall('customer_details');
 			$arr=$this->selectall('goods_type');
