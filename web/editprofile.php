@@ -1,4 +1,4 @@
-<?php
+<?php 
 if(isset($_SESSION['username']))
 {
 
@@ -46,8 +46,7 @@ include_once('header.php');
                    
                     <form name="profileform" action="" method="post" enctype="multipart/form-data" class="main-input">
                        
-                        
-						<div class="top-inputs">
+                       <div class="top-inputs">
                         Customer Name: <input type="text" name="cust_name" placeholder="Customer Name"  class="form-control" value="<?php echo $fetch->cust_name;?>" required="">
                         </div>
 
@@ -66,7 +65,7 @@ include_once('header.php');
                         </div>
 
 						<div class="top-inputs">    
-                        Customer Address<input type="text" name="cust_add" placeholder="Customer Address" class="form-control" value="<?php echo $fetch->cust_add;?>" required="">
+                        Customer Address<input type="text" name="cust_add" placeholder="Customer Address" class="form-control" value="<?php echo $fetch->cust_add;?>"  required="">
                         </div>
 
 						<div class="top-inputs">    

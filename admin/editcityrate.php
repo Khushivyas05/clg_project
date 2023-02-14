@@ -10,10 +10,16 @@ function validate()
 		alert("Please fill out the cr_id");
 		return false;
 	}  
-	var city_id=document.forms["cityrateform"]["city_id"].value;
-	if(city_id=="" || city_id==null)
+	var source=document.forms["cityrateform"]["source"].value;
+	if(source=="" || source==null)
 	{
-		alert("Please fill out the city_id");
+		alert("Please fill out the source");
+		return false;
+	}
+	var destination=document.forms["cityrateform"]["destination"].value;
+	if(destination=="" || destination==null)
+	{
+		alert("Please fill out the destination");
 		return false;
 	}
 	
@@ -51,25 +57,19 @@ function validate()
             
             <div class="clearfix"> </div>
             </div>
+			<div class="col-md-12 form-group1">
+              <label class="control-label">Source</label>
+              <input type="text" placeholder="source" name="source" value="<?php echo $fetch->source;?>" >
+            </div>
 			
 			<div class="col-md-12 form-group1">
-			<label class="control-label">City:</label>
-            <select name="city_id" class="form-control">
-			<?php
-			foreach($fetcharr as $f)
-			{
-			?>
-			<option value="<?php echo $f->city_id?>"><?php echo $f->city_name?></option>
-			<?php
-			}
-			?>
-			</select>
+              <label class="control-label">Destination</label>
+              <input type="text" placeholder="destination" name="destination" value="<?php echo $fetch->destination;?>" >
             </div>
 			
 			
-			
 			<div class="col-md-12 form-group1">
-              <label class="control-label">rate</label>
+              <label class="control-label">Rate</label>
               <input type="text" placeholder="rate" name="rate" value="<?php echo $fetch->rate;?>"><br>
             </div>
 			

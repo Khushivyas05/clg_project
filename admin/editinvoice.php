@@ -5,29 +5,71 @@ include_once('header.php');
 	11
 function validate()
 {
-	var feedback_id=document.forms["feedbackform"]["feedback_id"].value;
-	if(feedback_id=="" || feedback_id==null)
+	var invoice_id=document.forms["invoiceform"]["invoice_id"].value;
+	if(invoice_id=="" || invoice_id==null)
 	{
-		alert("Please fill out the feedback_id");
+		alert("Please fill out the invoice_id");
 		return false;
 	}  
-	var cust_id=document.forms["feedbackform"]["cust_id"].value;
-	if(cust_id=="" || cust_id==null)
+	var booking_id=document.forms["invoiceform"]["booking_id"].value;
+	if(booking_id=="" || booking_id==null)
 	{
-		alert("Please fill out the cust_id");
+		alert("Please fill out the booking_id");
+		return false;
+	}  
+	var branch_id=document.forms["invoiceform"]["branch_id"].value;
+	if(branch_id=="" || branch_id==null)
+	{
+		alert("Please fill out the branch_id");
 		return false;
 	}
+	var parcel_id=document.forms["invoiceform"]["parcel_id"].value;
+	if(parcel_id=="" || parcel_id==null)
+	{
+		alert("Please fill out the parcel_id");
+		return false;
+	}  
+	var invoice_date=document.forms["invoiceform"]["invoice_date"].value;
+	if(invoice_date=="" || invoice_date==null)
+	{
+		alert("Please fill out the invoice_date");
+		return false;
+	}  
 	
-	var comment=document.forms["feedbackform"]["comment"].value;
-	if(comment=="" || comment==null)
+	var goods_type=document.forms["invoiceform"]["goods_type"].value;
+	if(goods_type=="" || goods_type==null)
 	{
-		alert("Please fill out the comment");
+		alert("Please fill out the goods_type");
 		return false;
 	}
-	var date=document.forms["feedbackform"]["date"].value;
-	if(date=="" || date==null)
+	var charges=document.forms["invoiceform"]["charges"].value;
+	if(charges=="" || charges==null)
 	{
 		alert("Please fill out the Date");
+		return false;
+	}
+	var Source=document.forms["invoiceform"]["Source"].value;
+	if(Source=="" || Source==null)
+	{
+		alert("Please fill out the Source");
+		return false;
+	}
+	var Destination=document.forms["invoiceform"]["Destination"].value;
+	if(Destination=="" || Destination==null)
+	{
+		alert("Please fill out the Destination");
+		return false;
+	}
+	var payment_type=document.forms["invoiceform"]["payment_type"].value;
+	if(payment_type=="" || payment_type==null)
+	{
+		alert("Please fill out the payment_type");
+		return false;
+	}
+	var price=document.forms["invoiceform"]["price"].value;
+	if(price=="" || price==null)
+	{
+		alert("Please fill out the price");
 		return false;
 	}
 	
@@ -79,6 +121,11 @@ function validate()
 			</select>
             </div>
 			 <div class="clearfix"> </div>
+
+			 <div class="col-md-12 form-group1">
+              <label class="control-label">Parcel Id</label>
+              <input type="text" placeholder="parcel_id" name="parcel_id" value="<?php echo $fetch->parcel_id;?>" >
+            </div>
 			
 			<div class="col-md-12 form-group1">
               <label class="control-label">Invoice Date</label>
