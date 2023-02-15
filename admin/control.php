@@ -250,7 +250,7 @@ class control extends model
 				$res=$this->insert('invoice',$arr);
 				if($res)
 				{
-					echo  "<script>alert('Register success')</script>";
+					echo  "<script>alert('Invoice Created')</script>";
 				}
 				else
 				{
