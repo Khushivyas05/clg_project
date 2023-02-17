@@ -24,10 +24,10 @@ function validate()
 		alert("Please fill out the charges");
 		return false;
 	}
-    var Sourse=document.forms["invoiceform"]["Sourse"].value;
-	if(Sourse=="" ||Sourse==null)
+    var Source=document.forms["invoiceform"]["Source"].value;
+	if(Source=="" ||Source==null)
 	{
-		alert("Please fill out the Sourse");
+		alert("Please fill out the Source");
 		return false;
 	}
     var Destination=document.forms["invoiceform"]["Destination"].value;
@@ -59,7 +59,7 @@ function validate()
 		    	<h2>
 				<a href="manage_customer">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Add City</span>
+				<span>Add Invoice</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -69,7 +69,7 @@ function validate()
  		<div class="validation-form">
  	<!---->
   	    
-        <form name="cityform" action="" method="post" enctype="multipart/form-data" onsubmit="return validate()">
+        <form name="invoiceform" action="" method="post" enctype="multipart/form-data" onsubmit="return validate()">
          	<div class="vali-form">
             <div class="clearfix"> </div>
             </div>
@@ -86,8 +86,8 @@ function validate()
               <input type="text"  name="charges" placeholder="charges" >
             </div>
 			<div class="col-md-12 form-group1">
-              <label class="control-label">Sourse</label>
-              <input type="text"  name="Sourse" placeholder="Sourse" >
+              <label class="control-label">Source</label>
+              <input type="text"  name="Source" placeholder="Source" >
             </div>
 			<div class="col-md-12 form-group1">
               <label class="control-label">Destination</label>

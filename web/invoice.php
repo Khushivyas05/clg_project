@@ -71,7 +71,7 @@ include_once('header.php');
 	</head>
 
 	<body>
-  <h1 class="head" style="align:center"><b>Invoice</b></h1>
+  <h1 class="head"><b>Invoice</b></h1>
 	<div class="invoice">
 		<div class="company-address">
 			ACME ltd
@@ -81,17 +81,11 @@ include_once('header.php');
 			London, AF3Z 7BP
 			<br />
 		</div>
-    <?php 
-    foreach($invoice_arr as $i)
-    {
-    ?>
 		<div class="invoice-details">
-			Invoice No:1
+			Invoice No:<?php echo $fetch->invoice_id;?>
 			<br />
-			Date: 19/11/2020
+			Date: <?php echo $fetch->invoice_date;?>
 		</div>
-		<?php
-    }?>
 		<div class="customer-address">
 			To:
 			<br />
@@ -107,47 +101,40 @@ include_once('header.php');
 			<table border='1' cellspacing='0'>
 				<tr>
 					<th width=250>Description</th>
-					<th width=80>Amount</th>
-					<th width=100>Unit price</th>
-					<th width=100>Total price</th>
+					<th width=250>Price</th>
+					<th width=250>Total price</th>
 				</tr>
 
 			<?php
 			$total = 0;
-			$vat = 21;
-			
-			$articles = array(
-						array("Motherboard","Case","RAM","Hard Disk","Monitor", "Installation"),
-						array(1,1,2,2,1,1),
-						array(65,80,70,125,210,30)
-			);
 
-			for($a=0;$a<5;$a++) {
-					$description = $articles[0][$a];
-					$amount = $articles[1][$a];
-					$unit_price = number_format( $articles[2][$a], 2);
-					$total_price = number_format( $amount * $unit_price, 2);
-					$total += $total_price;
-					echo("<tr>");
-					echo("<td>$description</td>");
-					echo("<td class='text-center'>$amount</td>");
-					echo("<td class='text-right'>€$unit_price</td>");
-					echo("<td class='text-right'>€$total_price</td>");
-					echo("</tr>");
-			}
 			
-			echo("<tr>");
-			echo("<td colspan='3' class='text-right'>Sub total</td>");
-			echo("<td class='text-right'>€" . number_format($total,2) . "</td>");
-			echo("</tr>");
-			echo("<tr>");
-			echo("<td colspan='3' class='text-right'>VAT</td>");
-			echo("<td class='text-right'>€" . number_format(($total*$vat)/100,2) . "</td>");
-			echo("</tr>");
-			echo("<tr>");
-			echo("<td colspan='3' class='text-right'><b>TOTAL</b></td>");
-			echo("<td class='text-right'><b>€" . number_format(((($total*$vat)/100)+$total),2) . "</b></td>");
-			echo("</tr>");
+				/*$description = $articles[0][$a];
+				$amount = $articles[1][$a];
+				$unit_price = number_format( $articles[2][$a], 2);*/
+				$total_price = $fetch->charges+$fetch->price;
+				$total += $total_price;
+				echo("<tr>");
+				echo("<td>$fetch->goods_type</td>");
+				//echo("<td class='text-center'>₹".number_format($fetch->charges)."</td>");
+				//echo("<td class='text-right'>₹".number_format($fetch->price)."</td>");
+				echo("<td class='text-right'>₹".number_format($fetch->price)."</td>");
+				echo("</tr>");
+			
+			
+			
+				echo("<tr>");
+				echo("<td colspan='3' class='text-right'>Sub total</td>");
+				echo("<td class='text-right'>₹" . number_format($fetch->price) . "</td>");
+				echo("</tr>");
+				echo("<tr>");
+				echo("<td colspan='3' class='text-right'>Charges</td>");
+				echo("<td class='text-right'>₹" . number_format($fetch->charges) . "</td>");
+				echo("</tr>");
+				echo("<tr>");
+				echo("<td colspan='3' class='text-right'><b>TOTAL</b></td>");
+				echo("<td class='text-right'><b>₹" . number_format($total) . "</b></td>");
+				echo("</tr>");
 			?>
 			</table>
 		</div>

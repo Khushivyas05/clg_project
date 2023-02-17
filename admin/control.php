@@ -240,17 +240,17 @@ class control extends model
 				$invoice_date=$_REQUEST['invoice_date'];
 				$goods_type=$_REQUEST['goods_type'];
 				$charges=$_REQUEST['charges'];
-				$source=$_REQUEST['source'];
-				$destination=$_REQUEST['destination'];
+				$Source=$_REQUEST['Source'];
+				$Destination=$_REQUEST['Destination'];
 				$payment_type=$_REQUEST['payment_type'];
 				$price=$_REQUEST['price'];
 					
-				$arr=array("booking_id"=>$booking_id,"branch_id"=>$branch_id,"parcel_id"=>$parcel_id,"invoice_date"=>$invoice_date,"goods_type"=>$goods_type,"charges"=>$charges,"source"=>$source,"destination"=>$destination,"payment_type"=>$payment_type,"price"=>$price);
+				$arr=array("booking_id"=>$booking_id,"branch_id"=>$branch_id,"parcel_id"=>$parcel_id,"invoice_date"=>$invoice_date,"goods_type"=>$goods_type,"charges"=>$charges,"Source"=>$Source,"Destination"=>$Destination,"payment_type"=>$payment_type,"price"=>$price);
 					
 				$res=$this->insert('invoice',$arr);
 				if($res)
 				{
-					echo  "<script>alert('Register success')</script>";
+					echo  "<script>alert('Invoice Created')</script>";
 				}
 				else
 				{
