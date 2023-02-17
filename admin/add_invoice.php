@@ -4,7 +4,24 @@ include_once('header.php');
 <script>
 function validate()
 {
-	
+	var booking_id=document.forms["invoiceform"]["booking_id"].value;
+	if(booking_id=="" ||booking_id==null)
+	{
+		alert("Please fill out the booking_id");
+		return false;
+	}
+    var branch_id=document.forms["invoiceform"]["branch_id"].value;
+	if(branch_id=="" ||branch_id==null)
+	{
+		alert("Please fill out the branch_id");
+		return false;
+	}
+    var parcel_id=document.forms["invoiceform"]["parcel_id"].value;
+	if(parcel_id=="" ||parcel_id==null)
+	{
+		alert("Please fill out the parcel_id");
+		return false;
+	}			
     var invoice_date=document.forms["invoiceform"]["invoice_date"].value;
 	if(invoice_date=="" ||invoice_date==null)
 	{
@@ -71,6 +88,18 @@ function validate()
         <form name="invoiceform" action="" method="post" enctype="multipart/form-data" onsubmit="return validate()">
          	<div class="vali-form">
             <div class="clearfix"> </div>
+            </div>
+			<div class="col-md-12 form-group1">
+              <label class="control-label">Booking Id</label>
+              <input type="text"  name="booking_id" placeholder="booking_id" >
+            </div>
+			<div class="col-md-12 form-group1">
+              <label class="control-label">Branch Id</label>
+              <input type="text"  name="branch_id" placeholder="branch_id" >
+            </div>
+			<div class="col-md-12 form-group1">
+              <label class="control-label">Parcel Id</label>
+              <input type="text"  name="parcel_id" placeholder="parcel_id" >
             </div>
 			<div class="col-md-12 form-group1">
               <label class="control-label">Invoice Date</label>
