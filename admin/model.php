@@ -92,6 +92,22 @@ class model
 		}
 	}
 
+	function select_where_join5($tbl1,$tbl2,$on1,$tbl3,$on2,$where)
+	{
+		$key_arr=array_keys($where);
+		$value_arr=array_values($where);
+		
+		$sel="select * from $tbl1 join $tbl2 on $on1 join $tbl3 on $on2 where 1=1";
+		$i=0;
+		foreach($where as $w)
+		{
+			$sel.=" and $key_arr[$i]='$value_arr[$i]'";
+			$i++;
+		}
+		$run=$this->conn->query($sel);
+		return $run;
+	}
+
 	function select_where_join1($tbl1,$tbl2,$on1,$tbl3,$on2)
 	{
 	    $ins="select * from $tbl1 join $tbl2 on $on1 join $tbl3 on $on2";
