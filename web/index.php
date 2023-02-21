@@ -3,52 +3,11 @@ include_once('header.php');
 ?>
 <section class="form-12" id="home">
 	<div class="form-12-content" style="padding:80px" >
-		<div class="container" style="padding:70px">
+		<div class="container" style="padding:210px">
 			<div class="grid grid-column-2" >
 				<div class="column2">
 					</div>
-				<div class="column1" >
-					<h3 class="tagline mb-3">Get a Free Moving Quote</h3>
-					
-						<form action="" method="post">
-							<div class="">
-                            From City:
-                            <select name="city_id" class="form-control">
-                            <?php
-                            foreach($arr as $f)
-                            {
-                            ?>
-                            <option value="<?php echo $f->city_id?>"><?php echo $f->city_name;?></option>
-                            <?php
-                            }
-                            ?>
-                        </select>
-							</div><br>
-                            To City:
-							<div class="">
-                            <select name="city_id" class="form-control">
-                            <?php
-                            foreach($arr as $f)
-                            {
-                            ?>
-                            <option value="<?php echo $f->city_id?>"><?php echo $f->city_name;?></option>
-                            <?php
-                            }
-                            ?>
-                        </select>
-							</div>
-							<!--<div class="">
-								<input type="text" name="name" class="form-input" placeholder="Your Name" />
-							</div>
-							<div class="">
-								<input type="email" name="email" class="form-input" placeholder="Email" />
-							</div>
-							<div class="">
-								<input type="tel" name="phone" class="form-input" placeholder="Phone" />
-							</div>-->
-							<button type="submit" class="btn">Submit</button>
-						</form>
-					</div>
+				
 				
 			</div>
 		</div>

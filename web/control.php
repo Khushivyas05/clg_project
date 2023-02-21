@@ -113,7 +113,6 @@ class control extends model
             break;    
             
             case '/index':
-            $arr=$this->selectall('city');
             $fetcharr=$this->selectall('category');
             include_once('index.php');
             break;
@@ -153,8 +152,11 @@ class control extends model
             {
                 $booking_id=$_REQUEST['booking_id'];
                 $where=array("booking_id"=>$booking_id);
-                $run=$this->select_where_join2('invoice','branch','invoice.branch_id=branch.branch_id',$where);
+                $run=$this->select_where_join5('invoice','branch','invoice.branch_id=branch.branch_id','parcel','invoice.parcel_id=parcel.parcel_id',$where);
                 $fetch=$run->fetch_object();
+                $where=array("cust_id"=>$_SESSION['cust_id']);
+                $r=$this->select_where('customer_details',$where);
+                $f=$r->fetch_object();
             }
             include_once('invoice.php');
             break;

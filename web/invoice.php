@@ -1,146 +1,125 @@
 <?php
 include_once('header.php');
 ?>
-<html>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<style>
+.invoice-title h2, .invoice-title h3 {
+    font-size:20px;
+    display: inline-block;
+}
 
-	<head>
-	<title>Invoice</title>
+.table > tbody > tr > .no-line {
+    font-size:20px;
+    border-top: none;
+}
 
-		<style type="text/css">
-		body {	
-      	    
-			font-family: Verdana;
-		}
-		
-		div.invoice {
-		border:1px solid #ccc;
-		padding:10px;
-		height:740pt;
-		width:570pt;
-		}
+.table > thead > tr > .no-line {
+    font-size:20px;
+    border-bottom: none;
+}
 
-		div.company-address {
-			border:1px solid #ccc;
-			float:left;
-			width:200pt;
-		}
-		
-		div.invoice-details {
-			border:1px solid #ccc;
-			float:right;
-			width:200pt;
-		}
-		
-		div.customer-address {
-			border:1px solid #ccc;
-			float:right;
-			margin-bottom:50px;
-			margin-top:100px;
-			width:200pt;
-		}
-		
-		div.clear-fix {
-			clear:both;
-			float:none;
-		}
-		
-		table {
-			width:100%;
-		}
-		
-		th {
-			text-align: left;
-		}
-		
-		td {
-		}
-		
-		.text-left {
-			text-align:left;
-		}
-		
-		.text-center {
-			text-align:center;
-		}
-		
-		.text-right {
-			text-align:right;
-		}
-		
-		</style>
-	</head>
-
-	<body>
-  <h1><b>Invoice</b></h1>
-	<div class="invoice">
-		<div class="company-address">
-			ACME ltd
-			<br />
-			489 Road Street
-			<br />
-			London, AF3Z 7BP
-			<br />
-		</div>
-		<div class="invoice-details">
-			Invoice No:<?php echo $fetch->invoice_id;?>
-			<br />
-			Date: <?php echo $fetch->invoice_date;?>
-		</div>
-		<div class="customer-address">
-			To:
-			<br />
-			Mr. Bill Terence
-			<br />
-			123 Long Street
-			<br />
-			London, DC3P F3Z 
-			<br />
-		</div>
-		
-		<div class="clear-fix"></div>
-			<table border='1' cellspacing='0'>
-				<tr>
-					<th width=250>Description</th>
-					<th width=250>Price</th>
-					<th width=250>Total price</th>
-				</tr>
-
-			<?php
-			$total = 0;
-
-			
-				/*$description = $articles[0][$a];
-				$amount = $articles[1][$a];
-				$unit_price = number_format( $articles[2][$a], 2);*/
-				$total_price = $fetch->charges+$fetch->price;
-				$total += $total_price;
-				echo("<tr>");
-				echo("<td>$fetch->goods_type</td>");
-				//echo("<td class='text-center'>₹".number_format($fetch->charges)."</td>");
-				//echo("<td class='text-right'>₹".number_format($fetch->price)."</td>");
-				echo("<td class='text-right'>₹".number_format($fetch->price)."</td>");
-				echo("</tr>");
-			
-			
-			
-				echo("<tr>");
-				echo("<td colspan='3' class='text-right'>Sub total</td>");
-				echo("<td class='text-right'>₹" . number_format($fetch->price) . "</td>");
-				echo("</tr>");
-				echo("<tr>");
-				echo("<td colspan='3' class='text-right'>Charges</td>");
-				echo("<td class='text-right'>₹" . number_format($fetch->charges) . "</td>");
-				echo("</tr>");
-				echo("<tr>");
-				echo("<td colspan='3' class='text-right'><b>TOTAL</b></td>");
-				echo("<td class='text-right'><b>₹" . number_format($total) . "</b></td>");
-				echo("</tr>");
-			?>
-			</table>
-		</div>
-	</body>
-
-</html>
-<?php
+.table > tbody > tr > .thick-line {
+    font-size:20px;
+    border-top: 2px solid;
+}
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12" style="font-size:18px">
+    		<div class="invoice-title">
+    			<h1><strong>Invoice</strong></h1>
+    		</div>
+    		<hr>
+    		<div class="row">
+    			<div class="col-xs-6" style="font-size:18px">
+    				<address>
+    				<strong>Main Branch:</strong><br>
+                    F/F-4,Tarak Appartment,<br>
+                    punitnagar, Ghodasar, <br>
+    				Ahmedabad-380050<br>
+    				<strong>Branch Name:</strong>
+                    <?php echo $fetch->branch_name;?>	
+    				</address>
+    			</div>
+    			<div class="col-xs-6 text-right" style="font-size:18px">
+    				<address>
+        			<strong>Shipped To:</strong><br>
+    					<?php echo $f->cust_add;?><br>
+    				</address>
+    			</div>
+    		</div>
+    		<div class="row">
+    			<div class="col-xs-6" style="font-size:18px">
+    				<address>
+    					<strong>Payment Method:</strong><br>
+    					<?php echo $fetch->payment_type;?>
+    					
+    				</address>
+    			</div>
+    			<div class="col-xs-6 text-right" style="font-size:18px">
+    				<address>
+    					<strong>Order Date:</strong><br>
+    					<?php echo $fetch->invoice_date?><br><br>
+    				</address>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    
+    <div class="row">
+    	<div class="col-md-12">
+    		<div class="panel panel-default" style="font-size:18px">
+    			<div class="panel-heading" >
+    				<h3 class="panel-title" style="font-size:18px"><strong>Order summary</strong></h3>
+    			</div>
+    			<div class="panel-body">
+    				<div class="table-responsive">
+    					<table class="table table-stripped">
+    						<thead>
+                                <tr>
+        							<td><strong>Item</strong></td>
+        							<td class="text-center"><strong>Parcel Quantity</strong></td>
+        							<td class="text-right"><strong>Price</strong></td>
+                                </tr>
+    						</thead>
+    						<tbody>
+    							<!-- foreach ($order->lineItems as $line) or some such thing here -->
+    							<tr>
+    								<td><?php echo $fetch->goods_type;?></td>
+    								<td class="text-center"><?php echo $fetch->quantity;?></td>
+    								<td class="text-right"><?php echo number_format($fetch->price);?></td>
+    							</tr>
+    							<tr>
+    								<td class="thick-line"></td>
+    								<td class="thick-line"></td>
+    								<td class="thick-line text-center"><strong>Subtotal</strong></td>
+    								<td class="thick-line text-right"><?php echo number_format($fetch->price);?></td>
+    							</tr>
+    							<tr>
+    								<td class="no-line"></td>
+    								<td class="no-line"></td>
+    								<td class="no-line text-center"><strong>Charges</strong></td>
+    								<td class="no-line text-right"><?php echo number_format($fetch->charges);?></td>
+    							</tr>
+                                <?php
+                                $total_price=$fetch->price+$fetch->charges;
+                                ?>
+    							<tr>
+    								<td class="no-line"></td>
+    								<td class="no-line"></td>
+    								<td class="no-line text-center"><strong>Total</strong></td>
+    								<td class="no-line text-right"><?php echo number_format($total_price);?></td>
+    							</tr>
+    						</tbody>
+    					</table>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+</div>
+<?php 
 include_once('footer.php');
 ?>
