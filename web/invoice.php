@@ -8,7 +8,7 @@ include_once('header.php');
 
 		<style type="text/css">
 		body {	
-      	
+      	    
 			font-family: Verdana;
 		}
 		
@@ -71,7 +71,7 @@ include_once('header.php');
 	</head>
 
 	<body>
-  <h1 class="head"><b>Invoice</b></h1>
+  <h1><b>Invoice</b></h1>
 	<div class="invoice">
 		<div class="company-address">
 			ACME ltd
