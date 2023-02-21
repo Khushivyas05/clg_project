@@ -93,14 +93,36 @@ function validate()
               <label class="control-label">Booking Id</label>
               <input type="text"  name="booking_id" placeholder="booking_id" >
             </div>
+
 			<div class="col-md-12 form-group1">
-              <label class="control-label">Branch Id</label>
-              <input type="text"  name="branch_id" placeholder="branch_id" >
-            </div>
+			<label class="control-label">Branch name</label>
+            <select name="branch_id" class="form-control">
+			<?php
+			foreach($fetcharr as $f)
+			{
+			?>
+			<option value="<?php echo $f->branch_id?>"><?php echo $f->branch_name?></option>
+			<?php
+			}
+			?>
+			</select>
+		    </div>
+
 			<div class="col-md-12 form-group1">
-              <label class="control-label">Parcel Id</label>
-              <input type="text"  name="parcel_id" placeholder="parcel_id" >
-            </div>
+			<label class="control-label">Parcel Quantity</label>
+            <select name="parcel_id" class="form-control">
+			<?php
+			foreach($arr as $f)
+			{
+			?>
+			<option value="<?php echo $f->parcel_id?>"><?php echo $f->quantity?></option>
+			<?php
+			}
+			?>
+			</select>
+		    </div>
+
+			
 			<div class="col-md-12 form-group1">
               <label class="control-label">Invoice Date</label>
               <input type="date"  name="invoice_date" placeholder="invoice_date" >
@@ -121,16 +143,15 @@ function validate()
               <label class="control-label">Destination</label>
               <input type="text"  name="Destination" placeholder="Destination" >
             </div>
-			<div class="col-md-12 form-group1">
-              <label class="control-label">Payment Type</label>
-              <input type="text"  name="payment_type" placeholder="payment_type" >
+			<div class="top-inputs">    
+            Payment Type:
+            <input type="radio" name="payment_type" value="Cash" class="form-control" required="">Cash
+            <input type="radio" name="payment_type" value="Card" class="form-control" required="">Card
             </div>
 			<div class="col-md-12 form-group1">
-              <label class="control-label">Price</label>
+              <label class="control-label">price</label>
               <input type="text"  name="price" placeholder="price" >
             </div>
-			
-			
              <div class="clearfix"> </div>
    
              <div class="clearfix"> </div>
