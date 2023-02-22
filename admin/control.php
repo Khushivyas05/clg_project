@@ -232,6 +232,8 @@ class control extends model
 			break;
 
 			case '/add_invoice':
+			$fetcharr=$this->selectall('branch');
+			$arr=$this->selectall('parcel');
 			if(isset($_REQUEST['submit']))
 			{
 				$booking_id=$_REQUEST['booking_id'];
