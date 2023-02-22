@@ -86,10 +86,11 @@ include_once('header.php');
                         <div class="top-inputs">    
                          Date:<input type="date" name="book_date" placeholder="Date" class="form-control" required="">
                         </div>
-                        <div class="top-inputs">    
+                        
+                        <div>    
                          Payment Type:
-                         <input type="radio" name="payment_type" value="Cash" class="form-control" required="">Cash
-                         <input type="radio" name="payment_type" value="Card" class="form-control" required="">Card
+                         <div><input type="radio" name="payment_type" value="Cash" class="form-check-input" required="">Cash</div>
+                         <div><input type="radio" name="payment_type" value="Card" class="form-check-input" required="">Card</div>
                         </div>
                         
                         <div class="text-right">
