@@ -9,7 +9,7 @@ include_once('header.php');
             <ul class="breadcrumbs-custom-path">
                
                 <li><a href="index">Home <span class="fa fa-angle-double-right" aria-hidden="true"></span></a></li>
-                <li class="active">Check List</li>
+                <li class="active">Price List</li>
             </ul>
         </div>
     </div>
@@ -19,28 +19,34 @@ include_once('header.php');
   <div class="product-inner">
     <div class="container pt-2">
       <div class="checkout-right">
-        <h3 class="head"><b>Check List</b><h3>
+        <h3 class="head"><b>Price List</b><h3>
         <div class="table-responsive">
           <table class="timetable_sub">
             <thead>
               <tr>
-                <th>Sourece</th>
+                <th>Source</th>
                 <th>Destination</th>
                 <th>Rate</th>
               </tr>
             </thead>
             <tbody>
+              <?php
+              foreach($fetcharr as $f)
+              {
+              ?>
              <tr class="rem1">
               <td class="invert product-name">
-              <?php echo $fetcharr->source;?>
+              <?php echo $f->source;?>
                 </td>
                 <td class="invert product-name">
-                <?php echo $fetcharr->destination;?>
+                <?php echo $f->destination;?>
                 </td>
                 <td class="invert product-name">
-                  <?php echo $fetcharr->rate;?>
+                  <?php echo $f->rate;?>
                 </td>
-               
+               <?php
+               }
+               ?>
                 <!--<td class="invert">
                   <div class="quantity">
                     <div class="quantity-select d-flex">
@@ -99,8 +105,11 @@ include_once('header.php');
 
             </tbody>
           </table>
-        </div>
-      </div>
+          </div>
+          </div>
+          <strong>Note:</strong>Prices may vary as charges will be added at delivery time.
+        
+      
 
       <div class="checkout-left">
         <div class="address_form_hny">

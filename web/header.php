@@ -280,7 +280,7 @@ RIGHT SIDEBAR TOGGLE SECTION
           <a class="nav-link" href="index">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="about">About</a>
+          <a class="nav-link" href="pricelist">Price List</a>
         </li>
        <!-- <li class="nav-item">
           <a class="nav-link" href="booking">Booking</a>
@@ -335,7 +335,7 @@ RIGHT SIDEBAR TOGGLE SECTION
           <a class="nav-link" href="contact">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="checklist">Checklist</a>
+          <a class="nav-link" href="about">About</a>
         </li>
       </ul>
       <!--<form class="form-inline">

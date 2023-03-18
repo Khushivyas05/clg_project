@@ -147,9 +147,9 @@ class control extends model
             include_once('trackorder.php');
             break; 
 
-            case '/checklist':
+            case '/pricelist':
             $fetcharr=$this->selectall('city_rate');
-            include_once('checklist.php');
+            include_once('pricelist.php');
             break; 
 
             case '/invoice':
