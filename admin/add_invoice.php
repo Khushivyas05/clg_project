@@ -143,13 +143,13 @@ function validate()
               <label class="control-label">Destination</label>
               <input type="text"  name="Destination" placeholder="Destination" >
             </div>
-			<div class="top-inputs">    
-            Payment Type:
-            <input type="radio" name="payment_type" value="Cash" class="form-control" required="">Cash
-            <input type="radio" name="payment_type" value="Card" class="form-control" required="">Card
+			<div class="col-md-12 form-group1">    
+            <label class="control-label">Payment Type</label>
+            <input type="radio" name="payment_type" value="Cash" class="form-check-input" required="">Cash
+            <input type="radio" name="payment_type" value="Card" class="form-check-input" required="">Card
             </div>
 			<div class="col-md-12 form-group1">
-              <label class="control-label">price</label>
+              <label class="control-label">Price</label>
               <input type="text"  name="price" placeholder="price" >
             </div>
              <div class="clearfix"> </div>
