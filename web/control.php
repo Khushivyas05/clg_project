@@ -147,6 +147,11 @@ class control extends model
             include_once('trackorder.php');
             break; 
 
+            case '/checklist':
+            $fetcharr=$this->selectall('city_rate');
+            include_once('checklist.php');
+            break; 
+
             case '/invoice':
             if(isset($_REQUEST['booking_id']))
             {
