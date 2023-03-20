@@ -109,10 +109,10 @@ function validate()
 		    </div>
 
 			<div class="col-md-12 form-group1">
-			<label class="control-label">Parcel Quantity</label>
+			<label class="control-label">Parcel Quantity </label>
             <select name="parcel_id" class="form-control">
 			<?php
-			foreach($arr as $f)
+			foreach($fetcharr as $f)
 			{
 			?>
 			<option value="<?php echo $f->parcel_id?>"><?php echo $f->quantity?></option>
@@ -121,8 +121,8 @@ function validate()
 			?>
 			</select>
 		    </div>
-
-			
+             
+		   
 			<div class="col-md-12 form-group1">
               <label class="control-label">Invoice Date</label>
               <input type="date"  name="invoice_date" placeholder="invoice_date" >
