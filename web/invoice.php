@@ -38,15 +38,18 @@ include_once('header.php');
     				<strong>Main Branch:</strong><br>
                     F/F-4,Tarak Appartment,<br>
                     punitnagar, Ghodasar, <br>
-    				Ahmedabad-380050<br>
+    				Ahmedabad-380050<br><br>
     				<strong>Branch Name:</strong>
                     <?php echo $fetch->branch_name;?>	
     				</address>
     			</div>
     			<div class="col-xs-6 text-right" style="font-size:18px">
     				<address>
+					<strong>Invoice No.:</strong>
+                    <?php echo $fetch->invoice_id;?><br><br>
         			<strong>Shipped To:</strong><br>
-    					<?php echo $f->cust_add;?><br>
+					<?php echo $f->cust_name;?><br>
+    				<?php echo $f->cust_add;?><br>
     				</address>
     			</div>
     		</div>

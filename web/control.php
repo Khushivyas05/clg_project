@@ -147,6 +147,19 @@ class control extends model
             include_once('trackorder.php');
             break; 
 
+            case '/trackorderans':
+            $invoice_id=$_REQUEST['invoice_id'];
+            $where=array("invoice_id"=>$invoice_id);
+            $run=$this->select_where('tracking',$where);
+            $fetch=$run->fetch_object();
+            include_once('trackorderans.php');
+            break;
+
+            case '/pricelist':
+            $fetcharr=$this->selectall('city_rate');
+            include_once('pricelist.php');
+            break; 
+
             case '/invoice':
             if(isset($_REQUEST['booking_id']))
             {

@@ -12,7 +12,6 @@ else
 include_once('header.php');
 ?>
 <!-- inner banner -->
-
 <section class="w3l-inner-banner-main">
     <div class="about-inner sear-1">
         <div class="container">
@@ -64,7 +63,7 @@ include_once('header.php');
                         </div>
 
                         <div class="top-inputs">    
-                         Source:<!--<input type="text" name="source" placeholder="Source" class="form-control" required="">-->
+                         Source:
                          <select name="source" class="form-control">
                             <option value="Ahmedabad">Ahmedabad</option>
                             <option value="Indore">Indore</option>
@@ -73,8 +72,9 @@ include_once('header.php');
                             <option value="Rajkot">Rajkot</option>
                         </select>
                         </div>
+
                         <div class="top-inputs">    
-                         Destination:<!--<input type="text" name="destination" placeholder="Destination" class="form-control" required="">-->
+                         Destination:
                           <select name="destination" class="form-control">
                             <option value="Ahmedabad">Ahmedabad</option>
                             <option value="Indore">Indore</option>
@@ -83,15 +83,18 @@ include_once('header.php');
                             <option value="Rajkot">Rajkot</option>
                         </select>
                        </div>
+
                         <div class="top-inputs">    
                          Date:<input type="date" name="book_date" placeholder="Date" class="form-control" required="">
                         </div>
-                        <div class="top-inputs">    
+                        
+                        <div>    
                          Payment Type:
-                         <input type="radio" name="payment_type" value="Cash" class="form-control" required="">Cash
-                         <input type="radio" name="payment_type" value="Card" class="form-control" required="">Card
+                         <div><input type="radio" name="payment_type" value="Cash" class="form-check-input" required="">Cash</div>
+                         <div><input type="radio" name="payment_type" value="Card" class="form-check-input" required="">Card</div>
                         </div>
                         
+
                         <div class="text-right">
                             <button type="submit" name="submit" class="btn btn-theme2">Book Now</button>
                         </div>
