@@ -9,7 +9,7 @@ include_once('header.php');
             <ul class="breadcrumbs-custom-path">
                
                 <li><a href="index">Home <span class="fa fa-angle-double-right" aria-hidden="true"></span></a></li>
-                <li class="active">Your Order</li>
+                <li class="active">Your Order Status</li>
             </ul>
         </div>
     </div>
@@ -24,7 +24,7 @@ include_once('header.php');
           <table class="timetable_sub">
             <thead>
               <tr>
-                <th>Invoice Number</th>
+                <th>Invoice No.</th>
                 <th>Status</th>
                 <th>Tracking details</th>
               </tr>
