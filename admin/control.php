@@ -184,6 +184,11 @@ class control extends model
 			include_once('manage_goodstype.php');
 			break;	
 
+			case '/manage_tracking':
+			$manage_track_arr=$this->select_where_join('tracking','invoice','tracking.invoice_id=invoice.invoice_id');
+			include_once('manage_tracking.php');
+			break;
+
 			case '/add_emp':
 			$fetcharr=$this->selectall('city');
 			if(isset($_REQUEST['submit']))
