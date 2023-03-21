@@ -39,7 +39,7 @@ include_once('header.php');
 					  <tr>
 						<td><?php echo $m->track_id;?></td>
 						<td><?php echo $m->invoice_date;?></td>
-						<td><?php echo $m->status;?></td>
+						<td><a href="status?status_track_id=<?php echo $m->track_id;?>" class="btn btn-primary"><?php echo $m->status;?></a></td>
 						<td><?php echo $m->tracking_details;?></td>
 						<td><a href="editbranch?edit_track_id=<?php echo $m->track_id;?>" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_track_id=<?php echo $m->track_id;?>" class="btn btn-danger">Delete</a></td>
