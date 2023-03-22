@@ -397,7 +397,7 @@ class control extends model
 			include_once('editcity.php');
 			break;
 
-			case'/edittracking':
+			case'/edittrack':
 			if(isset($_REQUEST['edit_track_id']))
 			{
 				$track_id=$_REQUEST['edit_track_id'];
@@ -409,9 +409,8 @@ class control extends model
 				{
 					$track_id=$_REQUEST['track_id'];
 					$invoice_id=$_REQUEST['invoice_id'];
-					$status=$_REQUEST['status'];
 					$tracking_details=$_REQUEST['tracking_details'];
-					$arr=array("track_id"=>$track_id,"invoice_id"=>$invoice_id,"status"=>$status,"tracking_details"=>$tracking_details);
+					$arr=array("track_id"=>$track_id,"invoice_id"=>$invoice_id,"tracking_details"=>$tracking_details);
 					$res=$this->update('tracking',$arr,$where);
 					if($res)
 					{
@@ -421,7 +420,9 @@ class control extends model
 						</script>";
 					}
 				}
-			}	
+			}
+			include_once('edittrack.php');
+			break;	
 
 			case'/editcityrate':
 			if(isset($_REQUEST['edit_cr_id']))
@@ -557,11 +558,10 @@ class control extends model
 			case '/add_tracking':
 			if(isset($_REQUEST['submit']))
 			{
-				$track_id=$_REQUEST['track_id'];
 				$invoice_id=$_REQUEST['invoice_id'];
 				$status=$_REQUEST['status'];
 				$tracking_details=$_REQUEST['tracking_details'];
-				$arr=array("track_id"=>$track_id,"invoice_id"=>$invoice_id,"status"=>$status,"tracking_details"=>$tracking_details);
+				$arr=array("invoice_id"=>$invoice_id,"status"=>$status,"tracking_details"=>$tracking_details);
 				$res=$this->insert('tracking',$arr);
 				if($res)
 				{
