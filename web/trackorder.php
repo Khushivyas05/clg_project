@@ -7,7 +7,7 @@ include_once('header.php');
         <div class="container">
             
             
-        </div>vv
+        </div>
     </div>
 </section>
 <!-- //covers -->
