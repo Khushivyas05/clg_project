@@ -4,16 +4,16 @@ include_once('header.php');
 <script>
 function validate()
 {
-	var state_id=document.forms["trackingform"]["track_id"].value;
-	if(state_id=="" ||state_id==null)
+	var track_id=document.forms["trackingform"]["track_id"].value;
+	if(track_id=="" ||track_id==null)
 	{
-		alert("Please fill out the State Id");
+		alert("Please fill out the track Id");
 		return false;
 	}
 	var invoice_id=document.forms["trackingform"]["invoice_id"].value;
 	if(invoice_id=="" ||invoice_id==null)
 	{
-		alert("Please fill out the City invoice_id");
+		alert("Please fill out the invoice_id");
 		return false;
 	}
     var status=document.forms["trackingform"]["status"].value;
@@ -38,7 +38,7 @@ function validate()
 		    	<h2>
 				<a href="manage_customer">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Add City</span>
+				<span>Add Tracking</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -56,24 +56,21 @@ function validate()
 			
 			<div class="col-md-12 form-group1">
               <label class="control-label">Tracking Id</label>
-              <input type="text"  name="track_id" placeholder="Tracking Id " >
+              <input type="text"  name="track_id" placeholder="track_id" >
             </div>
 			<div class="col-md-12 form-group1">
               <label class="control-label">Invoice Id</label>
-              <input type="text"  name="invoice_id" placeholder="Invoice Id" >
+              <input type="text"  name="invoice_id" placeholder="invoice_id" >
             </div>
-			<div class="col-md-12 form-group1">
-              <label class="control-label">status</label>
-              <input type="text"  name="status" placeholder="status" >
+			<div class="col-md-12 form-group1">    
+            <label class="control-label">Status</label>
+            <input type="radio" name="status" value="Delivered" class="form-check-input" required="">Delivered
+            <input type="radio" name="status" value="Not Delivered" class="form-check-input" required="">Not Delivered
             </div>
 			<div class="col-md-12 form-group1">
               <label class="control-label">Tracking Details</label>
-              <input type="text"  name="tracking_details" placeholder="Tracking Details" >
+              <input type="text"  name="tracking_details" placeholder="tracking_details" >
             </div>
-			
-			
-			
-			
 			
 			<div class="clearfix"> </div>
    

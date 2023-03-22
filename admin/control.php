@@ -397,6 +397,32 @@ class control extends model
 			include_once('editcity.php');
 			break;
 
+			case'/edittracking':
+			if(isset($_REQUEST['edit_track_id']))
+			{
+				$track_id=$_REQUEST['edit_track_id'];
+				$where=array("track_id"=>$track_id);
+				$run=$this->select_where('tracking',$where);
+				$fetch=$run->fetch_object();
+					
+				if(isset($_REQUEST['submit']))
+				{
+					$track_id=$_REQUEST['track_id'];
+					$invoice_id=$_REQUEST['invoice_id'];
+					$status=$_REQUEST['status'];
+					$tracking_details=$_REQUEST['tracking_details'];
+					$arr=array("track_id"=>$track_id,"invoice_id"=>$invoice_id,"status"=>$status,"tracking_details"=>$tracking_details);
+					$res=$this->update('tracking',$arr,$where);
+					if($res)
+					{
+						echo "<script> 
+						alert('Update Success'); 
+						window.location='manage_tracking';
+						</script>";
+					}
+				}
+			}	
+
 			case'/editcityrate':
 			if(isset($_REQUEST['edit_cr_id']))
 			{
@@ -404,7 +430,7 @@ class control extends model
 				$where=array("cr_id"=>$cr_id);
 				$run=$this->select_where('city_rate',$where);
 				$fetch=$run->fetch_object();
-					
+						
 				if(isset($_REQUEST['submit']))
 				{
 					$cr_id=$_REQUEST['cr_id'];
@@ -527,7 +553,27 @@ class control extends model
 			}
 			include_once('add_city.php');
 			break;
-
+            
+			case '/add_tracking':
+			if(isset($_REQUEST['submit']))
+			{
+				$track_id=$_REQUEST['track_id'];
+				$invoice_id=$_REQUEST['invoice_id'];
+				$status=$_REQUEST['status'];
+				$tracking_details=$_REQUEST['tracking_details'];
+				$arr=array("track_id"=>$track_id,"invoice_id"=>$invoice_id,"status"=>$status,"tracking_details"=>$tracking_details);
+				$res=$this->insert('tracking',$arr);
+				if($res)
+				{
+					echo "<script>alert('Data Inserted successfully')</script>";
+				}
+				else
+				{
+					echo "<script>alert('Data is not inserted')</script>";
+				}
+			}
+			include_once('add_tracking.php');
+			break;
 				
 			case '/add_cityrate':
 			if(isset($_REQUEST['submit']))
@@ -1109,6 +1155,19 @@ class control extends model
 					echo "<script>
 					alert('Delete Success');
 					window.location='manage_fuel';
+					</script>";
+				}
+			}
+			if(isset($_REQUEST['del_track_id']))
+			{
+				$track_id=$_REQUEST['del_track_id'];
+				$where=array("track_id"=>$track_id);
+				$res=$this->delete_where('tracking',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('Delete Success');
+					window.location='manage_tracking';
 					</script>";
 				}
 			}
