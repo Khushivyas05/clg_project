@@ -14,7 +14,7 @@ function validate()
 	var invoice_id=document.forms["trackingform"]["invoice_id"].value;
 	if(invoice_id=="" || invoice_id==null)
 	{
-		alert("Please fill out the invoice_id");
+		alert("Please fill out the invoice id");
 		return false;
 	}
     var tracking_details=document.forms["trackingform"]["tracking_details"].value;
