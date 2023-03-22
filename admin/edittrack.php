@@ -57,7 +57,7 @@ function validate()
             </div>
             <div class="col-md-12 form-group1">
               <label class="control-label">Tracking Details</label>
-              <input type="text" placeholder="tracking_details"   name="tracking_details" value="<?php echo $fetch->tracking_details;?>"><br>
+              <input type="text" placeholder="tracking_details" name="tracking_details" value="<?php echo $fetch->tracking_details;?>"><br>
             </div>
 			
              <div class="clearfix"> </div>

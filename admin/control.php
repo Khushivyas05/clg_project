@@ -397,7 +397,7 @@ class control extends model
 			include_once('editcity.php');
 			break;
 
-			case'/edittracking':
+			case'/edittrack':
 			if(isset($_REQUEST['edit_track_id']))
 			{
 				$track_id=$_REQUEST['edit_track_id'];
