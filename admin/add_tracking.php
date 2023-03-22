@@ -53,14 +53,9 @@ function validate()
             <div class="clearfix"> </div>
             </div>
 		
-			
 			<div class="col-md-12 form-group1">
-              <label class="control-label">Tracking Id</label>
-              <input type="text"  name="track_id" placeholder="track_id" >
-            </div>
-			<div class="col-md-12 form-group1">
-              <label class="control-label">Invoice Id</label>
-              <input type="text"  name="invoice_id" placeholder="invoice_id" >
+              <label class="control-label">Invoice no.</label>
+              <input type="text"  name="invoice_id" placeholder="Invoice no." >
             </div>
 			<div class="col-md-12 form-group1">    
             <label class="control-label">Status</label>
