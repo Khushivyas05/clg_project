@@ -7,13 +7,13 @@ function validate()
 	var track_id=document.forms["trackingform"]["track_id"].value;
 	if(track_id=="" ||track_id==null)
 	{
-		alert("Please fill out the State Id");
+		alert("Please fill out the track Id");
 		return false;
 	}
 	var invoice_id=document.forms["trackingform"]["invoice_id"].value;
 	if(invoice_id=="" ||invoice_id==null)
 	{
-		alert("Please fill out the City invoice_id");
+		alert("Please fill out the invoice_id");
 		return false;
 	}
     var status=document.forms["trackingform"]["status"].value;
@@ -56,7 +56,7 @@ function validate()
 			
 			<div class="col-md-12 form-group1">
               <label class="control-label">Tracking Id</label>
-              <input type="text"  name="track_id" placeholder="tracking_id" >
+              <input type="text"  name="track_id" placeholder="track_id" >
             </div>
 			<div class="col-md-12 form-group1">
               <label class="control-label">Invoice Id</label>
