@@ -112,7 +112,7 @@ function validate()
 			<label class="control-label">Parcel Quantity </label>
             <select name="parcel_id" class="form-control">
 			<?php
-			foreach($fetcharr as $f)
+			foreach($arr as $f)
 			{
 			?>
 			<option value="<?php echo $f->parcel_id?>"><?php echo $f->quantity?></option>
