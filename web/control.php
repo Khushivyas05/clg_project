@@ -102,7 +102,7 @@ class control extends model
                 $res=$this->insert('feedback',$arr);
 				if($res)
 				{
-					echo  "<script>alert('Register success')</script>";
+					echo  "<script>alert('Feedback Registered')</script>";
 				}
 				else
 				{
