@@ -50,14 +50,16 @@ function validate()
             </div>
             
             <div class="clearfix"> </div>
-            </div>		
+            </div>	
+
 			<div class="col-md-12 form-group1">
-              <label class="control-label">Invoice Id</label>
-              <input type="text" placeholder="invoice_id"   name="invoice_id" value="<?php echo $fetch->invoice_id;?>"><br>
+              <label class="control-label">Invoice No.</label>
+              <input type="text" placeholder="Invoice No."   name="invoice_id" value="<?php echo $fetch->invoice_id;?>"><br>
             </div>
+
             <div class="col-md-12 form-group1">
               <label class="control-label">Tracking Details</label>
-              <input type="text" placeholder="tracking_details" name="tracking_details" value="<?php echo $fetch->tracking_details;?>"><br>
+              <input type="text" placeholder="Tracking Details" name="tracking_details" value="<?php echo $fetch->tracking_details;?>"><br>
             </div>
 			
              <div class="clearfix"> </div>
