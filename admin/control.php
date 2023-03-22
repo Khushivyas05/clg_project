@@ -1220,7 +1220,40 @@ class control extends model
 							</script>";
 					}
 				}
-			}	
+			}
+			
+			if(isset($_REQUEST['status_track_id']))
+			{
+				$track_id=$_REQUEST['status_track_id'];
+				$where=array("track_id"=>$track_id);
+				$run=$this->select_where('tracking',$where);
+				$fetch=$run->fetch_object();
+				$status=$fetch->status;
+				if($status=='Delivered')
+				{
+					$arr=array("status"=>"Not Delivered");
+					$res=$this->update('tracking',$arr,$where);
+					if($res)
+					{
+						echo "<script> 
+							alert('Not Delivered Success') 
+							window.location='manage_tracking';
+							</script>";
+					}
+				}
+				else
+				{
+					$arr=array("status"=>"Delivered");
+					$res=$this->update('tracking',$arr,$where);
+					if($res)
+					{
+						echo "<script> 
+							alert('Delivered Success') 
+							window.location='manage_tracking';
+							</script>";
+					}
+				}
+			}
 			
      		default :
 			include_once('404.php');
