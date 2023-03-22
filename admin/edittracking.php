@@ -7,7 +7,7 @@ function validate()
     var track_id=document.forms["trackingform"]["track_id"].value;
 	if(track_id=="" || track_id==null)
 	{
-		alert("Please fill out the track_id");
+		alert("Please fill out the trackid");
 		return false;
 	}
 	
