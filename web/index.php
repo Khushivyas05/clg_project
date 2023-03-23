@@ -220,12 +220,10 @@ include_once('header.php');
     
             <div class="row mt-5 pt-3">
                     <?php 
-                         foreach(array_slice($fetcharr,0,3) as $data)
-                         {
+                    foreach(array_slice($fetcharr,0,3) as $data)
+                    {
                     ?>
-               
                  <div class="grids4-info col-lg-4 col-md-6 offset-lg-0 offset-md-3 mt-lg-0 mt-4" style="padding:5px">
-                    
                  <div class="info-bg editContent">
                             <a href="category"><img src="../admin/pictures/<?php echo $data->img;?>" width="100%" height="275px" alt=""></a>
                             <h5 class="mt-4 mb-3 editContent"><a class="editContent" href="blog"></a></h5>
@@ -235,11 +233,9 @@ include_once('header.php');
                         </div>
                     
                     </div>
-					
-                
-                     <?php
-                     }
-                     ?>
+                    <?php
+                    }
+                    ?>
            </div>
            
     </div>

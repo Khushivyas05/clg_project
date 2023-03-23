@@ -102,7 +102,7 @@ class control extends model
                 $res=$this->insert('feedback',$arr);
 				if($res)
 				{
-					echo  "<script>alert('Register success')</script>";
+					echo  "<script>alert('Feedback Registered')</script>";
 				}
 				else
 				{
@@ -147,9 +147,17 @@ class control extends model
             include_once('trackorder.php');
             break; 
 
-            case '/checklist':
+            case '/trackorderans':
+            $invoice_id=$_REQUEST['invoice_id'];
+            $where=array("invoice_id"=>$invoice_id);
+            $run=$this->select_where('tracking',$where);
+            $fetch=$run->fetch_object();
+            include_once('trackorderans.php');
+            break;
+
+            case '/pricelist':
             $fetcharr=$this->selectall('city_rate');
-            include_once('checklist.php');
+            include_once('pricelist.php');
             break; 
 
             case '/invoice':

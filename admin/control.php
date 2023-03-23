@@ -184,6 +184,11 @@ class control extends model
 			include_once('manage_goodstype.php');
 			break;	
 
+			case '/manage_tracking':
+			$manage_track_arr=$this->select_where_join('tracking','invoice','tracking.invoice_id=invoice.invoice_id');
+			include_once('manage_tracking.php');
+			break;
+
 			case '/add_emp':
 			$fetcharr=$this->selectall('city');
 			if(isset($_REQUEST['submit']))
@@ -392,6 +397,33 @@ class control extends model
 			include_once('editcity.php');
 			break;
 
+			case'/edittrack':
+			if(isset($_REQUEST['edit_track_id']))
+			{
+				$track_id=$_REQUEST['edit_track_id'];
+				$where=array("track_id"=>$track_id);
+				$run=$this->select_where('tracking',$where);
+				$fetch=$run->fetch_object();
+					
+				if(isset($_REQUEST['submit']))
+				{
+					$track_id=$_REQUEST['track_id'];
+					$invoice_id=$_REQUEST['invoice_id'];
+					$tracking_details=$_REQUEST['tracking_details'];
+					$arr=array("track_id"=>$track_id,"invoice_id"=>$invoice_id,"tracking_details"=>$tracking_details);
+					$res=$this->update('tracking',$arr,$where);
+					if($res)
+					{
+						echo "<script> 
+						alert('Update Success'); 
+						window.location='manage_tracking';
+						</script>";
+					}
+				}
+			}
+			include_once('edittrack.php');
+			break;	
+
 			case'/editcityrate':
 			if(isset($_REQUEST['edit_cr_id']))
 			{
@@ -399,7 +431,7 @@ class control extends model
 				$where=array("cr_id"=>$cr_id);
 				$run=$this->select_where('city_rate',$where);
 				$fetch=$run->fetch_object();
-					
+						
 				if(isset($_REQUEST['submit']))
 				{
 					$cr_id=$_REQUEST['cr_id'];
@@ -522,7 +554,26 @@ class control extends model
 			}
 			include_once('add_city.php');
 			break;
-
+            
+			case '/add_tracking':
+			if(isset($_REQUEST['submit']))
+			{
+				$invoice_id=$_REQUEST['invoice_id'];
+				$status=$_REQUEST['status'];
+				$tracking_details=$_REQUEST['tracking_details'];
+				$arr=array("invoice_id"=>$invoice_id,"status"=>$status,"tracking_details"=>$tracking_details);
+				$res=$this->insert('tracking',$arr);
+				if($res)
+				{
+					echo "<script>alert('Data Inserted successfully')</script>";
+				}
+				else
+				{
+					echo "<script>alert('Data is not inserted')</script>";
+				}
+			}
+			include_once('add_tracking.php');
+			break;
 				
 			case '/add_cityrate':
 			if(isset($_REQUEST['submit']))
@@ -1107,6 +1158,19 @@ class control extends model
 					</script>";
 				}
 			}
+			if(isset($_REQUEST['del_track_id']))
+			{
+				$track_id=$_REQUEST['del_track_id'];
+				$where=array("track_id"=>$track_id);
+				$res=$this->delete_where('tracking',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('Delete Success');
+					window.location='manage_tracking';
+					</script>";
+				}
+			}
 
 			if(isset($_REQUEST['del_gt_id']))
 			 {
@@ -1156,7 +1220,40 @@ class control extends model
 							</script>";
 					}
 				}
-			}	
+			}
+			
+			if(isset($_REQUEST['status_track_id']))
+			{
+				$track_id=$_REQUEST['status_track_id'];
+				$where=array("track_id"=>$track_id);
+				$run=$this->select_where('tracking',$where);
+				$fetch=$run->fetch_object();
+				$status=$fetch->status;
+				if($status=='Delivered')
+				{
+					$arr=array("status"=>"Not Delivered");
+					$res=$this->update('tracking',$arr,$where);
+					if($res)
+					{
+						echo "<script> 
+							alert('Not Delivered Success') 
+							window.location='manage_tracking';
+							</script>";
+					}
+				}
+				else
+				{
+					$arr=array("status"=>"Delivered");
+					$res=$this->update('tracking',$arr,$where);
+					if($res)
+					{
+						echo "<script> 
+							alert('Delivered Success') 
+							window.location='manage_tracking';
+							</script>";
+					}
+				}
+			}
 			
      		default :
 			include_once('404.php');
