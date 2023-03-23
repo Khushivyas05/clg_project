@@ -22,30 +22,7 @@ include_once('header.php');
                             <button type="submit" name="submit" class="theme-button btn">Track Result</button>
                         </form>
                     </div>
-
-        <!--<table class="timetable_sub">
-            <thead>
-              <tr>
-                <th>Invoice Date</th>
-                <th>Status</th>
-                <th>Tracking details</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="rem1">
-              <td class="invert product-name">
-                  <?php //echo $fetch->invoice_id;?>
-                </td>
-                <td class="invert product-name">
-                <?php //echo $fetch->status;?>
-                </td>
-                <td class="invert product-name">
-                  <?php //echo $fetch->tracking_details;?>
-                </td>
-            </tr>
-            </tbody>
-        </table>-->
-                
+                                    
             </div>
         </div>
     </section>
