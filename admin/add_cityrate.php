@@ -38,7 +38,7 @@ function validate()
 		    	<h2>
 				<a href="manage_customer">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Add Cityrate</span>
+				<span>ADD Cityrate</span>
 				</h2>
 		    </div>
 		<!--//banner-->
