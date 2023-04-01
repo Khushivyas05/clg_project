@@ -45,13 +45,13 @@ class control extends model
 				else
 				{
 					$run=$this->select_where('employee_details',$where);
-					
+					$fetch=$run->fetch_object();
 					$res=$run->num_rows; 
 					if($res==1) 
 					{
 						
 						$_SESSION['employee_details']=$username;
-						
+						$_SESSION['emp_name']=$fetch->emp_name;
 						echo "<script> 
 							alert('Login Success') 
 							window.location='manage_customer';

@@ -51,9 +51,8 @@ include_once('header.php');
 				if(isset($_SESSION['employee_details']))
 				{
 				?>
-				<h6>Id:<?php echo $fetch->emp_id;?> </h6>
 				<table>
-				<tr><td>Userame</td>  
+				<tr><td>Username</td>  
 				<td>:</td>  
 				<td><?php echo $fetch->username;?></td>
 				</tr>
@@ -65,7 +64,7 @@ include_once('header.php');
 				<td>:</td>  
 				<td><?php echo $fetch->emp_add;?></td>
 				</tr>
-				<tr><td>Desgination</td>  
+				<tr><td>Designation</td>  
 				<td>:</td>  
 				<td><?php echo $fetch->designation;?></td>
 				</tr>
@@ -77,7 +76,7 @@ include_once('header.php');
 				<td>:</td>  
 				<td><?php echo $fetch->contact;?></td>
 				</tr>
-				<tr><td>Driving licence</td>  
+				<tr><td>Driving licence No.</td>  
 				<td>:</td>  
 				<td><?php echo $fetch->driving_licence;?></td>
 				</tr>
