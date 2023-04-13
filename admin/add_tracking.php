@@ -54,8 +54,8 @@ function validate()
             </div>
 		
 			<div class="col-md-12 form-group1">
-              <label class="control-label">Invoice no.</label>
-              <input type="text"  name="invoice_id" placeholder="Invoice no." >
+              <label class="control-label">Order no.</label>
+              <input type="text"  name="booking_id" placeholder="Order no." >
             </div>
 			<div class="col-md-12 form-group1">    
             <label class="control-label">Status</label>

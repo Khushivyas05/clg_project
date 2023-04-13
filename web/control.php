@@ -148,8 +148,8 @@ class control extends model
             break; 
 
             case '/trackorderans':
-            $invoice_id=$_REQUEST['invoice_id'];
-            $where=array("invoice_id"=>$invoice_id);
+            $booking_id=$_REQUEST['booking_id'];
+            $where=array("booking_id"=>$booking_id);
             $run=$this->select_where('tracking',$where);
             $fetch=$run->fetch_object();
             include_once('trackorderans.php');
