@@ -45,13 +45,13 @@ class control extends model
 				else
 				{
 					$run=$this->select_where('employee_details',$where);
-					
+					$fetch=$run->fetch_object();
 					$res=$run->num_rows; 
 					if($res==1) 
 					{
 						
 						$_SESSION['employee_details']=$username;
-						
+						$_SESSION['emp_name']=$fetch->emp_name;
 						echo "<script> 
 							alert('Login Success') 
 							window.location='manage_customer';
@@ -185,7 +185,7 @@ class control extends model
 			break;	
 
 			case '/manage_tracking':
-			$manage_track_arr=$this->select_where_join('tracking','invoice','tracking.invoice_id=invoice.invoice_id');
+			$manage_track_arr=$this->select_where_join('tracking','booking','tracking.booking_id=booking.booking_id');
 			include_once('manage_tracking.php');
 			break;
 
@@ -408,9 +408,9 @@ class control extends model
 				if(isset($_REQUEST['submit']))
 				{
 					$track_id=$_REQUEST['track_id'];
-					$invoice_id=$_REQUEST['invoice_id'];
+					$booking_id=$_REQUEST['booking_id'];
 					$tracking_details=$_REQUEST['tracking_details'];
-					$arr=array("track_id"=>$track_id,"invoice_id"=>$invoice_id,"tracking_details"=>$tracking_details);
+					$arr=array("track_id"=>$track_id,"booking_id"=>$booking_id,"tracking_details"=>$tracking_details);
 					$res=$this->update('tracking',$arr,$where);
 					if($res)
 					{
@@ -558,10 +558,10 @@ class control extends model
 			case '/add_tracking':
 			if(isset($_REQUEST['submit']))
 			{
-				$invoice_id=$_REQUEST['invoice_id'];
+				$booking_id=$_REQUEST['booking_id'];
 				$status=$_REQUEST['status'];
 				$tracking_details=$_REQUEST['tracking_details'];
-				$arr=array("invoice_id"=>$invoice_id,"status"=>$status,"tracking_details"=>$tracking_details);
+				$arr=array("booking_id"=>$booking_id,"status"=>$status,"tracking_details"=>$tracking_details);
 				$res=$this->insert('tracking',$arr);
 				if($res)
 				{

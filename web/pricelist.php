@@ -114,15 +114,6 @@ include_once('header.php');
       <div class="checkout-left">
         <div class="address_form_hny">
           <div class="checkout-right-basket">
-            <!--<a href="feedback" class="btn btn-secondary btn-theme">
-              <div class="anim"></div><span>Add Feedback</span>
-            </a>
-            <a href="order" class="btn btn-theme3">
-              <div class="anim"></div><span>Your Order</span>
-            </a>
-           <a href="editprofile?edit_cust_id=<?php echo $fetch->cust_id;?>" class="btn btn-secondary btn-theme">
-            Edit Profile
-            </a>-->
           </div>
         </div>
         <div class="clearfix"> </div>

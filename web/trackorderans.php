@@ -24,7 +24,7 @@ include_once('header.php');
           <table class="timetable_sub">
             <thead>
               <tr>
-                <th>Invoice No.</th>
+                <th>Order No.</th>
                 <th>Status</th>
                 <th>Tracking details</th>
               </tr>
@@ -32,7 +32,7 @@ include_once('header.php');
             <tbody>
               <tr class="rem1">
                 <td class="invert product-name">
-                  <?php echo $fetch->invoice_id;?>
+                  <?php echo $fetch->booking_id;?>
                 </td>
                 <td class="invert product-name">
                   <?php echo $fetch->status;?>
