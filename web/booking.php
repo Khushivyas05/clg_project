@@ -47,20 +47,11 @@ include_once('header.php');
                         <div class="top-inputs">
                         <input type="hidden" name="cust_id" placeholder="" value="<?php echo $_SESSION['cust_id'];?>" class="form-control" required="">
                         </div>
-                        
+
                         <div class="top-inputs">
-                        Select Truck:
-                        <select name="cate_id" class="form-control">
-                            <?php
-                            foreach($fetcharr as $f)
-                            {
-                            ?>
-                            <option value="<?php echo $f->cate_id?>"><?php echo $f->company_name; echo "&nbsp &nbsp"; echo $f->model_name;?></option>
-                            <?php
-                            }
-                            ?>
-                        </select>
+                        <input type="hidden" name="cate_id" value="<?php echo $fetch->cate_id;?>" placeholder=""  class="form-control" required="">
                         </div>
+                       
 
                         <div class="top-inputs">    
                          Source:

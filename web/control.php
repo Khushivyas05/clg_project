@@ -119,26 +119,32 @@ class control extends model
 
             
             case '/booking':
-            $fetcharr=$this->selectall('category');
-            if(isset($_REQUEST['submit'])) 
+            if(isset($_REQUEST['cate_id']))
             {
-                $cust_id=$_REQUEST['cust_id'];
                 $cate_id=$_REQUEST['cate_id'];
-                $source=$_REQUEST['source'];
-                $destination=$_REQUEST['destination'];
-                $book_date=$_REQUEST['book_date'];
-                $payment_type=$_REQUEST['payment_type'];
+				$where=array("cate_id"=>$cate_id);
+				$run=$this->select_where('category',$where);
+				$fetch=$run->fetch_object();
+                if(isset($_REQUEST['submit'])) 
+                {
+                    $cust_id=$_REQUEST['cust_id'];
+                    $cate_id=$_REQUEST['cate_id'];
+                    $source=$_REQUEST['source'];
+                    $destination=$_REQUEST['destination'];
+                    $book_date=$_REQUEST['book_date'];
+                    $payment_type=$_REQUEST['payment_type'];
 
-                $arr=array("cust_id"=>$cust_id,"cate_id"=>$cate_id,"source"=>$source,"destination"=>$destination,"book_date"=>$book_date,"payment_type"=>$payment_type);
-                $res=$this->insert('booking',$arr);
-				if($res)
-				{
-					echo  "<script>alert('Register success')</script>";
-				}
-				else
-				{
-					echo "<script>alert('Not success')</script>";
-				}
+                    $arr=array("cust_id"=>$cust_id,"cate_id"=>$cate_id,"source"=>$source,"destination"=>$destination,"book_date"=>$book_date,"payment_type"=>$payment_type);
+                    $res=$this->insert('booking',$arr);
+                    if($res)
+                    {
+                        echo  "<script>alert('Register success')</script>";
+                    }
+                    else
+                    {
+                        echo "<script>alert('Not success')</script>";
+                    }
+                }
             }
             include_once('booking.php');
             break;

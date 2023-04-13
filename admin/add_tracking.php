@@ -52,10 +52,13 @@ function validate()
          	<div class="vali-form">
             <div class="clearfix"> </div>
             </div>
-		
 			<div class="col-md-12 form-group1">
-              <label class="control-label">Invoice no.</label>
-              <input type="text"  name="invoice_id" placeholder="Invoice no." >
+              <label class="control-label">Track Id</label>
+              <input type="text"  name="track_id" placeholder="track Id" >
+            </div>
+			<div class="col-md-12 form-group1">
+              <label class="control-label">Invoice Id</label>
+              <input type="text"  name="invoice_id" placeholder="Invoice id." >
             </div>
 			<div class="col-md-12 form-group1">    
             <label class="control-label">Status</label>

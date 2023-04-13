@@ -44,7 +44,7 @@ include_once('header.php');
               if(isset($_SESSION['username']))
               {
               ?>
-              <a href="booking" class="btn btn-secondary btn-theme1">
+              <a href="booking?cate_id=<?php echo $data->cate_id;?>" class="btn btn-secondary btn-theme1">
               <?php
               }
               else
