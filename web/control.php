@@ -175,9 +175,14 @@ class control extends model
                 $where=array("booking_id"=>$booking_id);
                 $run=$this->select_where_join5('invoice','branch','invoice.branch_id=branch.branch_id','parcel','invoice.parcel_id=parcel.parcel_id',$where);
                 $fetch=$run->fetch_object();
+
                 $where=array("cust_id"=>$_SESSION['cust_id']);
                 $r=$this->select_where('customer_details',$where);
                 $f=$r->fetch_object();
+
+                $data=array("booking_id"=>$booking_id);
+                $ru=$this->select_where_join2('booking','goods_type','booking.gt_id=goods_type.gt_id',$data);
+                $fe=$ru->fetch_object();
             }
             include_once('invoice.php');
             break;

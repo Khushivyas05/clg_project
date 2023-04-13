@@ -38,7 +38,7 @@ class model
 		$key_arr=array_keys($where);
 		$value_arr=array_values($where);
 		
-		$sel="select * from $tbl where 1=1";
+		echo $sel="select * from $tbl where 1=1";
 		$i=0;
 		foreach($where as $w)
 		{
@@ -113,7 +113,7 @@ class model
 		$key_arr=array_keys($where);
 		$value_arr=array_values($where);
 		
-		echo $sel="select * from $tbl1 join $tbl2 on $on1 join $tbl3 on $on2 join $tbl4 on $on3 where 1=1";
+		$sel="select * from $tbl1 join $tbl2 on $on1 join $tbl3 on $on2 join $tbl4 on $on3 where 1=1";
 		$i=0;
 		foreach($where as $w)
 		{
