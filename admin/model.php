@@ -108,6 +108,22 @@ class model
 		return $run;
 	}
 
+	function select_where_join6($tbl1,$tbl2,$on1,$tbl3,$on2,$tbl4,$on3,$where)
+	{
+		$key_arr=array_keys($where);
+		$value_arr=array_values($where);
+		
+		echo $sel="select * from $tbl1 join $tbl2 on $on1 join $tbl3 on $on2 join $tbl4 on $on3 where 1=1";
+		$i=0;
+		foreach($where as $w)
+		{
+			$sel.=" and $key_arr[$i]='$value_arr[$i]'";
+			$i++;
+		}
+		$run=$this->conn->query($sel);
+		return $run;
+	}
+
 	function select_where_join1($tbl1,$tbl2,$on1,$tbl3,$on2)
 	{
 	    $ins="select * from $tbl1 join $tbl2 on $on1 join $tbl3 on $on2";
@@ -128,7 +144,7 @@ class model
 
 	function select_where_join3($tbl1,$tbl2,$on1,$tbl3,$on2,$tbl4,$on3)
 	{
-	    $ins="select * from $tbl1 join $tbl2 on $on1 join $tbl3 on $on2 join $tbl4 on $on3";
+	    echo $ins="select * from $tbl1 join $tbl2 on $on1 join $tbl3 on $on2 join $tbl4 on $on3";
 		$run=$this->conn->query($ins);
 		while($fetch=$run->fetch_object())
 		{
