@@ -155,7 +155,7 @@ class control extends model
 			break;
 
 			case '/manage_booking':
-			$manage_booking_arr=$this->select_where_join1('booking','customer_details','booking.cust_id=customer_details.cust_id','category','booking.cate_id=category.cate_id');
+			$manage_booking_arr=$this->select_where_join3('booking','customer_details','booking.cust_id=customer_details.cust_id','category','booking.cate_id=category.cate_id','goods_type','booking.gt_id=goods_type.gt_id');
 			include_once('manage_booking.php');
 			break;
 
