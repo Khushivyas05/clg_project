@@ -102,8 +102,8 @@ function validate()
             </div>
 			
 			<div class="col-md-12 form-group1">
-			<label class="control-label">Book date</label>
-            <input type="text" placeholder="booking date" name="booking_id" value="<?php echo $fetch->booking_id;?>" >
+			<label class="control-label">Book No.</label>
+            <input type="text" placeholder="Booking No." name="booking_id" value="<?php echo $fetch->booking_id;?>" >
             </div>
 			 <div class="clearfix"> </div>
 			

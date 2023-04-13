@@ -47,21 +47,11 @@ include_once('header.php');
                         <div class="top-inputs">
                         <input type="hidden" name="cust_id" placeholder="" value="<?php echo $_SESSION['cust_id'];?>" class="form-control" required="">
                         </div>
-                        
-                        <div class="top-inputs">
-                        Select Truck:
-                        <select name="cate_id" class="form-control">
-                            <?php
-                            foreach($fetcharr as $f)
-                            {
-                            ?>
-                            <option value="<?php echo $f->cate_id?>"><?php echo $f->company_name; echo "&nbsp &nbsp"; echo $f->model_name;?></option>
-                            <?php
-                            }
-                            ?>
-                        </select>
-                        </div>
 
+                        <div class="top-inputs">
+                        <input type="hidden" name="cate_id" value="<?php echo $fetch->cate_id;?>" placeholder=""  class="form-control" required="">
+                        </div>
+                       
                         <div class="top-inputs">    
                          Source:
                          <select name="source" class="form-control">
@@ -81,6 +71,20 @@ include_once('header.php');
                             <option value="Surat">Surat</option>
                             <option value="Bhopal">Bhopal</option>
                             <option value="Rajkot">Rajkot</option>
+                        </select>
+                       </div>
+
+                       <div class="top-inputs">    
+                         Goods type:
+                         <select name="gt_id" class="form-control">
+                        <?php
+                        foreach($fetcharr as $f)
+                        {
+                        ?>
+                        <option value="<?php echo $f->gt_id?>"><?php echo $f->g_type;?></option>
+                        <?php
+                        }
+                        ?>
                         </select>
                        </div>
 
