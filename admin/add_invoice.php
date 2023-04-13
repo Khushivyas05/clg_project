@@ -90,8 +90,8 @@ function validate()
             <div class="clearfix"> </div>
             </div>
 			<div class="col-md-12 form-group1">
-              <label class="control-label">Booking Id</label>
-              <input type="text"  name="booking_id" placeholder="booking_id" >
+              <label class="control-label">Booking No.</label>
+              <input type="text"  name="booking_id" placeholder="Booking No." >
             </div>
 
 			<div class="col-md-12 form-group1">
