@@ -1385,13 +1385,13 @@ label.control-label {
 	padding: 0.5em 1em;
 }
 .login-mail i{
-	color: #999;
+	color: black;
 }
 .login-mail input[type="text"],.login-mail input[type="password"]{
 	border: none;
 	outline:none;
 	font-size: 0.9em;
-    color: #999;
+    color: black;
     width: 89%;
     font-family: 'Muli-Regular';
 }

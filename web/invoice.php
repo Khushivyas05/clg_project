@@ -92,19 +92,19 @@ include_once('header.php');
     							<tr>
     								<td><?php echo $fetch->goods_type;?></td>
     								<td class="text-center"><?php echo $fetch->quantity;?></td>
-    								<td class="text-right"><?php echo number_format($fetch->price);?></td>
+    								<td class="text-right"><?php echo "₹".number_format($fetch->price);?></td>
     							</tr>
     							<tr>
     								<td class="thick-line"></td>
     								<td class="thick-line"></td>
     								<td class="thick-line text-center"><strong>Subtotal</strong></td>
-    								<td class="thick-line text-right"><?php echo number_format($fetch->price);?></td>
+    								<td class="thick-line text-right"><?php echo "₹".number_format($fetch->price);?></td>
     							</tr>
     							<tr>
     								<td class="no-line"></td>
     								<td class="no-line"></td>
     								<td class="no-line text-center"><strong>Charges</strong></td>
-    								<td class="no-line text-right"><?php echo number_format($fetch->charges);?></td>
+    								<td class="no-line text-right"><?php echo "₹".number_format($fetch->charges);?></td>
     							</tr>
                                 <?php
                                 $total_price=$fetch->price+$fetch->charges;
@@ -113,7 +113,7 @@ include_once('header.php');
     								<td class="no-line"></td>
     								<td class="no-line"></td>
     								<td class="no-line text-center"><strong>Total</strong></td>
-    								<td class="no-line text-right"><?php echo number_format($total_price);?></td>
+    								<td class="no-line text-right"><?php echo "₹".number_format($total_price);?></td>
     							</tr>
     						</tbody>
     					</table>

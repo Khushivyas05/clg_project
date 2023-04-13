@@ -95,11 +95,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		    <div class="drop-men" >
 		        <ul class=" nav_1">
 		           
-		    		
+
 		         </ul>
 		            </li>
 					<li class="dropdown">
-		              <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"><span class=" name-caret">Rackham<i class="caret"></i></span><img src="images/wo.jpg"></a>
+		              <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"><span class=" name-caret"><?php if(isset($_SESSION['admin_details'])){ echo $_SESSION['admin_details']; } elseif(isset($_SESSION['employee_details'])){ echo $_SESSION['emp_name'];}
+?><i class="caret"></i></span><img src="images/wo.jpg"></a>
 		              <ul class="dropdown-menu " role="menu">
 		                <li><a href="profile"><i class="fa fa-user"></i>Profile</a></li>
 						<li><a href="logout"><i class="fa fa-user"></i>Logout</a></li>
@@ -123,7 +124,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li><a href="manage_customer" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Customer</a></li>
 					<li><a href="manage_feedback" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Feedback </a></li>
 					<li><a href="manage_booking" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Booking</a></li>
-					<li><a href="manage_fuel" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Fuel</a></li>
+					<!--<li><a href="manage_fuel" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Fuel</a></li>-->
 					<li><a href="manage_payment" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Payment</a></li>
 					<li><a href="manage_parcel" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Parcel</a></li>
                     <li>
@@ -205,7 +206,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                  ?>
                  
 					<li><a href="manage_customer" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Customer</a></li>
-                   <li>
+                   <!--<li>
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Fuel</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li><a href="add_fuel" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Fuel Amount</a></li>
@@ -213,7 +214,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <li><a href="manage_fuel" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Fuel Amount</a></li>
 
 					   </ul>
-                    </li>
+                    </li>-->
 
                    <li>
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Branch</span><span class="fa arrow"></span></a>
