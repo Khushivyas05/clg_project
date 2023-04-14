@@ -140,7 +140,9 @@ class control extends model
                     $res=$this->insert('booking',$arr);
                     if($res)
                     {
-                        echo  "<script>alert('Register success')</script>";
+                        echo  "<script>alert('Booking Success')
+                                window.location='checkout';
+                               </script>";
                     }
                     else
                     {
@@ -289,7 +291,14 @@ class control extends model
                  window.location='index';
                  </script>";
             break;
-            
+
+            case '/placeorder':
+            include_once('placeorder.php');
+            break;
+
+            case '/checkout':
+            include_once('checkout.php');
+            break;
 
             default:
             include_once('404.php');
