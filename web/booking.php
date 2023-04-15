@@ -52,7 +52,6 @@ include_once('header.php');
                         <input type="hidden" name="cate_id" value="<?php echo $fetch->cate_id;?>" placeholder=""  class="form-control" required="">
                         </div>
                        
-
                         <div class="top-inputs">    
                          Source:
                          <select name="source" class="form-control">
@@ -72,6 +71,20 @@ include_once('header.php');
                             <option value="Surat">Surat</option>
                             <option value="Bhopal">Bhopal</option>
                             <option value="Rajkot">Rajkot</option>
+                        </select>
+                       </div>
+
+                       <div class="top-inputs">    
+                         Goods type:
+                         <select name="gt_id" class="form-control">
+                        <?php
+                        foreach($fetcharr as $f)
+                        {
+                        ?>
+                        <option value="<?php echo $f->gt_id?>"><?php echo $f->g_type;?></option>
+                        <?php
+                        }
+                        ?>
                         </select>
                        </div>
 

@@ -90,7 +90,7 @@ include_once('header.php');
     						<tbody>
     							<!-- foreach ($order->lineItems as $line) or some such thing here -->
     							<tr>
-    								<td><?php echo $fetch->goods_type;?></td>
+    								<td><?php echo $fe->g_type;?></td>
     								<td class="text-center"><?php echo $fetch->quantity;?></td>
     								<td class="text-right"><?php echo "₹".number_format($fetch->price);?></td>
     							</tr>

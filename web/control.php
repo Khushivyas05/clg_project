@@ -119,6 +119,7 @@ class control extends model
 
             
             case '/booking':
+            $fetcharr=$this->selectall('goods_type');
             if(isset($_REQUEST['cate_id']))
             {
                 $cate_id=$_REQUEST['cate_id'];
@@ -131,14 +132,17 @@ class control extends model
                     $cate_id=$_REQUEST['cate_id'];
                     $source=$_REQUEST['source'];
                     $destination=$_REQUEST['destination'];
+                    $gt_id=$_REQUEST['gt_id'];
                     $book_date=$_REQUEST['book_date'];
                     $payment_type=$_REQUEST['payment_type'];
 
-                    $arr=array("cust_id"=>$cust_id,"cate_id"=>$cate_id,"source"=>$source,"destination"=>$destination,"book_date"=>$book_date,"payment_type"=>$payment_type);
+                    $arr=array("cust_id"=>$cust_id,"cate_id"=>$cate_id,"source"=>$source,"destination"=>$destination,"gt_id"=>$gt_id,"book_date"=>$book_date,"payment_type"=>$payment_type);
                     $res=$this->insert('booking',$arr);
                     if($res)
                     {
-                        echo  "<script>alert('Register success')</script>";
+                        echo  "<script>alert('Booking Success')
+                                window.location='checkout';
+                               </script>";
                     }
                     else
                     {
@@ -173,9 +177,14 @@ class control extends model
                 $where=array("booking_id"=>$booking_id);
                 $run=$this->select_where_join5('invoice','branch','invoice.branch_id=branch.branch_id','parcel','invoice.parcel_id=parcel.parcel_id',$where);
                 $fetch=$run->fetch_object();
+
                 $where=array("cust_id"=>$_SESSION['cust_id']);
                 $r=$this->select_where('customer_details',$where);
                 $f=$r->fetch_object();
+
+                $data=array("booking_id"=>$booking_id);
+                $ru=$this->select_where_join2('booking','goods_type','booking.gt_id=goods_type.gt_id',$data);
+                $fe=$ru->fetch_object();
             }
             include_once('invoice.php');
             break;
@@ -287,7 +296,14 @@ class control extends model
                  window.location='index';
                  </script>";
             break;
-            
+
+            case '/placeorder':
+            include_once('placeorder.php');
+            break;
+
+            case '/checkout':
+            include_once('checkout.php');
+            break;
 
             default:
             include_once('404.php');
