@@ -38,7 +38,7 @@ class model
 		$key_arr=array_keys($where);
 		$value_arr=array_values($where);
 		
-		echo $sel="select * from $tbl where 1=1";
+		$sel="select * from $tbl where 1=1";
 		$i=0;
 		foreach($where as $w)
 		{

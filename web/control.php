@@ -126,7 +126,7 @@ class control extends model
 				$where=array("cate_id"=>$cate_id);
 				$run=$this->select_where('category',$where);
 				$fetch=$run->fetch_object();
-                if(isset($_REQUEST['submit'])) 
+                /*if(isset($_REQUEST['submit'])) 
                 {
                     $cust_id=$_REQUEST['cust_id'];
                     $cate_id=$_REQUEST['cate_id'];
@@ -148,7 +148,7 @@ class control extends model
                     {
                         echo "<script>alert('Not success')</script>";
                     }
-                }
+                }*/
             }
             include_once('booking.php');
             break;
@@ -302,6 +302,54 @@ class control extends model
             break;
 
             case '/checkout':
+            $cust_id=$_REQUEST['cust_id'];
+            $where=array("cust_id"=>$cust_id);
+            $run=$this->select_where('customer_details',$where);
+            $fetch=$run->fetch_object();
+
+            $cate_id=$_REQUEST['cate_id'];
+            $where1=array("cate_id"=>$cate_id);
+            $run1=$this->select_where('category',$where1);
+            $fetch1=$run1->fetch_object();
+
+            $source=$_REQUEST['source'];
+            $destination=$_REQUEST['destination'];
+            $where2=array("source"=>$source,"destination"=>$destination);
+            $run2=$this->select_where('city_rate',$where2);
+            $fetch2=$run2->fetch_object();
+
+            $gt_id=$_REQUEST['gt_id'];
+            $where3=array("gt_id"=>$gt_id);
+            $run3=$this->select_where('goods_type',$where3);
+            $fetch3=$run3->fetch_object();
+
+            $book_date=$_REQUEST['book_date'];
+            $payment_type=$_REQUEST['payment_type'];
+            
+            if(isset($_REQUEST['submit']))
+            {
+                $cust_id=$_REQUEST['cust_id'];
+                $cate_id=$_REQUEST['cate_id'];
+                $source=$_REQUEST['source'];
+                $destination=$_REQUEST['destination'];
+                $gt_id=$_REQUEST['gt_id'];
+                $book_date=$_REQUEST['book_date'];
+                $payment_type=$_REQUEST['payment_type'];
+
+                $arr=array("cust_id"=>$cust_id,"cate_id"=>$cate_id,"source"=>$source,"destination"=>$destination,"gt_id"=>$gt_id,"book_date"=>$book_date,"payment_type"=>$payment_type);
+                $res=$this->insert('booking',$arr);
+                if($res)
+                {
+                    echo  "<script>alert('Booking Success')
+                            window.location='placeorder';
+                          </script>";
+                }
+                else
+                {
+                    echo "<script>alert('Not success')</script>";
+                }
+            }
+            
             include_once('checkout.php');
             break;
 
