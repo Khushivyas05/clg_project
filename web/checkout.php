@@ -60,7 +60,7 @@ include_once('header.php');
                 </td>
 
                 <td class="invert product-name">
-                  <?php echo $fetch2->rate;?>
+                <input type="hidden" name="price" value="<?php echo $fetch2->rate;?>"><?php echo $fetch2->rate;?></input>
                 </td>
 
                 <td class="invert product-name">

@@ -48,8 +48,10 @@ include_once('header.php');
 					<strong>Invoice No.:</strong>
                     <?php echo $fetch->invoice_id;?><br><br>
         			<strong>Shipped To:</strong><br>
-					<?php echo $f->cust_name;?><br>
-    				<?php echo $f->cust_add;?><br>
+					<?php echo $f->cust_name;?><br><br>
+					<strong>Status:</strong><br>
+					<?php echo $var1->status;?><br>
+					<?php echo $var1->tracking_details;?><br>
     				</address>
     			</div>
     		</div>
@@ -57,14 +59,17 @@ include_once('header.php');
     			<div class="col-xs-6" style="font-size:18px">
     				<address>
     					<strong>Payment Method:</strong><br>
-    					<?php echo $fetch->payment_type;?>
-    					
+    					<?php echo $fe->payment_type;?><br><br>
+    					<strong>Source:</strong><br>
+						<?php echo $fe->source;?>
     				</address>
     			</div>
     			<div class="col-xs-6 text-right" style="font-size:18px">
     				<address>
     					<strong>Order Date:</strong><br>
-    					<?php echo $fetch->invoice_date?><br><br>
+    					<?php echo $fetch->invoice_date;?><br><br>
+						<strong>Destination:</strong><br>
+    					<?php echo $fe->destination;?>
     				</address>
     			</div>
     		</div>
@@ -92,13 +97,13 @@ include_once('header.php');
     							<tr>
     								<td><?php echo $fe->g_type;?></td>
     								<td class="text-center"><?php echo $fetch->quantity;?></td>
-    								<td class="text-right"><?php echo "₹".number_format($fetch->price);?></td>
+    								<td class="text-right"><?php echo "₹".number_format($fe->price);?></td>
     							</tr>
     							<tr>
     								<td class="thick-line"></td>
     								<td class="thick-line"></td>
     								<td class="thick-line text-center"><strong>Subtotal</strong></td>
-    								<td class="thick-line text-right"><?php echo "₹".number_format($fetch->price);?></td>
+    								<td class="thick-line text-right"><?php echo "₹".number_format($fe->price);?></td>
     							</tr>
     							<tr>
     								<td class="no-line"></td>
@@ -107,7 +112,7 @@ include_once('header.php');
     								<td class="no-line text-right"><?php echo "₹".number_format($fetch->charges);?></td>
     							</tr>
                                 <?php
-                                $total_price=$fetch->price+$fetch->charges;
+                                $total_price=$fe->price+$fetch->charges;
                                 ?>
     							<tr>
     								<td class="no-line"></td>
