@@ -132,51 +132,11 @@ function validate()
               <input type="date" placeholder="invoice_date"   name="invoice_date" value="<?php echo $fetch->invoice_date;?>"><br>
             </div>
 			
-						
-			<div class="col-md-12 form-group1">
-              <label class="control-label">Goods Type</label>
-              <input type="text" placeholder="goods_type" name="goods_type" value="<?php echo $fetch->goods_type;?>"><br>
-            </div>
              <div class="clearfix"> </div>
             
 			 <div class="col-md-12 form-group1">
               <label class="control-label">Charges</label>
               <input type="text" placeholder="charges" name="charges" value="<?php echo $fetch->charges;?>"><br>
-            </div>
-
-			<div class="col-md-12 form-group1">
-              <label class="control-label">Source</label>
-              <input type="text" placeholder="source" name="source" value="<?php echo $fetch->Source;?>"><br>
-            </div>
-
-            <div class="col-md-12 form-group1">
-              <label class="control-label">Destination</label>
-              <input type="text" placeholder="destination" name="destination" value="<?php echo $fetch->Destination;?>"><br>
-            </div>
-
-			<div class="col-md-12 form-group1">
-              <label class="control-label">Payment Type</label>
-              <?php
-				if($fetch->payment_type=="Cash")
-				{
-				?>
-				 Cash<input type="radio" name="payment_type" value="Cash" checked>
-				 Card<input type="radio" name="payment_type" value="Card">
-				<?php
-				}
-				elseif($fetch->payment_type=="Card")
-				{
-				?>
-				 Cash<input type="radio" name="payment_type" value="Cash">
-				 Card<input type="radio" name="payment_type" value="Card" checked>
-				<?php
-				}
-				?>
-            </div>
-
-			<div class="col-md-12 form-group1">
-              <label class="control-label">Price</label>
-              <input type="text" placeholder="price" name="price" value="<?php echo $fetch->price;?>"><br>
             </div>
 
              <div class="clearfix"> </div>

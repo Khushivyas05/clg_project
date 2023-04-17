@@ -26,6 +26,7 @@ include_once('header.php');
 						<th>Payment_id</th>
 						<th>Customer Name</th>
 						<th>Invoice Date</th>
+						<th>Booking Date</th>
 						<th>Price</th>
                         <th>Payment_type</th>
 						<th>Date</th>
@@ -43,7 +44,8 @@ include_once('header.php');
 						<td><?php echo $c->payment_id;?></td>
 						<td><?php echo $c->cust_name;?></td>
 						<td><?php echo $c->invoice_date;?></td>
-						<td><?php echo $c->Price;?></td>
+						<td><?php echo $c->book_date?></td>
+						<td><?php echo $c->price+$c->charges;?></td>
                         <td><?php echo $c->payment_type;?></td>
 						<td><?php echo $c->date;?></td>
 						<td><a href="status?status_payment_id=<?php echo $c->payment_id;?>" class="btn btn-primary"><?php echo $c->status;?></a></td>

@@ -43,7 +43,7 @@ include_once('header.php');
                  <!-- contact form -->
                  <div class="contacts12-main col-lg-12 pr-lg-5 pr-3">
                    
-                    <form name="bookingform" action="" method="post" enctype="multipart/form-data" class="main-input">
+                    <form name="bookingform" action="checkout" method="post" enctype="multipart/form-data" class="main-input">
                         <div class="top-inputs">
                         <input type="hidden" name="cust_id" placeholder="" value="<?php echo $_SESSION['cust_id'];?>" class="form-control" required="">
                         </div>
@@ -100,7 +100,7 @@ include_once('header.php');
                         
 
                         <div class="text-right">
-                            <button type="submit" name="submit" class="btn btn-theme2">Book Now</button>
+                            <button type="submit" class="btn btn-theme2">Book Now</button>
                         </div>
                     </form>
                 </div>
