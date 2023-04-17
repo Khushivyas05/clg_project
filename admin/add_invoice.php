@@ -127,15 +127,15 @@ function validate()
               <label class="control-label">Invoice Date</label>
               <input type="date"  name="invoice_date" placeholder="invoice_date" >
             </div>
-			<div class="col-md-12 form-group1">
+			<!--<div class="col-md-12 form-group1">
               <label class="control-label">Goods Type</label>
               <input type="text"  name="goods_type" placeholder="goods_type" >
-            </div>
+            </div>-->
 			<div class="col-md-12 form-group1">
               <label class="control-label">Charges</label>
               <input type="text"  name="charges" placeholder="charges" >
             </div>
-			<div class="col-md-12 form-group1">
+			<!--<div class="col-md-12 form-group1">
               <label class="control-label">Source</label>
               <input type="text"  name="Source" placeholder="Source" >
             </div>
@@ -151,7 +151,7 @@ function validate()
 			<div class="col-md-12 form-group1">
               <label class="control-label">Price</label>
               <input type="text"  name="price" placeholder="price" >
-            </div>
+            </div>-->
              <div class="clearfix"> </div>
    
              <div class="clearfix"> </div>

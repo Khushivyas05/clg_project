@@ -175,7 +175,7 @@ class control extends model
 			break;
 
 			case '/manage_payment':
-			$manage_payment_arr=$this->select_where_join1('payment','customer_details','payment.cust_id=customer_details.cust_id','invoice','payment.invoice_id=invoice.invoice_id');
+			$manage_payment_arr=$this->select_where_join3('payment','customer_details','payment.cust_id=customer_details.cust_id','invoice','payment.invoice_id=invoice.invoice_id','booking','payment.booking_id=booking.booking_id');
 			include_once('manage_payment.php');
 			break;
 
@@ -245,14 +245,9 @@ class control extends model
 				$branch_id=$_REQUEST['branch_id'];
 				$parcel_id=$_REQUEST['parcel_id'];
 				$invoice_date=$_REQUEST['invoice_date'];
-				$goods_type=$_REQUEST['goods_type'];
 				$charges=$_REQUEST['charges'];
-				$Source=$_REQUEST['Source'];
-				$Destination=$_REQUEST['Destination'];
-				$payment_type=$_REQUEST['payment_type'];
-				$price=$_REQUEST['price'];
 					
-				$arr=array("booking_id"=>$booking_id,"branch_id"=>$branch_id,"parcel_id"=>$parcel_id,"invoice_date"=>$invoice_date,"goods_type"=>$goods_type,"charges"=>$charges,"Source"=>$Source,"Destination"=>$Destination,"payment_type"=>$payment_type,"price"=>$price);
+				$arr=array("booking_id"=>$booking_id,"branch_id"=>$branch_id,"parcel_id"=>$parcel_id,"invoice_date"=>$invoice_date,"charges"=>$charges);
 					
 				$res=$this->insert('invoice',$arr);
 				if($res)
@@ -300,7 +295,7 @@ class control extends model
 			break;
 
 			case'/editinvoice':
-			$fetcharr=$this->select_where_join3('invoice','booking','invoice.booking_id=booking.booking_id','branch','invoice.branch_id=branch.branch_id','parcel','invoice.parcel_id=parcel.parcel_id');
+			$fetcharr=$this->selectall('branch');
 			if(isset($_REQUEST['edit_invoice_id']))
 			{
 				$invoice_id=$_REQUEST['edit_invoice_id'];

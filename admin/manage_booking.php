@@ -31,6 +31,7 @@ include_once('header.php');
 						<th>Goods type</th>
 						<th>Booking date</th>
                         <th>Payment type</th>
+						<th>Price</th>
 						<th>Delete</th>
 					  </tr>
 					</thead>
@@ -48,6 +49,7 @@ include_once('header.php');
 						<td><?php echo $m->g_type;?></td>
 						<td><?php echo $m->book_date;?></td>
                         <td><?php echo $m->payment_type;?></td>
+						<td><?php echo $m->price;?></td>
 						<td><a href="delete?del_booking_id=<?php echo $m->booking_id?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
 					 <?php

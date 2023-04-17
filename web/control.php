@@ -185,6 +185,10 @@ class control extends model
                 $data=array("booking_id"=>$booking_id);
                 $ru=$this->select_where_join2('booking','goods_type','booking.gt_id=goods_type.gt_id',$data);
                 $fe=$ru->fetch_object();
+
+                $where=array("booking_id"=>$booking_id);
+                $var=$this->select_where('tracking',$where);
+                $var1=$var->fetch_object();
             }
             include_once('invoice.php');
             break;
@@ -335,8 +339,9 @@ class control extends model
                 $gt_id=$_REQUEST['gt_id'];
                 $book_date=$_REQUEST['book_date'];
                 $payment_type=$_REQUEST['payment_type'];
+                $price=$_REQUEST['price'];
 
-                $arr=array("cust_id"=>$cust_id,"cate_id"=>$cate_id,"source"=>$source,"destination"=>$destination,"gt_id"=>$gt_id,"book_date"=>$book_date,"payment_type"=>$payment_type);
+                $arr=array("cust_id"=>$cust_id,"cate_id"=>$cate_id,"source"=>$source,"destination"=>$destination,"gt_id"=>$gt_id,"book_date"=>$book_date,"payment_type"=>$payment_type,"price"=>$price);
                 $res=$this->insert('booking',$arr);
                 if($res)
                 {
