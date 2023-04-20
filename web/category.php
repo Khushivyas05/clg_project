@@ -1,7 +1,6 @@
 <?php
 include_once('header.php');
 ?>
-a
 <!-- inner banner -->
 <section class="w3l-inner-banner-main">
     <div class="about-inner ecomerce-1">
