@@ -37,7 +37,7 @@ class control extends model
 					else
 					{
 						echo "<script> 
-							alert('Login Failed due wrong credebntial') 
+							alert('Login Failed due wrong credentials') 
 							window.location='index';
 							</script>";
 					}
