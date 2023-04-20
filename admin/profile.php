@@ -86,7 +86,7 @@ include_once('header.php');
 				?>
 			</div>
 			
-			</div>
+			
 			<div class="profile-bottom-bottom">
 			<div class="col-md-4 profile-fo">
 				
