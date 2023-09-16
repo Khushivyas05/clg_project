@@ -47,62 +47,9 @@ include_once('header.php');
                <?php
                }
                ?>
-                <!--<td class="invert">
-                  <div class="quantity">
-                    <div class="quantity-select d-flex">
-                      <input type="number" value="1" min="1">
-                    </div>
-                  </div>
-                </td>
-                <td class="invert price">$ 36.80 </td>-->
 
               </tr>
-             <!-- <tr class="rem2">
-                <td class="invert-image">
-                  <a href="ecommerce-single.html">
-                    <img src="assets/images/s4.jpg" alt=" " class="img-responsive">
-                  </a>
-                </td>
-                <td class=" invert product-name"><a href="ecommerce-single.html">
-                  Packaging, Shipping Packaging Box (Pack of 25 Brown)
-                  </a>
-
-
-                </td>
-                <td class="invert">
-                  <div class="quantity">
-                    <div class="quantity-select d-flex">
-                      <input type="number" value="1" min="1">
-                    </div>
-                  </div>
-                </td>
-                <td class="invert price">$ 139.45 </td>
-
-              </tr>
-              <tr class="rem3">
-                <td class="invert-image">
-                  <a href="ecommerce-single.html">
-                    <img src="assets/images/s2.jpg" alt=" " class="img-responsive">
-                  </a>
-                </td>
-                <td class="invert product-name"><a href="ecommerce-single.html">
-                  Corrugated Cardboard Packaging Box (Pack of 25 Brown)
-                  </a>
-
-                </td>
-                <td class="invert">
-                  <div class="quantity">
-                    <div class="quantity-select d-flex">
-                      <input type="number" value="1" min="1">
-                    </div>
-                  </div>
-                </td>
-                <td class="invert price">$ 14.90</td>
-
-              </tr>-->
-
-             
-
+            
             </tbody>
           </table>
           </div>

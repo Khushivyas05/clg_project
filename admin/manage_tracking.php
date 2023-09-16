@@ -24,7 +24,7 @@ include_once('header.php');
 					<thead>
 					  <tr>
 						<th>Tracking id</th>
-						<th>Invoice Date</th>
+						<th>Booking Date</th>
 						<th>Status</th>
 						<th>Tracking details</th>
 						<th>Edit</th>
@@ -38,7 +38,7 @@ include_once('header.php');
 					?>
 					  <tr>
 						<td><?php echo $m->track_id;?></td>
-						<td><?php echo $m->invoice_date;?></td>
+						<td><?php echo $m->book_date;?></td>
 						<td><a href="status?status_track_id=<?php echo $m->track_id;?>" class="btn btn-primary"><?php echo $m->status;?></a></td>
 						<td><?php echo $m->tracking_details;?></td>
 						<td><a href="edittrack?edit_track_id=<?php echo $m->track_id;?>" class="btn btn-primary">Edit</a></td>

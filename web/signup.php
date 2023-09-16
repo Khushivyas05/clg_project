@@ -299,5 +299,4 @@ RIGHT SIDEBAR TOGGLE SECTION
 
 </body>
 
-<!-- Mirrored from demo.w3layouts.com/demosWTR/Freedom/20-10-2020/packers-freedom-demo_Free/244861779/web/signup.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Dec 2022 15:49:27 GMT -->
 </html>

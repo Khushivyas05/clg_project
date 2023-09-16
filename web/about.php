@@ -31,7 +31,7 @@ include_once('header.php');
 				<div class="column center-align-self col-lg-6 mt-lg-0 mt-4 pl-lg-5 pl-3">
 					<h5 class="editContent">Our commitment</h5>
 					<p class="more-gap editContent">We are a dedicated group of professionals, committed to delivering value for you.  You will get what we have promised you. We don’t make false promises and don’t hide anything from you. When we make the commitment, you will get the delivery- no excuses.</p><br>
-					<p class="more-gap editContent">To increase your business with a single click we have launched an advanced, inventive and feature-rich mobile app. With this user-friendly interface, TruckGuru is offering you ease, flexibility, and efficiency to book a truck which will also contribute to driving your business growth. We have hundreds of wheels on the road. You can find one in just a click and can enjoy our quick and safe transport services.</p>
+					<p class="more-gap editContent">To increase your business with a single click we have launched an advanced, inventive and feature-rich website. With this user-friendly interface, Your Transport Solution is offering you ease, flexibility, and efficiency to book a truck which will also contribute to driving your business growth. We have hundreds of wheels on the road. You can find one in just a click and can enjoy our quick and safe transport services.</p>
 
 				    
 					<!--<li><span class="fa fa-thumbs-o-up"></span> We use ecofriendly materials only</li>
@@ -51,7 +51,7 @@ include_once('header.php');
             <div class="container py-md-3 my-md-4">
 			<div class="heading text-center mx-auto">
 				<h3 class="head">ABOUT OUR COMPANY</h3>
-				<p class="my-3 head"> Your transport services, a leading transport and logistics service provider is introducing a truly innovative,
+				<p class="my-3 head"> Your Transport Solution, a leading transport and logistics service provider is introducing a truly innovative,
 				modern and high-tech online platform to book the truck in a few simple steps.</p>
 				
 			  </div>
@@ -77,7 +77,7 @@ include_once('header.php');
 					<div class="icon"> <span class="fa fa-laptop" aria-hidden="true"></span></div>
 					 <div class="icon-info">
 						<h5>2</h5>
-						<p> Your transport services offers cutting-edge and state-of-the-art transport solutions to its customers, helping them to focus on their core competencies and business operations. </p>
+						<p> Your Transport Solution offers cutting-edge and state-of-the-art transport solutions to its customers, helping them to focus on their core competencies and business operations. </p>
 						
 					</div>
 			 </div> 

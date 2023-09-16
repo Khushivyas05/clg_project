@@ -37,7 +37,7 @@ class control extends model
 					else
 					{
 						echo "<script> 
-							alert('Login Failed due wrong credebntial') 
+							alert('Login Failed due wrong credentials') 
 							window.location='index';
 							</script>";
 					}
@@ -138,11 +138,6 @@ class control extends model
 			$manage_branch_arr=$this->selectall('branch');
 			include_once('manage_branch.php');
 			break;
-	
-			case '/manage_wrate':
-			$manage_wrate_arr=$this->selectall('w_rate');
-			include_once('manage_wrate.php');
-			break;
 
 			case '/manage_customer':
 			$manage_customer_arr=$this->select_where_join('customer_details','city','customer_details.city_id=city.city_id');
@@ -157,11 +152,6 @@ class control extends model
 			case '/manage_booking':
 			$manage_booking_arr=$this->select_where_join3('booking','customer_details','booking.cust_id=customer_details.cust_id','category','booking.cate_id=category.cate_id','goods_type','booking.gt_id=goods_type.gt_id');
 			include_once('manage_booking.php');
-			break;
-
-			case '/manage_fuel':
-			$manage_fuel_arr=$this->select_where_join('fuel','employee_details','fuel.emp_id=employee_details.emp_id');
-			include_once('manage_fuel.php');
 			break;
 
 			case '/manage_invoice':
@@ -678,50 +668,6 @@ class control extends model
 			}
 			include_once('add_state.php');
 			break;
-
-			case '/add_fuel':
-			$fetcharr=$this->selectall('employee_details');	
-			if(isset($_REQUEST['submit']))
-				{
-					$emp_id=$_REQUEST['emp_id'];
-					$source=$_REQUEST['source'];
-					$destination=$_REQUEST['destination'];
-					$fuel_amt=$_REQUEST['fuel_amt'];
-					$arr=array("emp_id"=>$emp_id,"source"=>$source,"destination"=>$destination,"fuel_amt"=>$fuel_amt);
-					$res=$this->insert('fuel',$arr);
-					if($res)
-					{
-						echo "<script>alert('Data Inserted successfully')</script>";
-					}
-					else
-					{
-						echo "<script>alert('Data is not inserted')</script>";
-					}
-				}
-				include_once('add_fuel.php');
-				break;
-
-			
-
-			case '/add_wrate':
-			if(isset($_REQUEST['submit']))
-			{
-				$kg=$_REQUEST['kg'];
-				$rate=10;
-				$price=$kg*$rate;
-				$arr=array("kg"=>$kg,"price"=>$price);
-				$res=$this->insert('w_rate',$arr);
-				if($res)
-				{
-					echo "<script>alert('Data Inserted successfully')</script>";
-				}
-				else
-				{
-					echo "<script>alert('Data is not inserted')</script>";
-				}
-			}
-			include_once('add_wrate.php');
-			break;
 			
 			case '/editemp':
 			$fetcharr=$this->selectall('city');
@@ -897,65 +843,7 @@ class control extends model
 			include_once('editpayment.php');
 			break;
 
-			/*case '/editbooking':
-			$fetcharr=$this->selectall('customer_details');
-			if(isset($_REQUEST['edit_booking_id']))
-			{
-				$booking_id=$_REQUEST['edit_booking_id'];
-				$where=array("booking_id"=>$booking_id);
-				$run=$this->select_where('booking',$where);
-				$fetch=$run->fetch_object();
-				if(isset($_REQUEST['submit']))
-				{
-					$booking_id=$_REQUEST['booking_id'];
-					$cust_id=$_REQUEST['cust_id'];
-					$cate_id=$_REQUEST['cate_id'];
-					$source=$_REQUEST['source'];
-					$destination=$_REQUEST['destination'];
-					$book_date=$_REQUEST['book_date'];
-					$price=$_REQUEST['price'];
-					$payment_type=$_REQUEST['payment_type'];
-					$arr=array("booking_id"=>$booking_id,"cust_id"=>$cust_id,"cate_id"=>$cate_id,"source"=>$source,"destination"=>$destination,"book_date"=>$book_date,"price"=>$price,"payment_type"=>$payment_type);
-					$res=$this->update('booking',$arr,$where);
-					if($res)
-					{
-						echo "<script>
-						alert('update success');
-						window.location='manage_booking';
-						</script>";
-					}
-				}
-			}
-			include_once('editbooking.php');
-			break;*/
-
-			case '/editfuel':
-			if(isset($_REQUEST['edit_fuel_id']))
-			{
-				$fuel_id=$_REQUEST['edit_fuel_id'];
-				$where=array("fuel_id"=>$fuel_id);
-				$run=$this->select_where('fuel',$where);
-				$fetch=$run->fetch_object();
-				if(isset($_REQUEST['submit']))
-				{
-					$fuel_id=$_REQUEST['fuel_id'];
-					$emp_id=$_REQUEST['emp_id'];
-					$source=$_REQUEST['source'];
-					$destination=$_REQUEST['destination'];
-					$fuel_amt=$_REQUEST['fuel_amt'];
-					$arr=array("fuel_id"=>$fuel_id,"emp_id"=>$emp_id,"source"=>$source,"destination"=>$destination,"fuel_amt"=>$fuel_amt);
-					$res=$this->update('fuel',$arr,$where);
-					if($res)
-					{
-						echo "<script>
-						alert('update success');
-						window.location='manage_fuel';
-						</script>";
-					}
-				}
-			}
-			include_once('editfuel.php');
-			break;
+			
 
 			case '/delete':
 			if(isset($_REQUEST['del_emp_id']))
@@ -1101,19 +989,6 @@ class control extends model
 					</script>";
 				}
 			}
-			if(isset($_REQUEST['del_w_id']))
-			{
-				$w_id=$_REQUEST['del_w_id'];
-				$where=array("w_id"=>$w_id);
-				$res=$this->delete_where('w_rate',$where);
-				if($res)
-				{
-					echo "<script>
-					alert('Delete Success');
-					window.location='manage_wrate';
-					</script>";
-				}
-			}
 			if(isset($_REQUEST['del_payment_id']))
 			{
 				$payment_id=$_REQUEST['del_payment_id'];
@@ -1137,19 +1012,6 @@ class control extends model
 					echo "<script>
 					alert('Delete Success');
 					window.location='manage_booking';
-					</script>";
-				}
-			}
-			if(isset($_REQUEST['del_fuel_id']))
-			{
-				$fuel_id=$_REQUEST['del_fuel_id'];
-				$where=array("fuel_id"=>$fuel_id);
-				$res=$this->delete_where('fuel',$where);
-				if($res)
-				{
-					echo "<script>
-					alert('Delete Success');
-					window.location='manage_fuel';
 					</script>";
 				}
 			}
